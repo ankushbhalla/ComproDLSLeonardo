@@ -1,0 +1,22 @@
+<div class="container-fluid header">
+  <div class="headingWrapper">
+    <h2 class="col-md-12">
+      <span class="loading-logo">
+                <span class="logo-blue">comproDLS™</span></span>
+      <span>Leonardo</span>
+    </h2>
+  </div>
+</div>
+
+<div #contentWrapper class="contentWrapper container-fluid">
+  <vertical-split-pane class="verticalSeparator" primary-component-initialratio="0.50" separator-thickness="21" [primary-component-minsize]="0"
+    [secondary-component-minsize]="0">
+    <div class="split-pane-content-primary">
+      <app-question-box class="questionWrapper col-md-12" [questionData]='this.questionData'></app-question-box>
+    </div>
+    <div class="split-pane-content-secondary">
+      <app-workspace [(checkAnswerClicked)]="this.checkAnswerClicked" class="workspaceWrapper col-md-12" [solutionData]='this.solutionData'></app-workspace>
+    </div>
+  </vertical-split-pane>
+</div>
+<app-navigator (checkAnswer)="handleCompEvents($event)" class="navigatorWrapper"></app-navigator>

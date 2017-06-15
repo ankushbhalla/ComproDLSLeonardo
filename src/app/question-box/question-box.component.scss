@@ -1,0 +1,17 @@
+.questionHost{
+    &>div{
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+
+    .questionHeadings{
+        font-weight: 600;
+        color: #008fce;
+        font-size: 1.5em;
+    }
+
+    .leoHost{
+        width: 100%;
+        overflow: auto;
+    }
+}
