@@ -15,7 +15,16 @@
     line-height: 1.6;
 }
 
+.workspaceWrapper{
+    height: 100%;
+}
+
 .split-pane-content-primary{
+    height: 100%;
+    width: 100%;
+}
+
+.split-pane-content-secondary{
     height: 100%;
     width: 100%;
 }
