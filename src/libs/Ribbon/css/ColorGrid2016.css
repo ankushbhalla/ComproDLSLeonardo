@@ -1,0 +1,24 @@
+/*******************Office 2016**********************/
+
+.Office2016 .sims-ColorGrid .backgroundColor .color:hover, .Office2016 .sims-ColorGrid .backgroundColor .color.c-NoColor:hover
+{
+    border-color: #DBE6F5;
+    background-color: #E7F2FF;
+}
+
+.Office2016 .sims-ColorGrid .backgroundColor .color.clr-selected, .Office2016 .sims-ColorGrid .backgroundColor .color.c-NoColor.clr-selected {
+    border-color: #B3D3E4;
+    background-color: #CFE8FF;
+}
+
+.Office2016 .sims-ColorGrid .backgroundColor .color.c-NoColor .kid {
+    height: 14px;
+    padding-top: 1px;
+    font-size: 11px;
+}
+.Office2016 .sims-ColorGrid .backgroundColor .color.clr-focus, .Office2016 .sims-ColorGrid .backgroundColor .color.c-NoColor.clr-focus
+{
+    border-color: #99D1FF;
+    background-color: #CCE8FF;
+}
+/*******************Office 2016**********************/
