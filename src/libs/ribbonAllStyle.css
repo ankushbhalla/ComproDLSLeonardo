@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+ /*http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 
@@ -1049,7 +1049,7 @@ legend.DisabledLegend
 /* "app/Controls/CheckBox/css/CheckBox.css", */
 .SIMS .checkBox
 {
-	background-image:url("images/controls/checkbox/checkbox.png");	
+	/*background-image:url("assets/RibbonAssets/images/controls/checkbox/checkbox.png");*/
 	height:13px;
 	background-repeat:no-repeat;
 	background-position:0px 0px;	
@@ -1191,7 +1191,7 @@ legend.DisabledLegend
 
 .SIMS .excel-pane .checkBox
 {
-	background-image:url("images/controls/checkbox/checkbox.png");	
+	/*background-image:url("assets/RibbonAssets/images/controls/checkbox/checkbox.png");	*/
 	height:13px;
 	background-repeat:no-repeat;
 	background-position:-22px 0px;	
@@ -1434,11 +1434,11 @@ legend.DisabledLegend
 	padding-left:4px;
 	padding-bottom:3px;
 	border:1px solid rgb(198,199,198);
-	background-image:url('images/controls/imagegrid/divimage.jpg');
+	/*background-image:url('images/controls/imagegrid/divimage.jpg');*/
 }
 
 .ImageStyleSelectedFromList{
-    background-image: url("images/controls/imagegrid/allimagesinrows.jpg");           
+    /*background-image: url("assets/RibbonAssets/images/controls/imagegrid/allimagesinrows.jpg");           */
 }
 
 .customListImages .clicked
@@ -1620,7 +1620,7 @@ legend.DisabledLegend
 }
 
 .ImageGridDropdown .simsDDTitle span.simsDDArrow {
-    background: url("images/controls/imagegrid/arrow.png") no-repeat scroll 0 0 transparent;
+    /*background: url("assets/RibbonAssets/images/controls/imagegrid/arrow.png") no-repeat scroll 0 0 transparent;*/
     
     cursor: pointer;
     display: inline-block;
@@ -1633,13 +1633,13 @@ legend.DisabledLegend
 
 
 .ImageGridDropdown .simsDDTitle span.simsDDArrow:hover {
-    background: url("images/controls/imagegrid/arrowhover.png") no-repeat scroll 0 0 transparent;
+    /*background: url("/images/controls/imagegrid/arrowhover.png") no-repeat scroll 0 0 transparent;*/
     
 }
 
 .simsDDArrowOnHover
 {
-    background: url("images/controls/imagegrid/arrowhover.png") no-repeat scroll 0 0 transparent;    
+    /*background: url("/images/controls/imagegrid/arrowhover.png") no-repeat scroll 0 0 transparent;    */
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -1690,10 +1690,10 @@ legend.DisabledLegend
 
 }
 
-.hidden()
+/*.hidden()
 {
     display: none;
-}
+}*/
 
 .unselectable {
     -moz-user-select: -moz-none;
@@ -1938,7 +1938,7 @@ div.simsLBScrollContainer
 
 .sims-SimsListBox div.simsLBUpScroll
 {
-	background-image:url('images/controls/listbox/scrollbuttons.png');
+	/*background-image:url('images/controls/listbox/scrollbuttons.png');*/
 	background-position:0px 0px ;
 	width:15px;
 	height:17px;
@@ -1950,19 +1950,19 @@ div.simsLBScrollContainer
 
 .sims-SimsListBox div.simsLBUpScroll:hover
 {
-	background-image:url('images/controls/listbox/scrollbuttons.png');
+	/*background-image:url('images/controls/listbox/scrollbuttons.png');*/
 	background-position:0px -17px;
 }
 
 .sims-SimsListBox div.simsLBUpScroll:active
 {
-	background-image:url('images/controls/listbox/scrollbuttons.png');
+	/*background-image:url('images/controls/listbox/scrollbuttons.png');*/
 	background-position:0px -34px;
 }
 
 .sims-SimsListBox div.simsLBUpScrollDisabled, .sims-SimsListBox.disabled div.simsLBUpScroll
 {
-	background-image:url('images/controls/listbox/scrollbuttons.png');
+	/*background-image:url('images/controls/listbox/scrollbuttons.png');*/
 	background-position:0px -51px;
 	pointer-events: none;
 }
@@ -1991,7 +1991,7 @@ div.simsLBScrollContainer
 
 .sims-SimsListBox div.simsLBDownScroll
 {
-	background:url('images/controls/listbox/scrollbuttons.png');
+	/*background:url('images/controls/listbox/scrollbuttons.png');*/
 	background-position:0px -68px;
 	width:15px;
 	height:17px;
@@ -2003,19 +2003,19 @@ div.simsLBScrollContainer
 
 .sims-SimsListBox div.simsLBDownScroll:hover
 {
-	background-image:url('images/controls/listbox/scrollbuttons.png');
+	/*background-image:url('images/controls/listbox/scrollbuttons.png');*/
 	background-position:0px -85px;
 }
 
 .sims-SimsListBox div.simsLBDownScroll:active
 {
-	background-image:url('images/controls/listbox/scrollbuttons.png');
+	/*background-image:url('images/controls/listbox/scrollbuttons.png');*/
 	background-position:0px -102px;
 }
 
 .sims-SimsListBox div.simsLBDownScrollDisabled, .sims-SimsListBox.disabled div.simsLBDownScroll
 {
-	background-image:url('images/controls/listbox/scrollbuttons.png');
+	/*background-image:url('images/controls/listbox/scrollbuttons.png');*/
 	background-position:0px -119px;
 	pointer-events: none;
 }
@@ -2289,14 +2289,14 @@ div.simsLBScrollContainer
 
 .simsDropdown .simsDDTitle span.simsDDArrow.simsDDArrowGrey 
 {
-     background: url("images/controls/dropdown/greyarrow.png") no-repeat scroll 0 0 transparent;
+     /*background: url("/images/controls/dropdown/greyarrow.png") no-repeat scroll 0 0 transparent;*/
      cursor: pointer;
 	 width: 15.7px;   
 }
  span.simsDDArrowGrey.simsDDArrowOnHover
 {
 
-	background: url("images/controls/dropdown/greyarrow.png") no-repeat scroll 0 0 transparent;
+	/*background: url("/images/controls/dropdown/greyarrow.png") no-repeat scroll 0 0 transparent;*/
 	cursor: default;
 	width: 15.7px;
 
@@ -2304,7 +2304,7 @@ div.simsLBScrollContainer
 }
 span.simsDDArrowGrey.simsDDArrowOnClick
 {
-  background: url("images/controls/dropdown/greyarrow.png") no-repeat scroll 0 0 transparent;
+  /*background: url("/images/controls/dropdown/greyarrow.png") no-repeat scroll 0 0 transparent;*/
   cursor: default;
   width: 15.7px;
 
@@ -2352,7 +2352,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 
 .simsDropdown .simsDDTitle span.simsDDArrow
  {
-    background: url("images/controls/dropdown/arrow.png") no-repeat scroll 0 0 transparent;    
+    /*background: url("/images/controls/dropdown/arrow.png") no-repeat scroll 0 0 transparent;    */
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -2363,7 +2363,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 }
 .simsDropdown .simsDDTitle span.simsDDOpaqueArrow
  {
-    background: url("images/controls/dropdown/opaque_arrow.png") no-repeat scroll 0 0 transparent;    
+    /*background: url("/images/controls/dropdown/opaque_arrow.png") no-repeat scroll 0 0 transparent;    */
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -2374,7 +2374,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 }
 
 .ppt .simsDropdown .simsDDTitle span.simsDDArrow {
-    background: url("images/controls/dropdown/pptarrow.png") no-repeat scroll 0 0 transparent;    
+    /*background: url("/images/controls/dropdown/pptarrow.png") no-repeat scroll 0 0 transparent;    */
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -2385,19 +2385,19 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 }
 
 .simsDropdown .simsDDTitle span.simsDDArrowDisable {
-    background: url("images/controls/dropdown/disable.png");   
+    /*background: url("/images/controls/dropdown/disable.png");   */
     cursor:default; 
 }
 
 .simsDropdown .simsDDTitle span.simsDDArrowDisable.simsDDArrowGrey 
 {
-     background: url("images/controls/dropdown/greyarrowdisable.png");
+     /*background: url("/images/controls/dropdown/greyarrowdisable.png");*/
      cursor: default;
 }
 
 .simsDDArrowOnHover
 {
-    background: url("images/controls/dropdown/arrowhover.png") no-repeat scroll 0 0 transparent;    
+    /*background: url("/images/controls/dropdown/arrowhover.png") no-repeat scroll 0 0 transparent;    */
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -2409,7 +2409,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 
 .simsDDArrowOnClick
 {
-    background: url("images/controls/dropdown/arrowclick.png") no-repeat scroll 0 0 transparent;    
+    /*background: url("/images/controls/dropdown/arrowclick.png") no-repeat scroll 0 0 transparent;    */
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -2420,7 +2420,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 }
 .ppt .simsDDArrowOnHover
 {
-    background: url("images/controls/dropdown/pptarrowhover.png") no-repeat scroll 0 0 transparent;    
+    /*background: url("/images/controls/dropdown/pptarrowhover.png") no-repeat scroll 0 0 transparent;    */
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -2432,7 +2432,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 
 .ppt .simsDDArrowOnClick
 {
-    background: url("images/controls/dropdown/pptarrowclick.png") no-repeat scroll 0 0 transparent;    
+    /*background: url("/images/controls/dropdown/pptarrowclick.png") no-repeat scroll 0 0 transparent;    */
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -2539,7 +2539,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
     border-right-style: hidden; 
 }
 .simsDropdown .simsDDTitle span.opaqueArrow{
-    background:url('images/controls/dropdown/opaque_arrow.png') !important;
+    /*background:url('images/controls/dropdown/opaque_arrow.png') !important;*/
 
 }
 
@@ -2659,7 +2659,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
   height: 9px;
   /*right: 2px;*/
   /*background-image: url('images/controls/spincontrol/spin_control_buttons.png');*/
-  background-image: url('images/controls/spincontrol/spin_control_buttons_pane.png');
+  /*background-image: url('images/controls/spincontrol/spin_control_buttons_pane.png');*/
   background-repeat: no-repeat;
   /* Change this to modify the default button color*/
   /*background-color: #000000;*/
@@ -2672,7 +2672,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
   height: 9px;
   /*right: 2px;*/
   /*background-image: url('images/controls/spincontrol/spin_control_buttons.png');*/
-  background-image: url('images/controls/spincontrol/spin_control_buttons_pane1.png');
+  /*background-image: url('images/controls/spincontrol/spin_control_buttons_pane1.png');*/
   background-repeat: no-repeat;
   /* Change this to modify the default button color*/
   /*background-color: #000000;*/
@@ -2832,7 +2832,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
   width: 15px;
   height: 8px;
   /*right: 2px;*/
-  background-image: url('images/controls/spincontrol/spin_control_buttons.png');
+  /*background-image: url('images/controls/spincontrol/spin_control_buttons.png');*/
   /*background-image: url('images/controls/spincontrol/spin_control_buttons_pane.png');*/
   background-repeat: no-repeat;
   /* Change this to modify the default button color*/
@@ -3263,7 +3263,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
     line-height: 14px;
     vertical-align: middle;
     font-size: 9pt;
-    background: url("../img/morecolorimage.png") no-repeat scroll 6px 4px transparent; 
+    /*background: url("/RibbonAssets/img/morecolorimage.png") no-repeat scroll 6px 4px transparent; */
 }
 
 
@@ -3277,7 +3277,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
     line-height: 14px;
     vertical-align: middle;
     font-size: 9pt;
-    background: url("images/controls/colorgrid/eyedropper.png") no-repeat scroll 6px 4px transparent;
+    /*background: url("/images/controls/colorgrid/eyedropper.png") no-repeat scroll 6px 4px transparent;*/
 }
 
 .sims-ColorGrid .patternColor .transparentItem
@@ -3290,7 +3290,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
     line-height: 14px;
     vertical-align: middle;
     font-size: 9pt;
-    background: url("images/controls/colorgrid/transparent.png") no-repeat scroll 6px 4px transparent;
+    /*background: url("/images/controls/colorgrid/transparent.png") no-repeat scroll 6px 4px transparent;*/
 }
 
 .sims-ColorGrid .word .color.clr-selected .wrapper
@@ -3367,7 +3367,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 }
 
 .simsColorGridDropdown .simsColorGridDDTitle span.simsColorGridDDArrow {
-    background: url("images/controls/colorgriddropdown/arrow.png") no-repeat scroll 0 0 transparent;    
+    /*background: url("/images/controls/colorgriddropdown/arrow.png") no-repeat scroll 0 0 transparent;    */
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -3378,7 +3378,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 }
 
 .simsColorGridDropdown .simsColorGridDDTitle span.newSimsColorGridDDArrow {
-    background: url("images/controls/newcolorgriddropdown/down-arrow.png") no-repeat scroll 0 0 transparent;    
+    /*background: url("/images/controls/newcolorgriddropdown/down-arrow.png") no-repeat scroll 0 0 transparent;    */
     display: inline-block;
     float: right;
     height: 5px;
@@ -3434,7 +3434,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 
 .simsColorGridDropdown .simsColorGridDDTitle .simsColorGridDDArrowOnHover
 {
-    background: url("images/controls/colorgriddropdown/arrowhover.png") no-repeat scroll 0 0 transparent;    
+    /*background: url("/images/controls/colorgriddropdown/arrowhover.png") no-repeat scroll 0 0 transparent;    */
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -3446,7 +3446,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 
 .simsColorGridDropdown .simsColorGridDDTitle .simsColorGridDDArrowOnClick
 {
-    background: url("images/controls/colorgriddropdown/arrowclick.png") no-repeat scroll 0 0 transparent;    
+    /*background: url("/images/controls/colorgriddropdown/arrowclick.png") no-repeat scroll 0 0 transparent;    */
     cursor: pointer;
     display: inline-block;
     float: right;
@@ -3465,7 +3465,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 
 
 .simsColorGridDropdown .simsColorGridDDTitle span.simsDDArrowDisable {
-    background: url("images/controls/colorgriddropdown/disable.png");   
+    /*background: url("/images/controls/colorgriddropdown/disable.png");   */
     cursor:default; 
 }
 
@@ -3557,7 +3557,7 @@ span.simsDDArrowGrey.simsDDArrowOnClick
 
 .ImageButtonDropDown .image-item
 {
-    background-image:url("images/controls/imagebuttondropdown/imagebuttondropdown.png");
+    /*background-image:url("/images/controls/imagebuttondropdown/imagebuttondropdown.png");*/
     width:48px;
     height:48px;  
     background-repeat:no-repeat;
@@ -3979,7 +3979,7 @@ background: linear-gradient(to bottom,  rgba(252,224,188,1) 0%,rgba(252,180,78,1
 {
 	width:60px;
 	height:45px;		
-	background-image:url("images/controls/imageselector/imagesource.png");
+	/*background-image:url("/images/controls/imageselector/imagesource.png");*/
 	background-repeat:no-repeat;
 	display:inline-block;	
 	margin:0px;	
@@ -4476,37 +4476,37 @@ div.rangeSelectorDiv
 .displayMode
 {
 	outline: 1px solid rgb(172,172,172);
-    background-image:url(images/controls/rangeselector/disp_normal.png);
+    /*background-image:url(images/controls/rangeselector/disp_normal.png);*/
 }
 
 .displayMode:hover
 {
     outline: 1px solid rgb(126,180,234);
-    background-image:url(images/controls/rangeselector/disp_hover.png);
+    /*background-image:url(images/controls/rangeselector/disp_hover.png);*/
 }
 
 .displayMode:active
 {
     outline: 1px solid rgb(86,157,229);
-    background-image:url(images/controls/rangeselector/disp_clicked.png);
+    /*background-image:url(images/controls/rangeselector/disp_clicked.png);*/
 }
 
 .selectionMode
 {
 	outline: 1px solid rgb(172,172,172);
-    background-image:url(images/controls/rangeselector/sel_normal.png);
+    /*background-image:url(images/controls/rangeselector/sel_normal.png);*/
 }
 
 .selectionMode:hover
 {
     outline: 1px solid rgb(126,180,234);
-    background-image:url(images/controls/rangeselector/sel_hover.png);
+    /*background-image:url(images/controls/rangeselector/sel_hover.png);*/
 }
 
 .selectionMode:active
 {
     outline: 1px solid rgb(86,157,229);
-    background-image:url(images/controls/rangeselector/sel_clicked.png);
+    /*background-image:url(images/controls/rangeselector/sel_clicked.png);*/
 }
 
 .rangeSelectorDiv .disabled-overlay 
@@ -4522,7 +4522,7 @@ div.rangeSelectorDiv
 /* "app/Controls/EditableTextArea/css/EditableTextArea.css", */
 .simsEditableTextArea 
 {
-    background-image: url("images/controls/editabletextarea/backgroundimage.png");
+    /*background-image: url("/images/controls/editabletextarea/backgroundimage.png");*/
     background-color: transparent;
     -moz-appearance: textfield-multiline;
     /*-webkit-appearance: textarea;*/
@@ -4581,7 +4581,7 @@ div.rangeSelectorDiv
 
 .ImageSelectBox .img-list-item
 {
-   background-image:url("images/controls/imageselectbox/imageselectbox.png");	
+   /*background-image:url("/images/controls/imageselectbox/imageselectbox.png");	*/
    background-repeat:no-repeat;
    display:inline-block;  
    position: relative;  
@@ -4710,7 +4710,7 @@ div.rangeSelectorDiv
 .top-ruler .sims-HRuler-markers{
     width: 16px;
     height: 14px;
-    background-image: url(../app/Controls/HRuler/img/marker.png);
+    /*background-image: url(../app/Controls/HRuler/img/marker.png);*/
     position: absolute;
     top: 3px;
     z-index: 0;
@@ -5106,7 +5106,7 @@ div.rangeSelectorDiv
     display: inline-block;
     height: 100%;
     width: 15px;
-    background:url("images/controls/splitbutton/insert_arrow1.png") no-repeat scroll 0 -1px transparent;  
+    /*background:url("/images/controls/splitbutton/insert_arrow1.png") no-repeat scroll 0 -1px transparent;  */
     margin-bottom:1px;
     margin-top:1px;
     margin-left:2px;
@@ -5123,7 +5123,7 @@ div.rangeSelectorDiv
     background-color:#EFEBEF;
     padding:2px 0 0 1px;
     margin:0 0 0 -4px;
-    background:url("images/controls/splitbutton/Items_background.png") repeat scroll 0 0 transparent;  
+    /*background:url("/images/controls/splitbutton/Items_background.png") repeat scroll 0 0 transparent;  */
 }
 
 
@@ -5180,7 +5180,7 @@ div.rangeSelectorDiv
 
 .sims-ExcelCheckList .dots
 {
-    background-image:url('images/controls/excelchecklist/images.png');
+    /*background-image:url('images/controls/excelchecklist/images.png');*/
     background-position: 0px 0px;
     width:9px;
     height:15px;
@@ -5190,7 +5190,7 @@ div.rangeSelectorDiv
 
 .sims-ExcelCheckList .checkbox
 {
-    background-image:url('images/controls/excelchecklist/images.png');
+    /*background-image:url('images/controls/excelchecklist/images.png');*/
     background-position: 0px 0px;
     width: 11px;
     height: 11px;
@@ -5337,7 +5337,7 @@ div.rangeSelectorDiv
 .sortable-grid-control .checkbox-data-item
 {
     width: 33px;    
-    background: url("images/controls/sortableGrid/checked-checkbox.png") no-repeat scroll  3px 0px white;    
+    /*background: url("/images/controls/sortableGrid/checked-checkbox.png") no-repeat scroll  3px 0px white;    */
 }
 
 .sortable-grid-control .header-row-container
@@ -5372,7 +5372,7 @@ div.rangeSelectorDiv
 .sortable-grid-control .checkbox-header-item
 {
     width: 33px;
-    background: url("images/controls/sortableGrid/checked-checkbox.png") no-repeat scroll  3px 0px rgb(240,240,240);    
+    /*background: url("/images/controls/sortableGrid/checked-checkbox.png") no-repeat scroll  3px 0px rgb(240,240,240);    */
 }
 
 .sortable-grid-control .dropdown-header-item
@@ -5495,7 +5495,7 @@ div.rangeSelectorDiv
 
 .sortable-grid-control .selected-row>.selector-data-item
 {
-    background: url("images/controls/sortableGrid/arrow.png") no-repeat scroll  1px 2px rgb(240,240,240);    
+    /*background: url("/images/controls/sortableGrid/arrow.png") no-repeat scroll  1px 2px rgb(240,240,240);    */
 }
 
 .sims-DatePicker{
@@ -5577,13 +5577,13 @@ div.rangeSelectorDiv
 
 .SIMS .ui-datepicker .ui-datepicker-next span
 {
-    background-image: url("images/controls/datepicker/next.png");
+    /*background-image: url("/images/controls/datepicker/next.png");*/
     background-position: 0px 0px;
 }
 
 .SIMS .ui-datepicker .ui-datepicker-prev span
 {
-    background-image: url("images/controls/datepicker/prev.png");
+    /*background-image: url("/images/controls/datepicker/prev.png");*/
     background-position: 0px 0px;
 }
 
@@ -5729,7 +5729,7 @@ div.rangeSelectorDiv
 
 .sims-ExcelDateCheckList .dots
 {
-    background-image:url('images/controls/excelchecklist/images.png');
+    /*background-image:url('images/controls/excelchecklist/images.png');*/
     background-position: 0px 0px;
     width:9px;
     height:15px;
@@ -5739,7 +5739,7 @@ div.rangeSelectorDiv
 
 .sims-ExcelDateCheckList .checkbox
 {
-    background-image:url('images/controls/excelchecklist/images.png');
+    /*background-image:url('images/controls/excelchecklist/images.png');*/
     background-position: 0px 0px;
     width: 11px;
     height: 11px;
@@ -5790,14 +5790,14 @@ div.rangeSelectorDiv
 
 .sims-ExcelDateCheckList .checklist1 
 {
-    background: url('images/controls/exceldatechecklist/datechecklist.png');
+    /*background: url('images/controls/exceldatechecklist/datechecklist.png');*/
     background-repeat:no-repeat;
     background-position:-1px -1px;
 }
 
 .sims-ExcelDateCheckList .checklist2
 {
-    background: url('images/controls/exceldatechecklist/datechecklist2.png');
+    /*background: url('images/controls/exceldatechecklist/datechecklist2.png');*/
 }
 
 .sims-ExcelDateCheckList .month-inner-div {
@@ -5860,7 +5860,7 @@ div.rangeSelectorDiv
 
 .SIMS-Tree-View-Cont-level-1
 {
-    background-image: url("images/controls/treeView/arrows.png");
+    /*background-image: url("/images/controls/treeView/arrows.png");*/
     background-repeat: no-repeat;
     position: relative;
     width: 16px;
@@ -5871,7 +5871,7 @@ div.rangeSelectorDiv
 
 .SIMS-Tree-View-Cont-parent
 {
-    background-image: url("images/controls/treeView/arrows.png");
+    /*background-image: url("/images/controls/treeView/arrows.png");*/
     background-repeat: no-repeat;
     position: relative;
     width: 16px;
@@ -5882,7 +5882,7 @@ div.rangeSelectorDiv
 
 .SIMS-Tree-View-Cont-parent-closed
 {
-    background-image: url("images/controls/treeView/arrows.png");
+    /*background-image: url("/images/controls/treeView/arrows.png");*/
     background-repeat: no-repeat;
     position: relative;
     width: 16px;
@@ -5892,7 +5892,7 @@ div.rangeSelectorDiv
 
 .SIMS-Tree-View-Cont-level-2
 {
-    background-image: url("images/controls/treeView/arrows.png");
+    /*background-image: url("/images/controls/treeView/arrows.png");*/
     background-repeat: no-repeat;
     position: relative;
     width: 16px;
@@ -5902,7 +5902,7 @@ div.rangeSelectorDiv
 
 .SIMS-Tree-View-Cont-level-3
 {
-    background-image: url("images/controls/treeView/arrows.png");
+    /*background-image: url("/images/controls/treeView/arrows.png");*/
     background-repeat: no-repeat;
     position: relative;
     width: 16px;
@@ -5912,7 +5912,7 @@ div.rangeSelectorDiv
 
 .SIMS-Tree-View-Cont-level-4
 {
-    background-image: url("images/controls/treeView/arrows.png");
+    /*background-image: url("/images/controls/treeView/arrows.png");*/
     background-repeat: no-repeat;
     position: relative;
     width: 16px;
@@ -5923,7 +5923,7 @@ div.rangeSelectorDiv
 .SIMS-Tree-View-Cont-image
 {
     padding-right: 1px;
-    background-image: url("images/controls/treeView/icons.png");
+    /*background-image: url("/images/controls/treeView/icons.png");*/
     background-repeat: no-repeat;
     position: relative;
     width: 16px;
@@ -6062,7 +6062,7 @@ div.rangeSelectorDiv
 .SIMS-RList-View-Cont-outer-body .ui-icon {
     width: 16px;
     height: 16px;
-    background-image: url();
+    /*background-image: url();*/
 }
 
 
@@ -6313,7 +6313,7 @@ div.rangeSelectorDiv
 .ppt-text-pane .bullet{
     height:10px;
     width:10px;
-    background-image: url('images/controls/TextPane/bullet.png');
+    /*background-image: url('images/controls/TextPane/bullet.png');*/
     background-repeat: no-repeat;
     float: left;
     margin-top: 5px;
@@ -6398,7 +6398,7 @@ div.rangeSelectorDiv
     width: 16px;
     height: 15px;
     display:inline-block;
-    background-image: url("images/controls/treeView/arrows.png");
+    /*background-image: url("/images/controls/treeView/arrows.png");*/
     background-repeat: no-repeat;
 }
 .collapsable-heading-control .heading-text
@@ -6436,7 +6436,7 @@ div.rangeSelectorDiv
 .sims-DropDownPercentageWidth .PercentageWidthDropdownButton
 {
     float:right;
-    background-image:url("images/controls/DropDownPercentageWidth/DropdDownButton.png");
+    /*background-image:url("/images/controls/DropDownPercentageWidth/DropdDownButton.png");*/
     height:14px;
     width:19px;
 }
@@ -6488,7 +6488,7 @@ sims-DropDownPercentageWidth. input.PercentageWidthInput::selection {
 .sims-DropDownPercentageWidth .PercentageWidthInput + .PercentageWidthDropdownButton
 {
     float:right;
-    background-image:url("images/controls/DropDownPercentageWidth/DropdDownButton.png");
+    /*background-image:url("/images/controls/DropDownPercentageWidth/DropdDownButton.png");*/
     height:14px;
     width:17px;
     cursor:default;
@@ -6496,7 +6496,7 @@ sims-DropDownPercentageWidth. input.PercentageWidthInput::selection {
 
 .sims-DropDownPercentageWidth:hover > .PercentageWidthDropdownButton
 {
-    background-image:url("images/controls/DropDownPercentageWidth/DropdDownButtonhover.png");
+    /*background-image:url("/images/controls/DropDownPercentageWidth/DropdDownButtonhover.png");*/
 }
 
 .sims-DropDownPercentageWidth {
@@ -6722,7 +6722,7 @@ group-sort_radio-dd group-sort_radio-dd-focussed{
 	width: 20px;
 	height: 100%;
 	display: inline-block;
-	background-image:url("images/controls/GroupSortRadioDropdown/Arrow.png");
+	/*background-image:url("/images/controls/GroupSortRadioDropdown/Arrow.png");*/
 	border:1px solid transparent;
 	position: relative;
 	left:-2px;
@@ -6735,7 +6735,7 @@ group-sort_radio-dd group-sort_radio-dd-focussed{
 	position: relative;
 	top:-5px;
 	left:-2px;
-	background-image:url("images/controls/GroupSortRadioDropdown/RadioDD.png");
+	/*background-image:url("/images/controls/GroupSortRadioDropdown/RadioDD.png");*/
 	border:1px solid #c6c6c6;
 }
 
@@ -6794,7 +6794,7 @@ group-sort_radio-dd group-sort_radio-dd-focussed{
     width: 20px;
     height: 100%;
     display: inline-block;
-    background-image:url("images/controls/GroupSortRadioDropdown/Arrow.png");
+    /*background-image:url("/images/controls/GroupSortRadioDropdown/Arrow.png");*/
     border:1px solid transparent;
     position: relative;
     left:-2px;
@@ -6807,7 +6807,7 @@ group-sort_radio-dd group-sort_radio-dd-focussed{
     position: absolute;
     top:-38px;
     left: 477px;
-    background-image:url("images/controls/GroupSortTotalDropdown/withTotal.png");
+    /*background-image:url("/images/controls/GroupSortTotalDropdown/withTotal.png");*/
     border:1px solid #c6c6c6;
 }
 
@@ -7084,9 +7084,9 @@ html
 .SIMS .ribbon .office-control.ctrl-checkbox{margin:8px 2px;}
 .SIMS .ribbon .check-box-label{display:inline-block;padding:0px 5px;font-size:9pt;font-family:Segoe UI;height:13px;vertical-align:text-bottom;background-color:white;}
 .SIMS .ribbon .check-box{display:inline-block;height:13px;width:13px;padding:0px 0px;}
-.SIMS .ribbon .check-box-unchecked{background:url("../img/Checkbox.png") 0 -14px no-repeat}
+/*.SIMS .ribbon .check-box-unchecked{background:url("../img/Checkbox.png") 0 -14px no-repeat}
 .SIMS .ribbon .check-box-checked{background:url("../img/Checkbox.png") 0 -28px no-repeat}
-.SIMS .ribbon .check-box-checked:active{background:url("../img/Checkbox.png") -3px -45px no-repeat}
+.SIMS .ribbon .check-box-checked:active{background:url("../img/Checkbox.png") -3px -45px no-repeat}*/
 /*//////////////////////////////////////////////////*/
 .SIMS .ribbon .office-arrow
 {
@@ -7288,7 +7288,7 @@ html
 .SIMS .ribbon .item-type-tablegriddiv:hover{background-color: #ffffff !important;}
 
 .SIMS .ribbon .section-launcher {
-  background-image: url("../img/dialoglauncher.png");
+  /*background-image: url("../img/dialoglauncher.png");*/
   background-position: center center;
   background-repeat: no-repeat;
   float: right;
@@ -7312,7 +7312,7 @@ html
   padding-left: 2px;
 }
 .SIMS .ribbon .combobox-wrapper, .SIMS .SIMS_DocumentArea .combobox-wrapper, .SIMS .chart-comp .combobox-wrapper, .SIMS .chart-comp-v2 .combobox-wrapper, .SIMS .pptTable .combobox-wrapper,  .SIMS .mini-tb-rbn .combobox-wrapper {display:inline-block; z-index: 9993;}
-.SIMS .ribbon .font-dropdown-item-icon{background-image:url(../img/fonticon.png);}
+/*.SIMS .ribbon .font-dropdown-item-icon{background-image:url(RibbonAssets/img/fonticon.png);}*/
 
 .SIMS .ribbon .dropdown-item-icon,.SIMS .chart-comp .dropdown-item-icon, .SIMS .chart-comp-v2 .dropdown-item-icon,.SIMS .excel-word-art .dropdown-item-icon .SIMS .pptTable .dropdown-item-icon , .SIMS .mini-tb-rbn .dropdown-item-icon  {min-width:24px;min-height:24px;display:block; float: left;background-repeat:no-repeat;background-position:center}
 .SIMS .ribbon .dropdown-item-icon.no-icon , .SIMS .chart-comp .dropdown-item-icon.no-icon, .SIMS .chart-comp-v2 .dropdown-item-icon.no-icon{min-width: 0px; width: 0px; padding: 0px;}
@@ -7416,7 +7416,7 @@ html
 .SIMS .ribbon .tooltip-image-div, .SIMS .SIMS_DocumentArea .tooltip-image-div,  .SIMS .pptTable .tooltip-image-div,  .SIMS .mini-tb-rbn .tooltip-image-div {margin:0 auto;}
 .SIMS .ribbon .tooltip-help, .SIMS .SIMS_DocumentArea .tooltip-help, .SIMS .pptTable .tooltip-help, .SIMS .mini-tb-rbn .tooltip-help{border-top:1px solid #e0e0e0;}
 .SIMS .ribbon .tooltip-help-text, .SIMS .SIMS_DocumentArea .tooltip-help-text, .SIMS .pptTable .tooltip-help-text , .SIMS .mini-tb-rbn .tooltip-help-text {color: #497EB3;font-size: 12px;font-weight: bold;}
-.SIMS .ribbon .tooltip-help-icon, .SIMS .SIMS_DocumentArea .tooltip-help-icon{background:url(../img/helpicon.png) no-repeat center;width:16px;height:16px;}
+/*.SIMS .ribbon .tooltip-help-icon, .SIMS .SIMS_DocumentArea .tooltip-help-icon{background:url(RibbonAssets/img/helpicon.png) no-repeat center;width:16px;height:16px;}*/
 .SIMS .ribbon .tooltip-help > *, .SIMS .SIMS_DocumentArea .tooltip-help > *{display:inline-block;vertical-align:middle;margin-right:8px;}
 .SIMS .ribbon .tooltip-nopic .tooltip-image, .SIMS .SIMS_DocumentArea .tooltip-nopic .tooltip-image, .SIMS .pptTable .tooltip-nopic .tooltip-image, .SIMS .mini-tb-rbn .tooltip-nopic .tooltip-image {display:none;}
 .SIMS .ribbon .tooltip-noheader .tooltip-header, .SIMS .SIMS_DocumentArea .tooltip-noheader .tooltip-header, .SIMS .pptTable .tooltip-noheader .tooltip-header, .SIMS .mini-tb-rbn .tooltip-noheader .tooltip-header {display:none;}
@@ -7775,7 +7775,7 @@ html
     border: 1px solid #b7b7b7;
 }
 
-.SIMS .ribbon .gallery-button-up
+/*.SIMS .ribbon .gallery-button-up
 {
     background: url("../img/GalleryControlButton.png") no-repeat scroll 0 0 transparent;
 }
@@ -7788,7 +7788,7 @@ html
 .SIMS .ribbon .gallery-button-expand
 {
     background: url("../img/GalleryControlButton.png") no-repeat scroll 0 -40px transparent;
-}
+}*/
 
 
 .SIMS .ribbon .table-style-gallery .gallery-inner-div
@@ -7813,7 +7813,7 @@ html
 
 .SIMS .ribbon .tooltip ul
 {
-    list-style: inside url("../img/tooltip_bullet.jpg") disc;
+    /*list-style: inside url("../img/tooltip_bullet.jpg") disc;*/
 	line-height: 12px;  /*Line height was used as 12px ideally it should have been 15px and also a singlr <br> tag should be used but through out the ribbon 2 <br> have been used which is not as per live.*/
 }
 
@@ -7871,7 +7871,7 @@ html
     height: 100%;
     width: 22px;
     display: inline-block;
-    background-image: url("../img/vertical.png");
+    /*background-image: url("../img/vertical.png");*/
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -7880,7 +7880,7 @@ html
     height: 100%;
     width: 10px;
     display: inline-block;
-    background-image: url("../img/diagonal.png");
+    /*background-image: url("../img/diagonal.png");*/
     background-position: center center;
     background-repeat: no-repeat;
 }
@@ -7973,13 +7973,13 @@ html
     float: left;
     height: 22px;
     width: 22px;
-    background: url(../img/tell_me_image.png);
+    /*background: url(../img/tell_me_image.png);*/
     background-repeat: no-repeat;
     background-position: 6px 6px;
 }
 
 .SIMS.Office2016 .ribbon .tellMeSearchBox:hover .tellMeBoxImage {
-    background: url(../img/tell_me_hover.png);
+    /*background: url(../img/tell_me_hover.png);*/
     background-repeat: no-repeat;
     background-position: 6px 6px;
 }
@@ -8026,7 +8026,7 @@ html
     float: left;
     height: 23px;
     width: 23px;
-    background: url(../img/user_img.png);
+    /*background: url(../img/user_img.png);*/
     background-repeat: no-repeat;
     background-position: 0px 3px;
 }
@@ -8151,7 +8151,7 @@ html
 /*Ribbon commom collapse button starts here*/
 .SIMS .excel.ribbon .ribbon-tab-container .collapse-button
 {
-    background: url(../img/collapse_icon.png);
+    /*background: url(../img/collapse_icon.png);*/
     background-repeat: no-repeat;
     background-color: #FFFFFF;
     height: 18px;

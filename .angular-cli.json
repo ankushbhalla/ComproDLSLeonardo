@@ -10,7 +10,8 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "RibbonAssets"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -22,6 +23,9 @@
         "styles.css"
       ],
       "scripts": [
+        "libs/styles.bundle.js",
+        "libs/ribbonAll.js",
+        "libs/scripts.bundle.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

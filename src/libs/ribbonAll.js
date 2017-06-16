@@ -9655,58 +9655,65 @@ var stringToClass = function (str) {
     return fn;
 };
 
-var Polyfills = {};
-
-
-// Array.prototype.find = function (key, val) {
-//     var results = [];
-//     for (var i = 0; i < this.length; i++) {
-//         var currentEl = this[i];
-//         if (currentEl[key] == val) {
-//             results.push(currentEl);
-//         }
-//     }
-//     return results;
-// };
-
-// Array.prototype.findSingle = function (key, val) {
-//     var results = this.find(key, val);
-//     if (results.length > 1) {
-//         //throw "Query returned more than one elements.";
-//         GlobalLog("Query returned more than one elements.");
-//         return results[0];
-//     }
-//     else {
-//         return results[0];
-//     }
-// };
-
-// String.prototype.contains = function (text) {
-//     return this.indexOf(text) !== -1;
-// };
-
-// String.prototype.startsWith = function (text) {
-//     return this.indexOf(text) === 0;
-// };
-
-// String.prototype.endsWith = function(suffix) {
-//     return this.indexOf(suffix, this.length - suffix.length) !== -1;
-// };
-
-
-Polyfills.removeSpaces = function (string) {
+var Polyfills = {string:{}};
+Polyfills.string.removeSpaces = function (string) {
     return string.replace(/\s/g, '');
 };
-
-Polyfills.isEmpty = function (string) {
+Polyfills.string.isEmpty = function (string) {
     return string == "";
 };
 
-// if (!String.prototype.trim) {
-//     String.prototype.trim = function () {
-//         return this.replace(/^\s+|\s+$/g, '');
-//     };
-// }
+/*
+Array.prototype.find = function (key, val) {
+    var results = [];
+    for (var i = 0; i < this.length; i++) {
+        var currentEl = this[i];
+        if (currentEl[key] == val) {
+            results.push(currentEl);
+        }
+    }
+    return results;
+};
+
+Array.prototype.findSingle = function (key, val) {
+    var results = this.find(key, val);
+    if (results.length > 1) {
+        //throw "Query returned more than one elements.";
+        GlobalLog("Query returned more than one elements.");
+        return results[0];
+    }
+    else {
+        return results[0];
+    }
+};
+
+String.prototype.contains = function (text) {
+    return this.indexOf(text) !== -1;
+};
+
+String.prototype.startsWith = function (text) {
+    return this.indexOf(text) === 0;
+};
+
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+
+
+String.prototype.removeSpaces = function () {
+    return this.replace(/\s/g, '');
+};
+
+String.prototype.isEmpty = function () {
+    return this == "";
+};
+
+if (!String.prototype.trim) {
+    String.prototype.trim = function () {
+        return this.replace(/^\s+|\s+$/g, '');
+    };
+}
+*/
 
 namespace('SIMS');
 namespace("SIMS.Objects");
@@ -11475,9 +11482,9 @@ OfficeUIUtls.TooltipHelpers.GetToolTip = function (xToolTip) {
     var toolTipClasses = OfficeUIUtls.TooltipHelpers.TranslateTooltipTypeIntoClasses(tooltipType);
     var templateMarkup = '<div class="tooltip ' + toolTipClasses + 'tooltip-' + tooltipType.toLowerCase() + '"><div class="tooltip-header">${header}</div><div class="tooltip-image"><div class="tooltip-image-div"{{if img}} style="background-image:url(${img.src});width:${img.wd};height:${img.ht};background-position:${img.imgcrop.left} ${img.imgcrop.top}"{{/if}} /></div><div class="tooltip-body">{{html body}}</div><div class="tooltip-help"><div class="tooltip-help-icon"/><div class="tooltip-help-text">{{if helptext}}${helptext}{{else}}Tell me more{{/if}}</div></div></div>';
     templateMarkup = templateMarkup.replace(/[\n\r\t]/g, "");
-    var $template = jQuery.template('tooltipTemplate', templateMarkup);
+    var $template = $.template('tooltipTemplate', templateMarkup);
     var jsonToolTip = xToolTip.convertToJSON();
-    var $tooltip = jQuery.tmpl('tooltipTemplate', jsonToolTip);
+    var $tooltip = $.tmpl('tooltipTemplate', jsonToolTip);
 
     //Positioning
     var tooltipPosition = $(xToolTip).attr('position');
@@ -11579,7 +11586,7 @@ OfficeUIUtls.TooltipHelpers.AttachTooltipFunctionality = function ($externallyPa
     }, hideTooltip);
 };
 
-jQuery.fn.addTooltip = function (xToolTip) {
+$.fn.addTooltip = function (xToolTip) {
 
     if (!($(this).find(".tooltip").length > 0)) {
         var showtooltip = OfficeUIUtls.TooltipHelpers.ShowTooltip;
@@ -23735,7 +23742,7 @@ ItemGenerators.ItemBase = Base.extend({
     },
     AttachData: function ($item, $itemXml, dataId) {
         var eventId = $itemXml.attr(dataId);
-        if (eventId != null && !Polyfills.isEmpty(eventId)) {
+        if (eventId != null && !Polyfills.string.isEmpty(eventId)) {
             $item.data(dataId, eventId);
         }
     },
@@ -24090,12 +24097,12 @@ ItemGenerators.IconTextDesc = ItemGenerators.IconAndText.extend({
     },
     getValue: function ($itemXml) {
         var text = $itemXml.attr('text');
-        text = text != null && !text.isEmpty() ? text : "";
+        text = text != null && !Polyfills.string.isEmpty(text) ? text : "";
         return $('<div class="dropdown-item-value" unselectable="on"><b>' + text + '</b></div>');
     },
     getDesc: function ($itemXml) {
         var desc = $itemXml.attr('desc');
-        desc = desc != null && !desc.isEmpty() ? desc : "";
+        desc = desc != null && !Polyfills.string.isEmpty(desc) ? desc : "";
         return $('<div class="dropdown-item-desc" unselectable="on">' + desc + '</div>');
     }
 });
@@ -24118,26 +24125,6 @@ ItemGenerators2016.IconTextDesc = ItemGenerators.IconTextDesc.extend({
 });
                   
   
-namespace("ItemGenerators");
-
-ItemGenerators.Separator = ItemGenerators.ItemBase.extend({
-    getItem: function (xItem, type) {
-        var $itemXml = $(xItem);
-        var separatormode = $itemXml.attr('mode');
-        var cssclass;
-        if (separatormode == 'solid') {
-            cssclass = ' dropdown-item-text-separator';
-        }
-        else if (separatormode == 'dashed') {
-            cssclass = ' dropdown-item-text-separator-dashed';
-        }
-        var itemDiv = UIUtils.getUnselectableDiv('', cssclass);
-        return itemDiv;
-        //SIMS.Controls.Factory
-        //$iconPart.addClass('office-hover-default');
-        //return $iconPart;
-    }
-});
 namespace("ItemGenerators");
 ItemGenerators.Text = ItemGenerators.ItemBase.extend();
 namespace("ItemGenerators");
@@ -25140,12 +25127,12 @@ ControlGenerators.ControlBase = function () {
 
         //Adding custom classname
         var className = $controlXml.attr("classname");
-        if (className != null && !Polyfills.isEmpty(className)) {
+        if (className != null && !Polyfills.string.isEmpty(className)) {
             $control.addClass(className);
         }
 
         var ident = $controlXml.attr("identifier");
-        if (ident != null && !Polyfills.isEmpty(ident)) {
+        if (ident != null && !Polyfills.string.isEmpty(ident)) {
             $control.addClass(ident);
         }
 
@@ -25281,14 +25268,14 @@ ControlGenerators.ControlBase.prototype.CheckHidden = function () {
 
 ControlGenerators.ControlBase.prototype.AttachEventId = function () {
     var eventId = this.$controlXml.attr('eventId');
-    if (eventId != null && !Polyfills.isEmpty(eventId)) {
+    if (eventId != null && !Polyfills.string.isEmpty(eventId)) {
         this.$control.data('eventId', eventId);
     }
 };
 
 ControlGenerators.ControlBase.prototype.AttachData = function ($controlXml,$control,dataName) {
     var dataId = $controlXml.attr(dataName);
-    if (dataId != null && !Polyfills.isEmpty(dataId)) {
+    if (dataId != null && !Polyfills.string.isEmpty(dataId)) {
         $control.data(dataName, dataId);
     }
 };
@@ -25398,9 +25385,9 @@ ControlGenerators.ControlBase.prototype.AttachTooltipFunctionality = function ($
 ControlGenerators.ControlBase.prototype.GetToolTip = function (xToolTip) {
     var templateMarkup = '<div class="tooltip"><div class="tooltip-header">${header}</div><div class="tooltip-body">{{html body}}</div></div>';
     templateMarkup = templateMarkup.replace(/[\n\r\t]/g, "");
-    var $template = jQuery.template('tooltipTemplate', templateMarkup);
+    var $template = $.template('tooltipTemplate', templateMarkup);
     var jsonToolTip = xToolTip.convertToJSON();
-    var $tooltip = jQuery.tmpl('tooltipTemplate', jsonToolTip);
+    var $tooltip = $.tmpl('tooltipTemplate', jsonToolTip);
     return $tooltip;
 };
 ControlGenerators.ControlBase.prototype.showTooltip = function () {
@@ -25530,7 +25517,7 @@ var ControlGetters = {
         var w = $control.outerWidth(), h = $control.outerHeight(), controlX = $control.offset().left;
         var opts = bLookAlongXY ? { checkHoriz: true, checkVert: false, tolerance: 2} : null;
         var index = $allItems.index($control);
-        var func = bFarthest ? jQuery.furthest : jQuery.nearest;
+        var func = bFarthest ? $.furthest : $.nearest;
         var $filteredItems;
 
         var returnObj = { bounced: false };
@@ -25538,7 +25525,7 @@ var ControlGetters = {
         //At the beginning of a list
         if (index === 0) {
             returnObj.bounced = true;
-            returnObj.item = jQuery.furthest({ y: $control.offset().top + ($control.outerHeight() / 2), x: controlX }, $allItems, opts).first();
+            returnObj.item = $.furthest({ y: $control.offset().top + ($control.outerHeight() / 2), x: controlX }, $allItems, opts).first();
             return returnObj;
         }
 
@@ -25548,7 +25535,7 @@ var ControlGetters = {
 
         //At the beginning of a list
         if (returnObj.item.length === 0 || returnObj.item.offset().left > controlX) {
-            returnObj.item = jQuery.furthest({ y: $control.offset().top + ($control.outerHeight() / 2), x: controlX }, $allItems, opts).first();
+            returnObj.item = $.furthest({ y: $control.offset().top + ($control.outerHeight() / 2), x: controlX }, $allItems, opts).first();
             returnObj.bounced = true;
         }
 
@@ -25566,19 +25553,19 @@ var ControlGetters = {
         //Beginning of a list
         if (index === 0) {
             returnObj.bounced = true;
-            returnObj.item = jQuery.furthest(pt, $allItems, opts).first();
+            returnObj.item = $.furthest(pt, $allItems, opts).first();
             return returnObj;
         }
         $filteredItems = $($allItems.slice(0, index));
         var w = $control.outerWidth(), h = $control.outerHeight();
 
-        var func = bFarthest ? jQuery.furthest : jQuery.nearest;
+        var func = bFarthest ? $.furthest : $.nearest;
 
         returnObj.item = func(pt, $filteredItems, opts).first();
 
         //Beginning of a list
         if (returnObj.item.length === 0 || returnObj.item.offset().top > controlY) {
-            returnObj.item = jQuery.furthest(pt, $allItems, opts).first();
+            returnObj.item = $.furthest(pt, $allItems, opts).first();
             returnObj.bounced = true;
         }
 
@@ -25587,7 +25574,7 @@ var ControlGetters = {
     getControlImmediatelyToTheRightOf: function ($control, $allItems, bLookAlongXY, bFarthest) {
         var index = $allItems.index($control);
         var opts = bLookAlongXY ? { checkHoriz: true, checkVert: false, tolerance: 2} : null;
-        var func = bFarthest ? jQuery.furthest : jQuery.nearest;
+        var func = bFarthest ? $.furthest : $.nearest;
         var w = $control.outerWidth(), h = $control.outerHeight(), controlX = $control.offset().left;
         var $filteredItems;
 
@@ -25595,7 +25582,7 @@ var ControlGetters = {
 
         //At the end of a list
         if (index == $allItems.length - 1) {
-            returnObj.item = jQuery.furthest({
+            returnObj.item = $.furthest({
                 y: $control.offset().top + ($control.outerHeight() / 2),
                 x: $control.offset().left + $control.outerWidth()
             }, $allItems, opts).first();
@@ -25612,7 +25599,7 @@ var ControlGetters = {
 
         //At the end of a list
         if (returnObj.item.length === 0 || returnObj.item.offset().left < controlX) {
-            returnObj.item = jQuery.furthest({
+            returnObj.item = $.furthest({
                 y: $control.offset().top + ($control.outerHeight() / 2),
                 x: $control.offset().left + $control.outerWidth()
             }, $allItems, opts).first();
@@ -25625,7 +25612,7 @@ var ControlGetters = {
         var w = $control.outerWidth(), h = $control.outerHeight();
         var opts = bLookAlongXY ? { checkHoriz: false, checkVert: true, tolerance: 2} : null;
         var controlX = $control.offset().left, controlY = $control.offset().top, controlH = $control.outerHeight(), controlW = $control.outerWidth();
-        var func = bFarthest ? jQuery.furthest : jQuery.nearest;
+        var func = bFarthest ? $.furthest : $.nearest;
         debugger;
         var index = $allItems.index($control);
         var $filteredItems;
@@ -25634,7 +25621,7 @@ var ControlGetters = {
 
         //At the end of a list
         if (index == $allItems.length - 1) {
-            returnObj.item = jQuery.furthest({
+            returnObj.item = $.furthest({
                 y: controlY + controlH,
                 x: controlX
             }, $allItems, opts).first();
@@ -25651,7 +25638,7 @@ var ControlGetters = {
 
         //At the end of a list
         if (returnObj.item.length === 0 || returnObj.item.offset().top < controlY) {
-            $reqItem = jQuery.furthest({
+            $reqItem = $.furthest({
                 y: controlY + controlH,
                 x: controlX
             }, $allItems, opts).first();
@@ -27423,7 +27410,7 @@ function getLabel(textXml) {
 //DOWN ARROW
 //Leonardo Start
 function getDownArrow() {
-    var eleAttrs = [{ name: "src", value: "src/libs/Ribbon/img/EwaCommon.png" }, //Changing Image Path
+    var eleAttrs = [{ name: "src", value: "RibbonAssets/img/EwaCommon.png" }, //Changing Image Path
                     { name: "width", value: "5px" },
                     { name: "height", value: "3px" },
                     { name: "top", value: "-133px" },
@@ -27435,7 +27422,7 @@ function getDownArrow() {
 
 //Right ARROW
 function getRightArrow() {
-    var eleAttrs = [{ name: "src", value: "src/libs/Ribbon/img/EwaCommon.png" },//changing Image Path
+    var eleAttrs = [{ name: "src", value: "RibbonAssets/img/EwaCommon.png" },//changing Image Path
                     { name: "width", value: "4px" },
                     { name: "height", value: "7px" },
                     { name: "top", value: "-113px" },
@@ -28284,7 +28271,7 @@ SIMS.Manipulators.RibbonControlManipulatorFactory = Base.extend({
 
             var headText = $($contextualTabs[index]).data("head-text") || "";
             $contextualTabHead.text(headText.toUpperCase());
-            var headNameMin = Polyfills.removeSpaces(headText).replace("&", "").toLowerCase();
+            var headNameMin = Polyfills.string.removeSpaces(headText).replace("&", "").toLowerCase();
             $contextualTabHead.addClass("contextual-head-" + headNameMin);
             $contextualTabHead.data("tabclass", $($contextualTabs[index]).data("tabclass"));
 
@@ -28507,7 +28494,7 @@ SIMS.Manipulators.RibbonControlManipulatorFactory = Base.extend({
 
         //Adding tab body
 
-        var $tabContainer = UIUtils.getUnselectableDiv("ribbon-tab-container-" + Polyfills.removeSpaces(tabName).replace("&", "").toLowerCase(), "ribbon-tab-container");
+        var $tabContainer = UIUtils.getUnselectableDiv("ribbon-tab-container-" + Polyfills.string.removeSpaces(tabName).replace("&", "").toLowerCase(), "ribbon-tab-container");
 
        // $tabContainer.data('tabxml',tabXml);
         this.$ribbon.append($tabContainer);
@@ -28543,7 +28530,7 @@ SIMS.Manipulators.RibbonControlManipulatorFactory = Base.extend({
     this.getTabHeader = function(tabXml) {
         var type = $(tabXml).attr('type');
         var tabName = $(tabXml).attr("name");
-        var tabNameMin = Polyfills.removeSpaces(tabName).replace("&", "").toLowerCase();
+        var tabNameMin = Polyfills.string.removeSpaces(tabName).replace("&", "").toLowerCase();
         var $tabHead = UIUtils.getUnselectableGenericElement("li", "", "tab-header");
         if (type != null && type.length > 0) {
             $tabHead.addClass('tab-header-' + type.toLowerCase());
@@ -28879,7 +28866,7 @@ SIMS.Manipulators.RibbonControlManipulatorFactory = Base.extend({
 
         if ($(tabXml).attr("name") != undefined) {
 
-            var tabName = Polyfills.removeSpaces($(tabXml).attr("name")).replace("&", "").toLowerCase();
+            var tabName = Polyfills.string.removeSpaces($(tabXml).attr("name")).replace("&", "").toLowerCase();
             var $tabHead = this.$ribbon.find(".tab-header-" + tabName);
 
             //////////////////////////////////////////////////////////////////////////
@@ -28924,7 +28911,7 @@ SIMS.Manipulators.RibbonControlManipulatorFactory = Base.extend({
         if(tabName)
         {
             SIMS.Components.Common.RibbonCurrentTabName = tabName;
-            tabName =  Polyfills.removeSpaces($tabXml.attr("name")).replace("&", "").toLowerCase();
+            tabName =  Polyfills.string.removeSpaces($tabXml.attr("name")).replace("&", "").toLowerCase();
             var $tabContainer = this.getTabContainer(tabName);
             
             if($tabContainer.children().length==0) {// tab has not been created yet
