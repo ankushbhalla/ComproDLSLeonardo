@@ -77,8 +77,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.VIEWIDs = {
     DEFAULT: "",
     GRID: "Grid",
-    TOPBAR: "Topbar",
-    RIBBON: "Ribbon"
+    TOPBAR: "Topbar"
 };
 exports.Events = {
     ViewEvents: {
@@ -3610,7 +3609,7 @@ this.el.style.left='auto';this.el.style.top='auto';addClass(this.el,'is-hidden')
  *
  * @returns `String` or `Object`
  */ZeroClipboard.prototype.getData=function(){if(!_clientMeta[this.id]){throw new Error("Attempted to get pending clipboard data from a destroyed ZeroClipboard client instance");}return ZeroClipboard.getData.apply(this,_args(arguments));};if(typeof define==="function"&&define.amd){define(function(){return ZeroClipboard;});}else if((typeof module==="undefined"?"undefined":_typeof(module))==="object"&&module&&_typeof(module.exports)==="object"&&module.exports){module.exports=ZeroClipboard;}else{window.ZeroClipboard=ZeroClipboard;}})(function(){return this||window;}());},{}]},{},[141,64,66,67,65,68,111,112,113,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,100,101,102,103,104,106,107,108,109,110,114,115,116,117,135,136,137,138,120,121,122,123,124,125,32,36,33,34,41,35,37,38,39,40,142,143,144,145,146,217,218,211,212,213,147,148,149,150,151,152,154,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,187,188,189,190,191,192,193,194,195,196,198,199,200,201,202,203,204,205,206,207,208,209,210,214,215,216,219,220,222,223,224,225,226])(141);});
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(21), __webpack_require__(19)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(20), __webpack_require__(18)))
 
 /***/ }),
 /* 3 */
@@ -3620,7 +3619,7 @@ this.el.style.left='auto';this.el.style.top='auto';addClass(this.el,'is-hidden')
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var spreadsheetController_1 = __webpack_require__(12);
-var TEMPLATE = '<div id="spreadSheet" class="DLSLeonardo"><div id="buttonGroup"><button id="hintBtn">Hint</button><button id="checkMyAnswer">Check My Answer</button><button id="exportConfigBtn">Export Config</button><button id="exportCorrectDataBtn">Export Correct Data</button></div><div id="SIMArea" style="width:100%"></div><div class="formulaToolbar"><input type="text" id="nameBox" spellcheck="false"/><div class="formulaBarContainer"><button id="fx">fx</button><input type="text" id="formulaBar" spellcheck="false"/></div></div><div id="grid"></div></div>';
+var TEMPLATE = '<div id="spreadSheet" class="DLSLeonardo"><div id="buttonGroup"><button id="hintBtn">Hint</button><button id="checkMyAnswer">Check My Answer</button><button id="exportConfigBtn">Export Config</button><button id="exportCorrectDataBtn">Export Correct Data</button></div><div class="formulaToolbar"><input type="text" id="nameBox" spellcheck="false"/><div class="formulaBarContainer"><button id="fx">fx</button><input type="text" id="formulaBar" spellcheck="false"/></div></div><div id="grid"></div></div>';
 var LeoIntegrationLayer = (function () {
     function LeoIntegrationLayer() {
         this.spreadsheets = {};
@@ -4092,8 +4091,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var eventController_1 = __webpack_require__(13);
 var dataModel_1 = __webpack_require__(11);
 var grid_1 = __webpack_require__(14);
-var ribbon_1 = __webpack_require__(15);
-var topBar_1 = __webpack_require__(16);
+var topBar_1 = __webpack_require__(15);
 var hints_1 = __webpack_require__(10);
 var checkAnswer_1 = __webpack_require__(7);
 var exportdata_1 = __webpack_require__(9);
@@ -4105,7 +4103,6 @@ var SpreadsheetController = (function () {
         this.model = new dataModel_1.DataModel(config, this.eventController);
         this.grid = new grid_1.Grid(container.querySelector('#grid'), config, this.model, this.eventController);
         this.topBar = new topBar_1.TopBar(container.querySelector(".formulaToolbar"), this.model, this.eventController);
-        this.ribbon = new ribbon_1.Ribbon(container.querySelector('#SIMArea'), this.eventController);
         this.hints = new hints_1.Hints(container.querySelector('#hintBtn'), config.hints, this.model, this, this.getDataAtCell);
         this.checkAnswer = new checkAnswer_1.CheckAnswer(container.querySelector('#checkMyAnswer'), this.model, this.eventController, correctData, this, this.getUserData);
         this.exportData = new exportdata_1.ExportData(container.querySelector('#exportConfigBtn'), container.querySelector("#exportCorrectDataBtn"), this.model);
@@ -4259,7 +4256,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var enums_1 = __webpack_require__(0);
 var baseView_1 = __webpack_require__(1);
-var hotWrapper_1 = __webpack_require__(17);
+var hotWrapper_1 = __webpack_require__(16);
 var Grid = (function (_super) {
     __extends(Grid, _super);
     function Grid(container, config, dataModel, eventController) {
@@ -4436,61 +4433,6 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var enums_1 = __webpack_require__(0);
 var baseView_1 = __webpack_require__(1);
-var Ribbon = (function (_super) {
-    __extends(Ribbon, _super);
-    function Ribbon(ribbonContainer, eventController) {
-        var _this = _super.call(this) || this;
-        _this.ribbonContainer = ribbonContainer;
-        _this.eventController = eventController;
-        _this.viewId = enums_1.VIEWIDs.RIBBON;
-        _this.initializeRibbon();
-        return _this;
-    }
-    Ribbon.prototype.initializeRibbon = function () {
-        namespace("SIMS.Objects");
-        namespace("SIMS.Objects.DOMElements");
-        namespace("SIMS.Components2016.Excel");
-        var obj = {
-            SendMessageToComponents: function (evtArgs, logevents) {
-                console.log(evtArgs);
-            }
-        };
-        SIMS.Objects.Utils = new SIMS.Common.UtilityFunctions();
-        SIMS.Objects.DOMElements.SIMArea = jQuery(this.ribbonContainer);
-        REGISTER_MSG("COMP_ACTION", obj, obj.SendMessageToComponents);
-        var compJS = new SIMS.Components2016.Excel.Ribbon();
-        var compInfo = { "@id": "1", "@mode": "new", "sizeandpos": { "attr": [{ "@name": "left", "@value": "0" }, { "@name": "top", "@value": "0" }, { "@name": "width", "@value": "*" }, { "@name": "height", "@value": "112" }] }, "initialattrs": { "attr": [{ "@name": "APP", "@value": "excel" }, { "@name": "RIBBON_PATH", "@value": "Ribbon/2016Ribbon/excel-ribbon.xml" }, { "@name": "FONT_NAME", "@value": "Calibri light" }, { "@name": "BOTTOM_ALIGN", "@value": "true" }, { "@name": "CENTER_ALIGN", "@value": "true" }, { "@name": "FONT_SIZE", "@value": "18" }, { "@name": "MERGE_AND_CENTER", "@value": "true" }] }, "events": { "event": [{ "@id": "51", "@desc": "Insert Cells", "validate": [{ "@followup": "3", "comp": { "@id": "2", "@validation-set": "Selected_cell1" } }, { "@followup": "2", "comp": { "@id": "2", "@validation-set": "Selected_cell2" } }] }, { "@id": "52", "@desc": "click Insert Sheet Rows.", "validate": { "@followup": "3", "@operator": "any", "comp": [{ "@id": "2", "@validation-set": "Selected_cell2" }, { "@id": "2", "@validation-set": "Selected_cell1" }] } }, { "@id": "82", "@desc": "Cells group Insert", "validate": { "@followup": "3", "comp": { "@id": "2", "@validation-set": "Selected_cell1" } } }] }, "compName": "SIMS.Components.Excel.Ribbon", "className": "SIMS.Components2016.Excel.Ribbon", "compType": "default", "taskbarImage": {} };
-        compJS.AddComponentUI(compInfo, "<div class='compDiv SIMS_Ribbon_Excel' id='1' tabindex='1'></div>");
-        compJS.Initialize(compInfo);
-        compJS.SetCompState(compInfo); // sizeandpos
-        compJS.ShowComponent(compInfo["@id"], true, compInfo); //display true
-        compJS.UpdateComponentState(compInfo, "default"); //set attriubte
-        compJS.GenerateHTML();
-    };
-    return Ribbon;
-}(baseView_1.BaseView));
-exports.Ribbon = Ribbon;
-
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var enums_1 = __webpack_require__(0);
-var baseView_1 = __webpack_require__(1);
 var TopBar = (function (_super) {
     __extends(TopBar, _super);
     function TopBar(formulaToolbar, dataModel, eventController) {
@@ -4580,13 +4522,13 @@ exports.TopBar = TopBar;
 
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var Autofillformula = __webpack_require__(22);
+var Autofillformula = __webpack_require__(21);
 var hotWrapper = (function () {
     function hotWrapper(config, gridRef) {
         this.config = config;
@@ -4908,8 +4850,8 @@ exports.hotWrapper = hotWrapper;
 
 
 /***/ }),
-/* 18 */,
-/* 19 */
+/* 17 */,
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5102,8 +5044,8 @@ process.umask = function () {
 };
 
 /***/ }),
-/* 20 */,
-/* 21 */
+/* 19 */,
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5133,7 +5075,7 @@ try {
 module.exports = g;
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

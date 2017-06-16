@@ -14,7 +14,7 @@ export class WorkspaceComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
-    // Leonardo.scripts.add(this.leoHost.nativeElement, this.solutionData.config, this.solutionData.correctData);
+    Leonardo.scripts.add(this.leoHost.nativeElement, this.solutionData.config, this.solutionData.correctData);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
