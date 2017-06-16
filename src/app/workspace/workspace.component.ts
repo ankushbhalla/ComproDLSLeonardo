@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 declare var Leonardo: any;
 
@@ -7,9 +7,8 @@ declare var Leonardo: any;
   templateUrl: './workspace.component.html',
   styleUrls: ['./workspace.component.scss']
 })
-export class WorkspaceComponent implements OnInit, OnChanges {
+export class WorkspaceComponent implements OnInit {
   @Input() solutionData: any;
-  @Input() checkAnswerClicked: boolean;
   @ViewChild('leoHost') leoHost: ElementRef;
   constructor() { }
 
@@ -17,10 +16,11 @@ export class WorkspaceComponent implements OnInit, OnChanges {
     Leonardo.scripts.add(this.leoHost.nativeElement, this.solutionData.config, this.solutionData.correctData);
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes["checkAnswerClicked"].currentValue === true) {
-      Leonardo.scripts.checkAnswer(this.leoHost.nativeElement);
-      this.checkAnswerClicked = false;
-    }
+  checkAnswer(){
+    Leonardo.scripts.checkAnswer(this.leoHost.nativeElement);
+  }
+
+  displayHint(){
+    Leonardo.scripts.displayHint(this.leoHost.nativeElement);
   }
 }

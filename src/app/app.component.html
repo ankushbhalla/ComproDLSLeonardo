@@ -15,8 +15,8 @@
       <app-question-box class="questionWrapper col-md-12" [questionData]='this.questionData'></app-question-box>
     </div>
     <div class="split-pane-content-secondary">
-      <app-workspace [(checkAnswerClicked)]="this.checkAnswerClicked" class="workspaceWrapper col-md-12" [solutionData]='this.solutionData'></app-workspace>
+      <app-workspace #workspace class="workspaceWrapper col-md-12" [solutionData]='this.solutionData'></app-workspace>
     </div>
   </vertical-split-pane>
 </div>
-<app-navigator (checkAnswer)="handleCompEvents($event)" class="navigatorWrapper"></app-navigator>
+<app-navigator (navEvent)="handleCompEvents($event)" class="navigatorWrapper"></app-navigator>

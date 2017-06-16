@@ -6,14 +6,18 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./navigator.component.scss']
 })
 export class NavigatorComponent implements OnInit {
-  @Output() checkAnswer: EventEmitter<Object> = new EventEmitter();
+  @Output() navEvent: EventEmitter<Object> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
   checkMyAnswer(){
-    this.checkAnswer.emit({eventId:"CHECK_MY_ANSWER_CLICKED"});
+    this.navEvent.emit({eventId:"CHECK_MY_ANSWER_CLICKED"});
+  }
+
+  displayHint(){
+    this.navEvent.emit({eventId:"HINT_CLICKED"});
   }
 
 }

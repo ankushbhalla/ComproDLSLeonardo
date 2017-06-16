@@ -7,15 +7,14 @@ declare var document;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  @ViewChild('contentWrapper') contentWrapper: ElementRef;
+  @ViewChild('contentWrapper') contentWrapper;
+  @ViewChild('workspace') workspace;
   questionData: any;
   solutionData: any;
-  checkAnswerClicked: boolean;
 
   constructor() {
     this.questionData = configData[0]["question"];
     this.solutionData = configData[0]["solution"];
-    this.checkAnswerClicked = false;
   }
 
   ngOnInit() {
@@ -31,13 +30,18 @@ export class AppComponent {
 
   handleCompEvents($event) {
     let eventMap = {
-      "CHECK_MY_ANSWER_CLICKED": this.checkAnswer.bind(this)
+      "CHECK_MY_ANSWER_CLICKED": this.checkAnswer.bind(this),
+      "HINT_CLICKED": this.displayHint.bind(this)
     };
     eventMap[$event.eventId]();
   }
 
   checkAnswer() {
-    this.checkAnswerClicked = true;
+    this.workspace.checkAnswer();
+  }
+
+  displayHint(){
+    this.workspace.displayHint();
   }
 }
 
