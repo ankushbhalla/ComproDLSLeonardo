@@ -1,0 +1,101 @@
+
+.SIMS.Office2016 .excel.ribbon .title-bar .office-hover-default:hover,
+.SIMS.Office2016 .excel.ribbon .title-bar .office-hover-default.hovered, 
+.SIMS.Office2016 .excel.ribbon.navigation-key-state .title-bar .hovered {
+    background-color: #d5e1f2;
+}
+
+.SIMS.Office2016 .excel.ribbon .title-bar .office-hover-default.hover, 
+.SIMS.Office2016 .excel.ribbon .title-bar .office-hover-default.hovered, 
+.SIMS.Office2016 .excel.ribbon.navigation-key-state .title-bar .hovered {
+    background-color: #d5e1f2;
+}
+
+
+.SIMS.Office2016 .excel.ribbon .title-bar .office-hover-default:active {
+    background-color:#a3bde3;
+}
+
+
+.SIMS.Office2016 .ribbon.excel .title-bar .active-toggle {
+    background: #a3bde3;
+}
+
+
+.SIMS.Office2016 .ribbon.excel .sharebutton {
+    background-color: #217346;
+}
+
+/* Fix for SO-14058 */
+.SIMS.Office2016 .excel.ribbon .tab-header-charttoolsdesign {
+	width: auto;
+}
+
+.SIMS.Office2016 .excel.ribbon .title-bar .appController>.combobox-wrapper>.office-hover-default:hover
+ {
+    background-color: #ffffff;
+}
+
+.SIMS.Office2016 .excel.ribbon .title-bar .appController .active-toggle {
+    background: #ffffff;
+}
+
+.SIMS.Office2016 .excel.ribbon .title-bar .dropdown-item.office-hover-default:hover,
+.SIMS.Office2016 .excel.ribbon .title-bar .dropdown-item.office-hover-default.hovered, 
+.SIMS.Office2016 .excel.ribbon.navigation-key-state .title-bar .dropdown-item.hovered {
+    background-color: #D3F0E0;
+}
+
+.SIMS.Office2016 .excel.ribbon .title-bar  .dropdown-item.office-hover-default.hover, 
+.SIMS.Office2016 .excel.ribbon .title-bar  .dropdown-item.office-hover-default.hovered, 
+.SIMS.Office2016 .excel.ribbon.navigation-key-state .title-bar  .dropdown-item.hovered {
+    background-color: #D3F0E0;
+}
+/*Query tools query tab start*/
+.SIMS.Office2016 .excel.ribbon .tab-header-querytoolsquery
+{
+    background-color: #f0f5fc;
+    border-color: #f0f5fc #f0f5fc #f0f5fc;
+    width: 70px;
+}
+
+.SIMS.Office2016 .excel.ribbon .contextual-head-querytools
+{
+    background-color: #f0f5fc;
+    border-color: #508ee6;
+    color: #34609d;
+}
+
+.SIMS.Office2016 .excel.ribbon .tab-header-querytoolsquery:hover
+{
+    color: #34609d;
+}
+
+.SIMS.Office2016 .excel.ribbon .tab-header-querytoolsquery.tab-header-selected
+{
+    color: #34609d;        
+    border-color: #E1E1E1 #E1E1E1 #FFFFFF;
+    border-style: solid;    
+    background-color: white;
+}
+.SIMS.Office2016 .excel-power-pivot.ribbon .title-bar{
+background-color: white;
+}
+.SIMS.Office2016 .excel-power-pivot.ribbon .title-bar .office-hover-default:hover {
+background-color: white;
+}
+.SIMS.Office2016 .excel-power-pivot.ribbon .title-bar .power_pivot_close .office-hover-default:hover, .SIMS .excel-power-pivot.ribbon .title-bar .power_pivot_close .office-hover-default.hovered{
+background-color: #E81123 !important;    
+}
+
+.SIMS.Office2016 .excel.ribbon .from-other-sources-dropdown .accessibility-active.item-type-imageitem > .ribbon-SK {
+    right: auto;
+    top: -25px;
+    left: 0px;
+}
+.SIMS.Office2016 .excel-power-pivot.ribbon .title-bar .titlebar-section-3{
+    line-height: 1.5;
+}
+
+
+/*Query tools query tab end*/

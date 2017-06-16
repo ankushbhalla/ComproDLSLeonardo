@@ -16,7 +16,7 @@ export class QuestionBoxComponent implements OnInit {
     let leoInstances = this.questionHost.nativeElement.querySelectorAll(".leoHost");
     for (let index = 0; index < leoInstances.length; index++) {
       let data = this.questionData.leoData[leoInstances[index].getAttribute("leoDataId")];
-      // Leonardo.scripts.add(leoInstances[index], data.config, data.correctData );
+      Leonardo.scripts.add(leoInstances[index], data.config, data.correctData );
     }
   }
 

@@ -1,0 +1,110 @@
+﻿/* Basic HTML  / * Also Check http://necolas.github.com/normalize.css/2.1.0/normalize.css * /
+----------------------------------------------------------------------------------------------------*/
+html {font-size: 12px;overflow: auto; overflow-x: hidden;}
+html.no-overflow { overflow: hidden; }
+body {color: #000; font-size: 100%; line-height:1; font-family:"Segoe UI",Arial,Verdana,Sans-Serif;}
+
+a{color:#000;}
+a, a:focus {outline: none;}
+a, a:link, a:visited, a:active {text-decoration: none;}
+a:hover {text-decoration: underline;}
+address{color:#A9A9A9;margin-bottom:20px;}
+
+b {font-weight:bold;}
+i {font-style:italic;}
+u {text-decoration:underline;}
+center {text-align:center;}
+
+p { line-height:1; }
+
+::selection {
+	background: #c6c6c6; /* Safari */
+        color: #000;
+	}
+::-moz-selection {
+	background: #c6c6c6; /* Firefox */
+        color: #000;
+}
+
+label, legend{
+	-webkit-user-select: none;
+	user-select: none; 
+	-o-user-select:none;
+	-moz-user-select: none; 
+	-ms-user-select: none;
+	-khtml-user-select: none;
+}
+/* Hide dotted line */
+object:focus, object:active, a:focus, a:active, select, select:focus, select:active, label,
+select::-moz-focus-inner, button::-moz-focus-inner{ outline:none;border:0;-moz-outline: none;-moz-user-focus: none;}
+input, input:focus, input:active, input::-moz-focus-inner { }
+	
+ul, ol { list-style-type: none; }
+
+/* Headings
+----------------------------------------------------------------------------------------------------*/
+h1{ font-size: 18px; font-weight: normal; }
+h2{ color: #767676; font-size: 15px; font-weight: normal; }
+h3{ font-size: 13px; font-weight: normal; }
+h4{ font-size: 12px; font-weight: normal; }
+h5{ font-size: 12px; font-weight: bold; }
+h6{ font-size: 12px; font-style: italic; font-weight: normal; }
+
+/* Forms
+----------------------------------------------------------------------------------------------------*/
+input, textarea, select { font-family: inherit; font-size: inherit;}
+textarea { resize: none; font-family: inherit; font-size: inherit; outline: none;}
+
+/*input[type=text]::-webkit-input-placeholder,
+input[type=password]::-webkit-input-placeholder { color: #000; }*/
+
+legend{display:inline;}
+
+/* Utility classes
+----------------------------------------------------------------------------------------------------*/
+.left {float: left;}
+.right {float: right;}
+.abs {position:absolute}
+.no-wrap{text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.errorInput{margin-top:5px;}
+.error{color:#cc0000;}
+.highlight{color:#767676 !important;}
+.min-font{font-size:10px;}
+
+.unselectable 
+{
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor:default;
+}
+
+
+
+/* shadows
+----------------------------------------------------------------------------------------------------*/
+.shadow-overlay {
+	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,.22);		/* FF3.5+ */					/* plain would be #c7c7c7 */
+	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,.22);	/* Saf3.0+, Chrome */
+	box-shadow: 0px 0px 6px rgba(0,0,0,.22);			/* Opera 10.5, IE 9 */
+}
+.shadow-dropdown {
+	-moz-box-shadow: 3px 3px 3px rgba(0,0,0,.12);		/* FF3.5+ */					/* plain would be #e0e0e0 */
+	-webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.12);	/* Saf3.0+, Chrome */
+	box-shadow: 3px 3px 3px rgba(0,0,0,.12);			/* Opera 10.5, IE 9 */
+}
+.shadow-thumb {
+	-moz-box-shadow: 0px 0px 3px rgba(0,0,0,.33);		/* FF3.5+ */					/* plain would be #c7c7c7 */
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,.33);	/* Saf3.0+, Chrome */
+	box-shadow: 0px 0px 3px rgba(0,0,0,.33);			/* Opera 10.5, IE 9 */
+}
+
+
+/* IE 10 hide input cross
+----------------------------------------------------------------------------------------------------*/
+input[type=text]::-ms-clear 
+{
+    display: none;
+}
