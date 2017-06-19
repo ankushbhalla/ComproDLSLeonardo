@@ -5784,8 +5784,11 @@ No regression impact as the Power View Tab is being used first Time*/
   .DLSLeonardo .ribbon.EMBEDDED .userinfo .username,
   .DLSLeonardo .ribbon.EMBEDDED .tab-header-file {
     visibility: hidden; }
-  .DLSLeonardo .ribbon-tab-container {
-    border-left: 1px #E1E1E1; }
+  .DLSLeonardo #ribbon-tab-container-home {
+    border-left: 1px solid #E1E1E1;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box; }
   .DLSLeonardo .excel.ribbon .tab-header.tab-header-backstage {
     background-color: #217346;
     color: #fff; }
