@@ -3,24 +3,18 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { LeonardoModule } from "./leonardo/leonardo.module";
 import { AppComponent } from './app.component';
-import { NavigatorComponent } from './navigator/navigator.component';
-import { QuestionBoxComponent } from './question-box/question-box.component';
-import { WorkspaceComponent } from './workspace/workspace.component';
-import { SplitPaneModule } from './verticalSplitter/ng2-split-pane';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavigatorComponent,
-    QuestionBoxComponent,
-    WorkspaceComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    SplitPaneModule
+    LeonardoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
