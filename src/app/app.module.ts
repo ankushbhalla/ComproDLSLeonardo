@@ -4,20 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router'
 
-import { LeonardoModule } from "./leonardo/leonardo.module";
-import { DashboardModule } from "./dashboard/dashboard.module";
 import { AppComponent } from './app.component';
+import { DataService } from './data.service';
 
 
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'v1',
+    redirectTo: '/dashboard',
     pathMatch: 'full'
   },
   {
-    path: 'v1',
+    path: 'question/:id',
     loadChildren: './leonardo/leonardo.module#LeonardoModule'
+  },
+  {
+    path: 'dashboard',
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
   }
 ];
 
@@ -30,11 +33,9 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    LeonardoModule,
-    DashboardModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ DataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,17 +1,7 @@
-<div class="container-fluid header">
-  <div class="headingWrapper">
-    <h2 class="col-md-12">
-      <span class="loading-logo">
-        <span class="logo-blue">comproDLS™</span>
-      </span>
-      <span>Leonardo</span>
-    </h2>
-  </div>
-</div>
 <div class="vertical-center">
   <div class="container">
     <div class="row item-container">
-      <app-dashboard-item *ngFor="let ques of questions"></app-dashboard-item>
+      <app-dashboard-item [questionIndex]="'v'+(qIndex+1)" *ngFor="let ques of questions; let qIndex = index;"></app-dashboard-item>
     </div>
   </div>
 </div>
