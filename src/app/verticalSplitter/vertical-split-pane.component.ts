@@ -20,14 +20,12 @@ import { PositionService } from './position.service'
     }
 
     .left-component {
-      width: calc(50%);
-      max-width: 649px;      
+      width: calc(50%);      
     }
 
     .right-component {
       width: calc(50%);
       overflow: hidden;
-      min-width: 897px;
     }
   `],
   template: `
