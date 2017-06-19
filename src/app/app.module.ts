@@ -5,14 +5,15 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router'
 
 import { LeonardoModule } from "./leonardo/leonardo.module";
+import { DashboardModule } from "./dashboard/dashboard.module";
 import { AppComponent } from './app.component';
 
 
 const appRoutes: Routes = [
-  { 
+  {
     path: '',
     redirectTo: 'v1',
-    pathMatch: 'full' 
+    pathMatch: 'full'
   },
   {
     path: 'v1',
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     LeonardoModule,
+    DashboardModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
