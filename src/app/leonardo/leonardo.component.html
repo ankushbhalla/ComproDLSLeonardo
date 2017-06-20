@@ -13,4 +13,8 @@
       <app-question-box class="questionWrapper" [questionData]='questionData'></app-question-box>
       <app-workspace #workspace class="workspaceWrapper col-md-12" [solutionData]='solutionData'></app-workspace>
 </div>
+<div *ngIf="id=='v3'" #contentWrapper class="contentWrapper verticalView container-fluid">
+      <app-question-box class="questionWrapper" [questionData]='questionData'></app-question-box>
+      <app-workspace #workspace class="workspaceWrapper col-md-12" [solutionData]='solutionData'></app-workspace>
+</div>
 <app-navigator (navEvent)="handleCompEvents($event)" class="navigatorWrapper"></app-navigator>
