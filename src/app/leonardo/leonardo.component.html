@@ -10,7 +10,7 @@
   </vertical-split-pane>
 </div>
 <div *ngIf="id=='v2'" #contentWrapper class="contentWrapper verticalView container-fluid">
-      <app-question-box class="questionWrapper col-md-12" [questionData]='questionData'></app-question-box>
+      <app-question-box class="questionWrapper" [questionData]='questionData'></app-question-box>
       <app-workspace #workspace class="workspaceWrapper col-md-12" [solutionData]='solutionData'></app-workspace>
 </div>
 <app-navigator (navEvent)="handleCompEvents($event)" class="navigatorWrapper"></app-navigator>
