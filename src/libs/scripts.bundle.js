@@ -63757,6 +63757,7 @@ var CheckAnswer = (function () {
         this.correctData = correctData;
         this.Spreadsheet = Spreadsheet;
         this.getData = getData;
+        this.tolerance = 0;
     }
     CheckAnswer.prototype.init = function () {
         if (!this.dataModel.getButtonVisibility("checkAnswerButton")) {
@@ -63767,6 +63768,7 @@ var CheckAnswer = (function () {
             this.attachEvents();
         }
         this.registerEvents();
+        this.tolerance = this.dataModel.getValidationTolerance();
     };
     CheckAnswer.prototype.attachEvents = function () {
         this.checkMyAnswer.addEventListener("click", this.handleCheckAnswerClick.bind(this));
@@ -63795,8 +63797,12 @@ var CheckAnswer = (function () {
                     gradingObj[rowIndex][colIndex] = {};
                     gradingObj[rowIndex][colIndex]["grade"] = {};
                     gradingObj[rowIndex][colIndex]["comment"] = {};
-                    var cellValue = computedUserData[rowIndex][colIndex].trim();
-                    var correctVal = this.correctData[rowIndex][colIndex].trim();
+                    var cellValue = computedUserData[rowIndex][colIndex];
+                    if (typeof cellValue === "string")
+                        cellValue = cellValue.trim();
+                    var correctVal = this.correctData[rowIndex][colIndex];
+                    if (typeof correctVal === "string")
+                        correctVal = correctVal.trim();
                     if (correctVal === "" || cellValue === "") {
                         if (cellValue === "" && correctVal === "") {
                             gradingObj[rowIndex][colIndex].grade = enums_1.GRADINGCODES.BLANK;
@@ -63822,7 +63828,12 @@ var CheckAnswer = (function () {
                                 gradingObj[rowIndex][colIndex].grade = enums_1.GRADINGCODES.INCORRECT;
                             }
                             else {
-                                if (Number(cellValue).toFixed(precision) == Number(correctVal).toFixed(precision)) {
+                                var intCorrectVal = Number(correctVal);
+                                var intCellValue = Number(cellValue).toFixed(precision);
+                                var toleranceValue = (this.tolerance / 100) * intCorrectVal;
+                                var correctHigherRange = (intCorrectVal + toleranceValue).toFixed(precision);
+                                var correctLowerRange = (intCorrectVal - toleranceValue).toFixed(precision);
+                                if (intCellValue >= correctLowerRange && intCellValue <= correctHigherRange) {
                                     gradingObj[rowIndex][colIndex].grade = enums_1.GRADINGCODES.CORRECT;
                                 }
                                 else {
@@ -64195,6 +64206,9 @@ var DataModel = (function () {
     DataModel.prototype.isHeadersPresent = function (pos) {
         return this.dataJson.options[pos] === true;
     };
+    DataModel.prototype.getValidationTolerance = function () {
+        return this.dataJson.options["tolerance"] || 0;
+    };
     return DataModel;
 }());
 exports.DataModel = DataModel;
@@ -64306,6 +64320,9 @@ var SpreadsheetController = (function () {
         if (this.model.isRibbonVisible()) {
             availableHeight -= 120;
         }
+        if (this.model.getSheetNames() != null) {
+            availableHeight -= 25;
+        }
         availableHeight -= 30; //Considering 30px offset for scrollbar height
         availableWidth -= 30; //Considering 30px offset for scrollbar width
         var totalColWidth = this.grid.getGridWidth();
@@ -64325,6 +64342,7 @@ var SpreadsheetController = (function () {
         var newGridWidth = document.querySelector(".ht_master.handsontable")["offsetWidth"] - 21 + "px";
         this.container.querySelector(".formulaToolbar").style.width = newGridWidth;
         this.container.querySelector("#buttonGroup").style.width = newGridWidth;
+        this.container.querySelector('#sheetTabBar').style.width = newGridWidth;
     };
     return SpreadsheetController;
 }());
@@ -64529,13 +64547,23 @@ var Grid = (function (_super) {
         var commentsPlugin = this.getPlugin("comments");
         var rowIndex;
         var colIndex;
+        var cellData = this.dataModel.getCellData();
+        var rowCount = cellData.length;
+        var colCount = cellData[0].length;
+        this.enablecheckAnswerComments(commentsPlugin, rowCount, colCount);
         for (rowIndex in gradingObject) {
             for (colIndex in gradingObject[rowIndex]) {
                 var grade = gradingObject[rowIndex][colIndex].grade;
+                // Show Grading Result Feedback as HOT Comment
                 if (grade == GRADINGCODES.INCORRECT || grade == GRADINGCODES.MISSING) {
                     commentsPlugin.setCommentAtCell(rowIndex, colIndex, gradingObject[rowIndex][colIndex].comment);
                     commentsPlugin.updateCommentMeta(rowIndex, colIndex, { readOnly: true });
                 }
+                else {
+                    commentsPlugin.setRange({ from: { row: rowIndex, col: colIndex }, to: { row: rowIndex, col: colIndex } });
+                    commentsPlugin.removeComment();
+                }
+                //
                 var cellMeta = this.grid.getCellMeta(rowIndex, colIndex);
                 if (cellMeta.originalProp == null) {
                     if (cellMeta.renderingProps != null) {
@@ -64557,7 +64585,6 @@ var Grid = (function (_super) {
                 }
             }
         }
-        this.enablecheckAnswerComments(commentsPlugin, rowIndex, colIndex);
         this.render();
     };
     Grid.prototype.getRenderingProps = function (cellMeta, gradingCode, GradingUIConfig) {
@@ -65474,21 +65501,22 @@ return iterators;
 (function () {
 	var attachEvent = document.attachEvent,
 		stylesCreated = false;
-	
+	var scope = {};
+
+
 	if (!attachEvent) {
-		var requestFrame = (function(){
+		var requestFrame = (function () {
 			var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame ||
-								function(fn){ return window.setTimeout(fn, 20); };
-			return function(fn){ return raf(fn); };
-		})();
-		
-		var cancelFrame = (function(){
-			var cancel = window.cancelAnimationFrame || window.mozCancelAnimationFrame || window.webkitCancelAnimationFrame ||
-								   window.clearTimeout;
-		  return function(id){ return cancel(id); };
+				function (fn) { return window.setTimeout(fn, 20); };
+			return function (fn) { return raf(fn); };
 		})();
 
-		function resetTriggers(element){
+		var cancelFrame = (function () {
+			var cancel = window.cancelAnimationFrame || window.mozCancelAnimationFrame || window.webkitCancelAnimationFrame ||
+				window.clearTimeout;
+			return function (id) { return cancel(id); };
+		})();
+		scope.resetTriggers = function (element) {
 			var triggers = element.__resizeTriggers__,
 				expand = triggers.firstElementChild,
 				contract = triggers.lastElementChild,
@@ -65500,27 +65528,27 @@ return iterators;
 			expand.scrollLeft = expand.scrollWidth;
 			expand.scrollTop = expand.scrollHeight;
 		};
-
-		function checkTriggers(element){
-			return element.offsetWidth != element.__resizeLast__.width ||
-						 element.offsetHeight != element.__resizeLast__.height;
-		}
-		
-		function scrollListener(e){
+		scope.scrollListener = function (e) {
 			var element = this;
-			resetTriggers(this);
+			scope.resetTriggers(this);
 			if (this.__resizeRAF__) cancelFrame(this.__resizeRAF__);
-			this.__resizeRAF__ = requestFrame(function(){
-				if (checkTriggers(element)) {
+			this.__resizeRAF__ = requestFrame(function () {
+				if (scope.checkTriggers(element)) {
 					element.__resizeLast__.width = element.offsetWidth;
 					element.__resizeLast__.height = element.offsetHeight;
-					element.__resizeListeners__.forEach(function(fn){
+					element.__resizeListeners__.forEach(function (fn) {
 						fn.call(element, e);
 					});
 				}
 			});
 		};
-		
+		scope.checkTriggers = function (element) {
+			return element.offsetWidth != element.__resizeLast__.width ||
+				element.offsetHeight != element.__resizeLast__.height;
+		}
+
+
+
 		/* Detect CSS Animations support to detect element display/re-attach */
 		var animation = false,
 			animationstring = 'animation',
@@ -65528,39 +65556,39 @@ return iterators;
 			animationstartevent = 'animationstart',
 			domPrefixes = 'Webkit Moz O ms'.split(' '),
 			startEvents = 'webkitAnimationStart animationstart oAnimationStart MSAnimationStart'.split(' '),
-			pfx  = '';
+			pfx = '';
 		{
 			var elm = document.createElement('fakeelement');
-			if( elm.style.animationName !== undefined ) { animation = true; }    
-			
-			if( animation === false ) {
-				for( var i = 0; i < domPrefixes.length; i++ ) {
-					if( elm.style[ domPrefixes[i] + 'AnimationName' ] !== undefined ) {
-						pfx = domPrefixes[ i ];
+			if (elm.style.animationName !== undefined) { animation = true; }
+
+			if (animation === false) {
+				for (var i = 0; i < domPrefixes.length; i++) {
+					if (elm.style[domPrefixes[i] + 'AnimationName'] !== undefined) {
+						pfx = domPrefixes[i];
 						animationstring = pfx + 'Animation';
 						keyframeprefix = '-' + pfx.toLowerCase() + '-';
-						animationstartevent = startEvents[ i ];
+						animationstartevent = startEvents[i];
 						animation = true;
 						break;
 					}
 				}
 			}
 		}
-		
+
 		var animationName = 'resizeanim';
 		var animationKeyframes = '@' + keyframeprefix + 'keyframes ' + animationName + ' { from { opacity: 0; } to { opacity: 0; } } ';
 		var animationStyle = keyframeprefix + 'animation: 1ms ' + animationName + '; ';
 	}
-	
+
 	function createStyles() {
 		if (!stylesCreated) {
 			//opacity:0 works around a chrome bug https://code.google.com/p/chromium/issues/detail?id=286360
 			var css = (animationKeyframes ? animationKeyframes : '') +
-					'.resize-triggers { ' + (animationStyle ? animationStyle : '') + 'visibility: hidden; opacity: 0; } ' +
-					'.resize-triggers, .resize-triggers > div, .contract-trigger:before { content: \" \"; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }',
+				'.resize-triggers { ' + (animationStyle ? animationStyle : '') + 'visibility: hidden; opacity: 0; } ' +
+				'.resize-triggers, .resize-triggers > div, .contract-trigger:before { content: \" \"; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }',
 				head = document.head || document.getElementsByTagName('head')[0],
 				style = document.createElement('style');
-			
+
 			style.type = 'text/css';
 			if (style.styleSheet) {
 				style.styleSheet.cssText = css;
@@ -65572,8 +65600,8 @@ return iterators;
 			stylesCreated = true;
 		}
 	}
-	
-	window.addResizeListener = function(element, fn){
+
+	window.addResizeListener = function (element, fn) {
 		if (attachEvent) element.attachEvent('onresize', fn);
 		else {
 			if (!element.__resizeTriggers__) {
@@ -65583,32 +65611,33 @@ return iterators;
 				element.__resizeListeners__ = [];
 				(element.__resizeTriggers__ = document.createElement('div')).className = 'resize-triggers';
 				element.__resizeTriggers__.innerHTML = '<div class="expand-trigger"><div></div></div>' +
-																						'<div class="contract-trigger"></div>';
+					'<div class="contract-trigger"></div>';
 				element.appendChild(element.__resizeTriggers__);
-				resetTriggers(element);
-				element.addEventListener('scroll', scrollListener, true);
-				
+				scope.resetTriggers(element);
+				element.addEventListener('scroll', scope.scrollListener, true);
+
 				/* Listen for a css animation to detect element display/re-attach */
-				animationstartevent && element.__resizeTriggers__.addEventListener(animationstartevent, function(e) {
-					if(e.animationName == animationName)
-						resetTriggers(element);
+				animationstartevent && element.__resizeTriggers__.addEventListener(animationstartevent, function (e) {
+					if (e.animationName == animationName)
+						scope.resetTriggers(element);
 				});
 			}
 			element.__resizeListeners__.push(fn);
 		}
 	};
-	
-	window.removeResizeListener = function(element, fn){
+
+	window.removeResizeListener = function (element, fn) {
 		if (attachEvent) element.detachEvent('onresize', fn);
 		else {
 			element.__resizeListeners__.splice(element.__resizeListeners__.indexOf(fn), 1);
 			if (!element.__resizeListeners__.length) {
-					element.removeEventListener('scroll', scrollListener);
-					element.__resizeTriggers__ = !element.removeChild(element.__resizeTriggers__);
+				element.removeEventListener('scroll', scope.scrollListener);
+				element.__resizeTriggers__ = !element.removeChild(element.__resizeTriggers__);
 			}
 		}
 	}
 })();
+
 
 /***/ })
 /******/ ]);
