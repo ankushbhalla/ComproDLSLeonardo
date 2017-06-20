@@ -34,3 +34,13 @@
     width: 100%;
     overflow: auto;
 }
+
+.contentWrapper.verticalView{
+    
+    overflow-y: auto;
+    background-color: #fff;
+
+    .questionWrapper{
+        height: auto;
+    }
+}
