@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DashboardItemComponent implements OnInit {
   @Input() questionIndex: Number;
+  @Input() mode: String;
   constructor() { }
 
   ngOnInit() {
