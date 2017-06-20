@@ -6,11 +6,10 @@ import { SplitSeparatorComponent } from './split-pane-separator.component'
   styles: [`
     :host {
       width: 21px;
-      cursor: ew-resize;
+      cursor: url(../assets/cursor.png), ew-resize;
       position: relative;
-      background-color: #ececec;
+      background-color: #f7f7f7;
       border-left: 1px solid lightgrey;
-      border-right: 1px solid lightgrey;
       z-index:2;
     }
 
@@ -23,7 +22,7 @@ import { SplitSeparatorComponent } from './split-pane-separator.component'
     }
   `],
   template: `
-    <div class="handle"><span class="glyphicon glyphicon-align-justify" style="color: black; transform: rotate(90deg);"></span></div>
+    <div class="handle"><img src="../assets/splitter.png"></div>
   `
 })
 export class VerticalSplitSeparatorComponent extends SplitSeparatorComponent {

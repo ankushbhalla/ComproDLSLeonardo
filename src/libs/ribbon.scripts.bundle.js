@@ -11645,10 +11645,6 @@ OfficeUIUtls.TooltipHelpers.ShowTooltip = function () {
 };
 
 function MESSAGE_HANDLER() {
-    if (MESSAGE_HANDLER._MsgHandler) {
-        return MESSAGE_HANDLER._MsgHandler;
-    }
-    else {
         this._listeners = {};
         this._classObj = {};
         this.RegisterMessage = function (event, ClsObj, listener) {
@@ -11686,19 +11682,13 @@ function MESSAGE_HANDLER() {
                 alert("Failed to SEND_MESSAGE. Event [" + event + "] is not defined.");
             }
         }
-
-        MESSAGE_HANDLER._MsgHandler = this;
-    }
 }
 
-function REGISTER_MSG(event, clsObj, listener) {
-    var msgHandler = new MESSAGE_HANDLER();
+function REGISTER_MSG(event, clsObj, listener, msgHandler) {
     msgHandler.RegisterMessage(event, clsObj, listener);
 }
 
-function SEND_MESSAGE(event, paramData) {
-    var msgHandler = new MESSAGE_HANDLER();
-
+function SEND_MESSAGE(event, paramData, msgHandler) {
     if (paramData == undefined) {
         msgHandler.SendMessage(event);
     }
@@ -18935,6 +18925,7 @@ SIMS.Components.BaseComponent = Base.extend({// instance interface
     failedAttrValue: null,
 
     Initialize: function (CompInfo) {
+        this.msgHandler = new MESSAGE_HANDLER();
         this.currentTheme = SIMS.SharedData.ComponentThemes.OFFICE2013;
         this.keyControlMap = new jsDictionary();
         this._controlGroups = new jsDictionary();
@@ -19714,7 +19705,7 @@ SIMS.Components.BaseComponent = Base.extend({// instance interface
             bSafe = false;
         }
 
-        SEND_MESSAGE("COMP_ACTION", new SIMEventArgs(this._compID, eventId, "notused", desc, eventDetails, this._compinfo.compName, bSafe));
+        SEND_MESSAGE("COMP_ACTION", new SIMEventArgs(this._compID, eventId, "notused", desc, eventDetails, this._compinfo.compName, bSafe), this.msgHandler);
         /*
         if (eventDetails.ValidateMe) {
         if (this.Validate('DEFAULT', "default")) {
@@ -19742,7 +19733,7 @@ SIMS.Components.BaseComponent = Base.extend({// instance interface
     LogClickStreamInfo: function (desc) {
         if (desc != null && desc.trim() != "") {
             console.log("LogClickStreamInfo - " + this._compinfo.compName + ": " + desc);
-            SEND_MESSAGE("COMP_ACTION", new SIMEventArgs(this._compID, 0, "Clickstream", desc, null, this._compinfo.compName));
+            SEND_MESSAGE("COMP_ACTION", new SIMEventArgs(this._compID, 0, "Clickstream", desc, null, this._compinfo.compName), this.msgHandler);
         }
     },
 
@@ -20402,7 +20393,7 @@ SIMS.Components.BaseComponent = Base.extend({// instance interface
     },
 
     SendMessageToComponents: function (messageid, messageName, messageDetails) {
-        SEND_MESSAGE("COMP_MESSAGE", new CompMessageArgs(this._compID, messageid, messageName, messageDetails));
+        SEND_MESSAGE("COMP_MESSAGE", new CompMessageArgs(this._compID, messageid, messageName, messageDetails), this.msgHandler);
     },
 
 
@@ -20458,7 +20449,7 @@ SIMS.Components.BaseComponent = Base.extend({// instance interface
 
     // bMakeModal == true, as modal dialog, else modless
     SwitchComponentMode: function (bMakeModal) {
-        SEND_MESSAGE("COMP_SWITCH_MODE", new CompMessageArgs(this._compID, 1, "COMP_SWITCH_MODE", { MakeModal: bMakeModal }));
+        SEND_MESSAGE("COMP_SWITCH_MODE", new CompMessageArgs(this._compID, 1, "COMP_SWITCH_MODE", { MakeModal: bMakeModal }), this.msgHandler);
     },
     UpdateComponentFrameSize: function (wid, ht) {
         this.$thisCompElement.css("width", wid + "px");
@@ -20466,7 +20457,7 @@ SIMS.Components.BaseComponent = Base.extend({// instance interface
     },
 
     ShowLoadingCurtain: function (bShow) {
-        SEND_MESSAGE("SHOW_CURTAIN", bShow);
+        SEND_MESSAGE("SHOW_CURTAIN", bShow, this.msgHandler);
     },
 
     UpdateDialogTitle: function (titleText) {
@@ -20562,7 +20553,7 @@ SIMS.Components.BaseComponent = Base.extend({// instance interface
     },
 
     OnAppGroupChange: function (args) {
-        SEND_MESSAGE("CHANGE_APP_GROUP", new CompMessageArgs(this._compID, "CHANGE_APP_GROUP", "CHANGE_APP_GROUP", args));
+        SEND_MESSAGE("CHANGE_APP_GROUP", new CompMessageArgs(this._compID, "CHANGE_APP_GROUP", "CHANGE_APP_GROUP", args), this.msgHandler);
     },
 
     SetHelpButtonVisibility: function (isVisible) {

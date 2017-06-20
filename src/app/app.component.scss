@@ -1,20 +1,51 @@
 .header{
     width: 100%;
+    color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 63px;
+    height: 54px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     cursor: default;
-    border-left: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
-    background-color: #ececec;
-    border-bottom: 3px solid #CB2929;
+    background-color: black;
 
     .headingWrapper{
         width: 100%;
+        height: 34px;
+    }
+
+    .verticalLine{
+        border-left: 1px solid grey;
+        display: inline-block;
+        height: 60%;
+        width: 5px;
+    }
+    
+    .productName{
+        font-size : 28px;
+        font-weight : Bold;
+        font-family : "Open Sans";
+        color : #ffffff;
+        display: inline-block;
+        width: calc(100% - 206px);
+    }
+
+    .logo{
+        display: inline-block;
+        height: 100%;
+        width: 132px;
+        background: url("../assets/ComproDLS.png") no-repeat;
+        position: relative;
+        top: 6px;
+    }
+
+    .backbtn{
+        background-color: #E8E8E8;
+        position: relative;
+        top: -2px;
+        padding: 4px 12px;
     }
 }
