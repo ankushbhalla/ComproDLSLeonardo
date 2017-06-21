@@ -1,19 +1,19 @@
-<div *ngIf="id=='v1'" #contentWrapper class="contentWrapper container-fluid">
+<div *ngIf="id=='v1'" #contentWrapper class="contentWrapper">
   <vertical-split-pane class="verticalSeparator" primary-component-initialratio="0.50" separator-thickness="21" [primary-component-minsize]="0"
     [secondary-component-minsize]="897">
     <div class="split-pane-content-primary">
-      <app-question-box class="questionWrapper col-md-12" [questionData]='questionData'></app-question-box>
+      <app-question-box class="questionWrapper" [questionData]='questionData'></app-question-box>
     </div>
     <div class="split-pane-content-secondary">
-      <app-workspace #workspace class="workspaceWrapper col-md-12" [solutionData]='solutionData'></app-workspace>
+      <app-workspace #workspace class="workspaceWrapper" [solutionData]='solutionData'></app-workspace>
     </div>
   </vertical-split-pane>
 </div>
-<div *ngIf="id=='v2'" #contentWrapper class="contentWrapper verticalView container-fluid">
+<div *ngIf="id=='v2'" #contentWrapper class="contentWrapper verticalView">
       <app-question-box class="questionWrapper" [questionData]='questionData'></app-question-box>
       <app-workspace #workspace class="workspaceWrapper col-md-12" [solutionData]='solutionData'></app-workspace>
 </div>
-<div *ngIf="id=='v3'" #contentWrapper class="contentWrapper verticalView container-fluid">
+<div *ngIf="id=='v3'" #contentWrapper class="contentWrapper verticalView">
       <app-question-box class="questionWrapper" [questionData]='questionData'></app-question-box>
       <app-workspace #workspace class="workspaceWrapper col-md-12" [solutionData]='solutionData'></app-workspace>
 </div>
