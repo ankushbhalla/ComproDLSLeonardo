@@ -13,6 +13,16 @@ export class WorkspaceComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if(this.solutionData.gridUIParams){
+      if(this.solutionData.gridUIParams.height){
+        this.leoHost.nativeElement.style.height = this.solutionData.gridUIParams.height + "px";
+      }
+
+      if(this.solutionData.gridUIParams.width){
+        this.leoHost.nativeElement.style.width = this.solutionData.gridUIParams.width + "px";
+      }
+    }
+
     Leonardo.scripts.add(this.leoHost.nativeElement, this.solutionData.config, this.solutionData.correctData);
   }
 
