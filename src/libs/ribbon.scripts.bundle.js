@@ -25878,7 +25878,7 @@ ControlGenerators.ComboBox.prototype.AddFunctionality = function($dropDown, $com
 ControlGenerators.ComboBox.prototype.DropdownCloser = function() {
 
     var $curtain = $('.dropdown-curtain');
-    var $dropdown = $('.SIMS .ribbon .dropdown-open,.SIMS .mt-kb-util .dropdown-open');
+    var $dropdown = $('.DLSLeonardo .ribbon .dropdown-open,.DLSLeonardo .mt-kb-util .dropdown-open');
 
     $dropdown.hide();
 
@@ -25977,9 +25977,10 @@ ControlGenerators.ComboBox.prototype.DropdownOpener = function(e) {
     ddCss.left = $comboBox.position().left;
 
     //Vertical Overflow
+    var $leonardoArea = SIMS.Objects.DOMElements.LeonardoArea;
     var $simArea = SIMS.Objects.DOMElements.SIMArea;
 
-    var vOverflow = UIUtils.getVerticalOverflow($dropDown, $simArea) + 40;
+    var vOverflow = UIUtils.getVerticalOverflow($dropDown, $leonardoArea) + 40;
 
     if ((vOverflow > 0) && ($comboBox.offset().top - $dropDown.outerHeight()) > 0) {
         ddCss.bottom = $comboBox.position().top + $comboBox.outerHeight();
@@ -26650,9 +26651,10 @@ ControlGenerators.CondensedSectionControl.prototype.DropdownOpener = function(e)
     ddCss.left = $comboBox.position().left;
 
     //Vertical Overflow
+    var $leonardoArea = SIMS.Objects.DOMElements.LeonardoArea;
     var $simArea = SIMS.Objects.DOMElements.SIMArea;
 
-    var vOverflow = UIUtils.getVerticalOverflow($dropDown, $simArea) + 40;
+    var vOverflow = UIUtils.getVerticalOverflow($dropDown, $leonardoArea) + 40;
 
     if ((vOverflow > 0) && ($comboBox.offset().top - $dropDown.outerHeight()) > 0) {
         ddCss.bottom = $comboBox.position().top + $comboBox.outerHeight();
@@ -34707,13 +34709,13 @@ var ribbonGenerator16 = function () {
     //};
     this.subRibbonImgCheckFlag = true;
 
-    this.$ribbonXmlArray = [];  
+    this.$ribbonXmlArray = [];
     this.fixMultiRibbonTabSelection = false;
     /*Memory leak fix: Redefining $ribbonXmlArray as own property of ribbonGenerator16   
       REASON: Dispose function called for RibbonGenrator2016 loops through the prototypal property ($ribbonXmlArray) of ribbonGenerator16;
        and when it comes to resetting $ribbonXmlArray to null, it sets its own property which results in multiple instances of ribbonxml in this.$ribbonXmlArray  
     */
-    this.getRibbonFromXml = function(ribbonXml, appName, ribbonMode) {
+    this.getRibbonFromXml = function (ribbonXml, appName, ribbonMode) {
         SIMS.Objects.DOMElements.Ribbon = null;
         this.appName = appName;
 
@@ -34731,8 +34733,8 @@ var ribbonGenerator16 = function () {
             $ribbon.data('ContextMenuType', 'JSON');
         }
 
-        if(ribbonMode && ribbonMode !== SIMS.Components2016.Common.RibbonVisibilityModes.NORMAL){
-            $ribbon.addClass(ribbonMode);  
+        if (ribbonMode && ribbonMode !== SIMS.Components2016.Common.RibbonVisibilityModes.NORMAL) {
+            $ribbon.addClass(ribbonMode);
         }
 
 
@@ -34784,71 +34786,83 @@ var ribbonGenerator16 = function () {
             $titleBar.append($contextualTabHead);
         }
         //////////////////////////////////////////////////////////////////////////
-       
+
         //Leonardo Start
-        /*
+
         //Adding Tell me Search Box
-        var $TellMeBox = $('<li class="tellMeSearchBox"/>');
-        var $TellMeBoxImage = UIUtils.getUnselectableDiv('', 'tellMeBoxImage');
-        var $TellMeBoxText = UIUtils.getUnselectableDiv('', 'tellMeBoxText');
-        $TellMeBoxText.text("Tell me what you want to do...");
-        $TellMeBoxImage.appendTo($TellMeBox);
-        $TellMeBoxText.appendTo($TellMeBox);
-        $TellMeBox.appendTo(this.$tabsWrapper);
+        // var $TellMeBox = $('<li class="tellMeSearchBox"/>');
+        // var $TellMeBoxImage = UIUtils.getUnselectableDiv('', 'tellMeBoxImage');
+        // var $TellMeBoxText = UIUtils.getUnselectableDiv('', 'tellMeBoxText');
+        // $TellMeBoxText.text("Tell me what you want to do...");
+        // $TellMeBoxImage.appendTo($TellMeBox);
+        // $TellMeBoxText.appendTo($TellMeBox);
+        // $TellMeBox.appendTo(this.$tabsWrapper);
 
 
         //Adding user info
-        if (this.appName.toLowerCase() == "win10explorer") { // adding this case for win10 file exploror ribbon
-            var $xUserInfo = $ribbonXml.find('userinfo');
-            if ($xUserInfo != null) {
-                var $userInfo = $('<li class="userinfo"/>');
+        //if (this.appName.toLowerCase() == "win10explorer") { // adding this case for win10 file exploror ribbon
+        var $xUserInfo = $ribbonXml.find('userinfo');
+        if ($xUserInfo != null) {
+            var $userInfo = $('<li class="userinfo"/>');
 
-                //Collapse button for windows 10 explorer
-                var $collapseBtn = UIUtils.getUnselectableDiv('', 'collapseButton');
-
-                //Help button for windows 10 explorer
-                var $helpeBtn = UIUtils.getUnselectableDiv('', 'helpButton');
-
-                $userInfo.append($collapseBtn, $helpeBtn);
-
-                $userInfo.appendTo($tabsWrapper);
-            }
-        }
-        else {
-            var $xUserInfo = $ribbonXml.find('userinfo');  // For all office applications
-            if ($xUserInfo != null) {
-                var $userInfo = $('<li class="userinfo"/>');
-
-                //user name
-                var $username = UIUtils.getUnselectableDiv('', 'username');
-                $username.text($xUserInfo.attr('name'));
-
-
-                //Share Button
-                
-                var $sharebuttonXML =  $ribbonXml.find('shareButton control[identifier="sharebuttonEnabled"]');
-                if ($sharebuttonXML.length > 0) {    
-                    var $shareButton = $('<li class="shareButtonLI"/>');
-                    $userInfo.append($username);
-                    $shareButton.append(this.controlGeneratorFactory.getControl($sharebuttonXML));
-                    $tabsWrapper.append($shareButton);
-                   
+            //Collapse button for windows 10 explorer
+            //Collapse button for windows 10 explorer
+            var $ribbonShowHideButton = UIUtils.getUnselectableDiv('', 'expandButton');
+            var $compFrame = SIMS.Objects.DOMElements.SIMArea.find(".ComponentFrame");
+            $compFrame.addClass('expandRibbon');
+            $ribbonShowHideButton.click(function () {
+                if ($compFrame.hasClass('expandRibbon')) {
+                    $compFrame.removeClass('expandRibbon');
+                    $compFrame.addClass('colapseRibbon');
                 } else {
-                    var $sharebutton = UIUtils.getUnselectableDiv('', 'sharebutton');
-                    var $icon = UIUtils.getUnselectableDiv('', 'userinfo-icon');
-                    var $sharetext = UIUtils.getUnselectableDiv('', 'sharetext');
-                    $sharetext.text("Share");
-                    $sharebutton.append($icon, $sharetext);
-                    
-                    $userInfo.append($username, $sharebutton);
+                    $compFrame.removeClass('colapseRibbon');
+                    $compFrame.addClass('expandRibbon');
                 }
 
-                $userInfo.appendTo($tabsWrapper);         
-            }
+            });
+            //Help button for windows 10 explorer
+            //Help button for windows 10 explorer
+            //var $helpeBtn = UIUtils.getUnselectableDiv('', 'helpButton');
+
+            $userInfo.append($ribbonShowHideButton);
+            $userInfo.appendTo($tabsWrapper);
         }
-        */
+        //}
+        // else {
+        //     var $xUserInfo = $ribbonXml.find('userinfo');  // For all office applications
+        //     if ($xUserInfo != null) {
+        //         var $userInfo = $('<li class="userinfo"/>');
+
+        //         //user name
+        //         var $username = UIUtils.getUnselectableDiv('', 'username');
+        //         $username.text($xUserInfo.attr('name'));
+
+
+        //         //Share Button
+
+        //         var $sharebuttonXML =  $ribbonXml.find('shareButton control[identifier="sharebuttonEnabled"]');
+        //         if ($sharebuttonXML.length > 0) {    
+        //             var $shareButton = $('<li class="shareButtonLI"/>');
+        //             $userInfo.append($username);
+        //             $shareButton.append(this.controlGeneratorFactory.getControl($sharebuttonXML));
+        //             $tabsWrapper.append($shareButton);
+
+        //         } else {
+        //             var $sharebutton = UIUtils.getUnselectableDiv('', 'sharebutton');
+        //             var $icon = UIUtils.getUnselectableDiv('', 'userinfo-icon');
+        //             var $sharetext = UIUtils.getUnselectableDiv('', 'sharetext');
+        //             $sharetext.text("Share");
+        //             $sharebutton.append($icon, $sharetext);
+
+        //             $userInfo.append($username, $sharebutton);
+        //         }
+
+        //         $userInfo.appendTo($tabsWrapper);         
+        //     }
+        // }
+
         //Leonardo End
-        
+
         //Select Second tab by Default... changing selector from "tab-header:nth-child(2)" to "tab-header-home"
         var bCreateTabs = true;
         if (ribbonMode === SIMS.Components2016.Common.RibbonVisibilityModes.COLLAPSED) {
@@ -34858,13 +34872,13 @@ var ribbonGenerator16 = function () {
             var $secondTabHeader = $ribbon.find('.tab-header-home');
             this.manipulatorFactory.getManipulator($secondTabHeader).selectTab($secondTabHeader);
         }
-      
+
 
         if (this.menuType == "JSON") {
             //this.ribbonContextMenu.UpdateMenuBindings();
         }
         else {
-           // this.AddContextMenus();
+            // this.AddContextMenus();
         }
 
         if (this.appName.toString().toLowerCase() == "ppt") {
@@ -34904,7 +34918,7 @@ var ribbonGenerator16 = function () {
 
 
     this.updateRibbonfromXML = function (ribbonXml, ribbon, AttachSubRibbonWithIdentifier, fixMultiRibbonTabSelection) {
-        this.fixMultiRibbonTabSelection = fixMultiRibbonTabSelection ? true: false;
+        this.fixMultiRibbonTabSelection = fixMultiRibbonTabSelection ? true : false;
 
 
         ribbonGenerator16.prototype.updateRibbonfromXML.apply(this, [ribbonXml, ribbon, true]);
@@ -34913,36 +34927,36 @@ var ribbonGenerator16 = function () {
         if (this.subRibbonImgCheckFlag) {
             this.CheckForIncorrectImages(ribbonXml);
         }
-       
+
     };
 
-    this.IncorrectImagesDirectories =  [
+    this.IncorrectImagesDirectories = [
         //"app/comps/common/ribbon/img",
         "app/comps/common/ribbon/sprites",
         "app/comps2016/common/ribbon/sprites"
     ];
 
-    this.CheckForIncorrectImages = function(ribbonXml){
+    this.CheckForIncorrectImages = function (ribbonXml) {
 
         var subribbontext = new XMLSerializer().serializeToString(ribbonXml);
-        
-        for(var i=0; i<this.IncorrectImagesDirectories.length; i++){
-            if (subribbontext.toLowerCase().indexOf(this.IncorrectImagesDirectories[i]) >= 0){
+
+        for (var i = 0; i < this.IncorrectImagesDirectories.length; i++) {
+            if (subribbontext.toLowerCase().indexOf(this.IncorrectImagesDirectories[i]) >= 0) {
                 GlobalLog("Some images in this sub-Ribbon.xml is referred from " + this.IncorrectImagesDirectories[i] + " folder. Please replace these images with the images from img folder of current Office version of ribbon component");
             }
         }
     };
 
-     this.getTabContainer = function(tabName){
+    this.getTabContainer = function (tabName) {
         if (this.fixMultiRibbonTabSelection) {
             return this.$ribbon.find('#ribbon-tab-container-' + tabName);
         } else {
-            return SIMS.Objects.DOMElements.Ribbon.find('#ribbon-tab-container-'+tabName);
+            return SIMS.Objects.DOMElements.Ribbon.find('#ribbon-tab-container-' + tabName);
         }
     };
 
 };
-   
+
 
 
 ribbonGenerator16.prototype = new ribbonGenerator();
