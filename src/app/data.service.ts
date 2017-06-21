@@ -12,7 +12,7 @@ export class DataService {
             <br/>
             <div class="questionHeadings">Account Balances:</div>
             <div> The accounts are listed in no particular order.</div>
-            <div style="height: 565px;" leoDataId="leoHost1" class="leoHost">
+            <div style="height: 565px; min-width: 347px; min-height: 549px;" leoDataId="leoHost1" class="leoHost">
             </div>`,
 
           leoData: {
