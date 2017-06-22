@@ -1,9 +1,15 @@
-<div class="col-sm-4 col-md-3">
-  <div class="thumbnail">
-    <img src="https://www.pearson.com/content/dam/one-dot-com/one-dot-com/global/Pearson_logo.png" height="200" width="200">
-    <div class="caption">
-      <p class="text-center">{{mode}}</p>
-      <p><a [routerLink]="['/question', questionIndex]" href="#" class="btn btn-primary btn-block" role="button">Launch</a></p>
+<section class="widget dashboard-item-widget">
+  <div class="widget-body clearfix course-widget-body">
+    <div>
+      <div class="dashboard-item-heading">
+        <div class="dashboard-item-title">{{mode}}</div>
+      </div>
+      <div class="image-container">
+        <img src="assets/dashboard-item-logo.png" class="dashboard-item-image">
+      </div>
     </div>
   </div>
-</div>
+  <div class="button-container">
+    <button [routerLink]="['/question', questionIndex]" class="btn btn-inverse" type="submit">Continue <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+  </div>
+</section>
