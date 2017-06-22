@@ -4848,28 +4848,21 @@ var Grid = (function (_super) {
                     commentsPlugin.updateCommentMeta(rowIndex, colIndex, { readOnly: true });
                 }
                 else {
-                    commentsPlugin.setRange({ from: { row: rowIndex, col: colIndex }, to: { row: rowIndex, col: colIndex } });
-                    commentsPlugin.removeComment();
+                    commentsPlugin.removeCommentAtCell(rowIndex, colIndex, false);
                 }
-                //
                 var cellMeta = this.grid.getCellMeta(rowIndex, colIndex);
-                if (cellMeta.originalProp == null) {
-                    if (cellMeta.renderingProps != null) {
-                        this.grid.setCellMeta(rowIndex, colIndex, "originalProp", JSON.parse(JSON.stringify(cellMeta.renderingProps)));
+                if ((cellMeta.originalProp == null) && (cellMeta.renderingProps != null)) {
+                    this.grid.setCellMeta(rowIndex, colIndex, "originalProp", JSON.parse(JSON.stringify(cellMeta.renderingProps)));
+                }
+                switch (grade) {
+                    case GRADINGCODES.BLANK: {
+                        var cellOriginalConfig = cellMeta.originalProp;
+                        this.grid.setCellMeta(rowIndex, colIndex, "renderer", this.getRenderer(cellMeta, cellOriginalConfig));
+                        break;
                     }
-                }
-                if (grade === GRADINGCODES.CORRECT) {
-                    this.grid.setCellMeta(rowIndex, colIndex, "renderer", this.getRenderingProps(cellMeta, GRADINGCODES.CORRECT, GradingUIConfig));
-                }
-                else if (grade === GRADINGCODES.INCORRECT) {
-                    this.grid.setCellMeta(rowIndex, colIndex, "renderer", this.getRenderingProps(cellMeta, GRADINGCODES.INCORRECT, GradingUIConfig));
-                }
-                else if (grade === GRADINGCODES.MISSING) {
-                    this.grid.setCellMeta(rowIndex, colIndex, "renderer", this.getRenderingProps(cellMeta, GRADINGCODES.MISSING, GradingUIConfig));
-                }
-                else if (grade === GRADINGCODES.BLANK) {
-                    var cellOriginalConfig = cellMeta.originalProp;
-                    this.grid.setCellMeta(rowIndex, colIndex, "renderer", this.getRenderer(cellMeta, cellOriginalConfig));
+                    default: {
+                        this.grid.setCellMeta(rowIndex, colIndex, "renderer", this.getRenderingProps(cellMeta, grade, GradingUIConfig));
+                    }
                 }
             }
         }
@@ -5339,7 +5332,8 @@ var hotWrapper = (function () {
         this.config = config;
         this.gridRef = gridRef;
         this.themeMap = {
-            "cosmattThemeGreen": "cosmatt-theme-green"
+            "cosmattThemeGreen": "cosmatt-theme-green",
+            "leonardoThemeGreen": "leonardo-theme-green"
         };
         this.hotConfig = this.generateHotConfig();
     }
