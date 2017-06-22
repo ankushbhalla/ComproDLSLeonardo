@@ -4126,8 +4126,8 @@ var Hints = (function () {
     Hints.prototype.isHintRequired = function (hint) {
         var from = hint.from, to = hint.to;
         var hintRequired = false;
-        for (var i = 0; i <= to.col - from.col && !hintRequired; i++) {
-            for (var j = 0; j <= to.row - from.row && !hintRequired; j++) {
+        for (var i = 0; i <= to.row - from.row && !hintRequired; i++) {
+            for (var j = 0; j <= to.col - from.col && !hintRequired; j++) {
                 if (this.getUserDataAtCell(from.row + i, from.col + j) != hint.expectedvalues[i][j]) {
                     hintRequired = true;
                 }
@@ -4339,8 +4339,8 @@ var DataModel = (function () {
         this.dispatchEvent(eventArgs);
     };
     DataModel.prototype.updateCellData = function (from, to, values) {
-        for (var rowIndex = 0; rowIndex <= to.col - from.col; rowIndex++) {
-            for (var colIndex = 0; colIndex <= to.row - from.row; colIndex++) {
+        for (var rowIndex = 0; rowIndex <= to.row - from.row; rowIndex++) {
+            for (var colIndex = 0; colIndex <= to.col - from.col; colIndex++) {
                 var cellValue = {
                     row: from.row + rowIndex,
                     column: from.col + colIndex
@@ -4893,7 +4893,7 @@ var Grid = (function (_super) {
         }
     };
     Grid.prototype.enablecheckAnswerComments = function (commentsPlugin, rowIndex, colIndex) {
-        commentsPlugin.editor.editor.className += " leoCommentTextArea"; // to be checked.
+        commentsPlugin.editor.editor.classList.add('leoCommentTextArea');
         commentsPlugin.setRange({ from: { row: 0, col: 0 }, to: { row: rowIndex, col: colIndex } });
         commentsPlugin.show();
     };
@@ -4977,9 +4977,9 @@ var Grid = (function (_super) {
     };
     Grid.prototype.renderHint = function (eventArgs) {
         var _a = eventArgs.hintMeta, from = _a.from, to = _a.to, expectedvalues = _a.expectedvalues, comment = _a.comment;
-        this.updateSettings({ data: this.dataModel.getUserData() });
+        var RowConfig = this.hotWrapper.getCellProps(this.dataModel.getRowsConfig());
+        this.updateSettings({ data: this.dataModel.getUserData(), cell: RowConfig });
         this.selectCell(from.row, from.col, to.row, to.col);
-        this.render();
     };
     Grid.prototype.renderRibbonStyles = function (eventArgs) {
         var _a = eventArgs.eventData, property = _a.property, selectedRange = _a.selectedRange, type = _a.type;
@@ -5365,12 +5365,12 @@ var hotWrapper = (function () {
         var retVal = {
             outsideClickDeselects: false,
             enterBeginsEditing: false,
-            customBorders: this.getCustomBorders(),
             colWidths: this.getColumnWidths(),
             rowHeights: this.getRowHeights(),
             className: this.getDefaultHorizontalAlignment() + " " + this.getDefaultVerticalAlignment(),
             comments: true,
             formulas: true,
+            renderAllRows: true,
             renderer: this.config.options["defaultRenderer"] || "html",
             readOnlyCellClassName: this.getReadOnlyClass(this.config.options),
             selectedCellBorderColor: "#217346",
@@ -5387,6 +5387,9 @@ var hotWrapper = (function () {
                 return Autofillformula.beforeAutofillInsidePopulate(index, direction, data, deltas, {}, selected, this);
             }
         };
+        if (this.config.options["setUniformCustomProperties"] == null) {
+            retVal["customBorders"] = this.getCustomBorders();
+        }
         if (this.config.data) {
             retVal["data"] = this.config.data;
         }
@@ -5552,6 +5555,8 @@ var hotWrapper = (function () {
                     var cellRef = rows[rowIndex].cells[colIndex];
                     this.setColorFill(cellRef.colorfill, properties);
                     this.setAlignment(cellRef.alignment, properties);
+                    if (this.config.options["setUniformCustomProperties"] != null)
+                        this.setUniformBorder(cellRef.border, this.config.options["setUniformCustomProperties"]["border"], properties);
                     this.setRenderingProps(cellRef, properties);
                     this.setReadOnlyCell(cellRef, properties);
                     cellProps.push(properties);
@@ -5559,6 +5564,10 @@ var hotWrapper = (function () {
             }
             return cellProps;
         }
+    };
+    hotWrapper.prototype.setUniformBorder = function (cellBorder, UniformBorder, properties) {
+        if (cellBorder != null)
+            properties.renderingProps["border"] = UniformBorder;
     };
     hotWrapper.prototype.setColorFill = function (colorfill, properties) {
         var colorfills = this.config.styles["colorfills"] || [];
