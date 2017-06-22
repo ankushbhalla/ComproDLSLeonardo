@@ -13,10 +13,10 @@ export class DashboardComponent implements OnInit {
         mode: "Side By Side View"
       },
       {
-        mode: "Vertical Scroll (Reading View)"
+        mode: "Vertical Scroll</br>(Reading View)"
       },
       {
-        mode: "Vertical Scroll (Without Ribbon)"
+        mode: "Vertical Scroll</br>(Without Ribbon)"
       }];
   }
   ngOnInit() {
