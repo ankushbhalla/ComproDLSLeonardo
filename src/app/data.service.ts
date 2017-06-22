@@ -73,7 +73,8 @@ export class DataService {
             ]
           },
           gridUIParams: {
-            height: 950
+            height: 964,
+            width: 1378
           }
         }
       },
@@ -112,7 +113,8 @@ export class DataService {
             ]
           },
           gridUIParams: {
-            height: 827
+            height: 844,
+            width: 1378
           }
         }
       },

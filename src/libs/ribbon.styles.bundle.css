@@ -4812,7 +4812,8 @@ No regression impact as the Power View Tab is being used first Time*/
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; }
+    user-select: none;
+    box-sizing: content-box; }
   .DLSLeonardo #SIMArea .ribbon input {
     outline: none; }
   .DLSLeonardo #SIMArea .ribbon {
@@ -4876,7 +4877,7 @@ No regression impact as the Power View Tab is being used first Time*/
     position: relative;
     top: -1px;
     border-width: 1px 0;
-    min-width: 1022px;
+    min-width: 814px;
     /*display:none;*/ }
   .DLSLeonardo #SIMArea .ribbon .ribbon-tabs-wrapper {
     display: block;

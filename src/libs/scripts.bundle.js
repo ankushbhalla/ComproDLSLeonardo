@@ -91,6 +91,14 @@ exports.Events = {
     },
     GradingEvents: {
         RENDER_RESULT: "Render_Result"
+    },
+    RIBBON_EVENTS: {
+        STYLE_EVENT: "Style_Event",
+        RENDER_GRID: "Render_Grid",
+        RIBBON_COLLAPSED: "Ribbon_Collapsed"
+    },
+    HintEvents: {
+        RENDER_HINT: "Render_Hint"
     }
 };
 exports.GradingUIConfig = {
@@ -112,6 +120,27 @@ exports.GRADINGCODES = {
     INCORRECT: 1,
     MISSING: 2,
     BLANK: 3
+};
+exports.RIBBON_OPTIONS = {
+    "1": {
+        property: {
+            name: "fontWeight",
+            value: "bold"
+        },
+        type: "cellStyle",
+        attribute: "HIGHLIGHT_BOLD"
+    },
+    "61": {
+        property: {
+            name: "mergedranges"
+        },
+        type: "other",
+        attribute: "MERGE_AND_CENTER"
+    }
+};
+exports.PROPERTY_ATTRIBUTE_MAP = {
+    HIGHLIGHT_BOLD: "fontWeight",
+    MERGE_AND_CENTER: "mergedranges"
 };
 
 
@@ -3927,21 +3956,21 @@ var CheckAnswer = (function () {
     };
     CheckAnswer.prototype.getComment = function (submittedValue, correctValue, grade) {
         if (grade == enums_1.GRADINGCODES.CORRECT) {
-            return "You answered the question correctly!!. Answer is : " + correctValue + ", You Answered : " + submittedValue;
+            return "Your value is correct";
         }
         else if (grade == enums_1.GRADINGCODES.INCORRECT) {
             if (correctValue == "") {
-                return "This cell is to remain Blank!!. You Answered : " + submittedValue;
+                return "This cell should be Empty.";
             }
             else {
-                return "Incorrect Answer. Correct Answer is : " + correctValue + ", You Answered : " + submittedValue;
+                return "Correct value is: " + correctValue;
             }
         }
         else if (grade == enums_1.GRADINGCODES.MISSING) {
-            return "You did not entered the answer. Correct Answer is : " + correctValue;
+            return "You did not enter a value. Correct value is : " + correctValue;
         }
         else if (grade == enums_1.GRADINGCODES.BLANK) {
-            return "Correct. This cell is to remain Blank!!";
+            return "Your value is correct.";
         }
     };
     CheckAnswer.prototype.setCorrectData = function (newCorrectData) {
@@ -4058,11 +4087,13 @@ exports.ExportData = ExportData;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+var enums_1 = __webpack_require__(0);
 var Hints = (function () {
-    function Hints(hintBtn, hints, dataModel, spreadsheet, getDataAtCell) {
+    function Hints(hintBtn, hints, dataModel, eventController, spreadsheet, getDataAtCell) {
         this.hintBtn = hintBtn;
         this.hints = hints;
         this.dataModel = dataModel;
+        this.eventController = eventController;
         this.spreadsheet = spreadsheet;
         this.getDataAtCell = getDataAtCell;
     }
@@ -4073,44 +4104,36 @@ var Hints = (function () {
         }
         else {
             this.attachEvents();
+            this.registerEvents();
         }
     };
     Hints.prototype.attachEvents = function () {
         this.hintBtn.addEventListener("click", this.handleHintBtnClick.bind(this));
     };
+    Hints.prototype.registerEvents = function () {
+        this.eventController.registerEvent(enums_1.Events.HintEvents.RENDER_HINT);
+    };
     Hints.prototype.handleHintBtnClick = function () {
-        var commentsPlugin = this.spreadsheet.grid.getPlugin("comments");
         for (var index = 0; index < this.hints.length; index++) {
             var hint = this.hints[index];
-            var hintMetaData = this.getHintMetaData(hint);
-            if (hintMetaData.hintRequired) {
-                commentsPlugin.setCommentAtCell(hintMetaData.hintReqdAt['row'], hintMetaData.hintReqdAt['col'], hint['comment']);
-                commentsPlugin.updateCommentMeta(hintMetaData.hintReqdAt['row'], hintMetaData.hintReqdAt['col'], { readOnly: true });
-                commentsPlugin.editor.editor.className += " leoCommentTextArea";
-                commentsPlugin.show();
-                this.spreadsheet.grid.setDataAtCell(hintMetaData.hintReqdAt['row'], hintMetaData.hintReqdAt['col'], hintMetaData.hintValue);
-                this.spreadsheet.grid.selectCell(hintMetaData.hintReqdAt['row'], hintMetaData.hintReqdAt['col']);
+            var bHintRequired = this.isHintRequired(hint);
+            if (bHintRequired) {
+                this.dataModel.updateHintData(hint.from, hint.to, hint.expectedvalues, hint);
                 break;
             }
         }
-        this.spreadsheet.grid.render();
     };
-    Hints.prototype.getHintMetaData = function (hint) {
+    Hints.prototype.isHintRequired = function (hint) {
         var from = hint.from, to = hint.to;
         var hintRequired = false;
-        var hintReqdAt = {};
-        var hintValue;
         for (var i = 0; i <= to.col - from.col && !hintRequired; i++) {
             for (var j = 0; j <= to.row - from.row && !hintRequired; j++) {
                 if (this.getUserDataAtCell(from.row + i, from.col + j) != hint.expectedvalues[i][j]) {
                     hintRequired = true;
-                    hintReqdAt["row"] = from.row + i;
-                    hintReqdAt["col"] = from.col + j;
-                    hintValue = hint.expectedvalues[i][j];
                 }
             }
         }
-        return { hintRequired: hintRequired, hintReqdAt: hintReqdAt, hintValue: hintValue };
+        return hintRequired;
     };
     Hints.prototype.getUserDataAtCell = function (row, col) {
         return this.getDataAtCell.call(this.spreadsheet, row, col);
@@ -4134,6 +4157,7 @@ var DataModel = (function () {
         this.guid = guid;
         this.dataJson = dataJson;
         this.spreadsheetEventController = spreadsheetEventController;
+        this.bRibbonCollapsed = false;
         if (this.dataJson.options == null) {
             this.dataJson.options = {};
         }
@@ -4237,7 +4261,15 @@ var DataModel = (function () {
         return this.dataJson.rows;
     };
     DataModel.prototype.getCellProps = function (row, col) {
-        return this.dataJson.rows[row].cells[col];
+        if (this.dataJson.rows) {
+            var rows = this.dataJson.rows;
+            if (rows[row]) {
+                if (rows[row].cells) {
+                    return rows[row].cells[col] || {};
+                }
+            }
+        }
+        return {};
     };
     DataModel.prototype.getdataJsonForStudent = function () {
         var role = this.getUserRole();
@@ -4271,7 +4303,13 @@ var DataModel = (function () {
         if (!this.dataJson.mergedranges) {
             this.dataJson["mergedranges"] = [];
         }
-        this.dataJson.mergedranges.push(range);
+        var mergeStateInfo = this.getMergeStateInfo(range.row, range.col);
+        if (mergeStateInfo.status === "true") {
+            this.dataJson["mergedranges"].splice(mergeStateInfo["index"], 1);
+        }
+        else {
+            this.dataJson.mergedranges.push(range);
+        }
     };
     DataModel.prototype.getDefaultROVal = function () {
         return this.dataJson.options["readOnly"] !== undefined ? this.dataJson.options["readOnly"] : false;
@@ -4290,6 +4328,118 @@ var DataModel = (function () {
     };
     DataModel.prototype.getValidationTolerance = function () {
         return this.dataJson.options["tolerance"] || 0;
+    };
+    DataModel.prototype.updateHintData = function (from, to, values, hint) {
+        this.updateCellData(from, to, values);
+        var eventArgs = {
+            eventName: enums_1.Events.HintEvents.RENDER_HINT,
+            hintMeta: hint,
+            viewId: enums_1.VIEWIDs.DEFAULT
+        };
+        this.dispatchEvent(eventArgs);
+    };
+    DataModel.prototype.updateCellData = function (from, to, values) {
+        for (var rowIndex = 0; rowIndex <= to.col - from.col; rowIndex++) {
+            for (var colIndex = 0; colIndex <= to.row - from.row; colIndex++) {
+                var cellValue = {
+                    row: from.row + rowIndex,
+                    column: from.col + colIndex
+                };
+                this.setCellValue(cellValue, values[rowIndex][colIndex]);
+            }
+        }
+    };
+    DataModel.prototype.updateCellProperties = function (property, selectedRange, type) {
+        var from = selectedRange.from, to = selectedRange.to;
+        var rows = this.dataJson.rows;
+        if (rows == null) {
+            rows = {};
+        }
+        for (var colIndex = from.col; colIndex <= to.col; colIndex++) {
+            for (var rowIndex = from.row; rowIndex <= to.row; rowIndex++) {
+                if (rows[rowIndex] == null) {
+                    rows[rowIndex] = {};
+                }
+                if (rows[rowIndex].cells == null) {
+                    rows[rowIndex]["cells"] = {};
+                }
+                if (rows[rowIndex].cells[colIndex] == null) {
+                    rows[rowIndex].cells[colIndex] = {};
+                }
+                var cell = rows[rowIndex].cells[colIndex];
+                // If the Cell Property already exists delete it.
+                if (cell[property.name]) {
+                    delete cell[property.name];
+                }
+                else {
+                    cell[property.name] = property.value;
+                }
+            }
+        }
+    };
+    DataModel.prototype.handleRibbonEvents = function (eventID, selectedRange) {
+        var _a = enums_1.RIBBON_OPTIONS[eventID], property = _a.property, type = _a.type;
+        if (type === "cellStyle") {
+            this.updateCellProperties(property, selectedRange, type);
+        }
+        else if (type === "other") {
+            if (property.name === "mergedranges") {
+                var from = void 0, to = void 0;
+                var firstCell = selectedRange.from;
+                var secondCell = selectedRange.to;
+                // Compare the row and column indexes to calculate teh from and to objects. Because we need to subtract these indexes to calculate the rowspan and colspan
+                if (firstCell.row === secondCell.row) {
+                    from = (firstCell.col <= secondCell.col) ? firstCell : secondCell;
+                    to = (firstCell.col <= secondCell.col) ? secondCell : firstCell;
+                }
+                else if (firstCell.col === secondCell.col) {
+                    from = (firstCell.row <= secondCell.row) ? firstCell : secondCell;
+                    to = (firstCell.row <= secondCell.row) ? secondCell : firstCell;
+                }
+                else {
+                    from = (firstCell.row <= secondCell.row && firstCell.col <= secondCell.col) ? firstCell : secondCell;
+                    to = (firstCell.row <= secondCell.row && firstCell.col <= secondCell.col) ? secondCell : firstCell;
+                }
+                var row = from.row, col = from.col;
+                var rowspan = to.row - from.row + 1;
+                var colspan = to.col - from.col + 1;
+                this.pushMergedRange({ row: row, col: col, rowspan: rowspan, colspan: colspan });
+            }
+        }
+        var eventArgs = {
+            eventName: enums_1.Events.RIBBON_EVENTS.RENDER_GRID,
+            eventData: { property: property, selectedRange: selectedRange, type: type }
+        };
+        this.dispatchEvent(eventArgs);
+    };
+    DataModel.prototype.getMergedRanges = function () {
+        return this.dataJson.mergedranges || [];
+    };
+    DataModel.prototype.getCellMetaDataForRibbon = function (row, column) {
+        var cellProps = this.getCellProps(row, column);
+        var mergeStateInfo = this.getMergeStateInfo(row, column);
+        cellProps["mergedranges"] = mergeStateInfo.status;
+        return cellProps;
+    };
+    DataModel.prototype.getMergeStateInfo = function (row, col) {
+        var mergedranges = this.getMergedRanges();
+        for (var range = 0; range < mergedranges.length; range++) {
+            if (mergedranges[range].row <= row && mergedranges[range].row + mergedranges[range].rowspan - 1 >= row && mergedranges[range].col <= col && mergedranges[range].col + mergedranges[range].colspan - 1 >= col) {
+                return { status: "true", index: range };
+            }
+        }
+        return { status: "false" };
+    };
+    DataModel.prototype.setRibbonCollapsedState = function (viewId, bRibbonCollapsed) {
+        this.bRibbonCollapsed = bRibbonCollapsed;
+        var eventArgs = {
+            eventName: enums_1.Events.RIBBON_EVENTS.RIBBON_COLLAPSED,
+            viewId: viewId
+        };
+        this.dispatchEvent(eventArgs);
+    };
+    DataModel.prototype.isRibbonCollapsed = function () {
+        return this.bRibbonCollapsed;
     };
     return DataModel;
 }());
@@ -4324,7 +4474,7 @@ var SpreadsheetController = (function () {
         this.grid = new grid_1.Grid(container.querySelector('#grid'), config, this.model, this.eventController);
         this.topBar = new topBar_1.TopBar(container.querySelector(".formulaToolbar"), this.model, this.eventController);
         this.ribbon = new ribbon_1.Ribbon(container, this.model, this.eventController);
-        this.hints = new hints_1.Hints(container.querySelector('#hintBtn'), config.hints, this.model, this, this.getDataAtCell);
+        this.hints = new hints_1.Hints(container.querySelector('#hintBtn'), config.hints, this.model, this.eventController, this, this.getDataAtCell);
         this.checkAnswer = new checkAnswer_1.CheckAnswer(container.querySelector('#checkMyAnswer'), this.model, this.eventController, correctData, this, this.getUserData);
         this.exportData = new exportdata_1.ExportData(container.querySelector('#exportConfigBtn'), container.querySelector("#exportCorrectDataBtn"), this.model);
         this.sheetTabBar = new sheettabbar_1.SheetTabBar(container.querySelector('#sheetTabBar'), this.model);
@@ -4347,6 +4497,9 @@ var SpreadsheetController = (function () {
         for (var event_1 in enums_1.Events.ViewEvents) {
             this.eventController.registerEvent(enums_1.Events.ViewEvents[event_1]);
         }
+        for (var event_2 in enums_1.Events.HintEvents) {
+            this.eventController.registerEvent(enums_1.Events.HintEvents[event_2]);
+        }
         addResizeListener(this.container.querySelector(".DLSLeonardo"), function () {
             self.resetGridDimensions();
         });
@@ -4355,6 +4508,8 @@ var SpreadsheetController = (function () {
     SpreadsheetController.prototype.registerEventListeners = function () {
         this.eventController.addEventListener(enums_1.Events.DataModelEvents.BROADCAST_EVENT, this.BroadcastEvent.bind(this));
         this.eventController.addEventListener(enums_1.Events.GradingEvents.RENDER_RESULT, this.renderGradingResults.bind(this));
+        this.eventController.addEventListener(enums_1.Events.RIBBON_EVENTS.STYLE_EVENT, this.handleRibbonEvents.bind(this));
+        this.eventController.addEventListener(enums_1.Events.RIBBON_EVENTS.RIBBON_COLLAPSED, this.resetGridDimensions.bind(this));
     };
     SpreadsheetController.prototype.BroadcastEvent = function (eventArgs) {
         this.eventController.dispatchEvent(eventArgs.eventName, eventArgs);
@@ -4391,9 +4546,10 @@ var SpreadsheetController = (function () {
     SpreadsheetController.prototype.displayHint = function () {
         this.hints.handleHintBtnClick();
     };
-    SpreadsheetController.prototype.resetGridDimensions = function () {
-        var availableHeight = this.container.querySelector(".DLSLeonardo").offsetHeight;
-        var availableWidth = this.container.querySelector(".DLSLeonardo").offsetWidth;
+    SpreadsheetController.prototype.getAvailableDimensions = function () {
+        var spreadsheetEle = this.container.querySelector(".DLSLeonardo");
+        var availableWidth = spreadsheetEle.offsetWidth;
+        var availableHeight = spreadsheetEle.offsetHeight;
         if (this.showButtonGroup()) {
             availableHeight -= 35;
         }
@@ -4401,54 +4557,77 @@ var SpreadsheetController = (function () {
             availableHeight -= 25;
         }
         if (this.model.isRibbonVisible()) {
-            availableHeight -= 120;
+            if (this.model.isRibbonCollapsed()) {
+                availableHeight -= 30;
+            }
+            else {
+                availableHeight -= 120;
+            }
         }
         if (this.model.getSheetNames() != null) {
             availableHeight -= 25;
         }
-        var totalColWidth = this.grid.getGridWidth();
-        if (this.model.isHeadersPresent("rowheaders")) {
-            totalColWidth += 26;
-        }
-        var totalRowHeight = this.grid.getGridHeight();
-        if (this.model.isHeadersPresent("colheaders")) {
-            totalRowHeight += 26;
-        }
-        totalRowHeight += this.scrollBaroffset;
-        totalColWidth += this.scrollBaroffset;
-        var newHeight = (availableHeight < totalRowHeight) ? availableHeight : totalRowHeight + 15; //Scrollbar height;
-        var newWidth = (availableWidth < totalColWidth) ? availableWidth : totalColWidth + 15; //Scrollbar width;
+        return {
+            width: availableWidth,
+            height: availableHeight
+        };
+    };
+    SpreadsheetController.prototype.resetGridDimensions = function () {
+        var availableDimensions = this.getAvailableDimensions();
+        var requiredGridDimension = this.grid.getDimensions();
+        requiredGridDimension.height += this.scrollBaroffset;
+        requiredGridDimension.width += this.scrollBaroffset;
+        var newHeight = (availableDimensions.height < requiredGridDimension.height) ? availableDimensions.height : requiredGridDimension.height + 15; //Scrollbar height;
+        var newWidth = (availableDimensions.width < requiredGridDimension.width) ? availableDimensions.width : requiredGridDimension.width + 15; //Scrollbar width;
         this.grid.updateSettings({
             height: newHeight,
             width: newWidth
         });
-        var newGridWidth = newWidth - 3 + "px";
-        this.container.querySelector(".formulaToolbar").style.width = newGridWidth;
-        this.container.querySelector("#buttonGroup").style.width = newGridWidth;
-        this.container.querySelector('#sheetTabBar').style.width = newGridWidth;
-        var hotHolder = this.container.querySelector('.ht_master .wtHolder');
-        var gridEle = this.container.querySelector('#grid');
-        var scrollVisible = false;
-        if (hotHolder.scrollWidth > hotHolder.clientWidth) {
-            gridEle.classList.add("hasHorizontalScroll");
-            scrollVisible = true;
+        var horScrollVisible = this.grid.hasHorizontalScroll();
+        var verScrollVisible = this.grid.hasVericalScroll();
+        var spreadsheetEle = this.container.querySelector(".DLSLeonardo");
+        if (horScrollVisible) {
+            spreadsheetEle.classList.add("hasHorizontalScroll");
         }
         else {
-            gridEle.classList.remove("hasHorizontalScroll");
+            spreadsheetEle.classList.remove("hasHorizontalScroll");
         }
-        if (hotHolder.scrollHeight > hotHolder.clientHeight) {
-            gridEle.classList.add("hasVerticalScroll");
-            scrollVisible = true;
+        if (verScrollVisible) {
+            spreadsheetEle.classList.add("hasVerticalScroll");
         }
         else {
-            gridEle.classList.remove("hasVerticalScroll");
+            spreadsheetEle.classList.remove("hasVerticalScroll");
         }
-        //Handsontable Offset needs to be reset in case scroll bars are visible
-        if (scrollVisible) {
-            this.scrollBaroffset = 5;
+        var newContainerWidth = newWidth;
+        if (horScrollVisible || verScrollVisible) {
+            this.scrollBaroffset = 5; //Handsontable Offset needs to be reset in case scroll bars are visible
         }
         else {
             this.scrollBaroffset = 2;
+            newContainerWidth -= 15;
+        }
+        newContainerWidth += "px";
+        spreadsheetEle.querySelector(".formulaToolbar").style.width = newContainerWidth;
+        spreadsheetEle.querySelector("#buttonGroup").style.width = newContainerWidth;
+        spreadsheetEle.querySelector('#sheetTabBar').style.width = newContainerWidth;
+    };
+    SpreadsheetController.prototype.handleRibbonEvents = function (eventArgs) {
+        var eventID = eventArgs.eventID;
+        var selectedRange = this.grid.getSelected();
+        if (selectedRange) {
+            var from = {
+                row: selectedRange[0],
+                col: selectedRange[1]
+            };
+            var to = {
+                row: selectedRange[2],
+                col: selectedRange[3]
+            };
+            this.model.handleRibbonEvents(eventID, { from: from, to: to });
+        }
+        else {
+            // Handle case when no cell or range is selected
+            console.log("No Cell or Range selected");
         }
     };
     return SpreadsheetController;
@@ -4546,6 +4725,8 @@ var Grid = (function (_super) {
     Grid.prototype.registerEventListeners = function () {
         this.eventController.addEventListener(enums_1.Events.ViewEvents.SELECTED_CELL_VALUE_CHANGED, this.updateCurrentCellValue.bind(this));
         this.eventController.addEventListener(enums_1.Events.ViewEvents.SELECTED_CELL_CHANGED, this.updateCurrentSelectedCell.bind(this));
+        this.eventController.addEventListener(enums_1.Events.HintEvents.RENDER_HINT, this.renderHint.bind(this));
+        this.eventController.addEventListener(enums_1.Events.RIBBON_EVENTS.RENDER_GRID, this.renderRibbonStyles.bind(this));
     };
     Grid.prototype.InitializeHOT = function () {
         return new Handsontable(this.container, this.hotWrapper.getHotConfig());
@@ -4662,7 +4843,7 @@ var Grid = (function (_super) {
             for (colIndex in gradingObject[rowIndex]) {
                 var grade = gradingObject[rowIndex][colIndex].grade;
                 // Show Grading Result Feedback as HOT Comment
-                if (grade == GRADINGCODES.INCORRECT || grade == GRADINGCODES.MISSING) {
+                if ((grade == GRADINGCODES.INCORRECT || grade == GRADINGCODES.MISSING) && (gradingObject[rowIndex][colIndex].comment)) {
                     commentsPlugin.setCommentAtCell(rowIndex, colIndex, gradingObject[rowIndex][colIndex].comment);
                     commentsPlugin.updateCommentMeta(rowIndex, colIndex, { readOnly: true });
                 }
@@ -4750,11 +4931,20 @@ var Grid = (function (_super) {
         this.grid.updateSettings(settings, init);
         this.grid.render();
     };
+    Grid.prototype.getDimensions = function () {
+        return {
+            width: this.getGridWidth(),
+            height: this.getGridHeight()
+        };
+    };
     Grid.prototype.getGridWidth = function () {
         var data = this.dataModel.getCellData();
         var gridWidth = 0;
         for (var colIndex = 0; colIndex < data[0].length; colIndex++) {
             gridWidth += this.grid.getColWidth(colIndex);
+        }
+        if (this.dataModel.isHeadersPresent("rowheaders")) {
+            gridWidth += 26;
         }
         return gridWidth;
     };
@@ -4764,7 +4954,46 @@ var Grid = (function (_super) {
         for (var rowIndex = 0; rowIndex < data.length; rowIndex++) {
             gridHeight += this.grid.getRowHeight(rowIndex, defaultHeight);
         }
+        if (this.dataModel.isHeadersPresent("colheaders")) {
+            gridHeight += 26;
+        }
         return gridHeight;
+    };
+    Grid.prototype.hasHorizontalScroll = function () {
+        var scrollVisible = false;
+        var hotHolder = this.container.querySelector('.ht_master .wtHolder');
+        if (hotHolder.scrollWidth > hotHolder.clientWidth) {
+            scrollVisible = true;
+        }
+        return scrollVisible;
+    };
+    Grid.prototype.hasVericalScroll = function () {
+        var scrollVisible = false;
+        var hotHolder = this.container.querySelector('.ht_master .wtHolder');
+        if (hotHolder.scrollHeight > hotHolder.clientHeight) {
+            scrollVisible = true;
+        }
+        return scrollVisible;
+    };
+    Grid.prototype.renderHint = function (eventArgs) {
+        var _a = eventArgs.hintMeta, from = _a.from, to = _a.to, expectedvalues = _a.expectedvalues, comment = _a.comment;
+        this.updateSettings({ data: this.dataModel.getUserData() });
+        this.selectCell(from.row, from.col, to.row, to.col);
+        this.render();
+    };
+    Grid.prototype.renderRibbonStyles = function (eventArgs) {
+        var _a = eventArgs.eventData, property = _a.property, selectedRange = _a.selectedRange, type = _a.type;
+        var settings = {};
+        if (type === "cellStyle") {
+            var newRowConfig = this.hotWrapper.getCellProps(this.dataModel.getRowsConfig());
+            settings["cell"] = newRowConfig;
+        }
+        else if (type === "other") {
+            if (property.name === "mergedranges") {
+                settings["mergeCells"] = this.dataModel.getMergedRanges();
+            }
+        }
+        this.updateSettings(settings);
     };
     return Grid;
 }(baseView_1.BaseView));
@@ -4791,6 +5020,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var enums_1 = __webpack_require__(0);
 var baseView_1 = __webpack_require__(1);
+var enums_2 = __webpack_require__(0);
 var Ribbon = (function (_super) {
     __extends(Ribbon, _super);
     function Ribbon(leonardoContainer, dataModel, eventController) {
@@ -4799,6 +5029,7 @@ var Ribbon = (function (_super) {
         _this.dataModel = dataModel;
         _this.eventController = eventController;
         _this.viewId = enums_1.VIEWIDs.RIBBON;
+        _this.compID = 1;
         return _this;
     }
     Ribbon.prototype.init = function () {
@@ -4810,19 +5041,111 @@ var Ribbon = (function (_super) {
             SIMS.Objects.DOMElements.SIMArea = jQuery(this.leonardoContainer.querySelector('#SIMArea'));
             SIMS.Objects.DOMElements.LeonardoArea = jQuery(this.leonardoContainer);
             var ribbonXmlPath = this.dataModel.getHostAppRootPath() + "RibbonAssets/excel-ribbon.xml";
-            var compInfo = { "@id": "1", "@mode": "new", "sizeandpos": { "attr": [{ "@name": "left", "@value": "0" }, { "@name": "top", "@value": "0" }, { "@name": "width", "@value": "*" }, { "@name": "height", "@value": "121" }] }, "initialattrs": { "attr": [{ "@name": "APP", "@value": "excel" }, { "@name": "RIBBON_PATH", "@value": ribbonXmlPath }, { "@name": "FONT_NAME", "@value": "Calibri light" }, { "@name": "BOTTOM_ALIGN", "@value": "true" }, { "@name": "CENTER_ALIGN", "@value": "true" }, { "@name": "FONT_SIZE", "@value": "18" }, { "@name": "MERGE_AND_CENTER", "@value": "true" }] }, "events": { "event": [{ "@id": "51", "@desc": "Insert Cells", "validate": [{ "@followup": "3", "comp": { "@id": "2", "@validation-set": "Selected_cell1" } }, { "@followup": "2", "comp": { "@id": "2", "@validation-set": "Selected_cell2" } }] }, { "@id": "52", "@desc": "click Insert Sheet Rows.", "validate": { "@followup": "3", "@operator": "any", "comp": [{ "@id": "2", "@validation-set": "Selected_cell2" }, { "@id": "2", "@validation-set": "Selected_cell1" }] } }, { "@id": "82", "@desc": "Cells group Insert", "validate": { "@followup": "3", "comp": { "@id": "2", "@validation-set": "Selected_cell1" } } }] }, "compName": "SIMS.Components.Excel.Ribbon", "className": "SIMS.Components2016.Excel.Ribbon", "compType": "default", "taskbarImage": {} };
-            var compJS = new SIMS.Components2016.Excel.Ribbon();
-            compJS.AddComponentUI(compInfo, "<div class='compDiv SIMS_Ribbon_Excel' id='1' tabindex='1'></div>");
-            compJS.Initialize(compInfo);
-            REGISTER_MSG("COMP_ACTION", this, this.HandleRibbonEvents, compJS.msgHandler);
-            compJS.SetCompState(compInfo); // sizeandpos
-            compJS.ShowComponent(compInfo["@id"], true, compInfo); //display true
-            compJS.UpdateComponentState(compInfo, "default"); //set attriubte
-            compJS.GenerateHTML();
+            var compInfo = { "@id": "1", "@mode": "new", "sizeandpos": { "attr": [{ "@name": "left", "@value": "0" }, { "@name": "top", "@value": "0" }, { "@name": "width", "@value": "*" }, { "@name": "height", "@value": "120" }] }, "initialattrs": { "attr": [{ "@name": "APP", "@value": "excel" }, { "@name": "RIBBON_PATH", "@value": ribbonXmlPath }, { "@name": "FONT_NAME", "@value": "Calibri light" }, { "@name": "BOTTOM_ALIGN", "@value": "true" }, { "@name": "ENABLE_COLLAPSE_EXPAND_BUTTON", "@value": "true" }, { "@name": "CENTER_ALIGN", "@value": "true" }, { "@name": "FONT_SIZE", "@value": "18" }, { "@name": "MERGE_AND_CENTER", "@value": "false" }] }, "events": { "event": [{ "@id": "51", "@desc": "Insert Cells", "validate": [{ "@followup": "3", "comp": { "@id": "2", "@validation-set": "Selected_cell1" } }, { "@followup": "2", "comp": { "@id": "2", "@validation-set": "Selected_cell2" } }] }, { "@id": "52", "@desc": "click Insert Sheet Rows.", "validate": { "@followup": "3", "@operator": "any", "comp": [{ "@id": "2", "@validation-set": "Selected_cell2" }, { "@id": "2", "@validation-set": "Selected_cell1" }] } }, { "@id": "82", "@desc": "Cells group Insert", "validate": { "@followup": "3", "comp": { "@id": "2", "@validation-set": "Selected_cell1" } } }] }, "compName": "SIMS.Components.Excel.Ribbon", "className": "SIMS.Components2016.Excel.Ribbon", "compType": "default", "taskbarImage": {} };
+            this.compJS = new SIMS.Components2016.Excel.Ribbon();
+            this.compJS.AddComponentUI(compInfo, "<div class='compDiv SIMS_Ribbon_Excel' id='1' tabindex='1'></div>");
+            this.compJS.Initialize(compInfo);
+            REGISTER_MSG("COMP_ACTION", this, this.HandleRibbonEvents, this.compJS.msgHandler);
+            this.compJS.SetCompState(compInfo); // sizeandpos
+            this.compJS.ShowComponent(compInfo["@id"], true, compInfo); //display true
+            this.compJS.UpdateComponentState(compInfo, "default"); //set attriubte
+            this.compJS.GenerateHTML();
+            // If ribbon is visible then only register for its events
+            this.registerEvents();
+            this.registerEventListeners();
         }
     };
-    Ribbon.prototype.HandleRibbonEvents = function (evtArgs, logevents) {
-        console.log(evtArgs);
+    Ribbon.prototype.toggleCellStyleButtons = function (eventID, attrName, value) {
+        if (value == null) {
+            this.compJS.SetAttribute(this.compID, attrName, "true");
+        }
+        else {
+            this.compJS.SetAttribute(this.compID, attrName, "false");
+        }
+    };
+    Ribbon.prototype.toggleOtherStyleButtons = function (eventID, attrName, value) {
+        if (value === "true") {
+            this.compJS.SetAttribute(this.compID, attrName, "false");
+        }
+        else {
+            this.compJS.SetAttribute(this.compID, attrName, "true");
+        }
+    };
+    Ribbon.prototype.HandleRibbonEvents = function (ribbonEventArgs, logevents) {
+        var eventID = ribbonEventArgs._eventId;
+        if (enums_2.RIBBON_OPTIONS[eventID]) {
+            var eventType = enums_2.RIBBON_OPTIONS[eventID].type;
+            var attributeName = enums_2.RIBBON_OPTIONS[eventID].attribute;
+            var property = enums_2.PROPERTY_ATTRIBUTE_MAP[attributeName];
+            var cellRef = this.dataModel.getSelectedCell();
+            var cellProp = this.dataModel.getCellMetaDataForRibbon(cellRef.row, cellRef.column);
+            if (eventType === "cellStyle") {
+                this.toggleCellStyleButtons(eventID, attributeName, cellProp[property]);
+            }
+            else if (eventType === "other") {
+                this.toggleOtherStyleButtons(eventID, attributeName, cellProp[property]);
+            }
+            var eventArgs = {
+                eventName: enums_1.Events.RIBBON_EVENTS.STYLE_EVENT,
+                eventID: eventID
+            };
+            this.eventController.dispatchEvent(enums_1.Events.RIBBON_EVENTS.STYLE_EVENT, eventArgs);
+        }
+        else {
+            if (eventID == '3057') {
+                this.dataModel.setRibbonCollapsedState(this.viewId, true);
+            }
+            else if (eventID == '3058') {
+                this.dataModel.setRibbonCollapsedState(this.viewId, false);
+            }
+            return;
+        }
+    };
+    Ribbon.prototype.registerEvents = function () {
+        for (var event_1 in enums_1.Events.RIBBON_EVENTS) {
+            this.eventController.registerEvent(enums_1.Events.RIBBON_EVENTS[event_1]);
+        }
+    };
+    Ribbon.prototype.registerEventListeners = function () {
+        this.eventController.addEventListener(enums_1.Events.ViewEvents.SELECTED_CELL_CHANGED, this.updateRibbon.bind(this));
+    };
+    Ribbon.prototype.updateRibbon = function (eventArgs) {
+        if (eventArgs.viewId == this.getViewId()) {
+            return;
+        }
+        else {
+            var cellRef = this.dataModel.getSelectedCell();
+            var cellProp = this.dataModel.getCellMetaDataForRibbon(cellRef.row, cellRef.column);
+            var properties = [
+                {
+                    name: "fontWeight",
+                    handler: this.handleCellBold
+                },
+                {
+                    name: "mergedranges",
+                    handler: this.handleMergeCell
+                }
+            ];
+            for (var prop = 0, property = void 0; property = properties[prop]; prop++) {
+                property.handler.call(this, cellProp[property.name]);
+            }
+        }
+    };
+    Ribbon.prototype.handleCellBold = function (value) {
+        if (value === "bold") {
+            this.compJS.SetAttribute(this.compID, "HIGHLIGHT_BOLD", "true");
+        }
+        else {
+            this.compJS.SetAttribute(this.compID, "HIGHLIGHT_BOLD", "false");
+        }
+    };
+    Ribbon.prototype.handleMergeCell = function (value) {
+        if (value === "true") {
+            this.compJS.SetAttribute(this.compID, "MERGE_AND_CENTER", "true");
+        }
+        else {
+            this.compJS.SetAttribute(this.compID, "MERGE_AND_CENTER", "false");
+        }
     };
     return Ribbon;
 }(baseView_1.BaseView));
@@ -5049,7 +5372,6 @@ var hotWrapper = (function () {
             comments: true,
             formulas: true,
             renderer: this.config.options["defaultRenderer"] || "html",
-            cell: this.getCellProps(),
             readOnlyCellClassName: this.getReadOnlyClass(this.config.options),
             selectedCellBorderColor: "#217346",
             selectedAreaBorderColor: "#217346",
@@ -5124,6 +5446,9 @@ var hotWrapper = (function () {
         var tableClassNames = this.getTableClassNames();
         if (tableClassNames !== "") {
             retVal["tableClassName"] = tableClassNames;
+        }
+        if (this.config.rows) {
+            retVal["cell"] = this.getCellProps(this.config.rows);
         }
         return retVal;
     };
@@ -5214,9 +5539,8 @@ var hotWrapper = (function () {
             "$": "en-US"
         }[symbol];
     };
-    hotWrapper.prototype.getCellProps = function () {
-        if (this.config.rows) {
-            var rows = this.config.rows;
+    hotWrapper.prototype.getCellProps = function (rows) {
+        if (rows) {
             var cellProps = [];
             for (var rowIndex in rows) {
                 for (var colIndex in rows[rowIndex].cells) {
@@ -5234,9 +5558,6 @@ var hotWrapper = (function () {
                 }
             }
             return cellProps;
-        }
-        else {
-            return [];
         }
     };
     hotWrapper.prototype.setColorFill = function (colorfill, properties) {
@@ -5313,14 +5634,26 @@ var hotWrapper = (function () {
     hotWrapper.prototype.getRowHeights = function () {
         var rowHeights;
         var defaultRowHeight = this.config.options["defaultRowHeight"] || 30;
-        //Minimum row height is 30
+        // Minimum row height is 23
+        var minimumRowHeight = 23;
         if (defaultRowHeight < 30)
             defaultRowHeight = 30;
         if (this.config.rows) {
             rowHeights = [];
             var rows = this.config.rows;
             for (var i = 0; i <= this.config.data.length; i++) {
-                var height = (rows[i] && rows[i].height && rows[i].height >= defaultRowHeight) ? rows[i].height : defaultRowHeight;
+                var height = void 0;
+                if (rows[i] && rows[i].height) {
+                    if (rows[i].height < minimumRowHeight) {
+                        height = minimumRowHeight;
+                    }
+                    else {
+                        height = rows[i].height;
+                    }
+                }
+                else {
+                    height = defaultRowHeight;
+                }
                 rowHeights.push(height);
             }
         }

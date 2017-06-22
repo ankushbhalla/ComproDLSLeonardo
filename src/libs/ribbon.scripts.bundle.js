@@ -24988,7 +24988,7 @@ ControlGenerators.ItemsGenerator.prototype.showSubItems = function ($itemDiv, $n
         .css('top', "0px");    //fixing SIMS-107122: issue - position calculation has a bug that once overflow is applied, next time when same sub menu is displayed its position is not recalculated.
 
     //handling Vertical Overflow
-    var overflow = UIUtils.getVerticalOverflow($nextLevelDivWrapper, SIMS.Objects.DOMElements.SIMArea);
+    var overflow = UIUtils.getVerticalOverflow($nextLevelDivWrapper, SIMS.Objects.DOMElements.LeonardoArea);
 
     if (overflow > 0) {
         $nextLevelDivWrapper.css('top', "-=" + overflow);
@@ -25003,7 +25003,7 @@ ControlGenerators.ItemsGenerator.prototype.showSubItems = function ($itemDiv, $n
     }
 
     //Handling horizontal overflow
-    overflow = UIUtils.getHorizontalOverflow($nextLevelDivWrapper, SIMS.Objects.DOMElements.SIMArea);
+    overflow = UIUtils.getHorizontalOverflow($nextLevelDivWrapper, SIMS.Objects.DOMElements.LeonardoArea);
     if (overflow > 0) {
         if(!isGallerySubItem)
         {
@@ -34801,32 +34801,32 @@ var ribbonGenerator16 = function () {
 
         //Adding user info
         //if (this.appName.toLowerCase() == "win10explorer") { // adding this case for win10 file exploror ribbon
-        var $xUserInfo = $ribbonXml.find('userinfo');
-        if ($xUserInfo != null) {
-            var $userInfo = $('<li class="userinfo"/>');
+        // var $xUserInfo = $ribbonXml.find('userinfo');
+        // if ($xUserInfo != null) {
+        //     var $userInfo = $('<li class="userinfo"/>');
 
-            //Collapse button for windows 10 explorer
-            //Collapse button for windows 10 explorer
-            var $ribbonShowHideButton = UIUtils.getUnselectableDiv('', 'expandButton');
-            var $compFrame = SIMS.Objects.DOMElements.SIMArea.find(".ComponentFrame");
-            $compFrame.addClass('expandRibbon');
-            $ribbonShowHideButton.click(function () {
-                if ($compFrame.hasClass('expandRibbon')) {
-                    $compFrame.removeClass('expandRibbon');
-                    $compFrame.addClass('colapseRibbon');
-                } else {
-                    $compFrame.removeClass('colapseRibbon');
-                    $compFrame.addClass('expandRibbon');
-                }
+        //     //Collapse button for windows 10 explorer
+        //     //Collapse button for windows 10 explorer
+        //     var $ribbonShowHideButton = UIUtils.getUnselectableDiv('', 'expandButton');
+        //     var $compFrame = SIMS.Objects.DOMElements.SIMArea.find(".ComponentFrame");
+        //     $compFrame.addClass('expandRibbon');
+        //     $ribbonShowHideButton.click(function () {
+        //         if ($compFrame.hasClass('expandRibbon')) {
+        //             $compFrame.removeClass('expandRibbon');
+        //             $compFrame.addClass('colapseRibbon');
+        //         } else {
+        //             $compFrame.removeClass('colapseRibbon');
+        //             $compFrame.addClass('expandRibbon');
+        //         }
 
-            });
-            //Help button for windows 10 explorer
-            //Help button for windows 10 explorer
-            //var $helpeBtn = UIUtils.getUnselectableDiv('', 'helpButton');
+        //     });
+        //     //Help button for windows 10 explorer
+        //     //Help button for windows 10 explorer
+        //     //var $helpeBtn = UIUtils.getUnselectableDiv('', 'helpButton');
 
-            $userInfo.append($ribbonShowHideButton);
-            $userInfo.appendTo($tabsWrapper);
-        }
+        //     $userInfo.append($ribbonShowHideButton);
+        //     $userInfo.appendTo($tabsWrapper);
+        // }
         //}
         // else {
         //     var $xUserInfo = $ribbonXml.find('userinfo');  // For all office applications
@@ -35005,6 +35005,8 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
         this.RegisterAttribute("TELL_ME_SEARCH_BOX_WIDTH", "", 'string',false); 
         this.RegisterAttribute("FIX_MULTIRIBBON_TAB_SELECTION", false, 'bool',false); 
 
+        this.RegisterAttribute("ENABLE_COLLAPSE_EXPAND_BUTTON", "false", "bool", false);
+
 
         //...add new attributes here
     },
@@ -35071,6 +35073,9 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
         this.RegisterEvent(3054, "Excel -> Page Layout Tab -> Arrange -> Align ->Align Left", "", false, false, "");
         this.RegisterEvent(3055, "Excel -> Drawing Tools Format Tab -> Arrange -> Align ->Align Left", "", false, false, "");
         this.RegisterEvent(3056, "Excel -> Shape Styles group ->  Shape Effects, Bevel -> Soft Round", "", false, false, "");
+
+       this.RegisterEvent(3057, "Ribbon collapse event", "", false, false, "");
+       this.RegisterEvent(3058, "Ribbon Expand event", "", false, false, "");
 
     },
 
@@ -35317,6 +35322,11 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
             case "FIX_MULTIRIBBON_TAB_SELECTION":
                     this.fixMultiRibbonTabSelection = attrValue.toLowerCase() === "true" ? true : false;
                 break;
+             case "ENABLE_COLLAPSE_EXPAND_BUTTON":
+                if (attrValue.toLowerCase() == "true") {
+                    this.generateCollapseExpandButton($thisComp);
+                }
+                break;
             default:
                 {
                     this.base(compid, attrName, attrValue);
@@ -35437,5 +35447,28 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
     */
     HandleApplicationContextMenu: function () {
         return this.ShowApplicationContextMenu(".title-bar .office-control.titlebar-control.appController");
-    }
+    },
+
+     generateCollapseExpandButton: function ($thisComp) {
+        var self = this;
+          var $tabsWrapper = $thisComp.find(".ribbon-tabs-wrapper");
+            var $userInfo = $('<li class="userinfo"/>');
+            var $ribbonShowHideButton = UIUtils.getUnselectableDiv('', 'expandButton');
+            var $compFrame = SIMS.Objects.DOMElements.SIMArea.find(".ComponentFrame");
+            $compFrame.addClass('expandRibbon');
+            $ribbonShowHideButton.click(function () {
+                if ($compFrame.hasClass('expandRibbon')) {
+                    $compFrame.removeClass('expandRibbon');
+                    $compFrame.addClass('colapseRibbon');
+                     self.LogComponentEvent(3057, "Ribbon : Collapse the Ribbon Button Clicked");
+                } else {
+                    $compFrame.removeClass('colapseRibbon');
+                    $compFrame.addClass('expandRibbon');
+                     self.LogComponentEvent(3058, "Ribbon : Collapse the Ribbon Button Clicked");
+                }
+
+            });
+            $userInfo.append($ribbonShowHideButton);
+            $userInfo.appendTo($tabsWrapper);
+    },
 });
