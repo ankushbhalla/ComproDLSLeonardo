@@ -4,17 +4,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { DashboardItemComponent } from './dashboard-item/dashboard-item.component';
 
-const dashboardRoutes: Routes = [
+export const dashboardRoutes: Routes = [
   {
     path: '',
-    component: DashboardComponent
+    component: DashboardComponent,
+    pathMatch: 'full'
   }
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(dashboardRoutes)
+    RouterModule
   ],
   exports: [DashboardComponent],
   declarations: [DashboardComponent, DashboardItemComponent]

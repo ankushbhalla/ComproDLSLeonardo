@@ -9,9 +9,9 @@ import { WorkspaceComponent } from './workspace/workspace.component';
 
 import { SplitPaneModule } from './verticalSplitter/ng2-split-pane';
 
-const leoRoutes: Routes = [
+export const leoRoutes: Routes = [
   {
-    path: '',
+    path: ':id',
     component: LeonardoComponent
   }
 ];
@@ -20,7 +20,7 @@ const leoRoutes: Routes = [
   imports: [
     CommonModule,
     SplitPaneModule,
-    RouterModule.forChild(leoRoutes)
+    RouterModule
   ],
   exports: [
     LeonardoComponent

@@ -6,7 +6,8 @@ import { RouterModule, Routes } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { DataService } from './data.service';
-
+import { LeonardoModule, leoRoutes } from './leonardo/leonardo.module';
+import { DashboardModule, dashboardRoutes } from './dashboard/dashboard.module';
 
 const appRoutes: Routes = [
   {
@@ -15,12 +16,12 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'question/:id',
-    loadChildren: './leonardo/leonardo.module#LeonardoModule'
+    path: 'question',
+    children: leoRoutes
   },
   {
     path: 'dashboard',
-    loadChildren: './dashboard/dashboard.module#DashboardModule'
+    children: dashboardRoutes
   }
 ];
 
@@ -30,6 +31,8 @@ const appRoutes: Routes = [
     AppComponent
   ],
   imports: [
+    LeonardoModule,
+    DashboardModule,
     BrowserModule,
     FormsModule,
     HttpModule,
