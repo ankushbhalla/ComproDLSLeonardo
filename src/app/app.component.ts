@@ -10,6 +10,15 @@ export class AppComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(){
+    let body = document.getElementsByTagName("body")[0];
+    let self = this;
+    window.onresize = function (event) {
+      body.style.height = window.innerHeight + "px";
+      body.style.width = window.innerWidth + "px";
+    }
+    body.style.height = window.innerHeight + "px";
+    body.style.width = window.innerWidth + "px";
+    
     this.router.events.subscribe((urlParams)=>{
       if(urlParams.url==="/dashboard" || urlParams.url==="/"){
         this.isBackVisible = false;

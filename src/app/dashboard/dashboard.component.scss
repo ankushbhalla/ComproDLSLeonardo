@@ -1,16 +1,10 @@
 .header{
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     height: 63px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     cursor: default;
-    border-left: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
     background-color: #ececec;
     border-bottom: 3px solid #CB2929;
 
@@ -19,14 +13,10 @@
     }
 }
 
-.navigatorWrapper{
-    height: 155px;
-    bottom: 0;
-    font-size: 1.1em;
-    line-height: 1.6;
-    position: absolute;
+
+.dashboard-items-container {
+    background-color: #eee;
+    padding-top: 60px;
+    height: calc(100% - 54px)
 }
 
-.vertical-center {
-  margin-top: 15px;
-}

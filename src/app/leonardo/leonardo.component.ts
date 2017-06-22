@@ -28,14 +28,6 @@ export class LeonardoComponent implements OnInit {
     });
   }
   ngOnInit() {
-    let body = document.getElementsByTagName("body")[0];
-    let self = this;
-    window.onresize = function (event) {
-      body.style.height = window.innerHeight + "px";
-      body.style.width = window.innerWidth + "px";
-    }
-    body.style.height = window.innerHeight + "px";
-    body.style.width = window.innerWidth + "px";
   }
 
   handleCompEvents($event) {
