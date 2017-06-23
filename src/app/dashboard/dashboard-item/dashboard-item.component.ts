@@ -8,6 +8,7 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 export class DashboardItemComponent implements OnInit {
   @Input() questionIndex: Number;
   @Input() mode: String;
+  @Input() thumbnail: String;
   @ViewChild('title') titleBox: ElementRef;
   constructor() { }
 

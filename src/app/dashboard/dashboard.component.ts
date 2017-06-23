@@ -10,13 +10,16 @@ export class DashboardComponent implements OnInit {
   constructor() {
     this.questions = [
       {
-        mode: "Side By Side View"
+        mode: "Side By Side View",
+        image: "assets/dashboard-item-logo-1.png"
       },
       {
-        mode: "Vertical Scroll</br>(Reading View)"
+        mode: "Vertical Scroll</br>(Reading View)",
+        image: "assets/dashboard-item-logo-2.png"
       },
       {
-        mode: "Vertical Scroll</br>(Without Ribbon)"
+        mode: "Vertical Scroll</br>(Without Ribbon)",
+        image: "assets/dashboard-item-logo-3.png"
       }];
   }
   ngOnInit() {
