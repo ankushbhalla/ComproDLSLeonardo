@@ -12,7 +12,7 @@ export class DataService {
             <br/>
             <div class="questionHeadings">Account Balances:</div>
             <div> The accounts are listed in no particular order.</div>
-            <div style="height: 565px; min-width: 347px; min-height: 549px;" leoDataId="leoHost1" class="leoHost">
+            <div style="height: 440px; min-width: 347px; min-height: 440px;" leoDataId="leoHost1" class="leoHost">
             </div>`,
 
           leoData: {
@@ -45,7 +45,7 @@ export class DataService {
             <br/>
             <div class="questionHeadings">Account Balances:</div>
             <div> The accounts are listed in no particular order.</div>
-            <div style="height: 325px;" leoDataId="leoHost1" class="leoHost">
+            <div style="height: 280px; width: 820px;" leoDataId="leoHost1" class="leoHost">
             </div>
             <br/>
             <div class="questionHeadings">Requirement</div>
@@ -73,7 +73,7 @@ export class DataService {
             ]
           },
           gridUIParams: {
-            height: 1018,
+            height: 865,
             width: 1405
           }
         }
@@ -85,7 +85,7 @@ export class DataService {
             <br/>
             <div class="questionHeadings">Account Balances:</div>
             <div> The accounts are listed in no particular order.</div>
-            <div style="height: 325px;" leoDataId="leoHost1" class="leoHost">
+            <div style="height: 280px; width: 820px;" leoDataId="leoHost1" class="leoHost">
             </div>
             <br/>
             <div class="questionHeadings">Requirement</div>
@@ -113,7 +113,7 @@ export class DataService {
             ]
           },
           gridUIParams: {
-            height: 905,
+            height: 745,
             width: 1405
           }
         }
