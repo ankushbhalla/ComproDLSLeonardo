@@ -12,7 +12,7 @@
   .dashboard-item-heading {
     min-height: 80px;
     display: flex;
-    background-color: #f7f7f7;
+    background-color: #333;
     .dashboard-item-title {
       align-self: center;
       max-height: 58px;
@@ -21,6 +21,7 @@
       width: 100%;
       font-weight: 400;
       font-size: 2.4rem;
+      color: #fff;
       font-family: "open-sans";
     }
   }
