@@ -5249,8 +5249,18 @@ var checkCellFormulaMode = function (editor, evt) {
     var formulaMode = false;
     editor.instance.newFormulaCharEntered = false;
     var currentText = editor.getValue();
-    if (evt.keyCode != 16) {
-        console.log("here");
+    if ((evt.keyCode == 13) && currentText.indexOf("=") == 0) {
+        var patt = /[(]/g;
+        var openBracesArr = currentText.match(patt);
+        patt = /[)]/g;
+        var closeBracesArr = currentText.match(patt);
+        var openBracesCount = void 0;
+        var closeBracesCount = void 0;
+        openBracesCount = openBracesArr ? openBracesArr.length : 0;
+        closeBracesCount = closeBracesArr ? closeBracesArr.length : 0;
+        if (openBracesCount == closeBracesCount + 1) {
+            editor.setValue(currentText + ")");
+        }
     }
     if (currentText[0] == "=" || (!currentText && evt.keyCode == 187)) {
         if (evt.keyCode == 113) {
@@ -5830,7 +5840,6 @@ var hotWrapper = (function () {
             className: this.getDefaultHorizontalAlignment() + " " + this.getDefaultVerticalAlignment(),
             comments: true,
             formulas: true,
-            renderAllRows: true,
             renderer: this.config.options["defaultRenderer"] || "html",
             readOnlyCellClassName: this.getReadOnlyClass(this.config.options),
             selectedCellBorderColor: "#217346",
