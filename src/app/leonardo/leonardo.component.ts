@@ -17,7 +17,7 @@ export class LeonardoComponent implements OnInit {
   solutionData: any;
   id: string;
   private sub: any;
-
+  navigatorData: any;
 
   constructor(private dataService: DataService, private route: ActivatedRoute) {
     this.sub = this.route.params.subscribe(params => {
@@ -26,6 +26,11 @@ export class LeonardoComponent implements OnInit {
       this.questionData = questionConfig["question"];
       this.solutionData = questionConfig["solution"];
     });
+    this.navigatorData = {
+      hint: {
+        isLastHint: false
+      }
+    }
   }
   ngOnInit() {
   }
@@ -44,5 +49,9 @@ export class LeonardoComponent implements OnInit {
 
   displayHint(){
     this.workspace.displayHint();
+  }
+
+  handleGridEvent($event) {
+    this.navigatorData.hint.isLastHint = $event.hint.isLastHint;
   }
 }

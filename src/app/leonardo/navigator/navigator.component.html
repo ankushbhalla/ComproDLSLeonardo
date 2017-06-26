@@ -4,8 +4,8 @@
     <p><i>Avoid committing spelling mistakes while typing the account heads.</i></p>
   </div>
   <div class="panel-footer">
-    <button class="btn btn-primary" (click)="displayHint()">Hint</button>
-    <button class="btn btn-primary" (click)="checkMyAnswer()">Check my Work</button>
+    <button class="btn btn-primary" (click)="displayHint()" [disabled] = "navigatorData.hint.isLastHint">Hint</button>
+    <button class="btn btn-primary" (click)="checkMyAnswer()">Check My Work</button>
     <button class="btn btn-primary pull-right">Submit</button>
   </div>
 </div>

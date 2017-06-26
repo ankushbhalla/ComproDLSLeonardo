@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 
 declare var Leonardo: any;
 
@@ -10,6 +10,7 @@ declare var Leonardo: any;
 export class WorkspaceComponent implements OnInit {
   @Input() solutionData: any;
   @ViewChild('leoHost') leoHost: ElementRef;
+  @Output() gridEvent: EventEmitter<Object> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
@@ -31,6 +32,9 @@ export class WorkspaceComponent implements OnInit {
   }
 
   displayHint(){
-    Leonardo.scripts.displayHint(this.leoHost.nativeElement);
+    let hint = Leonardo.scripts.displayHint(this.leoHost.nativeElement);
+    if(hint.isLastHint) {
+      this.gridEvent.emit({type: "hint", hint: hint});
+    }
   }
 }
