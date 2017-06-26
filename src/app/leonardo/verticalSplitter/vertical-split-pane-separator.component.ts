@@ -6,7 +6,7 @@ import { SplitSeparatorComponent } from './split-pane-separator.component'
   styles: [`
     :host {
       width: 21px;
-      cursor: url(../assets/cursor.png), ew-resize;
+      cursor: url(../assets/cursor.cur), ew-resize;
       position: relative;
       background-color: #f7f7f7;
       border-left: 1px solid lightgrey;
