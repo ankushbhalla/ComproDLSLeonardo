@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigator',
@@ -8,7 +9,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class NavigatorComponent implements OnInit {
   @Output() navEvent: EventEmitter<Object> = new EventEmitter();
   @Input() navigatorData: any;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -21,4 +22,7 @@ export class NavigatorComponent implements OnInit {
     this.navEvent.emit({eventId:"HINT_CLICKED"});
   }
 
+  handleSubmitClick() {
+    this.router.navigate(['/dashboard']);
+  }
 }
