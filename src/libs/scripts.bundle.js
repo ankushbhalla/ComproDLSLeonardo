@@ -3731,7 +3731,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var spreadsheetController_1 = __webpack_require__(13);
 var eventController_1 = __webpack_require__(2);
 var enums_1 = __webpack_require__(0);
-var TEMPLATE = '<div id="spreadSheet" class="DLSLeonardo"><div id="buttonGroup"><button id="hintBtn">Hint</button><button id="checkMyAnswer">Check My Answer</button><button id="exportConfigBtn">Export Config</button><button id="exportCorrectDataBtn">Export Correct Data</button></div><div id="SIMArea" style="width:100%"></div><div class="formulaToolbar"><input type="text" id="nameBox" spellcheck="false"/><div class="formulaBarContainer"><button id="fx"><img src="assets/fx.png"></img></button><input type="text" id="formulaBar" spellcheck="false"/></div></div><div id="grid"></div><div id="sheetTabBar" class="sheetTabContainer"><div class="contentarea"><ul role="tablist" class="tablist" id="TabsContainerlist"></ul></div></div></div>';
+var TEMPLATE = '<div id="spreadSheet" class="DLSLeonardo"><div id = "leoContainer" ><div id="buttonGroup"><button id="hintBtn">Hint</button><button id="checkMyAnswer">Check My Answer</button><button id="exportConfigBtn">Export Config</button><button id="exportCorrectDataBtn">Export Correct Data</button></div><div id="SIMArea" style="width:100%"></div><div class="formulaToolbar"><input type="text" id="nameBox" spellcheck="false"/><div class="formulaBarContainer"><button id="fx"><img src="assets/fx.png"></img></button><input type="text" id="formulaBar" spellcheck="false"/></div></div><div id="grid"></div><div id="sheetTabBar" class="sheetTabContainer"><div class="contentarea"><ul role="tablist" class="tablist" id="TabsContainerlist"></ul></div></div></div></div>';
 var LeoIntegrationLayer = (function () {
     function LeoIntegrationLayer() {
         this.spreadsheets = {};
@@ -3769,7 +3769,12 @@ var LeoIntegrationLayer = (function () {
         this.spreadsheets[timestamp] = instance;
     };
     LeoIntegrationLayer.prototype.initLeonardo = function (container, config, correctData, eventController, guid, spreadsheets) {
-        this.sheetNameIdMap[((config.sheetNames)[0]).toUpperCase()] = guid;
+        if (config.sheetNames) {
+            this.sheetNameIdMap[((config.sheetNames)[0]).toUpperCase()] = guid;
+        }
+        else {
+            this.sheetNameIdMap[guid] = guid;
+        }
         var instance = new spreadsheetController_1.SpreadsheetController(container, config, correctData, eventController, guid, this.spreadsheets, this.sheetNameIdMap);
         instance.init();
         return instance;
@@ -4454,6 +4459,9 @@ var DataModel = (function () {
     DataModel.prototype.getSheetNames = function () {
         return this.dataJson.sheetNames;
     };
+    DataModel.prototype.getContainerStyles = function () {
+        return this.dataJson["options"]["containerStyles"];
+    };
     DataModel.prototype.getCellData = function () {
         return this.dataJson.data;
     };
@@ -4647,6 +4655,19 @@ var SpreadsheetController = (function () {
         this.registerEventListeners();
         this.handleButtonGroupVisibility();
         this.resetGridDimensions();
+        this.addCssPRopertiesTocontainer();
+    };
+    SpreadsheetController.prototype.addCssPRopertiesTocontainer = function () {
+        var properties = this.model.getContainerStyles();
+        if (properties) {
+            var styleDom = document.createElement('style');
+            styleDom.type = "text/css";
+            var css = document.createTextNode('.ContainerClass' + properties);
+            styleDom.appendChild(css);
+            document.head.appendChild(styleDom);
+            var containerEle = this.container.querySelector("#leoContainer");
+            containerEle.classList.add('ContainerClass');
+        }
     };
     SpreadsheetController.prototype.destroy = function () {
         this.deregisterEventListeners();
@@ -4744,6 +4765,27 @@ var SpreadsheetController = (function () {
             height: availableHeight
         };
     };
+    SpreadsheetController.prototype.getrequiredContainerHeight = function (gridheight) {
+        var requiredHeight = gridheight;
+        if (this.showButtonGroup()) {
+            requiredHeight += 35;
+        }
+        if (!this.model.isTopBarHidden()) {
+            requiredHeight += 25;
+        }
+        if (this.model.isRibbonVisible()) {
+            if (this.model.isRibbonCollapsed()) {
+                requiredHeight += 30;
+            }
+            else {
+                requiredHeight += 121;
+            }
+        }
+        if (this.model.getSheetNames() != null) {
+            requiredHeight += 25;
+        }
+        return requiredHeight;
+    };
     SpreadsheetController.prototype.resetGridDimensions = function () {
         var availableDimensions = this.getAvailableDimensions();
         var requiredGridDimension = this.grid.getDimensions();
@@ -4771,32 +4813,50 @@ var SpreadsheetController = (function () {
             spreadsheetEle.classList.remove("hasVerticalScroll");
         }
         var newContainerWidth = newWidth;
+        var newContainerHeight = this.getrequiredContainerHeight(newHeight);
         if (horScrollVisible || verScrollVisible) {
             this.scrollBaroffset = 5; //Handsontable Offset needs to be reset in case scroll bars are visible
         }
         else {
             this.scrollBaroffset = 2;
             newContainerWidth -= 15;
+            newContainerHeight -= 15;
         }
         newContainerWidth += "px";
         var formulaToolBarEle = spreadsheetEle.querySelector(".formulaToolbar");
         var buttonGroupEle = spreadsheetEle.querySelector("#buttonGroup");
         var sheetTabBarEle = spreadsheetEle.querySelector('#sheetTabBar');
         var ribbonEle = spreadsheetEle.querySelector('#SIMArea');
+        var containerEle = spreadsheetEle.querySelector('#leoContainer');
         formulaToolBarEle.style.width = newContainerWidth;
         buttonGroupEle.style.width = newContainerWidth;
         sheetTabBarEle.style.width = newContainerWidth;
         ribbonEle.style.width = parseInt(newContainerWidth) > 814 ? newContainerWidth : "814px";
-        var leftValue = "0px";
-        // to centre align the grid
-        if ((this.model.getLeoAlignment() == "center") && (availableDimensions.width > newWidth)) {
-            leftValue = ((availableDimensions.width - newWidth) / 2) + "px";
+        containerEle.style.width = parseInt(newContainerWidth) + "px";
+        containerEle.style.height = newContainerHeight + "px";
+        if (this.model.isRibbonVisible() && parseInt(newContainerWidth) < 814) {
+            containerEle.style.width = "818px";
         }
-        formulaToolBarEle.style.left = leftValue;
-        buttonGroupEle.style.left = leftValue;
-        sheetTabBarEle.style.left = leftValue;
-        spreadsheetEle.querySelector('#grid').style.left = leftValue;
-        ribbonEle.style.left = leftValue;
+        if ((this.model.getLeoAlignment() == "center")) {
+            if (this.model.isRibbonVisible()) {
+                if (availableDimensions.width > 814) {
+                    var leftValue = ((availableDimensions.width - 814) / 2) + "px";
+                    containerEle.style.left = leftValue;
+                }
+                else {
+                    containerEle.style.left = "0px";
+                }
+            }
+            else {
+                if ((availableDimensions.width > newWidth)) {
+                    var leftValue = ((availableDimensions.width - newWidth) / 2) + "px";
+                    containerEle.style.left = leftValue;
+                }
+                else {
+                    containerEle.style.left = "0px";
+                }
+            }
+        }
     };
     SpreadsheetController.prototype.handleRibbonEvents = function (eventArgs) {
         var eventID = eventArgs.eventID;
@@ -5145,13 +5205,15 @@ var Grid = (function (_super) {
             var newRowConfig = this.hotWrapper.getCellProps(this.dataModel.getRowsConfig());
             this.updateSettings({ "cell": newRowConfig });
         }
-        for (var rowIndex = 0; rowIndex <= to.row - from.row; rowIndex++) {
-            for (var colIndex = 0; colIndex <= to.col - from.col; colIndex++) {
-                var row = from.row + rowIndex;
-                var column = from.col + colIndex;
-                this.setDataAtCell(row, column, expectedvalues[rowIndex][colIndex], "Program");
-            }
-        }
+        var RowConfig = this.hotWrapper.getCellProps(this.dataModel.getRowsConfig());
+        this.updateSettings({ data: this.dataModel.getUserData(), cell: RowConfig });
+        // for (let rowIndex = 0; rowIndex <= to.row - from.row; rowIndex++) {
+        //   for (let colIndex = 0; colIndex <= to.col - from.col; colIndex++) {
+        //     let row = from.row + rowIndex;
+        //     let column = from.col + colIndex;
+        //     this.setDataAtCell(row, column, expectedvalues[rowIndex][colIndex], "Program");
+        //   }
+        // }
         this.selectCell(from.row, from.col, to.row, to.col);
     };
     Grid.prototype.renderRibbonStyles = function (eventArgs) {
