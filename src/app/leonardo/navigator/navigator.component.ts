@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
+declare var Leonardo: any;
+
 @Component({
   selector: 'app-navigator',
   templateUrl: './navigator.component.html',
@@ -23,6 +25,7 @@ export class NavigatorComponent implements OnInit {
   }
 
   handleSubmitClick() {
+    Leonardo.scripts.destroyGrids();
     this.router.navigate(['/dashboard']);
   }
 }

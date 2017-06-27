@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+declare var Leonardo: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -30,6 +33,7 @@ export class AppComponent implements OnInit {
   }
 
   backBtnClick(){
+    Leonardo.scripts.destroyGrids();
     this.router.navigate(['/dashboard']);
   }
 }
