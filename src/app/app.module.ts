@@ -12,7 +12,7 @@ import { DashboardModule, dashboardRoutes } from './dashboard/dashboard.module';
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: '/question/v1',
     pathMatch: 'full'
   },
   {

@@ -10,9 +10,9 @@ declare var Leonardo: any;
 })
 export class AppComponent implements OnInit {
   isBackVisible: boolean = false;
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
-  ngOnInit(){
+  ngOnInit() {
     let body = document.getElementsByTagName("body")[0];
     let self = this;
     window.onresize = function (event) {
@@ -21,18 +21,18 @@ export class AppComponent implements OnInit {
     }
     body.style.height = window.innerHeight + "px";
     body.style.width = window.innerWidth + "px";
-    
-    this.router.events.subscribe((urlParams)=>{
-      if(urlParams.url==="/dashboard" || urlParams.url==="/"){
+
+    this.router.events.subscribe((urlParams) => {
+      if (urlParams.url === "/dashboard" || (urlParams.url === "/" && urlParams["urlAfterRedirects"] === "/dashboard")){
         this.isBackVisible = false;
       }
-      else{
+      else {
         this.isBackVisible = true;
       }
     })
   }
 
-  backBtnClick(){
+  backBtnClick() {
     Leonardo.scripts.destroyGrids();
     this.router.navigate(['/dashboard']);
   }
