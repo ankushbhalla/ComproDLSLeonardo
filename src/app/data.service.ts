@@ -10,11 +10,11 @@ export class DataService {
           template: `<br><div class="questionHeadings">Requirement</div>
             <div>The accounts of Colby Group are provided with their normal balances as of August 31, 2017.</div>
             <br/>
-            <div>Prepare Colby Group trial balance as of August 31, 2017. (Enter the assets and liabilities in the order of liquidity.)</div>
+            <div>Prepare Colby Group trial balance as of August 31, 2017. Enter the assets and liabilities in the order of liquidity.</div>
             <br/>
-            <div>Remember that each line of the heading is very important and should be in a specific order. Avoid committing spelling mistakes while typing the account heads.</div>
+            <div>Remember that each line of the heading is very important and should be in a specific order.</div>
             <br>
-            <div class="questionHeadings">Account Balances:</div>
+            <div class="questionHeadings">Account Balances</div>
             <div> The accounts are listed in no particular order.</div>
             <div style="height: 440px; min-width: 347px; min-height: 440px;" leoDataId="leoHost1" class="leoHost">
             </div>`,
@@ -42,16 +42,16 @@ export class DataService {
       },
       "v2": {
         question: {
-          template: `<h1 class="questionHeadings">Instructions:</h1>
+          template: `<h1 class="questionHeadings">Instructions</h1>
             <div>The accounts of Colby Group are provided with their normal balances as of August 31, 2017.</div>
             <br/>
-            <div class="questionHeadings">Account Balances:</div>
+            <div class="questionHeadings">Account Balances</div>
             <div> The accounts are listed in no particular order.</div>
             <div style="height: 280px; width: 820px;" leoDataId="leoHost1" class="leoHost">
             </div>
             <br/>
             <div class="questionHeadings">Requirement</div>
-            <div>Prepare Colby Group trial balance as of August 31, 2017. (Enter the assets and liabilities in the order of liquidity.)<br> Remember that each line of the heading is very important and should be in a specific order. Avoid committing spelling mistakes while typing the account heads.</div>`,
+            <div>Prepare Colby Group trial balance as of August 31, 2017. Enter the assets and liabilities in the order of liquidity.<br> Remember that each line of the heading is very important and should be in a specific order.</div>`,
 
           leoData: {
             "leoHost1": {
@@ -80,16 +80,16 @@ export class DataService {
       },
       "v3": {
         question: {
-          template: `<h1 class="questionHeadings">Instructions:</h1>
+          template: `<h1 class="questionHeadings">Instructions</h1>
             <div>The accounts of Colby Group are provided with their normal balances as of August 31, 2017.</div>
             <br/>
-            <div class="questionHeadings">Account Balances:</div>
+            <div class="questionHeadings">Account Balances</div>
             <div> The accounts are listed in no particular order.</div>
             <div style="height: 280px; width: 820px;" leoDataId="leoHost1" class="leoHost">
             </div>
             <br/>
             <div class="questionHeadings">Requirement</div>
-            <div>Prepare Colby Group trial balance as of August 31, 2017. (Enter the assets and liabilities in the order of liquidity.) <br>Remember that each line of the heading is very important and should be in a specific order. Avoid committing spelling mistakes while typing the account heads.</div>`,
+            <div>Prepare Colby Group trial balance as of August 31, 2017. Enter the assets and liabilities in the order of liquidity. <br>Remember that each line of the heading is very important and should be in a specific order.</div>`,
 
           leoData: {
             "leoHost1": {
