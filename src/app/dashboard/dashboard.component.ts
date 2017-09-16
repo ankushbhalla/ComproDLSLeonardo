@@ -12,32 +12,38 @@ export class DashboardComponent implements OnInit {
       {
         qText: "Prepare a Trial Balance",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum ",
-        badges:['Accounting','Training', 'Side by Side View']
+        badges:['Accounting','Training'],
+        view:"Side by Side View"
       },
       {
         qText: "Prepare an Income Statement",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum ",
-        badges:['Accounting','Training', 'Side by Side View']
+        badges:['Accounting','Training'],
+        view:"Side by Side View"
       },
       {
         qText: "Create a Motion Profile Table",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
-        badges:['Physics','Training', 'Side by Side View']
+        badges:['Physics','Training'],
+        view:"Side by Side View"
       },
       {
         qText: "Prepare a Trial Balance",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
-        badges:['Accounting','Assessment', 'Reading View']
+        badges:['Accounting','Assessment'],
+        view:"Reading View"
       },
       {
         qText: "Prepare an Income Statement",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
-        badges:['Accounting','Assessment', 'Reading View']
+        badges:['Accounting','Assessment'],
+        view:"Reading View"
       },
       {
         qText: "Create a Motion Profile Table",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
-        badges:['Physics','Assessment', 'Reading View']
+        badges:['Physics','Assessment'],
+        view:"Reading View"
       }];
   }
   ngOnInit() {

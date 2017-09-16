@@ -10,8 +10,9 @@
       </div>
       <div class="badge-container">
           <span class="badge leobadge {{createClassName(badge)}}" *ngFor = "let badge of quesMeta.badges">{{badge}}</span>
+          <span class="viewtypeContainer">{{"| "+ quesMeta.view}}</span>
       </div>
-    </div>
+    </div>    
   </div>
   </div>
   <div class="button-container">

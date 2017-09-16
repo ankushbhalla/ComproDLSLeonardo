@@ -34,15 +34,6 @@
     }
 }
 
-.image-container {
-  text-align: center;
-  padding: 25px 0;
-  .dashboard-item-image {
-    height: 160px;
-    width: 160px;
-  }
-}
-
 .button-container {
   background-color: #F0F0F0;
   text-align: center;
@@ -70,7 +61,7 @@
   font-weight: normal;
   color: #fff;
   font-family: open-sans;
-  padding: 6px 7px;
+  padding: 7px 11px;
 }
 .badge-container{
   padding-top: 15px;
@@ -81,15 +72,15 @@
 .Training{
   background: #906D96;
 }
-.SidebySideView{
-  background: #768693;
-}
 .Accounting{
   background: #8D6E63;
 }
 .Assessment{
   background: #FF8E6C;
 }
-.ReadingView{
-  background: #5b6770;  
+.viewtypeContainer{
+  font-family: open-sans;
+  font-size: 16px;
+  color:#343434; 
+  padding-left: 15px;
 }
