@@ -2,29 +2,36 @@
   position: relative;
   margin-bottom: 30px;
   background: #fff;
-  border-radius: 0.2rem;
+  border: 0px solid #217346;
+  border-top-width: 8px;
+  border-radius: 0.5rem;
+  height: 260px;
+  box-shadow: 0 2px 4px 2px rgba(0,0,0,.2);
 }
 
 .dashboard-item-widget {
-  min-height: 410px;
-  border: 1px solid #333;
-  border-top-width: 5px;
-  .dashboard-item-heading {
-    min-height: 80px;
-    display: flex;
-    background-color: #333;
+  
+  padding: 30px 30px 40px 30px;
+  height: 200px;
     .dashboard-item-title {
       align-self: center;
       max-height: 58px;
-      text-align: center;
       line-height: 1.2;
       width: 100%;
-      font-weight: 400;
-      font-size: 2.4rem;
-      color: #fff;
+      font-size: 24px;
       font-family: "open-sans";
+      color: #464646;
     }
-  }
+    .description-container{
+      font-size: 16px;
+      font-family: "open-sans";
+      color: #575757;
+      padding-top: 11px; 
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
 }
 
 .image-container {
@@ -37,19 +44,52 @@
 }
 
 .button-container {
+  background-color: #F0F0F0;
   text-align: center;
-  padding: 20px 0 30px 0;
-  .btn-inverse {
-    background-color: #333; 
-    color: #fff;
-    &:hover {
-      background-color: #555; 
-      color: #fff;
-    }
-    span {
-      margin-left: 2px;
-      position: relative;
-      top: 2px;
-    }
+  padding: 10px 0 10px 0;
+  .btn-leonardo{
+    background-color:transparent;
+    color: #01579B;
+    border: 1px solid #01579B;
   }
+  .btn-leonardo:hover{
+    background-color:#01579B;
+    color:#F0F0F0;
+    border: 1px solid #01579B;
+  }
+  .btn-leonardo:hover{
+    background-color:#01579B;
+    color:#F0F0F0;
+    border: 1px solid #01579B;
+  }
+}
+.leobadge{
+  border-radius: 3px;
+  margin: 2px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #fff;
+  font-family: open-sans;
+  padding: 6px 7px;
+}
+.badge-container{
+  padding-top: 15px;
+}
+.Physics{
+  background: #006064;
+}
+.Training{
+  background: #906D96;
+}
+.SidebySideView{
+  background: #768693;
+}
+.Accounting{
+  background: #8D6E63;
+}
+.Assessment{
+  background: #FF8E6C;
+}
+.ReadingView{
+  background: #5b6770;  
 }

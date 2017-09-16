@@ -11,7 +11,7 @@ import { SplitPaneModule } from './verticalSplitter/ng2-split-pane';
 
 export const leoRoutes: Routes = [
   {
-    path: ':id',
+    path: ':id/:mode',
     component: LeonardoComponent
   }
 ];

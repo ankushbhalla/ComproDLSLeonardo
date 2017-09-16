@@ -7,13 +7,15 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 })
 export class DashboardItemComponent implements OnInit {
   @Input() questionIndex: Number;
-  @Input() mode: String;
-  @Input() thumbnail: String;
+  @Input() quesMeta;
   @ViewChild('title') titleBox: ElementRef;
   constructor() { }
 
   ngOnInit() {
-    this.titleBox.nativeElement.innerHTML = this.mode;
+  }
+  createClassName(badgeName){
+    return badgeName.split(" ").join("");
+
   }
 
 }

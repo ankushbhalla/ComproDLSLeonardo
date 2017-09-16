@@ -1,15 +1,21 @@
-<section class="widget dashboard-item-widget">
+<section class="widget">
+  <div class ="dashboard-item-widget">
   <div class="widget-body clearfix">
     <div>
-      <div class="dashboard-item-heading">
-        <div #title class="dashboard-item-title"></div>
+      <div>
+        <div #title class="dashboard-item-title">{{quesMeta.qText}}</div>
+
       </div>
-      <div class="image-container">
-        <img [src]="thumbnail" class="dashboard-item-image">
+      <div class="description-container">{{quesMeta.description}}
+      </div>
+      <div class="badge-container">
+          <span class="badge leobadge {{createClassName(badge)}}" *ngFor = "let badge of quesMeta.badges">{{badge}}</span>
       </div>
     </div>
   </div>
+  </div>
   <div class="button-container">
-    <button [routerLink]="['/question', questionIndex]" class="btn btn-inverse" type="submit">Continue <span class="glyphicon glyphicon-circle-arrow-right"></span></button>
+    <button [routerLink]="['/question',questionIndex,quesMeta.badges[1]]" class="btn btn-leonardo" type="submit">Launch</button>
+    <!-- routerlink path to be chnaged to ../../question when moved to previous release  -->
   </div>
 </section>

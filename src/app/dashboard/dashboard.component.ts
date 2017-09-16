@@ -10,19 +10,46 @@ export class DashboardComponent implements OnInit {
   constructor() {
     this.questions = [
       {
-        mode: "Side By Side View",
-        image: "assets/dashboard-item-logo-1.png"
+        qText: "Prepare a Trial Balance",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum ",
+        badges:['Accounting','Training', 'Side by Side View']
       },
       {
-        mode: "Vertical Scroll</br>(Reading View)",
-        image: "assets/dashboard-item-logo-2.png"
+        qText: "Prepare an Income Statement",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum ",
+        badges:['Accounting','Training', 'Side by Side View']
       },
       {
-        mode: "Vertical Scroll</br>(Without Ribbon)",
-        image: "assets/dashboard-item-logo-3.png"
+        qText: "Create a Motion Profile Table",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+        badges:['Physics','Training', 'Side by Side View']
+      },
+      {
+        qText: "Prepare a Trial Balance",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+        badges:['Accounting','Assessment', 'Reading View']
+      },
+      {
+        qText: "Prepare an Income Statement",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+        badges:['Accounting','Assessment', 'Reading View']
+      },
+      {
+        qText: "Create a Motion Profile Table",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+        badges:['Physics','Assessment', 'Reading View']
       }];
   }
   ngOnInit() {
+  }
+  getQuesIndex(Qindex){
+    let relativeLength = (this.questions.length)/2;
+    if(Qindex>relativeLength){
+      return (Qindex-relativeLength);
+    }
+    else{
+      return Qindex;
+    }
   }
 
 }

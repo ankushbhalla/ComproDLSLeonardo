@@ -14,6 +14,7 @@ export class NavigatorComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    console.log(this.navigatorData);
   }
 
   checkMyAnswer(){
@@ -27,5 +28,13 @@ export class NavigatorComponent implements OnInit {
   handleSubmitClick() {
     Leonardo.scripts.destroyGrids();
     this.router.navigate(['/dashboard']);
+  }
+  checkvisiblity(mode){
+    if(mode == true){
+      return "visible"
+    }
+    else{
+      return "hidden"
+    }
   }
 }

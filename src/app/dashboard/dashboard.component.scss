@@ -16,7 +16,11 @@
 
 .dashboard-items-container {
     background-color: #eee;
-    padding-top: 60px;
-    height: calc(100% - 54px)
+    padding-top: 160px;
+    height: calc(100% - 54px);
+}
+.contentDiv{
+    min-width: 80%;
+    max-width: 1280px;
 }
 
