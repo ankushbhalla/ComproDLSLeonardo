@@ -237,7 +237,7 @@ module.exports = {
         "libs"
       ],
       "globOptions": {
-        "cwd": __dirname+"/src",
+        "cwd": __dirname+"/123",
         "dot": true,
         "ignore": "**/.gitkeep"
       }
