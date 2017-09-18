@@ -130,7 +130,7 @@ exports.i(__webpack_require__(354), "");
 exports.i(__webpack_require__(355), "");
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n\r\nhtml{\r\n    height: 100%;\r\n}\r\nbody{\r\n    height: 100%;\r\n    background-color: #eee;\r\n}", ""]);
 
 // exports
 

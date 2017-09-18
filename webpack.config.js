@@ -191,8 +191,8 @@ module.exports = {
   "plugins": [
     new NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
-      "template": "./src\\index.html",
-      "filename": "./index.html",
+      "template": "./src\\launch.html",
+      "filename": "./launch.html",
       "hash": false,
       "inject": true,
       "compile": true,

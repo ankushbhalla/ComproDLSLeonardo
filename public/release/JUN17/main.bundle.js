@@ -1114,8 +1114,8 @@ var VerticalSplitSeparatorComponent = (function (_super) {
     VerticalSplitSeparatorComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_7" /* Component */])({
             selector: 'vertical-split-separator',
-            styles: ["\n    :host {\n      width: 21px;\n      cursor: url(../assets/cursor.cur), ew-resize;\n      position: relative;\n      background-color: #f7f7f7;\n      border-left: 1px solid lightgrey;\n      z-index:2;\n    }\n\n    .handle {\n      width: 100%;\n      height: 100%;\n      padding-left: 3px;\n      background-color: rgba(0,0,0,0);\n      position: absolute;\n    }\n  "],
-            template: "\n    <div class=\"handle\"><img src=\"../assets/splitter.png\"></div>\n  "
+            styles: ["\n    :host {\n      width: 21px;\n      cursor: url(./assets/cursor.cur), ew-resize;\n      position: relative;\n      background-color: #f7f7f7;\n      border-left: 1px solid lightgrey;\n      z-index:2;\n    }\n\n    .handle {\n      width: 100%;\n      height: 100%;\n      padding-left: 3px;\n      background-color: rgba(0,0,0,0);\n      position: absolute;\n    }\n  "],
+            template: "\n    <div class=\"handle\"><img src=\"./assets/splitter.png\"></div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], VerticalSplitSeparatorComponent);

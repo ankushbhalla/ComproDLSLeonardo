@@ -31,10 +31,14 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/release/:ver', (req, res) => {
   var ver = req.params.ver;
-  res.sendFile(path.join(__dirname, 'public/release/'+ver+'/chirag.html'));
+  res.sendFile(path.join(__dirname, 'public/release/'+ver+'/launch.html'));
+});
+app.get('/release/:ver/*', (req, res) => {
+  var ver = req.params.ver;
+  res.sendFile(path.join(__dirname, 'public/release/'+ver+'/launch.html'));
 });
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/chirag.html'));
+  res.sendFile(path.join(__dirname, 'dist/launch.html'));
 });
 
 
