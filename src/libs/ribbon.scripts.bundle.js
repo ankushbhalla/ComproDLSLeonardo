@@ -27423,7 +27423,7 @@ function getLabel(textXml) {
 //DOWN ARROW
 //Leonardo Start
 function getDownArrow() {
-    var eleAttrs = [{ name: "src", value: "libs/RibbonAssets/img/EwaCommon.png" }, //Changing Image Path
+    var eleAttrs = [{ name: "src", value: "RibbonAssets/img/EwaCommon.png" }, //Changing Image Path
                     { name: "width", value: "5px" },
                     { name: "height", value: "3px" },
                     { name: "top", value: "-133px" },
@@ -27435,7 +27435,7 @@ function getDownArrow() {
 
 //Right ARROW
 function getRightArrow() {
-    var eleAttrs = [{ name: "src", value: "libs/RibbonAssets/img/EwaCommon.png" },//changing Image Path
+    var eleAttrs = [{ name: "src", value: "RibbonAssets/img/EwaCommon.png" },//changing Image Path
                     { name: "width", value: "4px" },
                     { name: "height", value: "7px" },
                     { name: "top", value: "-113px" },
