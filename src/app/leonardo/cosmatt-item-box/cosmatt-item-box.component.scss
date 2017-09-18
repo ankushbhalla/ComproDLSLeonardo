@@ -1,0 +1,180 @@
+.cosmattItemHost{
+
+    background-color: #dedede;
+
+    .itemHeaderContainer{
+      float: none;
+      margin: 20px auto;
+      padding: 0px;
+    }
+
+    .cosmattItemContainer{
+
+      background-color: #ffffff;
+      margin: auto;
+      float: none;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      border-top: solid 5px #cb2929;
+      border-top-left-radius: 2.8px;
+      border-top-right-radius: 2.8px;
+
+      &>div{
+        font-size: 1.1em;
+        line-height: 1.6;
+      }
+
+      .questionHeadings{
+        font-weight: 600;
+        color: #008fce;
+        font-size: 1.5em;
+      }
+
+      .leoHost{
+        width: 100%;
+      }
+
+      div.code-math{
+
+        font-size: 24px;
+        padding: 10px;
+        border-radius: 3px;
+        text-align: center;
+        overflow: auto;
+        color: #333;
+        line-height: 19px;
+
+        .MathJax_SVG_Display{
+          width: auto;
+          display: inline-block!important;
+          border: 1px solid #199ed5;
+          border-radius: 10px;
+          padding: 10px;
+          background-color: #e2f4fd;
+          font-size: .65em;
+          font-family: Open Sans!important;
+        }
+      }
+
+      h6{
+        margin: 12px 0 10px;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        cursor: text;
+
+        position: relative;
+        font-size: 1.1em;
+        font-weight: 400;
+
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        color: #f3722d;
+      }
+
+      p img{
+        box-shadow: 6px 6px 9px #ddd;
+        border: 1px solid #ddd;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+        transform: translate(-50%);
+      }
+    }
+
+    .workspaceHost{
+      background-color: #ffffff;
+      margin: auto;
+      float: none;
+      padding-top: 1px;
+      padding-bottom: 50px;
+
+      .workspaceContainer{
+        box-shadow: 6px 6px 9px #ddd;
+        border: 1px solid #ddd;
+
+        .qInstruction{
+          width: 100%;
+          background-color: #f5f5f5;
+          font-size: 1.286em;
+
+          .qLabel{
+            color: #000;
+            float: left;
+            font-weight: 600;
+            display: inline-block;
+            padding: 20px 5px 20px 50px;
+            width: 135px;
+            height: 100%;
+          }
+
+          .statement{
+            color: #366894;
+            display: inline-block;
+            padding: 20px 50px 20px 5px;
+            width: calc(100% - 135px);
+          }
+        }
+
+        .workspace{
+          margin-top: 50px;
+        }
+
+        .btnContainer{
+          margin: auto;
+          float: none;
+          border-top: 1px solid #d1d1d1;
+          height: 70px;
+          padding-top: 15px;
+          width: 97%;
+
+          .navBtn{
+            color: #01579b;
+            padding: 5px 16px;
+            line-height: 1.5;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            border: none;
+            background-color: #fff;
+            outline: none;
+
+            a{
+              text-decoration: none;
+
+              .glyphicon{
+                padding-right: 7px;
+              }
+            }
+
+          }
+
+          .navBtn:hover{
+            text-decoration: underline;
+          }
+
+          .navBtn:disabled{
+            color: graytext;
+            text-decoration: none;
+            cursor: not-allowed;
+
+            .glyphicon{
+              color: graytext;
+            }
+          }
+
+          .navBtn.btnReset{
+            border-left: 1px solid #d1d1d1;
+          }
+        }
+      }
+
+    }
+
+}

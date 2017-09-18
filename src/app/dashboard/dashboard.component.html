@@ -1,7 +1,7 @@
 <div class="dashboard-items-container">
   <div class="container contentDiv">
     <div class="row item-container">
-      <app-dashboard-item *ngFor="let ques of questions; let qIndex = index;" [questionIndex]="getQuesIndex(qIndex+1)" [quesMeta]="ques" class="col-lg-4 col-md-4 col-sm-4"></app-dashboard-item>
+      <app-dashboard-item *ngFor="let ques of questions;" [quesMeta]="ques" class="col-lg-4 col-md-4 col-sm-4"></app-dashboard-item>
     </div>
   </div>
 </div>
