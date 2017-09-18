@@ -1,21 +1,17 @@
 import { Component, ViewChild, ElementRef, HostListener, EventEmitter, Input, Output } from '@angular/core';
 
-@Component({
-  selector: 'split-pane',
-  host: {'style': 'height: 40px; position:relative; top:2px; left:20px;'}
-})
 export abstract class SplitPaneComponent {
 
-  @ViewChild('primaryComponent') protected primaryComponent: ElementRef;
-  @ViewChild('secondaryComponent') protected secondaryComponent: ElementRef;
+  @ViewChild('primaryComponent') public primaryComponent: ElementRef;
+  @ViewChild('secondaryComponent') public secondaryComponent: ElementRef;
 
-  @Input('primary-component-initialratio') protected initialRatio: number = 0.5;
-  @Input('primary-component-minsize') protected primaryMinSize: number = 0;
-  @Input('secondary-component-minsize') protected secondaryMinSize: number = 0;
-  @Input('local-storage-key') private localStorageKey: string = null;
-  @Output('on-change') private notifySizeDidChange: EventEmitter<any> = new EventEmitter<any>();
+  @Input('primary-component-initialratio') public initialRatio: number = 0.5;
+  @Input('primary-component-minsize') public primaryMinSize: number = 0;
+  @Input('secondary-component-minsize') public secondaryMinSize: number = 0;
+  @Input('local-storage-key') public localStorageKey: string = null;
+  @Output('on-change') public notifySizeDidChange: EventEmitter<any> = new EventEmitter<any>();
 
-  private dividerSize: number = 8.0;
+  public dividerSize: number = 8.0;
   protected isResizing: boolean = false;
 
   ngAfterViewInit() {
@@ -53,11 +49,11 @@ export abstract class SplitPaneComponent {
     }
   }
 
-  private notifyWillChangeSize(resizing: boolean) {
+  public notifyWillChangeSize(resizing: boolean) {
     this.isResizing = resizing;
   }
 
-  private checkValidBounds(newSize: number, minSize: number, maxSize: number): number {
+  public checkValidBounds(newSize: number, minSize: number, maxSize: number): number {
     return newSize >= minSize 
             ? (newSize <= maxSize) 
                 ? newSize 
@@ -65,7 +61,7 @@ export abstract class SplitPaneComponent {
             : minSize;
   }
 
-  private stopResizing() {
+  public stopResizing() {
     this.isResizing = false;
     this.primaryComponent.nativeElement.style.cursor = "auto";
     this.secondaryComponent.nativeElement.style.cursor = "auto";

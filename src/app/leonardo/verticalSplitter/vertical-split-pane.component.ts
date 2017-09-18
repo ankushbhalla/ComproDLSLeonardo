@@ -44,9 +44,9 @@ import { PositionService } from './position.service'
 })
 export class VerticalSplitPaneComponent extends SplitPaneComponent {
 
-  @ViewChild('outer') protected outerContainer: ElementRef;
+  @ViewChild('outer') public outerContainer: ElementRef;
 
-  protected getTotalSize(): number {
+  public getTotalSize(): number {
     return this.outerContainer.nativeElement.offsetWidth;
   }
 
