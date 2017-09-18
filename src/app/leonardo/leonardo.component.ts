@@ -24,7 +24,7 @@ export class LeonardoComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id'];
       this.mode = params['mode'];
-      let questionConfig = this.dataService.getQuestionConfig(this.id);
+      let questionConfig = this.dataService.getQuestionConfig(this.mode, this.id);
       this.questionData = questionConfig["question"];
       this.solutionData = questionConfig["solution"];
     });
