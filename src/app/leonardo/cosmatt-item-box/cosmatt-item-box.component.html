@@ -1,0 +1,35 @@
+<div #cosmattItemHost class="col-md-12 cosmattItemHost">
+  <div #itemHeaderContainer class="col-md-11 itemHeaderContainer ">
+    <h2>
+      <span class="glyphicon glyphicon-book"></span>
+      <span>{{chapName}}</span>
+      <span>-</span>
+      <span>{{secName}}</span>
+    </h2>
+  </div>
+  <div #cosmattItemContainer class="col-md-11 cosmattItemContainer"></div>
+  <div #workspaceHost class="col-md-11 workspaceHost">
+    <div #workspaceContainer class="workspaceContainer">
+      <div class="qInstruction">
+        <div class="qLabel">Question:</div>
+        <div #qInstruction class="statement"></div>
+      </div>
+      <div #workspace class="workspace">
+      </div>
+      <div class="btnContainer">
+        <button class="navBtn btnCMW" (click)="cmwHandler()" [disabled]="!isCMWEnabled">
+          <a>
+            <span class="glyphicon glyphicon-ok"></span>
+          </a>
+          <span class="btnText">Check My Work</span>
+        </button>
+        <button class="navBtn btnReset" (click)="resetHandler()">
+          <a>
+            <span class="glyphicon glyphicon-repeat"></span>
+          </a>
+          <span class="btnText">Reset</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
