@@ -9,7 +9,7 @@
     "test": "karma start ./karma.conf.js",
     "lint": "ng lint",
     "e2e": "protractor ./protractor.conf.js",
-    "build": "webpack"
+    "build": "ng build --prod"
   },
   "author": "",
   "license": "ISC",
@@ -45,7 +45,7 @@
     "tslint": "~4.4.2",
     "typescript": "~2.0.0",
     "url-loader": "^0.5.7",
-    "@angular/cli": "^1.0.0-beta.32.3",
+    "@angular/cli": "^1.2.6",
     "css-loader": "^0.26.1",
     "exports-loader": "^0.6.3",
     "extract-text-webpack-plugin": "^3.0.0",
