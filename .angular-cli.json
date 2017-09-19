@@ -11,9 +11,12 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "libs/RibbonAssets"
+        "libs/RibbonAssets",
+        "libs/styles.bundle.js",
+        "libs/ribbon.scripts.bundle.js",
+        "libs/scripts.bundle.js"
       ],
-      "index": "index.html",
+      "index": "launch.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
@@ -21,11 +24,6 @@
       "prefix": "app",
       "styles": [
         "styles.css"
-      ],
-      "scripts": [
-        "libs/styles.bundle.js",
-        "libs/ribbon.scripts.bundle.js",
-        "libs/scripts.bundle.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
