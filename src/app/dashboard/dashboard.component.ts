@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
         qText: "Create a Motion Profile",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
         badges:['Physics','Training'],
-        view:"Side by Side View",
+        view:"Reading View",
         index:3
       },
       {
@@ -48,7 +48,7 @@ export class DashboardComponent implements OnInit {
         qText: "Create a Motion Profile",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
         badges:['Physics','Assessment'],
-        view:"Reading View",
+        view:"Side by Side View",
         index:3
       }];
   }
