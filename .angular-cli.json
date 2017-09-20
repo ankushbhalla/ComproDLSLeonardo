@@ -11,10 +11,7 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "libs/RibbonAssets",
-        "libs/styles.bundle.js",
-        "libs/ribbon.scripts.bundle.js",
-        "libs/scripts.bundle.js"
+        "libs"
       ],
       "index": "launch.html",
       "main": "main.ts",

@@ -3,11 +3,11 @@
 	<tabs>
 		<tab name="Home" ak="H">
 			<sections>
-				<section name="Clipboard" launcher="false" ak="FO" eventId="41">
+				<section name="Clipboard" launcher="true" ak="FO" eventId="41">
 					<tooltips>
 						<tooltip type="HeaderBodyPic">
-							<img wd="62px" ht="128px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-								<imgcrop top="-111px" left="-101px"/>
+							<img wd="62px" ht="128px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop top="-39px" left="-101px"/>
 							</img>
 							<body>
 								<![CDATA[See all the items you've copied to the Clipboard.]]>
@@ -15,7 +15,7 @@
 							<header>Clipboard</header>
 						</tooltip>
 					</tooltips>
-					<control type="SplitButtonNewVertical" text="Paste" ak="V" eventId="148" identifier="home_clipboard_paste">
+					<control type="SplitButtonNewVertical" identifier="home_clipboard_paste" text="Paste" ak="V" eventId="148">
 						<tooltips>
 							<tooltip target="arrow">
 								<body>
@@ -30,44 +30,44 @@
 								<header>Paste (Ctrl+V)</header>
 							</tooltip>
 						</tooltips>
-						<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-							<imgcrop top="-1304px" left="-238px"/>
+						<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+							<imgcrop top="-1230px" left="-238px"/>
 						</icon>
 						<items wd="150px">
 							<item type="ItemHeader" disabled="true" text="Paste"/>
 							<items type="ImageArea">
 								<item type="ImageItem" ak="P" eventId="148" tooltip="Paste (P)">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-174px" left="0px"/>
 									</icon>
 								</item>
 								<item type="ImageItem" ak="F" eventId="200" tooltip="Formulas (F)">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-348px" left="0px"/>
 									</icon>
 								</item>
 								<item type="ImageItem" ak="O" eventId="201" tooltip="Formulas &amp; Number Formatting (O)">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-319px" left="0px"/>
 									</icon>
 								</item>
 								<item type="ImageItem" eventId="202" ak="K" tooltip="Keep Source Formatting (K)">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-261px" left="0px"/>
 									</icon>
 								</item>
 								<item type="ImageItem" eventId="203" ak="B" tooltip="No Borders (B)">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-203px" left="0px"/>
 									</icon>
 								</item>
 								<item type="ImageItem" eventId="204" ak="W" tooltip="Keep Source Column Widths (W)">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-290px" left="0px"/>
 									</icon>
 								</item>
 								<item type="ImageItem" ak="T" tooltip="Transpose (T)" eventId="876">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-87px" left="0px"/>
 									</icon>
 								</item>
@@ -75,17 +75,17 @@
 							<item type="ItemHeader" disabled="true" text="Paste Values"/>
 							<items type="ImageArea">
 								<item type="ImageItem" ak="V" tooltip="Values (V)" eventId="877">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-58px" left="0px"/>
 									</icon>
 								</item>
 								<item type="ImageItem" ak="A" tooltip="Values &amp; Number Formatting (A)" eventId="443">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-29px" left="0px"/>
 									</icon>
 								</item>
-								<item type="ImageItem" ak="E" tooltip="Values &amp; Source Formatting (E)" eventId="131">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+								<item type="ImageItem" eventId="131" ak="E" tooltip="Values &amp; Source Formatting (E)">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="0px" left="0px"/>
 									</icon>
 								</item>
@@ -93,22 +93,22 @@
 							<item type="ItemHeader" disabled="true" text="Other Paste Options"/>
 							<items type="ImageArea">
 								<item type="ImageItem" ak="R" tooltip="Formatting (R)" eventId="870">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-377px" left="0px"/>
 									</icon>
 								</item>
 								<item type="ImageItem" ak="N" tooltip="Paste Link (N)" eventId="941">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-145px" left="0px"/>
 									</icon>
 								</item>
 								<item type="ImageItem" ak="U" tooltip="Picture (U)" eventId="942">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-116px" left="0px"/>
 									</icon>
 								</item>
 								<item type="ImageItem" ak="I" tooltip="Linked Picture (I)" eventId="943">
-									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel/home/clipboard_sectionitems.png">
+									<icon wd="24px" ht="24px" src="libs/RibbonAssets/sprites/excel1024/home/clipboard_sectionitems.png">
 										<imgcrop top="-232px" left="0px"/>
 									</icon>
 								</item>
@@ -127,8 +127,8 @@
 									<header>Cut (Ctrl+X)</header>
 								</tooltip>
 							</tooltips>
-							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-								<imgcrop top="-1338px" left="-238px"/>
+							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop top="-1264px" left="-238px"/>
 							</icon>
 						</control>
 						<control type="SplitButtonNewHorizontal" minimal="true" text="Copy" ak="C" eventId="133" classname="copy">
@@ -146,8 +146,8 @@
 									<header>Copy (Ctrl+C)</header>
 								</tooltip>
 							</tooltips>
-							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-								<imgcrop top="-1360px" left="-274px"/>
+							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop top="-1286px" left="-274px"/>
 							</icon>
 							<text>Copy</text>
 							<items type="IconAndText" wd="165px" ak="C">
@@ -176,24 +176,13 @@
 									<header>Format Painter</header>
 								</tooltip>
 							</tooltips>
-							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-								<imgcrop top="-74px" left="-205px"/>
+							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop top="0px" left="-128px"/>
 							</icon>
 						</control>
 					</control>
 				</section>
-				<section name="Font" launcher="false" nrows="2" orientation="vertical" ak="FN" eventId="42">
-					<tooltips>
-						<tooltip type="HeaderBodyPic">
-							<img wd="96px" ht="82px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-								<imgcrop top="-1031px" left="0px"/>
-							</img>
-							<body>
-								<![CDATA[Customize your text to give it the exact look you want. <br/> <br/> You can add a variety of styles and colors to your text, as well as visual effects such as strikethrough and superscript.]]>
-							</body>
-							<header>Font Settings (Ctrl+Shift+F)</header>
-						</tooltip>
-					</tooltips>
+				<section name="Font" launcher="true" nrows="2" orientation="vertical" ak="FN" eventId="42">
 					<control>
 						<control type="ComboBoxText" selectedindex="1" width="109px" text="Font" defaulttext="Calibri" ak="FF" classname="font-name">
 							<tooltips>
@@ -386,8 +375,8 @@
 									<header>Increase Font Size</header>
 								</tooltip>
 							</tooltips>
-							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-								<imgcrop top="-74px" left="-163px"/>
+							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop top="-21px" left="-126px"/>
 							</icon>
 						</control>
 						<control type="MinimalButton" text="Decrease Font Size" ak="FK">
@@ -399,8 +388,8 @@
 									<header>Decrease Font Size</header>
 								</tooltip>
 							</tooltips>
-							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-								<imgcrop top="-74px" left="-184px"/>
+							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop top="-21px" left="-147px"/>
 							</icon>
 						</control>
 					</control>
@@ -415,8 +404,8 @@
 										<header>Bold (Ctrl+B)</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop top="-1356px" left="-238px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop top="-1282px" left="-238px"/>
 								</icon>
 							</control>
 							<control type="MinimalToggleButton" text="Italics" ak="2" eventId="575" classname="italicsbutton">
@@ -428,19 +417,19 @@
 										<header>Italic (Ctrl+I)</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop top="-1342px" left="-274px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop top="-1268px" left="-274px"/>
 								</icon>
 							</control>
 							<control type="SplitButtonNewHorizontal" minimal="true" text="Underline" ak="3" classname="highlight-underline">
-								<items type="IconAndText" wd="158px">
+								<items type="IconAndText" wd="157px">
 									<item text="Underline" ak="U">
-										<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+										<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 											<imgcrop top="1px" left="-36px"/>
 										</icon>
 									</item>
-									<item text="Double Underline" ak="P">
-										<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+									<item text="Double Underline" ak="D">
+										<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 											<imgcrop top="-23px" left="-36px"/>
 										</icon>
 									</item>
@@ -459,8 +448,8 @@
 										<header>Underline (Ctrl+U)</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop top="-1373px" left="-238px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop top="-1299px" left="-238px"/>
 								</icon>
 							</control>
 						</control>
@@ -480,101 +469,101 @@
 										<header>Bottom Border</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop top="-626px" left="-107px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop top="-552px" left="-107px"/>
 								</icon>
 								<items>
 									<items type="scrollable" max-height="370px" wd="254px">
 										<item type="ItemHeader" disabled="true" text="Borders"/>
 										<item type="IconAndText" text="Bottom Border" ak="O">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-127px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Top Border" ak="P">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-29px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Left Border" ak="L">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-53px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Right Border" separator="true" ak="R">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-77px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="No Border" ak="N">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-103px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="All Borders" ak="A" eventId="873">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-127px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Outside Borders" ak="S" eventId="606">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-151px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Thick Outside Borders" separator="true" ak="T" eventId="178">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-175px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Bottom Double Border" ak="B">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-201px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Thick Bottom Border" ak="H" eventId="874">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-226px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Top and Bottom Border" ak="D" eventId="864">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-249px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Top and Thick Bottom Border" ak="C">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-274px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Top and Double Bottom Border" separator="true" ak="U" eventId="818">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-298px"/>
 											</icon>
 										</item>
 										<item type="ItemHeader" disabled="true" text="Draw Borders"/>
 										<item type="IconAndText" text="Draw Border" ak="W">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-344px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Draw Border Grid" ak="G">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-369px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Erase Border" ak="E">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-393px"/>
 											</icon>
 										</item>
 										<item type="IconAndText" text="Line Color" hassubitems="true" ak="I">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-417px"/>
 											</icon>
 										</item>
 										<item text="Line Style" type="IconAndText" separator="true" hassubitems="true" ak="Y"/>
 										<item type="IconAndText" text="More Borders..." eventId="80" ak="M">
-											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/font_sectionitems.png">
+											<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/font_sectionitems.png">
 												<imgcrop left="-4px" top="-467px"/>
 											</icon>
 										</item>
@@ -599,8 +588,8 @@
 										<header>Fill Color</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop top="-1306px" left="-290px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop top="-1232px" left="-290px"/>
 								</icon>
 								<items wd="173px">
 									<item type="ColorPicker" text="ColorGrid" eventId="154" mode="onlyColors" classname="shape-fill"/>
@@ -626,8 +615,8 @@
 										<header>Font Color</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop top="-77px" left="-141px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop top="-3px" left="-104px"/>
 								</icon>
 								<items wd="171px">
 									<item type="ColorPicker" text="ColorGrid" eventId="153" classname="excel-font-color"/>
@@ -635,12 +624,23 @@
 							</control>
 						</control>
 					</control>
-				</section>
-				<section name="Alignment" launcher="false" nrows="2" ak="FA" eventId="44">
 					<tooltips>
 						<tooltip type="HeaderBodyPic">
-							<img wd="96px" ht="95px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-								<imgcrop top="-842px" left="0px"/>
+							<img wd="96px" ht="82px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop top="-957px" left="0px"/>
+							</img>
+							<body>
+								<![CDATA[Customize your text to give it the exact look you want. <br/> <br/> You can add a variety of styles and colors to your text, as well as visual effects such as strikethrough and superscript.]]>
+							</body>
+							<header>Font Settings (Ctrl+Shift+F)</header>
+						</tooltip>
+					</tooltips>
+				</section>
+				<section name="Alignment" launcher="true" nrows="2" ak="FA" eventId="44">
+					<tooltips>
+						<tooltip type="HeaderBodyPic">
+							<img wd="96px" ht="95px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop top="-768px" left="0px"/>
 							</img>
 							<body>
 								<![CDATA[Don't see what you're looking for?<br/><br/>Check out the full set of cell alignment options.]]>
@@ -659,8 +659,8 @@
 										<header>Top Align</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop left="-290px" top="-1270px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop left="-290px" top="-1196px"/>
 								</icon>
 							</control>
 							<control type="MinimalToggleButton" classname="middlealign" text="Middle Align" ak="AM" eventId="60">
@@ -672,8 +672,8 @@
 										<header>Middle Align</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop left="-256px" top="-1338px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop left="-256px" top="-1264px"/>
 								</icon>
 							</control>
 							<control id="bottom-align" type="MinimalToggleButton" text="Bottom Align" ak="AB" eventId="920">
@@ -685,11 +685,10 @@
 										<header>Bottom Align</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop left="-264px" top="-1428px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop left="-264px" top="-1354px"/>
 								</icon>
 							</control>
-							<control type="Separator"/>
 						</control>
 						<control>
 							<control type="MinimalToggleButton" text="Align Text Left" ak="AL" eventId="3" classname="align-left">
@@ -701,11 +700,11 @@
 										<header>Align Left</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop left="-246px" top="-1428px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop left="-246px" top="-1354px"/>
 								</icon>
 							</control>
-							<control type="MinimalToggleButton" text="Center" classname="align-center" ak="AC" eventId="2">
+							<control type="MinimalToggleButton" text="Center" ak="AC" classname="align-center" eventId="2">
 								<tooltips>
 									<tooltip>
 										<body>
@@ -714,8 +713,8 @@
 										<header>Center</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop left="-156px" top="-1442px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop left="-156px" top="-1368px"/>
 								</icon>
 							</control>
 							<control type="MinimalToggleButton" text="Align Text Right" ak="AR" classname="align-right" eventId="316">
@@ -727,11 +726,10 @@
 										<header>Align Right</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop left="-228px" top="-1428px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop left="-228px" top="-1354px"/>
 								</icon>
 							</control>
-							<control type="Separator"/>
 						</control>
 					</control>
 					<control orientation="vertical">
@@ -744,37 +742,37 @@
 									<header>Orientation</header>
 								</tooltip>
 							</tooltips>
-							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-								<imgcrop left="-107px" top="-1120px"/>
+							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop left="-107px" top="-1046px"/>
 							</icon>
 							<items wd="193px">
 								<item type="IconAndText" text="Angle Counterclockwise" ak="O" eventId="605">
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/alignment_sectionitems.png">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/alignment_sectionitems.png">
 										<imgcrop left="-6px" top="-139px"/>
 									</icon>
 								</item>
 								<item type="IconAndText" text="Angle Clockwise" ak="L" eventId="869">
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/alignment_sectionitems.png">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/alignment_sectionitems.png">
 										<imgcrop left="-6px" top="-163px"/>
 									</icon>
 								</item>
 								<item type="IconAndText" text="Vertical Text" ak="V">
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/alignment_sectionitems.png">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/alignment_sectionitems.png">
 										<imgcrop left="-6px" top="-187px"/>
 									</icon>
 								</item>
 								<item type="IconAndText" text="Rotate Text Up" ak="U">
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/alignment_sectionitems.png">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/alignment_sectionitems.png">
 										<imgcrop left="-6px" top="-211px"/>
 									</icon>
 								</item>
 								<item type="IconAndText" text="Rotate Text Down" separator="true" ak="D">
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/alignment_sectionitems.png">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/alignment_sectionitems.png">
 										<imgcrop left="-6px" top="-236px"/>
 									</icon>
 								</item>
 								<item type="IconAndText" text="Format Cell Alignment" eventId="75" ak="M">
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/alignment_sectionitems.png">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/alignment_sectionitems.png">
 										<imgcrop left="-6px" top="-262px"/>
 									</icon>
 									<tooltips>
@@ -801,8 +799,8 @@
 										<header>Decrease Indent</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop left="-220px" top="-150px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop left="-174px" top="-76px"/>
 								</icon>
 							</control>
 							<control type="MinimalButton" text="Increase Indent" ak="6" eventId="103">
@@ -814,8 +812,8 @@
 										<header>Increase Indent</header>
 									</tooltip>
 								</tooltips>
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-									<imgcrop left="-243px" top="-150px"/>
+								<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+									<imgcrop left="-197px" top="-76px"/>
 								</icon>
 							</control>
 						</control>
@@ -824,11 +822,11 @@
 						<control type="Separator"/>
 					</control>
 					<control orientation="vertical">
-						<control type="ToggleButton" text="Wrap Text" classname="wraptext" ak="W" eventId="28">
+						<control type="ToggleButton" classname="wraptext" ak="W" eventId="28">
 							<tooltips>
 								<tooltip type="HeaderBodyPicHelp">
-									<img wd="96px" ht="128px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-										<imgcrop top="-74px" left="0px"/>
+									<img wd="96px" ht="128px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+										<imgcrop top="0px" left="0px"/>
 									</img>
 									<body>
 										<![CDATA[Wrap extra-long text into multiple lines so you can see all of it.]]>
@@ -836,15 +834,15 @@
 									<header>Wrap Text</header>
 								</tooltip>
 							</tooltips>
-							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-								<imgcrop left="-290px" top="-1288px"/>
+							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop left="-290px" top="-1214px"/>
 							</icon>
 						</control>
-						<control type="SplitButtonNewHorizontal" classname="mergeandcenter" text="Merge &amp; Center" eventId="61" ak="M">
+						<control type="SplitButtonNewHorizontal" minimal="true" classname="mergeandcenter" eventId="61" ak="M">
 							<tooltips>
 								<tooltip target="icon" type="HeaderBodyPicHelp">
-									<img wd="96px" ht="128px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-										<imgcrop top="-247px" left="-101px"/>
+									<img wd="96px" ht="128px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+										<imgcrop top="-173px" left="-101px"/>
 									</img>
 									<body>
 										<![CDATA[Combine and center the contents of the selected cells in a new larger cell.<br/><br/>This is a great way to create a label that spans multiple columns.]]>
@@ -858,17 +856,17 @@
 									<header>Merge &amp; Center</header>
 								</tooltip>
 							</tooltips>
-							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-								<imgcrop left="-107px" top="-522px"/>
+							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop left="-107px" top="-448px"/>
 							</icon>
 							<items wd="150px">
 								<item type="IconAndText" text="Merge &amp; Center" eventId="61" ak="C">
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/alignment_sectionitems.png">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/alignment_sectionitems.png">
 										<imgcrop left="-6px" top="-6px"/>
 									</icon>
 									<tooltips>
 										<tooltip type="HeaderBodyPicHelp" position="Item">
-											<img wd="96px" ht="128px" src="libs/RibbonAssets/sprites/excel/home/alignment_sectionitems.png">
+											<img wd="96px" ht="128px" src="libs/RibbonAssets/sprites/excel1024/home/alignment_sectionitems.png">
 												<imgcrop top="0px" left="-142px"/>
 											</img>
 											<body>
@@ -879,7 +877,7 @@
 									</tooltips>
 								</item>
 								<item type="IconAndText" text="Merge Across" eventId="85" ak="A">
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/alignment_sectionitems.png">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/alignment_sectionitems.png">
 										<imgcrop left="-6px" top="-30px"/>
 									</icon>
 									<tooltips>
@@ -892,7 +890,7 @@
 									</tooltips>
 								</item>
 								<item type="IconAndText" text="Merge Cells" eventId="86" ak="M">
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/alignment_sectionitems.png">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/alignment_sectionitems.png">
 										<imgcrop left="-6px" top="-54px"/>
 									</icon>
 									<tooltips>
@@ -905,7 +903,7 @@
 									</tooltips>
 								</item>
 								<item type="IconAndText" text="Unmerge Cells" eventId="87" ak="U">
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/alignment_sectionitems.png">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/alignment_sectionitems.png">
 										<imgcrop left="-6px" top="-78px"/>
 									</icon>
 									<tooltips>
@@ -921,11 +919,11 @@
 						</control>
 					</control>
 				</section>
-				<section name="Number" launcher="false" nrows="2" ak="FM" eventId="45">
+				<section name="Number" launcher="true" nrows="2" ak="FM" eventId="45">
 					<tooltips>
 						<tooltip type="HeaderBodyPic">
-							<img wd="96px" ht="95px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-								<imgcrop top="-1113px" left="0px"/>
+							<img wd="96px" ht="95px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop top="-1039px" left="0px"/>
 							</img>
 							<body>
 								<![CDATA[Don't see what you're looking for?<br/><br/>Check out the full set of number formatting options.]]>
@@ -934,7 +932,7 @@
 						</tooltip>
 					</tooltips>
 					<control orientation="vertical">
-						<control type="ComboBoxText" defaulttext="General" classname="num-format" selectedindex="1" width="129px" text="Number Format" ak="N" eventId="295" identifier="num_launcher_format" dontFireEventOnESC="true">
+						<control id="num-format" classname="num-format" type="ComboBoxText" selectedindex="1" width="129px" text="Number Format" defaulttext="General" ak="N" eventId="295" identifier="num_launcher_format" dontFireEventOnESC="true">
 							<tooltips>
 								<tooltip type="HeaderBodyHelp">
 									<body>
@@ -943,66 +941,66 @@
 									<header>Number Format</header>
 								</tooltip>
 							</tooltips>
-							<items width="202px" height="550px">
+							<items width="202px">
 								<items type="scrollable" max-height="350px">
 									<item text="General" type="IconTextDesc" desc="No Specific Format" selected="true" eventId="89">
-										<icon wd="150px" ht="33px" src="libs/RibbonAssets/sprites/excel/home/number_sectionitems.png">
+										<icon wd="150px" ht="33px" src="libs/RibbonAssets/sprites/excel1024/home/number_sectionitems.png">
 											<imgcrop top="-5px" left="-5px"/>
 										</icon>
 									</item>
 									<item text="Number" type="IconAndText" eventId="90">
-										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/number_sectionitems.png">
+										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel1024/home/number_sectionitems.png">
 											<imgcrop top="-49px" left="-5px"/>
 										</icon>
 									</item>
 									<item text="Currency" type="IconAndText" eventId="91">
-										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/number_sectionitems.png">
+										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel1024/home/number_sectionitems.png">
 											<imgcrop top="-93px" left="-5px"/>
 										</icon>
 									</item>
 									<item text="Accounting" type="IconAndText" eventId="63">
-										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/number_sectionitems.png">
+										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel1024/home/number_sectionitems.png">
 											<imgcrop top="-140px" left="-6px"/>
 										</icon>
 									</item>
 									<item text="Short Date" type="IconAndText" eventId="92">
-										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/number_sectionitems.png">
+										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel1024/home/number_sectionitems.png">
 											<imgcrop top="-181px" left="-5px"/>
 										</icon>
 									</item>
 									<item text="Long Date" type="IconAndText" eventId="93">
-										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/number_sectionitems.png">
+										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel1024/home/number_sectionitems.png">
 											<imgcrop top="-225px" left="-5px"/>
 										</icon>
 									</item>
 									<item text="Time" type="IconAndText" eventId="94">
-										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/number_sectionitems.png">
+										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel1024/home/number_sectionitems.png">
 											<imgcrop top="-269px" left="-5px"/>
 										</icon>
 									</item>
 									<item text="Percentage" type="IconAndText" eventId="118">
-										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/number_sectionitems.png">
+										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel1024/home/number_sectionitems.png">
 											<imgcrop top="-313px" left="-5px"/>
 										</icon>
 									</item>
 									<item text="Fraction" type="IconAndText" eventId="95">
-										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/number_sectionitems.png">
+										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel1024/home/number_sectionitems.png">
 											<imgcrop top="-357px" left="-5px"/>
 										</icon>
 									</item>
 									<item text="Scientific" type="IconAndText" eventId="96">
-										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/number_sectionitems.png">
+										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel1024/home/number_sectionitems.png">
 											<imgcrop top="-401px" left="-5px"/>
 										</icon>
 									</item>
 									<item text="Text" type="IconAndText" eventId="97" separator="true">
-										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/number_sectionitems.png">
+										<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel1024/home/number_sectionitems.png">
 											<imgcrop top="-445px" left="-5px"/>
 										</icon>
 									</item>
 								</items>
 								<item type="Separator" mode="solid">
-									<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/number_sectionitems.png">
+									<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel1024/home/number_sectionitems.png">
 										<imgcrop top="-35px" left="-296px"/>
 									</icon>
 								</item>
@@ -1026,8 +1024,8 @@
 											<header>Accounting Number Format</header>
 										</tooltip>
 									</tooltips>
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-										<imgcrop left="-266px" top="-73px"/>
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+										<imgcrop left="-190px" top="1px"/>
 									</icon>
 									<items wd="218px">
 										<item text="$ English (United States)" eventId="98"/>
@@ -1047,8 +1045,8 @@
 											<header>Percent Style (Ctrl+Shift+%)</header>
 										</tooltip>
 									</tooltips>
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-										<imgcrop left="-246px" top="-73px"/>
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+										<imgcrop left="-190px" top="-18px"/>
 									</icon>
 								</control>
 								<control type="MinimalButton" text="Comma Style" ak="K" eventId="65">
@@ -1060,8 +1058,8 @@
 											<header>Comma Style</header>
 										</tooltip>
 									</tooltips>
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-										<imgcrop left="-192px" top="-1442px"/>
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+										<imgcrop left="-192px" top="-1368px"/>
 									</icon>
 								</control>
 								<control type="Separator"/>
@@ -1076,8 +1074,8 @@
 											<header>Increase Decimal</header>
 										</tooltip>
 									</tooltips>
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-										<imgcrop left="-174px" top="-1442px"/>
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+										<imgcrop left="-174px" top="-1368px"/>
 									</icon>
 								</control>
 								<control type="MinimalButton" text="Decrease Decimal" ak="9" eventId="67">
@@ -1089,8 +1087,8 @@
 											<header>Decrease Decimal</header>
 										</tooltip>
 									</tooltips>
-									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-										<imgcrop left="-210px" top="-1442px"/>
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+										<imgcrop left="-210px" top="-1368px"/>
 									</icon>
 								</control>
 							</control>
@@ -1098,87 +1096,89 @@
 					</control>
 				</section>
 				<section name="Cells" display="hideOnLowRes">
-					<control type="SplitButtonNewVertical" text="Insert" eventId="82" ak="I" identifier="home_cells_insert">
-						<tooltips>
-							<tooltip target="icon" type="HeaderBodyHelp">
-								<body>
-									<![CDATA[Add new cells, rows or columns to your workbook.<br/><br/>FYI: To insert multiple rows or columns at a time, select multiple rows or columns in the sheet, and click Insert.]]>
-								</body>
-								<header>Insert Cells</header>
-							</tooltip>
-							<tooltip target="arrow">
-								<body>
-									<![CDATA[Add cells, rows, columns or sheets to your workbook.]]>
-								</body>
-								<header>Insert Cells</header>
-							</tooltip>
-						</tooltips>
-						<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-							<imgcrop top="0px" left="-185px"/>
-						</icon>
-						<items wd="180px">
-							<item type="IconAndText" text="Insert Cells..." separator="true" ak="I" eventId="51">
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/img/Excel/Home/Cells/Insert_Dropdown/InsertCells.png">
-									<imgcrop top="0px" left="0px"/>
-								</icon>
-							</item>
-							<item type="IconAndText" text="Insert Sheet ~Rows" ak="R" eventId="52">
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/img/EwaEdit.png">
-									<imgcrop top="-137px" left="-55px"/>
-								</icon>
-							</item>
-							<item type="IconAndText" text="Insert Sheet Columns" separator="true" ak="C" eventId="53">
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/img/EwaEdit.png">
-									<imgcrop top="-37px" left="-170px"/>
-								</icon>
-							</item>
-							<item type="IconAndText" text="Insert Sheet" ak="S" eventId="54" tooltip="Insert Worksheet (Shift+F11)">
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/img/EwaEdit.png">
-									<imgcrop top="-1px" left="-170px"/>
-								</icon>
-							</item>
-						</items>
-					</control>
-					<control type="SplitButtonNewVertical" text="Delete" eventId="84" ak="D" identifier="home_cells_delete">
-						<tooltips>
-							<tooltip target="icon">
-								<body>
-									<![CDATA[Delete cells, rows, columns or sheets from your workbook.<br/><br/>FYI: To delete multiple rows or columns at a time, select multiple rows or columns in the sheet, and click Delete.]]>
-								</body>
-								<header>Delete Cells</header>
-							</tooltip>
-							<tooltip target="arrow">
-								<body>
-									<![CDATA[Delete cells, rows, columns or sheets from your workbook.<br/><br/>FYI: To delete multiple rows or columns at a time, select multiple rows or columns in the sheet, and click Delete.]]>
-								</body>
-								<header>Delete Cells</header>
-							</tooltip>
-						</tooltips>
-						<icon wd="32px" ht="32px" src="libs/RibbonAssets/sprites/excel/home/home.png">
-							<imgcrop top="0px" left="-226px"/>
-						</icon>
-						<items wd="185px">
-							<item type="IconAndText" text="Delete Cells..." separator="true" ak="D" eventId="55">
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/img/Excel/Home/Cells/Delete_Dropdown/DeleteCells.png">
-									<imgcrop top="0px" left="0px"/>
-								</icon>
-							</item>
-							<item type="IconAndText" text="Delete Sheet Rows" ak="R" eventId="56">
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/img/EwaEdit.png">
-									<imgcrop top="-141px" left="-145px"/>
-								</icon>
-							</item>
-							<item type="IconAndText" text="Delete Sheet Columns" separator="true" ak="C" eventId="57">
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/img/EwaEdit.png">
-									<imgcrop top="-137px" left="-92px"/>
-								</icon>
-							</item>
-							<item type="IconAndText" text="Delete Sheet" ak="S" eventId="58">
-								<icon wd="16px" ht="16px" src="libs/RibbonAssets/img/EwaEdit.png">
-									<imgcrop top="-155px" left="-73px"/>
-								</icon>
-							</item>
-						</items>
+					<control orientation="vertical">
+						<control type="SplitButtonNewHorizontal" text="Insert" eventId="82" ak="I" identifier="home_cells_insert">
+							<tooltips>
+								<tooltip target="icon" type="HeaderBodyHelp">
+									<body>
+										<![CDATA[Add new cells, rows or columns to your workbook.<br/><br/>FYI: To insert multiple rows or columns at a time, select multiple rows or columns in the sheet, and click Insert.]]>
+									</body>
+									<header>Insert Cells</header>
+								</tooltip>
+								<tooltip target="arrow">
+									<body>
+										<![CDATA[Add cells, rows, columns or sheets to your workbook.]]>
+									</body>
+									<header>Insert Cells</header>
+								</tooltip>
+							</tooltips>
+							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop top="-78px" left="-263px"/>
+							</icon>
+							<items wd="180px">
+								<item type="IconAndText" text="Insert Cells..." separator="true" ak="I" eventId="51">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/cells_sectionitems.png">
+										<imgcrop top="0px" left="0px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Insert Sheet ~Rows" ak="R" eventId="52">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/cells_sectionitems.png">
+										<imgcrop top="-158px" left="-55px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Insert Sheet Columns" separator="true" ak="C" eventId="53">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/cells_sectionitems.png">
+										<imgcrop top="-58px" left="-170px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Insert Sheet" ak="S" eventId="54" tooltip="Insert Worksheet (Shift+F11)">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/cells_sectionitems.png">
+										<imgcrop top="-22px" left="-170px"/>
+									</icon>
+								</item>
+							</items>
+						</control>
+						<control type="SplitButtonNewHorizontal" text="Delete" eventId="84" ak="D" identifier="home_cells_delete">
+							<tooltips>
+								<tooltip target="icon">
+									<body>
+										<![CDATA[Delete cells, rows, columns or sheets from your workbook.<br/><br/>FYI: To delete multiple rows or columns at a time, select multiple rows or columns in the sheet, and click Delete.]]>
+									</body>
+									<header>Delete Cells</header>
+								</tooltip>
+								<tooltip target="arrow">
+									<body>
+										<![CDATA[Delete cells, rows, columns or sheets from your workbook.<br/><br/>FYI: To delete multiple rows or columns at a time, select multiple rows or columns in the sheet, and click Delete.]]>
+									</body>
+									<header>Delete Cells</header>
+								</tooltip>
+							</tooltips>
+							<icon wd="16px" ht="16px" src="libs/RibbonAssets/sprites/excel1024/home/home.png">
+								<imgcrop top="-101px" left="-263px"/>
+							</icon>
+							<items wd="185px">
+								<item type="IconAndText" text="Delete Cells..." separator="true" ak="D" eventId="55">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/img/Excel/Home/Cells/Delete_Dropdown/DeleteCells.png">
+										<imgcrop top="0px" left="0px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Delete Sheet Rows" ak="R" eventId="56">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/img/EwaEdit.png">
+										<imgcrop top="-141px" left="-145px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Delete Sheet Columns" separator="true" ak="C" eventId="57">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/img/EwaEdit.png">
+										<imgcrop top="-137px" left="-92px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Delete Sheet" ak="S" eventId="58">
+									<icon wd="16px" ht="16px" src="libs/RibbonAssets/img/EwaEdit.png">
+										<imgcrop top="-155px" left="-73px"/>
+									</icon>
+								</item>
+							</items>
+						</control>
 					</control>
 					<!--<control type="Image" hovereffect="true">
               <tooltips><tooltip>
