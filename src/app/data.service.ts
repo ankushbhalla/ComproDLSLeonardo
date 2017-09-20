@@ -59,7 +59,7 @@ export class DataService {
                 </div>
                 <div style="clear:both;">
                   <div class="questionHeadings">Cost of goods sold</div>
-                  <div style="height: 180px; min-width: 347px; min-height: 180px;" leoDataId="leoHost3" class="leoHost"></div>
+                  <div style="height: 180px; min-width: 392px; min-height: 180px;" leoDataId="leoHost3" class="leoHost"></div>
               </div>`,
 
             leoData: {
