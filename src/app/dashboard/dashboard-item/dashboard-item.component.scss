@@ -22,6 +22,11 @@
       font-family: "open-sans";
       color: #464646;
     }
+    @media (max-width: 1420px) and (min-width: 1200px){
+      .dashboard-item-title {
+          font-size: 21px;
+      }
+    }
     .description-container{
       font-size: 16px;
       font-family: "open-sans";
@@ -31,6 +36,11 @@
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
+    }
+    @media (max-width: 1420px) and (min-width: 1200px){
+      .description-container {
+        font-size: 15px;
+      }
     }
 }
 
@@ -57,12 +67,23 @@
 .leobadge{
   border-radius: 3px;
   margin: 2px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
   color: #fff;
   font-family: open-sans;
   padding: 7px 11px;
 }
+@media (max-width: 1420px) and (min-width: 1320px){
+  .leobadge {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1320px) and (min-width: 1200px){
+  .leobadge {
+    font-size: 11px;
+  }
+}
+
 .badge-container{
   padding-top: 15px;
 }
@@ -83,4 +104,9 @@
   font-size: 16px;
   color:#343434; 
   padding-left: 15px;
+}
+@media (max-width: 1420px) and (min-width: 1200px){
+  .viewtypeContainer {
+    font-size: 14px;
+  }
 }

@@ -9,7 +9,8 @@
     "test": "karma start ./karma.conf.js",
     "lint": "ng lint",
     "e2e": "protractor ./protractor.conf.js",
-    "build": "ng build --prod"
+    "build": "ng build --prod",
+    "postinstall": "ng build --aot -prod"
   },
   "author": "",
   "license": "ISC",
