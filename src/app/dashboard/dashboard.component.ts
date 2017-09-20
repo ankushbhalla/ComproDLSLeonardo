@@ -10,45 +10,45 @@ export class DashboardComponent implements OnInit {
   constructor() {
     this.questions = [
       {
-        qText: "Prepare a Trial Balance",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum ",
+        qText: "Trial Balance: Learn",
+        description: "Learn to prepare Trial Balance to verify that debits equal the credits",
         badges:['Accounting','Training'],
         view:"Side by Side View",
         index:1
       },
       {
-        qText: "Prepare an Income Statement",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum ",
+        qText: "Income Statement: Learn",
+        description: "Learn to prepare Income Statement to access the profitability of a company during a particular time interval",
         badges:['Accounting','Training'],
         view:"Side by Side View",
         index:2
       },
       {
-        qText: "Create a Motion Profile Table",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+        qText: "Create a Motion Profile",        
+        description: "Motion profile is simply a way of defining how an Axis moves with respect to time.",
         badges:['Physics','Training'],
-        view:"Side by Side View",
+        view:"Reading View",
         index:3
       },
       {
-        qText: "Prepare a Trial Balance",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+        qText: "Trial Balance: Assess",
+        description: "Assess student's knowledge and skill at the end of the course",
         badges:['Accounting','Assessment'],
         view:"Reading View",
         index:1
       },
       {
-        qText: "Prepare an Income Statement",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+        qText: "Income Statement: Assess",
+        description: "Assess student's knowledge and skill at the end of the course",
         badges:['Accounting','Assessment'],
         view:"Reading View",
         index:2
       },
       {
-        qText: "Create a Motion Profile Table",
+        qText: "Create a Motion Profile",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
         badges:['Physics','Assessment'],
-        view:"Reading View",
+        view:"Side by Side View",
         index:3
       }];
   }
