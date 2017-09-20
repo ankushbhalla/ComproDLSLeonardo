@@ -44,9 +44,9 @@ export class DataService {
         "2": {
           question: {
             template: `<br><div class="questionHeadings">Requirement</div>
-              <div>Kingram Company sells Leather Journal to office supply stores and other retailers around the world.</div>
+              <div>Kingram Company sells leather notepads to office supply stores and other retailers around the world.</div>
               <br/>
-              <div>Assume that the company sold 40000 pencils of its product at a price of $10 each during the year. Prepare the income statement for the most recent year.</div>
+              <div>Assume that the company sold 40000 leather notepads at a price of $10 each during the year. Prepare the income statement for the most recent year.</div>
               <br/>
               <div>
                 <div style="float:left;  margin-right:20px;">
@@ -246,7 +246,7 @@ export class DataService {
         "2": {
           question: {
             template: `<h1 class="questionHeadings">Instructions:</h1>
-              <div>Kingram Company sells Leather Journal to office supply stores and other retailers around the world.</div>
+              <div>Kingram Company sells leather notepads to office supply stores and other retailers around the world.</div>
               <br/>
               <div class="questionHeadings">Amounts</div>
               <div style="height: 230px; width: 820px;" leoDataId="leoHost1" class="leoHost"></div>
@@ -263,7 +263,7 @@ export class DataService {
               </div>
               <br/>
               <div class="questionHeadings" style="clear:both";>Requirement</div>
-              <div>Assume that the company sold 40000 pencils of its product at a price of $10 each during the year. Prepare the income statement for the most recent year.</div>`,
+              <div>Assume that the company sold 40000 leather notepads at a price of $10 each during the year. Prepare the income statement for the most recent year.</div>`,
 
             leoData: {
               "leoHost1": {
