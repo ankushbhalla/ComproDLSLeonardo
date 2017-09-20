@@ -5147,7 +5147,7 @@ No regression impact as the Power View Tab is being used first Time*/
     display: inline-block;
     z-index: 9993; }
   .DLSLeonardo #SIMArea .ribbon .font-dropdown-item-icon {
-    background-image: url(libs/RibbonAssets/img/fonticon.png); }
+    background-image: url(libs/RibbonAssets/img/FontIcon.png); }
   .DLSLeonardo #SIMArea .ribbon .dropdown-item-icon, .DLSLeonardo #SIMArea .chart-comp .dropdown-item-icon, .DLSLeonardo #SIMArea .chart-comp-v2 .dropdown-item-icon, .DLSLeonardo #SIMArea .excel-word-art .dropdown-item-icon .pptTable .dropdown-item-icon, .DLSLeonardo #SIMArea .mini-tb-rbn .dropdown-item-icon {
     min-width: 24px;
     min-height: 24px;
