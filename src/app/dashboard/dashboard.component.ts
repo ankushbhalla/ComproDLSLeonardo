@@ -24,8 +24,8 @@ export class DashboardComponent implements OnInit {
         index:2
       },
       {
-        qText: "Create a Motion Profile",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+        qText: "Create a Motion Profile",        
+        description: "Motion profile is simply a way of defining how an Axis moves with respect to time.",
         badges:['Physics','Training'],
         view:"Reading View",
         index:3
