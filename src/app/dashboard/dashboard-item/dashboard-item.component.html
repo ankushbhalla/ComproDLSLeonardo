@@ -1,5 +1,5 @@
 <section class="widget">
-  <div *ngIf="quesMeta.index == 3 && quesMeta.view == 'Side by Side View'" class="comingsooncurtain"><p> Coming Soon...</p></div>
+  <!-- <div *ngIf="quesMeta.index == 3 && quesMeta.view == 'Side by Side View'" class="comingsooncurtain"><p> Coming Soon...</p></div> -->
   <div class ="dashboard-item-widget">
   <div class="widget-body clearfix">
     <div>
@@ -16,8 +16,12 @@
     </div>    
   </div>
   </div>
-  <div class="button-container">
+  <div  *ngIf="!(quesMeta.index == 3 && quesMeta.view == 'Side by Side View') "class="button-container">
     <button [routerLink]="['/question',quesMeta.index,quesMeta.badges[1]]" class="btn btn-leonardo" type="submit">Launch</button>
+    <!-- routerlink path to be changed to ../../question when moved to previous release  -->
+  </div>
+  <div  *ngIf="quesMeta.index == 3 && quesMeta.view == 'Side by Side View'"class="button-container">
+    <button [routerLink]="['/question',quesMeta.index,quesMeta.badges[1]]" class="btn btn-leonardo-inverse" type="submit" disabled>Coming Soon</button>
     <!-- routerlink path to be changed to ../../question when moved to previous release  -->
   </div>
 </section>

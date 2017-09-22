@@ -5862,6 +5862,7 @@ var HotWrapper = (function () {
             }
         }
         this.updateSettings(settings);
+        this.container.focus();
     };
     // handleCellEditor(row, col) {
     //   let cellEditor = this.getActiveEditor();
