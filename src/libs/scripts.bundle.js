@@ -4582,7 +4582,7 @@ var DataModel = (function () {
         this.dispatchEvent(eventArgs);
     };
     DataModel.prototype.getHostAppRootPath = function () {
-        return this.dataJson.modeconfig["hostAppRootPath"] ? this.dataJson.modeconfig["hostAppRootPath"] : "";
+        return this.dataJson.modeconfig["hostAppRootPath"] && this.dataJson.modeconfig["hostAppRootPath"] != "" ? this.dataJson.modeconfig["hostAppRootPath"] + "/" : "";
     };
     DataModel.prototype.pushMergedRange = function (range, isForced) {
         if (!this.dataJson.mergedranges) {
@@ -6458,7 +6458,7 @@ var Ribbon = (function (_super) {
         _this.dataModel = dataModel;
         _this.eventController = eventController;
         _this.viewId = enums_1.VIEWIDs.RIBBON;
-        _this.compID = 1;
+        _this.compID = "1";
         return _this;
     }
     Ribbon.prototype.init = function () {
@@ -6469,14 +6469,16 @@ var Ribbon = (function (_super) {
             SIMS.Objects.Utils = new SIMS.Common.UtilityFunctions();
             SIMS.Objects.DOMElements.SIMArea = jQuery(this.leonardoContainer.querySelector('#SIMArea'));
             SIMS.Objects.DOMElements.LeonardoArea = jQuery(this.leonardoContainer);
-            var ribbonXmlPath = this.dataModel.getHostAppRootPath() + "libs/RibbonAssets/excel-ribbon.xml";
+            var ribbonXmlPath = this.dataModel.getHostAppRootPath() + "RibbonAssets/excel-ribbon.xml";
             var compInfo = { "@id": "1", "@mode": "new", "sizeandpos": { "attr": [{ "@name": "left", "@value": "0" }, { "@name": "top", "@value": "0" }, { "@name": "width", "@value": "*" }, { "@name": "height", "@value": "121" }] }, "initialattrs": { "attr": [{ "@name": "APP", "@value": "excel" }, { "@name": "RIBBON_PATH", "@value": ribbonXmlPath }, { "@name": "FONT_NAME", "@value": "Calibri light" }, { "@name": "BOTTOM_ALIGN", "@value": "true" }, { "@name": "ENABLE_COLLAPSE_EXPAND_BUTTON", "@value": "true" }, { "@name": "CENTER_ALIGN", "@value": "true" }, { "@name": "FONT_SIZE", "@value": "18" }, { "@name": "MERGE_AND_CENTER", "@value": "false" }] }, "events": { "event": [{ "@id": "51", "@desc": "Insert Cells", "validate": [{ "@followup": "3", "comp": { "@id": "2", "@validation-set": "Selected_cell1" } }, { "@followup": "2", "comp": { "@id": "2", "@validation-set": "Selected_cell2" } }] }, { "@id": "52", "@desc": "click Insert Sheet Rows.", "validate": { "@followup": "3", "@operator": "any", "comp": [{ "@id": "2", "@validation-set": "Selected_cell2" }, { "@id": "2", "@validation-set": "Selected_cell1" }] } }, { "@id": "82", "@desc": "Cells group Insert", "validate": { "@followup": "3", "comp": { "@id": "2", "@validation-set": "Selected_cell1" } } }] }, "compName": "SIMS.Components.Excel.Ribbon", "className": "SIMS.Components2016.Excel.Ribbon", "compType": "default", "taskbarImage": {} };
+            this.compID = compInfo["@id"];
             this.compJS = new SIMS.Components2016.Excel.Ribbon();
             this.compJS.AddComponentUI(compInfo, "<div class='compDiv SIMS_Ribbon_Excel' id='1' tabindex='1'></div>");
             this.compJS.Initialize(compInfo);
             REGISTER_MSG("COMP_ACTION", this, this.HandleRibbonEvents, this.compJS.msgHandler);
-            this.compJS.SetCompState(compInfo); // sizeandpos
+            this.compJS.SetCompState(compInfo); // sizeandpos            
             this.compJS.ShowComponent(compInfo["@id"], true, compInfo); //display true
+            this.compJS.SetAttribute(this.compID, "HOST_APP_ROOT_PATH", this.dataModel.getHostAppRootPath());
             this.compJS.UpdateComponentState(compInfo, "default"); //set attriubte
             this.compJS.GenerateHTML();
             // If ribbon is visible then only register for its events
@@ -6541,7 +6543,7 @@ var Ribbon = (function (_super) {
     };
     //control ribbon visibility
     Ribbon.prototype.updateRibbonVisibility = function (bVisible) {
-        this.compJS.ShowComponent(this.compJS._compinfo["@id"], this.dataModel.isRibbonVisible());
+        this.compJS.ShowComponent(this.compID, this.dataModel.isRibbonVisible());
     };
     Ribbon.prototype.updateRibbon = function (eventArgs) {
         if (eventArgs.viewId == this.getViewId()) {
