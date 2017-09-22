@@ -2630,7 +2630,7 @@ No regression impact as the Power View Tab is being used first Time*/
     line-height: 14px;
     vertical-align: middle;
     font-size: 9pt;
-    background: url("libs/RibbonAssets/img/morecolorimage.png") no-repeat scroll 6px 4px transparent; }
+    background: url("RibbonAssets/img/morecolorimage.png") no-repeat scroll 6px 4px transparent; }
   .DLSLeonardo #SIMArea .sims-ColorGrid .patternColor .eyeDropper {
     width: 136px;
     height: 18px;
@@ -5147,7 +5147,7 @@ No regression impact as the Power View Tab is being used first Time*/
     display: inline-block;
     z-index: 9993; }
   .DLSLeonardo #SIMArea .ribbon .font-dropdown-item-icon {
-    background-image: url(libs/RibbonAssets/img/FontIcon.png); }
+    background-image: url(RibbonAssets/img/FontIcon.png); }
   .DLSLeonardo #SIMArea .ribbon .dropdown-item-icon, .DLSLeonardo #SIMArea .chart-comp .dropdown-item-icon, .DLSLeonardo #SIMArea .chart-comp-v2 .dropdown-item-icon, .DLSLeonardo #SIMArea .excel-word-art .dropdown-item-icon .pptTable .dropdown-item-icon, .DLSLeonardo #SIMArea .mini-tb-rbn .dropdown-item-icon {
     min-width: 24px;
     min-height: 24px;
@@ -5340,7 +5340,7 @@ No regression impact as the Power View Tab is being used first Time*/
     font-size: 12px;
     font-weight: bold; }
   .DLSLeonardo #SIMArea .ribbon .tooltip-help-icon, .DLSLeonardo #SIMArea .SIMS_DocumentArea .tooltip-help-icon {
-    background: url(libs/RibbonAssets/img/helpicon.png) no-repeat center;
+    background: url(RibbonAssets/img/helpicon.png) no-repeat center;
     width: 16px;
     height: 16px; }
   .DLSLeonardo #SIMArea .ribbon .tooltip-help > *, .DLSLeonardo #SIMArea .SIMS_DocumentArea .tooltip-help > * {
@@ -6189,12 +6189,12 @@ No regression impact as the Power View Tab is being used first Time*/
     height: 25px;
     width: 20px;
     padding: 0px;
-    background: url(libs/RibbonAssets/img/collapse.png);
+    background: url(RibbonAssets/img/collapse.png);
     background-repeat: no-repeat;
     background-position: center;
     background-color: #FFFFFF; }
   .DLSLeonardo #SIMArea .colapseRibbon .excel.ribbon .userinfo .expandButton {
-    background-image: url(libs/RibbonAssets/img/expand.png); }
+    background-image: url(RibbonAssets/img/expand.png); }
   .DLSLeonardo #SIMArea .colapseRibbon .excel.ribbon .ribbon-tab-container {
     height: 0px;
     border-bottom: none;

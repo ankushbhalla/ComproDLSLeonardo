@@ -25621,14 +25621,15 @@ namespace("SIMS.Components2016.Excel");
 
 //Class Declaration and Derivation
 SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
-    
+
     fixMultiRibbonTabSelection: false,
+    hostAppRootPath: "",
     // Overriding of constructor can be done in this way
     constructor: function () {
-       this.base();       
-       // This is a map that maps the Office 13 ribbon xmls to Office 16 xmls
-       this.AddPathToXmlPathMap("app/comps/common/ribbon/excel-ribbon.xml", "app/comps2016/common/ribbon/excel-ribbon.xml");
-       this.AddPathToXmlPathMap("app/comps2016/common/ribbon/excel-ribbon.xml", "app/comps2016/common/ribbon/excel-ribbon.xml");
+        this.base();
+        // This is a map that maps the Office 13 ribbon xmls to Office 16 xmls
+        this.AddPathToXmlPathMap("app/comps/common/ribbon/excel-ribbon.xml", "app/comps2016/common/ribbon/excel-ribbon.xml");
+        this.AddPathToXmlPathMap("app/comps2016/common/ribbon/excel-ribbon.xml", "app/comps2016/common/ribbon/excel-ribbon.xml");
     },
 
     // For adding any new attribute then the attribute registered in RegisterAttributes function
@@ -25641,18 +25642,18 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
         this.RegisterAttribute("CHART_TEXT_FILL_COLOR", "0", 'int');
         this.RegisterAttribute("PICTURE_TOOLS_HEIGHT", "", 'float');
         this.RegisterAttribute("PIVOTCHART_TOOLS_FORMAT_CHART_ELEMENTS", "", 'text');
-        this.RegisterAttribute("RIBBON_MODE", SIMS.Components2016.Common.RibbonVisibilityModes.NORMAL, 'text',false);
+        this.RegisterAttribute("RIBBON_MODE", SIMS.Components2016.Common.RibbonVisibilityModes.NORMAL, 'text', false);
         this.RegisterAttribute("SLICER_SIZE_WIDTH", "", 'number');
 
-          /**Below attribute has been added to set the display of a contextual tab to none. 
-        Existing attribute (HIDE_TAB) is not relevent because it hides and then deactivates the tab. 
-        Our requirement is only to hide the tab on task launch so then tab show / hide functionality could work as expected when a contextual element is clicked.**/
-        this.RegisterAttribute("TAB_TO_DISPLAY_NONE", "", 'string',false); 
-        this.RegisterAttribute("TELL_ME_SEARCH_BOX_WIDTH", "", 'string',false); 
-        this.RegisterAttribute("FIX_MULTIRIBBON_TAB_SELECTION", false, 'bool',false); 
+        /**Below attribute has been added to set the display of a contextual tab to none. 
+      Existing attribute (HIDE_TAB) is not relevent because it hides and then deactivates the tab. 
+      Our requirement is only to hide the tab on task launch so then tab show / hide functionality could work as expected when a contextual element is clicked.**/
+        this.RegisterAttribute("TAB_TO_DISPLAY_NONE", "", 'string', false);
+        this.RegisterAttribute("TELL_ME_SEARCH_BOX_WIDTH", "", 'string', false);
+        this.RegisterAttribute("FIX_MULTIRIBBON_TAB_SELECTION", false, 'bool', false);
 
         this.RegisterAttribute("ENABLE_COLLAPSE_EXPAND_BUTTON", "false", "bool", false);
-
+        this.RegisterAttribute("HOST_APP_ROOT_PATH", "", "string", false);
 
         //...add new attributes here
     },
@@ -25670,9 +25671,9 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
         this.RegisterEvent(3005, "Excel -> Excel -> Sparkline Tools Design Tab -> Group Section -> Axis Control ->Vertical Axis Maximum ->Same for all Sparklines", "", false, false, "");
         this.RegisterEvent(3006, "Excel -> Chart Tools Design - Add Chart Elements -> Data Labels -> More Data Label Options", "", false, false, "");
         this.RegisterEvent(3007, "Excel -> Chart Tools Format -> Shape Styles -> Shape outline -> Colour picker", "", false, false, "");
-        this.RegisterEvent(3008, "Excel -> Chart Tools Format -> Shape Styles -> Shape outline -> Weight -> 1pt", "", false, false, "");    
-        this.RegisterEvent(3009, "Excel -> Chart Tools Format -> WordArt Styles -> Text Fill -> Colour picker", "", false, false, ""); 
-        this.RegisterEvent(3010, "Excel -> Home Tab -> Font Size -> 32", "", false, false, ""); 
+        this.RegisterEvent(3008, "Excel -> Chart Tools Format -> Shape Styles -> Shape outline -> Weight -> 1pt", "", false, false, "");
+        this.RegisterEvent(3009, "Excel -> Chart Tools Format -> WordArt Styles -> Text Fill -> Colour picker", "", false, false, "");
+        this.RegisterEvent(3010, "Excel -> Home Tab -> Font Size -> 32", "", false, false, "");
         this.RegisterEvent(3011, "Excel -> View Tab -> Zoom Group -> 100%", "", false, false, "");
         this.RegisterEvent(3012, "Excel -> Table Tools Design Tab -> Table Styles Group -> Light -> Table Style Light 16", "", false, false, "");
         this.RegisterEvent(3013, "Excel -> PivotChart Tools Design - Add Chart Elements -> Data Labels -> More Data Label Options", "", false, false, "");
@@ -25695,10 +25696,10 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
         this.RegisterEvent(3030, "SHARE_BUTTON", "Excel -> Share Button", false, false, "");
         this.RegisterEvent(3031, "Excel -> Formulas -> Function Library -> Logical -> AND ", "", false, false, "");
         this.RegisterEvent(3032, "Excel -> PivotChart Tools Design - Add Chart Elements -> Data Labels -> Best Fit", "", false, false, "");
-        this.RegisterEvent(3033, "Excel -> Insert Tab -> Add-ins -> Add-ins -> Manage other add-ins", "", false, false, ""); 
+        this.RegisterEvent(3033, "Excel -> Insert Tab -> Add-ins -> Add-ins -> Manage other add-ins", "", false, false, "");
         this.RegisterEvent(3034, "POWER_REPORT_VIEW_BUTTON", "Excel -> Insert a Power Report View Button", false, false, "");
-        this.RegisterEvent(3035, "Excel -> Page Layout Tab -> Fonts -> Cambria", "", false, false, ""); 
-        this.RegisterEvent(3036, "Excel -> Data Tab -> Get & Transform -> New Query -> From Web", "", false, false, ""); 
+        this.RegisterEvent(3035, "Excel -> Page Layout Tab -> Fonts -> Cambria", "", false, false, "");
+        this.RegisterEvent(3036, "Excel -> Data Tab -> Get & Transform -> New Query -> From Web", "", false, false, "");
         this.RegisterEvent(3037, "Excel - SlicerToolsOptions -> Size -> width", "", false, false, "");
         this.RegisterEvent(3038, "Excel - Data Tab- > Forecast -> Forecast Sheet", "", false, false, "");
         this.RegisterEvent(3039, "Excel - Drawing Tools Format Tab- > Shape Fill -> Gradient -> More Gradients...", "", false, false, "");
@@ -25708,20 +25709,20 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
         this.RegisterEvent(3043, "Excel - Saprklines Tools Design Tab- > Show -> Low Point", "", false, false, "");
         this.RegisterEvent(3044, "Excel - Saprklines Tools Design Tab- > Style -> Sparkline Style Accent 3, (no light or dark)", "", false, false, "");
         this.RegisterEvent(3045, "Excel -> Home tab -> Cells group -> Delete -> Delete Table Rows", "", false, false, "");
-        this.RegisterEvent(3046, "Excel -> Insert tab -> Text -> Wordart -> Wordart2", "", false, false, "");    
-        this.RegisterEvent(3047, "Excel -> Drawing Tools Format tab -> Shape Styles group -> Shape Fill -> Texture -> Canvas", "", false, false, "");    
-        this.RegisterEvent(3048, "Excel -> Chart Tools Design tab  -> Chart Styles group  ->  Gallery -> Style 4", "", false, false, "");  
+        this.RegisterEvent(3046, "Excel -> Insert tab -> Text -> Wordart -> Wordart2", "", false, false, "");
+        this.RegisterEvent(3047, "Excel -> Drawing Tools Format tab -> Shape Styles group -> Shape Fill -> Texture -> Canvas", "", false, false, "");
+        this.RegisterEvent(3048, "Excel -> Chart Tools Design tab  -> Chart Styles group  ->  Gallery -> Style 4", "", false, false, "");
         this.RegisterEvent(3049, "Excel -> SmartArt Tools Design tab  -> SmartArt Styles group  ->  SmartArt Styles -> Cartoon", "", false, false, "");
         this.RegisterEvent(3050, "Excel -> Table Tools Design Tab -> Table Styles group -> Table Style Medium 4", "", false, false, "");
-   		this.RegisterEvent(3051, "Excel -> Picture Tools Format tab -> Picture Styles group -> More -> Drop Shadow Rectangle", "", false, false, "");
+        this.RegisterEvent(3051, "Excel -> Picture Tools Format tab -> Picture Styles group -> More -> Drop Shadow Rectangle", "", false, false, "");
         this.RegisterEvent(3052, "Excel -> Picture Tools Format tab -> Adjust group -> Artistic Effects -> Artistic Effects Options...", "", false, false, "");
         this.RegisterEvent(3053, "Excel -> Page Layout tab  -> Themes group  -> Themes -> Crop", "", false, false, "");
         this.RegisterEvent(3054, "Excel -> Page Layout Tab -> Arrange -> Align ->Align Left", "", false, false, "");
         this.RegisterEvent(3055, "Excel -> Drawing Tools Format Tab -> Arrange -> Align ->Align Left", "", false, false, "");
         this.RegisterEvent(3056, "Excel -> Shape Styles group ->  Shape Effects, Bevel -> Soft Round", "", false, false, "");
 
-       this.RegisterEvent(3057, "Ribbon collapse event", "", false, false, "");
-       this.RegisterEvent(3058, "Ribbon Expand event", "", false, false, "");
+        this.RegisterEvent(3057, "Ribbon collapse event", "", false, false, "");
+        this.RegisterEvent(3058, "Ribbon Expand event", "", false, false, "");
 
     },
 
@@ -25776,6 +25777,11 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
                             async: false,
                             url: path,
                             success: function (xml) {
+                                if(self.hostAppRootPath != ""){
+                                    var xmlString = (new XMLSerializer()).serializeToString(xml);
+                                    xmlString = xmlString.replace(/src="RibbonAssets\//g, 'src="' + self.hostAppRootPath + 'RibbonAssets/');
+                                    xml = $.parseXML(xmlString);
+                                }
                                 SIMS.Components.Common.RibbonXML.Set(xml, path);
                                 self.CreateRibbon(xml);
                             }
@@ -25837,7 +25843,7 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
                         var $chartToolDesignTab = $thisComp.find(".tab-header-charttoolsdesign");
                         $contextualTabHead.css({ "left": $chartToolDesignTab.offset().left, "width": $tabHeader.outerWidth() + $chartToolDesignTab.outerWidth() + 3 })
                     }
-                        //special handling for table tools tabs  -- Word Ribbon
+                    //special handling for table tools tabs  -- Word Ribbon
                     else if ($tabHeader.is(".word .tab-header-tabletoolsdesign")) {
                         var $tab = $thisComp.find(".tab-header-tabletoolslayout");
                         $contextualTabHead.css({ "left": $tabHeader.offset().left, "width": $tabHeader.outerWidth() + $tab.outerWidth() + 3 })
@@ -25846,7 +25852,7 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
                         var $tab = $thisComp.find(".tab-header-tabletoolsdesign");
                         $contextualTabHead.css({ "left": $tab.offset().left, "width": $tabHeader.outerWidth() + $tab.outerWidth() + 3 })
                     }
-                        //special handling for smartart tools tabs
+                    //special handling for smartart tools tabs
                     else if ($tabHeader.is(".tab-header-smartarttoolsformat")) {
                         var $tab = $thisComp.find(".tab-header-smartarttoolsdesign");
                         $contextualTabHead.css({ "left": $tab.offset().left, "width": $tabHeader.outerWidth() + $tab.outerWidth() + 3 })
@@ -25911,7 +25917,7 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
                 break;
 
             case "CHART_TEXT_FILL_COLOR":
-            	var $charttoolsformatTab = $thisComp.find('#ribbon-tab-container-charttoolsformat');
+                var $charttoolsformatTab = $thisComp.find('#ribbon-tab-container-charttoolsformat');
 
                 if ($charttoolsformatTab.children().length == 0)  //not yet created
                 {
@@ -25934,7 +25940,7 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
                 break;
             case "PIVOTCHART_TOOLS_FORMAT_CHART_ELEMENTS":
                 var $pivotChartToolsFormatTab = $thisComp.find('#ribbon-tab-container-pivotcharttoolsformat');
-                
+
                 if ($pivotChartToolsFormatTab.children().length == 0) //not yet created
                 {
                     this.addAttrDataInTab($pivotChartToolsFormatTab, attrName, attrValue);
@@ -25957,7 +25963,7 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
                 }
                 break;
             case "TAB_TO_DISPLAY_NONE":
-                 this.HideTab(attrValue);
+                this.HideTab(attrValue);
                 break;
             case "TELL_ME_SEARCH_BOX_WIDTH":
                 var $Tellmetext = this.$thisCompElement.find('.tellMeSearchBox .tellMeBoxText');
@@ -25966,12 +25972,15 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
                 });
                 break;
             case "FIX_MULTIRIBBON_TAB_SELECTION":
-                    this.fixMultiRibbonTabSelection = attrValue.toLowerCase() === "true" ? true : false;
+                this.fixMultiRibbonTabSelection = attrValue.toLowerCase() === "true" ? true : false;
                 break;
-             case "ENABLE_COLLAPSE_EXPAND_BUTTON":
+            case "ENABLE_COLLAPSE_EXPAND_BUTTON":
                 if (attrValue.toLowerCase() == "true") {
                     this.generateCollapseExpandButton($thisComp);
                 }
+                break;
+            case "HOST_APP_ROOT_PATH":
+                this.hostAppRootPath = attrValue;
                 break;
             default:
                 {
@@ -25980,7 +25989,7 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
         }
     },
 
-    CreateRibbon: function (xml) {        
+    CreateRibbon: function (xml) {
         this.ribbonGenerator.activeTabList = ["Home"]
 
         this.$thisCompElement.append(this.ribbonGenerator.getRibbonFromXml(xml, this.appName, this.RibbonMode));
@@ -25991,7 +26000,7 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
         this.AttachComponentEvents(this._compinfo, this.$thisCompElement);
     },
 
-     PostSubRibbonAjaxCall: function(xml){
+    PostSubRibbonAjaxCall: function (xml) {
         //$thisComp.children().remove();
         this.ribbonGenerator.updateRibbonfromXML(xml, this.$thisCompElement.children('.ribbon'), this.AttachSubRibbonWithIdentifier, this.fixMultiRibbonTabSelection);
         //reset controlXMLUPdate as update is complete
@@ -26034,7 +26043,7 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
         return attrValue;
     },
 
-    FireSimEvent: function(id, controlEventArgs, clickstreamStr) {
+    FireSimEvent: function (id, controlEventArgs, clickstreamStr) {
 
         var checkHandled = false;
         switch (id) {
@@ -26065,7 +26074,7 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
         }
     },
 
-    ChartSpinButtonEventhandler: function(compEventId, spinCtrlName, finalAttrName, controlEventArgs, clickstreamStr) {
+    ChartSpinButtonEventhandler: function (compEventId, spinCtrlName, finalAttrName, controlEventArgs, clickstreamStr) {
         var checkHandled = false;
         switch (compEventId) {
             case 551:
@@ -26095,26 +26104,26 @@ SIMS.Components2016.Excel.Ribbon = SIMS.Components.Excel.Ribbon.extend({
         return this.ShowApplicationContextMenu(".title-bar .office-control.titlebar-control.appController");
     },
 
-     generateCollapseExpandButton: function ($thisComp) {
+    generateCollapseExpandButton: function ($thisComp) {
         var self = this;
-          var $tabsWrapper = $thisComp.find(".ribbon-tabs-wrapper");
-            var $userInfo = $('<li class="userinfo"/>');
-            var $ribbonShowHideButton = UIUtils.getUnselectableDiv('', 'expandButton');
-            var $compFrame = SIMS.Objects.DOMElements.SIMArea.find(".ComponentFrame");
-            $compFrame.addClass('expandRibbon');
-            $ribbonShowHideButton.click(function () {
-                if ($compFrame.hasClass('expandRibbon')) {
-                    $compFrame.removeClass('expandRibbon');
-                    $compFrame.addClass('colapseRibbon');
-                     self.LogComponentEvent(3057, "Ribbon : Collapse the Ribbon Button Clicked");
-                } else {
-                    $compFrame.removeClass('colapseRibbon');
-                    $compFrame.addClass('expandRibbon');
-                     self.LogComponentEvent(3058, "Ribbon : Collapse the Ribbon Button Clicked");
-                }
+        var $tabsWrapper = $thisComp.find(".ribbon-tabs-wrapper");
+        var $userInfo = $('<li class="userinfo"/>');
+        var $ribbonShowHideButton = UIUtils.getUnselectableDiv('', 'expandButton');
+        var $compFrame = SIMS.Objects.DOMElements.SIMArea.find(".ComponentFrame");
+        $compFrame.addClass('expandRibbon');
+        $ribbonShowHideButton.click(function () {
+            if ($compFrame.hasClass('expandRibbon')) {
+                $compFrame.removeClass('expandRibbon');
+                $compFrame.addClass('colapseRibbon');
+                self.LogComponentEvent(3057, "Ribbon : Collapse the Ribbon Button Clicked");
+            } else {
+                $compFrame.removeClass('colapseRibbon');
+                $compFrame.addClass('expandRibbon');
+                self.LogComponentEvent(3058, "Ribbon : Collapse the Ribbon Button Clicked");
+            }
 
-            });
-            $userInfo.append($ribbonShowHideButton);
-            $userInfo.appendTo($tabsWrapper);
+        });
+        $userInfo.append($ribbonShowHideButton);
+        $userInfo.appendTo($tabsWrapper);
     },
 });
