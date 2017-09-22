@@ -45,8 +45,8 @@ export class DashboardComponent implements OnInit {
         index:2
       },
       {
-        qText: "Create a Motion Profile",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+        qText: "Solve Projectile Problem",
+        description: "Assess student's knowledge and skill at the end of the course",
         badges:['Physics','Assessment'],
         view:"Side by Side View",
         index:3
