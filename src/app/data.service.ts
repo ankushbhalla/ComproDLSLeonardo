@@ -17,9 +17,12 @@ export class DataService {
             <br>
             <div class="questionHeadings">Account Balances</div>
             <div> The accounts are listed in no particular order.</div>
-            <div style="height: 440px; min-width: 347px; min-height: 440px;" leoDataId="leoHost1" class="leoHost">
-            </div>`,
-
+            <div style="height: 440px; min-width: 347px; min-height: 440px;" leoDataId="leoHost1" class="leoHost"></div>
+            <div class="questionHeadings">Prerequisites</div>
+            <div>1. Knowledge of Ledger balance (Ledger balances are segregated into debit balances and credit balances to prepare trial balance report.) </div>
+            <div>2. Understanding of following account groups – Assets, Liabilities, Equity, Revenue & Expenses</div>
+            <div>3. Familiar with golden rules of accounting i.e. able to list the account correctly under Debit/Credit side.</div>
+            `,
             leoData: {
               "leoHost1": {
                 config: {
