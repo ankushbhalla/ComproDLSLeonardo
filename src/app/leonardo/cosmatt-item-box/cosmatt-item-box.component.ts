@@ -48,7 +48,7 @@ export class CosmattItemBoxComponent implements OnInit {
       }
     }
 
-    Leonardo.scripts.add(this.workspace.nativeElement, this.solutionData.config, this.solutionData.correctData);
+    Leonardo.scripts.add(this.workspace.nativeElement, JSON.parse(JSON.stringify(this.solutionData.config)), this.solutionData.correctData);
   }
 
   cmwHandler(){
