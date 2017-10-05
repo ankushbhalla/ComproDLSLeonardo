@@ -1,0 +1,564 @@
+{
+    "control": [
+        {
+            "Add_to_quick_access_toolbar": {
+                "name": "~Add to Quick Access Toolbar",
+                "accesskey": "A",
+                "desc": "add to quick access toolbar",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "fireCMevent"
+            },
+            "separator1": "-",
+            "Customize_quick_access_toolbar": {
+                "name": "~Customize Quick Access Toolbar...",
+                "accesskey": "C",
+                "desc": "customize quick access toolbar",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "179"
+            },
+            "Show_Quick_access_toolbar_below_the_ribbon": {
+                "name": "~Show Quick Access Toolbar Below the Ribbon",
+                "accesskey": "S",
+                "desc": "show quick access toolbar below the ribbon",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "3"
+            },
+            "separator2": "-",
+            "Customize_the_ribbon": {
+                "name": "Customize the ~Ribbon...",
+                "accesskey": "R",
+                "desc": "cutomize the ribbon",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "250"
+            },
+            "Collapse_the_ribbon": {
+                "name": "Collapse the Ribbo~n",
+                "accesskey": "N",
+                "desc": "collapse the ribbon",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "1094"
+            }
+        }
+    ],
+    "ribbon": [
+        {
+            "Customize_quick_access_toolbar": {
+                "name": "~Customize Quick Access Toolbar...",
+                "accesskey": "C",
+                "desc": "customize quick access toolbar",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "179"
+            },
+            "Show_Quick_access_toolbar_below_the_ribbon": {
+                "name": "~Show Quick Access Toolbar Below the Ribbon",
+                "accesskey": "S",
+                "desc": "show quick access toolbar below the ribbon",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": ""
+            },
+            "separator1": "-",
+            "Customize_the_ribbon": {
+                "name": "Customize the ~Ribbon...",
+                "accesskey": "R",
+                "desc": "cutomize the ribbon",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "250"
+            },
+            "Collapse_the_ribbon": {
+                "name": "Collapse the Ribbo~n",
+                "accesskey": "N",
+                "desc": "collapse the ribbon",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "1094"
+            }
+        }
+    ],
+    "titlebar": [
+        {
+            "Restore": {
+                "name": "~Restore",
+                "icon": { "img": "app/Comps/Common/Ribbon/img/Titlebar/JsonMenuSprite.png", "bgPos": "3px 5px", "width": "23px", "height": "16px" },
+                "accesskey": "",
+                "desc": "restore",
+                "tooltip": "",
+                "listWidth": "170px",
+                "eventId": ""
+            },
+            "Move": {
+                "name": "Move",
+                "accesskey": "",
+                "desc": "move",
+                "tooltip": "",
+                "listWidth": "170px",
+                "eventId": ""
+            },
+            "Size": {
+                "name": "Size",
+                "accesskey": "",
+                "desc": "size",
+                "tooltip": "",
+                "listWidth": "170px",
+                "eventId": ""
+            },
+            "Minimize": {
+                "name": "Minimize",
+                "icon": { "img": "app/Comps/Common/Ribbon/img/Titlebar/JsonMenuSprite.png", "bgPos": "3px -17px", "width": "23px", "height": "16px" },
+                "accesskey": "",
+                "desc": "minimize",
+                "tooltip": "",
+                "listWidth": "170px",
+                "eventId": "835"
+            },
+            "Maximize": {
+                "name": "Maximize",
+                "icon": { "img": "app/Comps/Common/Ribbon/img/Titlebar/JsonMenuSprite.png", "bgPos": "3px -38px", "width": "23px", "height": "16px" },
+                "accesskey": "",
+                "desc": "maximize",
+                "tooltip": "",
+                "listWidth": "170px",
+                "eventId": ""
+            },
+            "separator1": "-",
+            "Close": {
+                "name": "Close (ALT+F4)",
+                "icon": { "img": "app/Comps/Common/Ribbon/img/Titlebar/JsonMenuSprite.png", "bgPos": "3px -59px", "width": "23px", "height": "16px" },
+                "accesskey": "",
+                "desc": "close",
+                "tooltip": "",
+                "listWidth": "170px",
+                "eventId": "836"
+            }
+        }
+    ],
+    "qa_control": [
+        {
+            "Remove_from_quick_access_toolbar": {
+                "name": "~Remove from Quick Access Toolbar",
+                "accesskey": "R",
+                "desc": "remove from quick access toolbar",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "fireCMevent"
+            },
+            "separator1": "-",
+            "Customize_quick_access_toolbar": {
+                "name": "~Customize Quick Access Toolbar...",
+                "accesskey": "C",
+                "desc": "customize quick access toolbar",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "179"
+            },
+            "Show_Quick_access_toolbar_below_the_ribbon": {
+                "name": "~Show Quick Access Toolbar Below the Ribbon",
+                "accesskey": "S",
+                "desc": "show quick access toolbar below the ribbon",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": ""
+            },
+            "separator2": "-",
+            "Customize_the_ribbon": {
+                "name": "Customize the ~Ribbon...",
+                "accesskey": "R",
+                "desc": "cutomize the ribbon",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "250"
+            },
+            "Collapse_the_ribbon": {
+                "name": "Collapse the Ribbo~n",
+                "accesskey": "N",
+                "desc": "collapse the ribbon",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": ""
+            }
+        }
+    ],
+       "qa_control1": [
+        {
+            "Remove_from_quick_access_toolbar": {
+                "name": "~Remove from Quick Access Toolbar",
+                "accesskey": "R",
+                "desc": "remove from quick access toolbar",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "182"
+            },
+            "separator1": "-",
+            "Customize_quick_access_toolbar": {
+                "name": "~Customize Quick Access Toolbar...",
+                "accesskey": "C",
+                "desc": "customize quick access toolbar",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "179"
+            },
+            "Show_Quick_access_toolbar_below_the_ribbon": {
+                "name": "~Show Quick Access Toolbar Below the Ribbon",
+                "accesskey": "S",
+                "desc": "show quick access toolbar below the ribbon",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": ""
+            },
+            "separator2": "-",
+            "Customize_the_ribbon": {
+                "name": "Customize the ~Ribbon...",
+                "accesskey": "R",
+                "desc": "cutomize the ribbon",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": "250"
+            },
+            "Collapse_the_ribbon": {
+                "name": "Collapse the Ribbo~n",
+                "accesskey": "N",
+                "desc": "collapse the ribbon",
+                "tooltip": "",
+                "listWidth": "315px",
+                "eventId": ""
+            }
+        }
+    ],
+    "customize_qa_control": [
+        {
+            "Customize_quick_access_toolbar_Header": {
+                "name": "Customize Quick Access Toolbar",
+                "icon": {"img": "", "bgPos": ""},
+                "disabled": true,
+                "itemHeight": "24px",
+                "gridStructure": {"text": "contextMenuHeader", "customeList": ""},
+                "accesskey": "",
+                "desc": "new",
+                "tooltip": "",
+                "listWidth": "235px",
+                "eventId": ""
+            },
+            "New": {
+                "name": "New",
+                "accesskey": "",
+                "desc": "new",
+                "tooltip": "",
+                "eventId": ""
+            },
+            "Open": {
+                "name": "Open",
+                "accesskey": "",
+                "desc": "open",
+                "tooltip": "",
+                "eventId": ""
+            },
+            "Save": {
+                "name": "Save",
+				"icon": { "img": "app/Comps/Common/Ribbon/img/Titlebar/JsonMenuSprite.png", "bgPos": "3px -74px", "width": "23px", "height": "16px" },
+                "accesskey": "",
+                "desc": "save",
+                "tooltip": "",
+                "eventId": ""
+            },
+            "Email": {
+                "name": "Email",
+                "accesskey": "",
+                "desc": "email",
+                "tooltip": "",
+                "eventId": ""
+            },
+            "Quick_print": {
+                "name": "Quick Print",
+                "accesskey": "",
+                "desc": "quick print",
+                "tooltip": "",
+                "eventId": ""
+            },
+            "print_preview_and_print": {
+                "name": "Print Preview and Print",
+                "accesskey": "",
+                "desc": "print preview and print",
+                "tooltip": "",
+                "eventId": ""
+            },
+            "Spelling": {
+                "name": "Spelling",
+                "accesskey": "",
+                "desc": "spelling",
+                "tooltip": "",
+                "eventId": ""
+            },
+            "undo": {
+                "name": "Undo",
+				"icon": { "img": "app/Comps/Common/Ribbon/img/Titlebar/JsonMenuSprite.png", "bgPos": "3px -74px", "width": "23px", "height": "16px" },
+                "accesskey": "",
+                "desc": "undo",
+                "tooltip": "",
+                "eventId": ""
+            },
+            "Redo": {
+                "name": "Redo",
+				"icon": { "img": "app/Comps/Common/Ribbon/img/Titlebar/JsonMenuSprite.png", "bgPos": "3px -74px", "width": "23px", "height": "16px" },
+                "accesskey": "",
+                "desc": "redo",
+                "tooltip": "",
+                "eventId": ""
+            },
+            "Sort_ascending": {
+                "name": "Sort Ascending",
+                "accesskey": "",
+                "desc": "sort ascending",
+                "tooltip": "",
+                "eventId": ""
+            },
+            "Sort_descending": {
+                "name": "Sort Descending",
+                "accesskey": "",
+                "desc": "sort descending",
+                "tooltip": "",
+                "eventId": ""
+            },
+            "Touch_mouse_mode": {
+                "name": "Touch/Mouse Mode",
+                "accesskey": "",
+                "desc": "touch/mouse mode",
+                "tooltip": "",
+                "eventId": ""
+            },
+            "separator1": "-",
+            "More_Commands": {
+                "name": "~More Commands...",
+                "accesskey": "M",
+                "desc": "more commands",
+                "tooltip": "",
+                "eventId": "179"
+            },
+            "Show_below_the_ribbon": {
+                "name": "~Show Below the Ribbon",
+                "accesskey": "S",
+                "desc": "show below the ribbon",
+                "tooltip": "",
+                "eventId": ""
+            }
+        }
+    ],
+    "cm0002": [
+        {
+            "Apply1": {
+                "name": "Apply to ~All Slides",
+                "accesskey": "a",
+                "desc": "apply to all slides",
+                "tooltip": "",
+                "listWidth": "223px",
+                "itemWidth": "223px",
+                "eventId": "1"
+            },
+            "separator1": "-",
+            "Add": {
+                "name": "~Add Gallery to Quick Access Toolbar",
+                "accesskey": "a",
+                "desc": "add gallery to quick access tollbar",
+                "tooltip": "",
+                "listWidth": "223px",
+                "itemWidth": "223px",
+                "eventId": "2"
+            }
+        }
+    ],
+    "cm0007": [
+        {
+            "Apply1": {
+                "name": "Lock Drawing Mode",
+                "accesskey": "",
+                "desc": "Lock Drawing Mode",
+                "tooltip": "",
+                "listWidth": "268px",
+                "itemWidth": "268px",
+                "eventId": "1"
+            },
+            "Apply2": {
+                "name": "~Add Gallery to Quick Access Toolbar",
+                "accesskey": "a",
+                "desc": "Add Gallery to Quick Access Toolbar",
+                "tooltip": "",
+                "listWidth": "268px",
+                "itemWidth": "268px",
+                "eventId": "2"
+            }
+        }
+    ],
+    "cm0009": [
+        {
+            "Apply": {
+                "name": "A~pply",
+                "accesskey": "P",
+                "desc": "apply",
+                "tooltip": "",
+                "listWidth": "240px",
+                "itemWidth": "240px",
+                "eventId": "1"
+            },
+            "separator": "-",
+            "Modify": {
+                "name": "~Modify...",
+                "accesskey": "M",
+                "desc": "modify",
+                "tooltip": "",
+                "listWidth": "240px",
+                "itemWidth": "240px",
+                "eventId": "2"
+            },
+            "Duplicate": {
+                "name": "~Duplicate...",
+                "accesskey": "D",
+                "desc": "Duplicate",
+                "tooltip": "",
+                "listWidth": "240px",
+                "itemWidth": "240px",
+                "eventId": "3"
+            },
+            "Delete": {
+                "name": "De~lete",
+                "accesskey": "L",
+                "desc": "delete",
+                "tooltip": "",
+                "listWidth": "240px",
+                "itemWidth": "240px",
+                "eventId": "4"
+            },
+            "separator1": "-",
+            "Add": {
+                "name": "~Add Gallery to Quick Access Toolbar",
+                "accesskey": "a",
+                "desc": "add gallery to quick access tollbar",
+                "tooltip": "",
+                "eventId": "5"
+            }
+        }
+    ],
+    "excel_app_icon":  [
+        {
+            "Restore": {
+                "name": "~Restore",
+                "icon": { "img": "app/Comps/Common/Ribbon/img/Titlebar/JsonMenuSprite.png", "bgPos": "3px 5px", "width": "23px", "height": "16px" },
+                "accesskey": "R",
+                "desc": "restore",
+                "tooltip": "",
+                "listWidth": "170px",
+                "eventId": ""
+            },
+            "Move": {
+                "name": "~Move",
+                "accesskey": "M",
+                "desc": "move",
+                "disabled": true,
+                "tooltip": "",
+                "listWidth": "170px",
+                "eventId": ""
+            },
+            "Size": {
+                "name": "~Size",
+                "accesskey": "S",
+                "desc": "size",
+                "disabled": true,
+                "tooltip": "",
+                "listWidth": "170px",
+                "eventId": ""
+            },
+            "Minimize": {
+                "name": "Mi~nimize",
+                "icon": { "img": "app/Comps/Common/Ribbon/img/Titlebar/JsonMenuSprite.png", "bgPos": "3px -17px", "width": "23px", "height": "16px" },
+                "accesskey": "N",
+                "desc": "minimize",
+                "tooltip": "",
+                "listWidth": "170px",
+                "eventId": "835"
+            },
+            "Maximize": {
+                "name": "Ma~ximize",
+                "icon": { "img": "app/Comps/Common/Ribbon/img/Titlebar/JsonMenuSprite.png", "bgPos": "3px -38px", "width": "23px", "height": "16px" },
+                "accesskey": "X",
+                "desc": "maximize",
+                "disabled": true,
+                "tooltip": "",
+                "listWidth": "170px",
+                "eventId": ""
+            },
+            "separator1": "-",
+            "Close": {
+                "name": "~Close (ALT+F4)",
+                "icon": { "img": "app/Comps/Common/Ribbon/img/Titlebar/JsonMenuSprite.png", "bgPos": "3px -59px", "width": "23px", "height": "16px" },
+                "accesskey": "C",
+                "desc": "close",
+                "tooltip": "",
+                "listWidth": "170px",
+                "eventId": "809"
+            }
+
+        }
+    ],
+    "excel_cm0010": [
+        {
+            "ApplyAndClearFormatting": {
+                "name": "Apply and ~Clear Formatting",
+                "accesskey": "C",
+                "desc": "apply and clear formatting",
+                "tooltip": "",
+                "listWidth": "250px",
+                "eventId": "1"
+            },
+            "ApplyAndMaintainFormatting": {
+                "name": "Apply (and ~Maintain Formatting)",
+                "accesskey": "M",
+                "desc": "apply and maintain formatting",
+                "tooltip": "",
+                "eventId": "2"
+            },
+            "separator": "-",
+            "Modify": {
+                "name": "Modif~y...",
+                "accesskey": "Y",
+                "desc": "modify",
+                "tooltip": "",
+                "disabled": true
+            },
+            "Duplicate": {
+                "name": "Du~plicate...",
+                "accesskey": "P",
+                "desc": "Duplicate",
+                "tooltip": "",
+                "eventId": "3"
+            },
+            "Delete": {
+                "name": "De~lete",
+                "accesskey": "L",
+                "desc": "delete",
+                "tooltip": "",
+                "disabled": true
+            },
+            "separator1": "-",
+            "SetAsDefault": {
+                "name": "Set As ~Default",
+                "accesskey": "D",
+                "desc": "set as default",
+                "tooltip": "",
+                "eventId": "4"               
+            },
+            "separator2": "-",
+            "Add": {
+                "name": "~Add Gallery to Quick Access Toolbar",
+                "accesskey": "a",
+                "desc": "add gallery to quick access tollbar",
+                "tooltip": "",
+                "eventId": "5"
+            }
+        }
+    ]
+}
