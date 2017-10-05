@@ -5,7 +5,7 @@
   </div>
   <div class="panel-footer">
     <button class="btn btn-primary" [style.visibility]="checkvisiblity(navigatorData.showHintButton)" (click)="displayHint()" [disabled] = "navigatorData.hint.isLastHint">Hint</button>
-    <button class="btn btn-primary" [style.visibility] = "checkvisiblity(navigatorData.showCheckAnswer)" (click)="checkMyAnswer()">Check My Work</button>
+    <button class="btn btn-primary" [style.visibility] = "checkvisiblity(navigatorData.showCheckAnswer)" (click)="checkMyAnswer()">{{(this.answerButtonMode == "checkAnswer"?"Check My Work":"Retry")}}</button>
     <button class="btn btn-primary pull-right" [style.visibility] = "checkvisiblity(navigatorData.showSubmitButton)" (click) = "handleSubmitClick()">Submit</button>
   </div>
 </div>

@@ -11,14 +11,25 @@ declare var Leonardo: any;
 export class NavigatorComponent implements OnInit {
   @Output() navEvent: EventEmitter<Object> = new EventEmitter();
   @Input() navigatorData: any;
-  constructor(private router: Router) { }
+  answerButtonMode;
+  constructor(private router: Router) {
+      this.answerButtonMode = "checkAnswer";
+  }
 
   ngOnInit() {
     console.log(this.navigatorData);
   }
 
   checkMyAnswer(){
-    this.navEvent.emit({eventId:"CHECK_MY_ANSWER_CLICKED"});
+    if(this.answerButtonMode == "checkAnswer"){
+      this.navEvent.emit({eventId:"CHECK_MY_ANSWER_CLICKED"});
+      this.answerButtonMode = "retry"
+    }
+    else if(this.answerButtonMode == "retry"){
+      this.navEvent.emit({eventId:"RETRY_CLICKED"});
+      this.answerButtonMode = "checkAnswer";
+    }
+    
   }
 
   displayHint(){

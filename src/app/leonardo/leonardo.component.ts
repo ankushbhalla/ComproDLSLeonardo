@@ -43,13 +43,19 @@ export class LeonardoComponent implements OnInit {
   handleCompEvents($event) {
     let eventMap = {
       "CHECK_MY_ANSWER_CLICKED": this.checkAnswer.bind(this),
-      "HINT_CLICKED": this.displayHint.bind(this)
+      "HINT_CLICKED": this.displayHint.bind(this),
+      "RETRY_CLICKED": this.retryAnswer.bind(this),
+
     };
     eventMap[$event.eventId]();
   }
 
   checkAnswer() {
     this.workspace.checkAnswer();
+  }
+
+  retryAnswer() {
+    this.workspace.retryAnswer();
   }
 
   displayHint(){
