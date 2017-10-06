@@ -44,7 +44,7 @@ export class LeonardoComponent implements OnInit {
     let eventMap = {
       "CHECK_MY_ANSWER_CLICKED": this.checkAnswer.bind(this),
       "HINT_CLICKED": this.displayHint.bind(this),
-      "RETRY_CLICKED": this.retryAnswer.bind(this),
+      "TRY_AGAIN_CLICKED": this.tryAgain.bind(this),
 
     };
     eventMap[$event.eventId]();
@@ -54,8 +54,8 @@ export class LeonardoComponent implements OnInit {
     this.workspace.checkAnswer();
   }
 
-  retryAnswer() {
-    this.workspace.retryAnswer();
+  tryAgain() {
+    this.workspace.tryAgain();
   }
 
   displayHint(){

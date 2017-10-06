@@ -23,10 +23,10 @@ export class NavigatorComponent implements OnInit {
   checkMyAnswer(){
     if(this.answerButtonMode == "checkAnswer"){
       this.navEvent.emit({eventId:"CHECK_MY_ANSWER_CLICKED"});
-      this.answerButtonMode = "retry"
+      this.answerButtonMode = "tryAgain"
     }
-    else if(this.answerButtonMode == "retry"){
-      this.navEvent.emit({eventId:"RETRY_CLICKED"});
+    else if(this.answerButtonMode == "tryAgain"){
+      this.navEvent.emit({eventId:"TRY_AGAIN_CLICKED"});
       this.answerButtonMode = "checkAnswer";
     }
     

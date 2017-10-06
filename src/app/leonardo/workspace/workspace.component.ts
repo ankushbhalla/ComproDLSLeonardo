@@ -31,8 +31,8 @@ export class WorkspaceComponent implements OnInit {
     Leonardo.scripts.checkAnswer(this.leoHost.nativeElement);
   }
 
-  retryAnswer(){
-    Leonardo.scripts.retry(this.leoHost.nativeElement);
+  tryAgain(){
+    Leonardo.scripts.tryAgain(this.leoHost.nativeElement);
   }
 
   displayHint(){
