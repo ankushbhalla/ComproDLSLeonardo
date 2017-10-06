@@ -18,7 +18,7 @@ export class LeonardoComponent implements OnInit {
   id: string;
   private sub: any;
   navigatorData: any;
-  mode:string;
+  mode: string;
 
   constructor(private dataService: DataService, private route: ActivatedRoute) {
     this.sub = this.route.params.subscribe(params => {
@@ -34,7 +34,8 @@ export class LeonardoComponent implements OnInit {
       },
       showCheckAnswer: this.checkmode(this.mode),
       showHintButton: this.checkmode(this.mode),
-      showSubmitButton:true
+      showStudyButton: this.checkmode(this.mode),
+      showSubmitButton: true
     }
   }
   ngOnInit() {
@@ -45,6 +46,7 @@ export class LeonardoComponent implements OnInit {
       "CHECK_MY_ANSWER_CLICKED": this.checkAnswer.bind(this),
       "HINT_CLICKED": this.displayHint.bind(this),
       "TRY_AGAIN_CLICKED": this.tryAgain.bind(this),
+      "STUDY_CLICKED": this.studyLaunch.bind(this),
 
     };
     eventMap[$event.eventId]();
@@ -54,22 +56,26 @@ export class LeonardoComponent implements OnInit {
     this.workspace.checkAnswer();
   }
 
+  studyLaunch() {
+    this.workspace.checkAnswer();
+  }
+
   tryAgain() {
     this.workspace.tryAgain();
   }
 
-  displayHint(){
+  displayHint() {
     this.workspace.displayHint();
   }
 
   handleGridEvent($event) {
     this.navigatorData.hint.isLastHint = $event.hint.isLastHint;
   }
-  checkmode(mode){
-    if(mode == "Assessment"){
+  checkmode(mode) {
+    if (mode == "Assessment") {
       return false;
     }
-    else{
+    else {
       return true;
     }
   }

@@ -20,9 +20,9 @@ export class NavigatorComponent implements OnInit {
     console.log(this.navigatorData);
   }
 
-  checkMyAnswer(){
+  checkMyAnswer() {
     if(this.answerButtonMode == "checkAnswer"){
-      this.navEvent.emit({eventId:"CHECK_MY_ANSWER_CLICKED"});
+    this.navEvent.emit({ eventId: "CHECK_MY_ANSWER_CLICKED" });
       this.answerButtonMode = "tryAgain"
     }
     else if(this.answerButtonMode == "tryAgain"){
@@ -32,19 +32,23 @@ export class NavigatorComponent implements OnInit {
     
   }
 
-  displayHint(){
-    this.navEvent.emit({eventId:"HINT_CLICKED"});
+  displayHint() {
+    this.navEvent.emit({ eventId: "HINT_CLICKED" });
+  }
+
+  launchEbook() {
+    this.navEvent.emit({ eventId: "STUDY_CLICKED" });
   }
 
   handleSubmitClick() {
     Leonardo.scripts.destroyGrids();
     this.router.navigate(['/dashboard']);
   }
-  checkvisiblity(mode){
-    if(mode == true){
+  checkvisiblity(mode) {
+    if (mode == true) {
       return "visible"
     }
-    else{
+    else {
       return "hidden"
     }
   }
