@@ -493,7 +493,7 @@ export class DataService {
   getQuestionConfig(mode, id,user = null) {
     let studentConfig;
     if(user){
-     studentConfig =  (user == 1)?this.stu1config[mode][id] :  this.stu2config[mode][id];
+     studentConfig =  (user == "stu1")?this.stu1config[mode][id] :  this.stu2config[mode][id];
     }
     else{
       studentConfig =  this.config[mode][id];

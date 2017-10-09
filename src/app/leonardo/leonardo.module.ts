@@ -12,11 +12,7 @@ import { SplitPaneModule } from './verticalSplitter/ng2-split-pane';
 
 export const leoRoutes: Routes = [
   {
-    path: ':id/:mode',
-    component: LeonardoComponent
-  },
-  {
-    path: ':id/:mode/user/:user',
+    path: ':id/:mode/:user?',
     component: LeonardoComponent
   }
 ];
