@@ -22,7 +22,7 @@ export class NavigatorComponent implements OnInit {
 
   checkMyAnswer() {
     if(this.answerButtonMode == "checkAnswer"){
-    this.navEvent.emit({ eventId: "CHECK_MY_ANSWER_CLICKED" });
+      this.navEvent.emit({ eventId: "CHECK_MY_ANSWER_CLICKED" });
       this.answerButtonMode = "tryAgain"
     }
     else if(this.answerButtonMode == "tryAgain"){
@@ -41,8 +41,9 @@ export class NavigatorComponent implements OnInit {
   }
 
   handleSubmitClick() {
-    Leonardo.scripts.destroyGrids();
-    this.router.navigate(['/dashboard']);
+    this.navEvent.emit({ eventId: "CHECK_MY_ANSWER_CLICKED" });
+    //Leonardo.scripts.destroyGrids();
+    //this.router.navigate(['/dashboard']);
   }
   checkvisiblity(mode) {
     if (mode == true) {
