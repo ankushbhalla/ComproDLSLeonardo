@@ -34,14 +34,14 @@ export class DashboardComponent implements OnInit {
         qText: "Trial Balance: Assess",
         description: "Assess student's knowledge and skill at the end of the course",
         badges:['Accounting','Assessment'],
-        view:"Reading View",
+        view:"Side by Side View",
         index:1
       },
       {
         qText: "Income Statement: Assess",
         description: "Assess student's knowledge and skill at the end of the course",
         badges:['Accounting','Assessment'],
-        view:"Reading View",
+        view:"Side by Side View",
         index:2
       },
       {
