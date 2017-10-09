@@ -14,6 +14,10 @@ export const leoRoutes: Routes = [
   {
     path: ':id/:mode',
     component: LeonardoComponent
+  },
+  {
+    path: ':id/:mode/user/:user',
+    component: LeonardoComponent
   }
 ];
 

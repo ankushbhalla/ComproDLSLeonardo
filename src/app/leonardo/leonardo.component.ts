@@ -18,13 +18,16 @@ export class LeonardoComponent implements OnInit {
   id: string;
   private sub: any;
   navigatorData: any;
-  mode: string;
-
+  mode:string;
+  user:any;
   constructor(private dataService: DataService, private route: ActivatedRoute) {
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id'];
       this.mode = params['mode'];
-      let questionConfig = this.dataService.getQuestionConfig(this.mode, this.id);
+      if(params['user']){
+        this.user = params['user'];
+      }      
+      let questionConfig = this.dataService.getQuestionConfig(this.mode, this.id, this.user);
       this.questionData = questionConfig["question"];
       this.solutionData = questionConfig["solution"];
     });
