@@ -90,7 +90,7 @@ export class LeonardoComponent implements OnInit {
       return true;
     }
   }
-  handleModalVisibiltyChange(modalVisiblity){
+  setModalVisibilty(modalVisiblity){
     this.modalVisible = modalVisiblity;
   }
 }

@@ -18,7 +18,7 @@
   <cosmatt-item-box #workspace class="questionWrapper" [questionData]='questionData' [solutionData]='solutionData' (gridEvent) = "handleGridEvent($event)"></cosmatt-item-box>
 </div>
 
-<div bsModal #modalWindow="bs-modal" class="modal fade" tabindex="-1" role="dialog" (onShown)="handleModalVisibiltyChange(true)" (onHidden)="handleModalVisibiltyChange(false)"aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<div bsModal #modalWindow="bs-modal" class="modal fade" tabindex="-1" role="dialog" (onShown)="setModalVisibilty(true)" (onHidden)="setModalVisibilty(false)"aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-view">
     <div class="modal-content ">
       <div class="modal-header comproBand">        
