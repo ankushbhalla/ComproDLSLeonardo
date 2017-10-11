@@ -71,24 +71,22 @@ export class StudymaterialComponent implements OnInit, AfterViewInit {
     for(let i=0;i<rootNodes.length;i++){
       rootNodes[i].addEventListener("click",function(){
         if(this.classList.contains("listHead-selected")){
-          this.children[0].classList.remove("glyphicon-menu-up");
-          this.children[0].classList.add("glyphicon-menu-down");
+          this.children[1].classList.remove("glyphicon-menu-up");
+          this.children[1].classList.add("glyphicon-menu-down");
           this.classList.remove("listHead-selected")
         }
         else{
           this.classList.add("listHead-selected");
-          this.children[0].classList.remove("glyphicon-menu-down");
-          this.children[0].classList.add("glyphicon-menu-up");
+          this.children[1].classList.remove("glyphicon-menu-down");
+          this.children[1].classList.add("glyphicon-menu-up");
         }        
-        let childNodes = this.parentElement.children;
-        for(let j=1;j<childNodes.length;j++){
-          if(childNodes[j].style.display == "none" || childNodes[j].style.display == ""){
-            childNodes[j].style.display = "block"
+        let listElement = this.parentElement.children[1];
+          if(listElement.style.display == "none" || listElement.style.display == ""){
+            listElement.style.display = "block"
           }
           else{
-            childNodes[j].style.display = "none"
+            listElement.style.display = "none"
           }
-        }
        })
     }
   //   $('label.tree-toggler').click(function () {
