@@ -49,3 +49,31 @@
 .contentWrapper.verticalView.cosmattItemWrapper{
   height: calc(100% - 54px);
 }
+
+.modal-view{
+    width: 90%;
+    height: 85%;
+    top: 10%;
+    margin: auto;
+}
+.modal-content{
+    height: 100%;
+}
+.modal-body{
+    height: calc(100% - 56px);
+    padding: 0px;
+}
+.modal-header{
+    border-bottom:0px;
+}
+.comproBand{
+    background: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    .closeButton{
+        color:#DAD2D2;
+        background: transparent;
+        border:0px;
+    }
+}

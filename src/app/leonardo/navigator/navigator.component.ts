@@ -11,29 +11,45 @@ declare var Leonardo: any;
 export class NavigatorComponent implements OnInit {
   @Output() navEvent: EventEmitter<Object> = new EventEmitter();
   @Input() navigatorData: any;
-  constructor(private router: Router) { }
+  answerButtonMode;
+  constructor(private router: Router) {
+      this.answerButtonMode = "checkAnswer";
+  }
 
   ngOnInit() {
     console.log(this.navigatorData);
   }
 
-  checkMyAnswer(){
-    this.navEvent.emit({eventId:"CHECK_MY_ANSWER_CLICKED"});
+  checkMyAnswer() {
+    if(this.answerButtonMode == "checkAnswer"){
+      this.navEvent.emit({ eventId: "CHECK_MY_ANSWER_CLICKED" });
+      this.answerButtonMode = "tryAgain"
+    }
+    else if(this.answerButtonMode == "tryAgain"){
+      this.navEvent.emit({eventId:"TRY_AGAIN_CLICKED"});
+      this.answerButtonMode = "checkAnswer";
+    }
+    
   }
 
-  displayHint(){
-    this.navEvent.emit({eventId:"HINT_CLICKED"});
+  displayHint() {
+    this.navEvent.emit({ eventId: "HINT_CLICKED" });
+  }
+
+  launchEbook() {
+    this.navEvent.emit({ eventId: "STUDY_CLICKED" });
   }
 
   handleSubmitClick() {
-    Leonardo.scripts.destroyGrids();
-    this.router.navigate(['/dashboard']);
+    this.navEvent.emit({ eventId: "CHECK_MY_ANSWER_CLICKED" });
+    //Leonardo.scripts.destroyGrids();
+    //this.router.navigate(['/dashboard']);
   }
-  checkvisiblity(mode){
-    if(mode == true){
+  checkvisiblity(mode) {
+    if (mode == true) {
       return "visible"
     }
-    else{
+    else {
       return "hidden"
     }
   }

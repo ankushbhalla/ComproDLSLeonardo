@@ -95,7 +95,8 @@ exports.Events = {
         BROADCAST_EVENT: "Broadcast_Event"
     },
     GradingEvents: {
-        RENDER_RESULT: "Render_Result"
+        RENDER_RESULT: "Render_Result",
+        TRY_AGAIN: "Try_Again"
     },
     RIBBON_EVENTS: {
         STYLE_EVENT: "Style_Event",
@@ -3858,6 +3859,12 @@ var LeoIntegrationLayer = (function () {
             spreadsheetController.reset();
         }
     };
+    LeoIntegrationLayer.prototype.tryAgain = function (container) {
+        var spreadsheetController = this.getInstance(container);
+        if (spreadsheetController != null) {
+            spreadsheetController.tryAgain();
+        }
+    };
     LeoIntegrationLayer.prototype.getData = function (container) {
         var spreadsheetController = this.getInstance(container);
         if (spreadsheetController != null) {
@@ -3923,6 +3930,10 @@ function reset(container) {
     LeoIntegration_1.LeoIntegration.reset(container);
 }
 exports.reset = reset;
+function tryAgain(container) {
+    LeoIntegration_1.LeoIntegration.tryAgain(container);
+}
+exports.tryAgain = tryAgain;
 function getData(container) {
     return LeoIntegration_1.LeoIntegration.getData(container);
 }
@@ -3981,6 +3992,7 @@ var CheckAnswer = (function () {
     };
     CheckAnswer.prototype.registerEvents = function () {
         this.eventController.registerEvent(enums_1.Events.GradingEvents.RENDER_RESULT);
+        this.eventController.registerEvent(enums_1.Events.GradingEvents.TRY_AGAIN);
     };
     CheckAnswer.prototype.getCellGrade = function (cellValue, correctVal) {
         if (typeof cellValue === "string")
@@ -5002,6 +5014,12 @@ var SpreadsheetController = (function () {
     SpreadsheetController.prototype.reset = function () {
         return this.resetGrid.handleResetGridClick();
     };
+    SpreadsheetController.prototype.tryAgain = function () {
+        var eventArgs = {
+            eventName: enums_1.Events.GradingEvents.TRY_AGAIN
+        };
+        this.BroadcastEvent(eventArgs);
+    };
     //Exposed to outer world to return the user entered data
     SpreadsheetController.prototype.getData = function () {
         return this.model.getUserData();
@@ -5245,6 +5263,7 @@ var Grid = (function (_super) {
         this.eventController.addEventListener(enums_1.Events.RIBBON_EVENTS.RENDER_GRID, this.renderRibbonStyles.bind(this));
         this.eventController.addEventListener(enums_1.Events.GRID_EVENTS.MESSAGE, this.handleGridWrapperMessages.bind(this));
         this.eventController.addEventListener(enums_1.Events.GradingEvents.RENDER_RESULT, this.renderGradingResults.bind(this));
+        this.eventController.addEventListener(enums_1.Events.GradingEvents.TRY_AGAIN, this.tryAgain.bind(this));
     };
     Grid.prototype.InitializeSheets = function (config, container, dataModel, eventController, sheetNameIdMap) {
         var _this = this;
@@ -5443,6 +5462,7 @@ var Grid = (function (_super) {
         var rowIndex;
         var colIndex;
         this.sheets[sheetId].updateSettings({ cell: this.sheets[sheetId].getAllCellProps() });
+        this.gradObj = gradingObject;
         for (rowIndex in gradingObject) {
             for (colIndex in gradingObject[rowIndex]) {
                 var grade = gradingObject[rowIndex][colIndex].grade;
@@ -5467,6 +5487,21 @@ var Grid = (function (_super) {
                         this.sheets[sheetId].renderGrade(rowIndex, colIndex, grade, GradingUIConfig);
                     }
                 }
+            }
+        }
+        this.render(this.getActiveSheet());
+    };
+    Grid.prototype.tryAgain = function (event, sheetId) {
+        if (sheetId === void 0) { sheetId = this.getActiveSheet(); }
+        var rowIndex;
+        var colIndex;
+        for (rowIndex in this.gradObj) {
+            for (colIndex in this.gradObj[rowIndex]) {
+                var cellMeta = this.sheets[sheetId].getCellMeta(rowIndex, colIndex);
+                if (cellMeta.originalProp) {
+                    this.sheets[sheetId].renderOriginal(rowIndex, colIndex, cellMeta.originalProp);
+                }
+                this.sheets[sheetId].removeCommentAtCell(rowIndex, colIndex);
             }
         }
         this.render(this.getActiveSheet());
@@ -5735,6 +5770,9 @@ var HotWrapper = (function () {
             return this.TextRenderer(cellRenderingProps);
         }
         else if (cellMeta.leoType === "numeric") {
+            return this.NumericRenderer(cellRenderingProps);
+        }
+        else if (cellMeta.leoType === "number") {
             return this.NumericRenderer(cellRenderingProps);
         }
     };
@@ -7055,12 +7093,23 @@ var hotConfig = (function () {
     hotConfig.prototype.getNumberFormatType = function (category) {
         return {
             "General": "text",
-            "Accounting": "numeric"
+            "Accounting": "numeric",
+            "Number": "number"
         }[category];
     };
-    hotConfig.prototype.getFormat = function (decimal) {
+    hotConfig.prototype.getAccountingFormat = function (decimal) {
         var format = "$0,0.";
         for (var i = 0; i < decimal; i++) {
+            format = format + "0";
+        }
+        return format;
+    };
+    hotConfig.prototype.getNumberFormat = function (decimal) {
+        if (decimal == 0) {
+            return "0";
+        }
+        var format = "0.";
+        for (var index = 0; index < decimal; index++) {
             format = format + "0";
         }
         return format;
@@ -7145,8 +7194,12 @@ var hotConfig = (function () {
                     var type = this.getNumberFormatType(numberFormats[index].cat) || "text";
                     properties["leoType"] = type;
                     if (type === "numeric") {
-                        properties["format"] = this.getFormat(numberFormats[index].decimal) || "$0,0.00";
+                        properties["format"] = this.getAccountingFormat(numberFormats[index].decimal) || "$0,0.00";
                         properties["language"] = this.getLanguage(numberFormats[index].symbol) || "en-US";
+                        properties["renderer"] = this.gridRef.NumericRenderer(properties.renderingProps);
+                    }
+                    else if (type === "number") {
+                        properties["format"] = this.getNumberFormat(numberFormats[index].decimal) || "0.00";
                         properties["renderer"] = this.gridRef.NumericRenderer(properties.renderingProps);
                     }
                     else {
