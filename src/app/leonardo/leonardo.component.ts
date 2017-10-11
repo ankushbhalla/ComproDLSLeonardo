@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { ActivatedRoute } from '@angular/router';
+import { ModalDirective } from 'ngx-bootstrap/modal';
 
 declare var window;
 declare var document;
@@ -11,6 +12,7 @@ declare var document;
 })
 export class LeonardoComponent implements OnInit {
 
+  @ViewChild('modalWindow') public modalWindow:ModalDirective;
   @ViewChild('contentWrapper') contentWrapper;
   @ViewChild('workspace') workspace;
   questionData: any;
@@ -20,6 +22,7 @@ export class LeonardoComponent implements OnInit {
   navigatorData: any;
   mode:string;
   user:any;
+  modalVisible:boolean;
   constructor(private dataService: DataService, private route: ActivatedRoute) {
     this.sub = this.route.params.subscribe(params => {
       this.id = params['id'];
@@ -40,6 +43,7 @@ export class LeonardoComponent implements OnInit {
       showStudyButton: this.checkmode(this.mode),
       showSubmitButton: true
     }
+    this.modalVisible = false;
   }
   ngOnInit() {
   }
@@ -60,7 +64,11 @@ export class LeonardoComponent implements OnInit {
   }
 
   studyLaunch() {
-    this.workspace.checkAnswer();
+    this.modalWindow.show();
+  }
+
+  studyClose() {
+    this.modalWindow.hide();
   }
 
   tryAgain() {
@@ -81,5 +89,8 @@ export class LeonardoComponent implements OnInit {
     else {
       return true;
     }
+  }
+  handleModalVisibiltyChange(modalVisiblity){
+    this.modalVisible = modalVisiblity;
   }
 }

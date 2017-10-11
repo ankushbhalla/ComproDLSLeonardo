@@ -18,4 +18,21 @@
   <cosmatt-item-box #workspace class="questionWrapper" [questionData]='questionData' [solutionData]='solutionData' (gridEvent) = "handleGridEvent($event)"></cosmatt-item-box>
 </div>
 
+<div bsModal #modalWindow="bs-modal" class="modal fade" tabindex="-1" role="dialog" (onShown)="handleModalVisibiltyChange(true)" (onHidden)="handleModalVisibiltyChange(false)"aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-view">
+    <div class="modal-content ">
+      <div class="modal-header comproBand">        
+        <p class="modal-title text-xs-center fw-bold mt" id="myModalLabel18">Study - Introduction to Financial Accounting
+        <button (click)="modalWindow.hide()" aria-label="Close" class="pull-right closeButton" type="button">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+      </p>
+      </div>
+      <div class="modal-body">
+        <app-studymaterial [modalVisible]= "modalVisible"></app-studymaterial>
+      </div>
+    </div>
+  </div>  
+</div>
+
 <app-navigator *ngIf="id!='3'" (navEvent)="handleCompEvents($event)" class="navigatorWrapper" [navigatorData] = "navigatorData"></app-navigator>

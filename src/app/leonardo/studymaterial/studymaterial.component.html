@@ -1,0 +1,49 @@
+<div class="row" style="height:100%">
+  <div class="col-sm-4 col-md-4 col-lg-3 pdfNavigator">
+    <div class="navigatorContainer">
+      <ul class="nav nav-list">
+        <li class="listHead" *ngFor="let listItem of listItems ">
+          <label class="tree-toggler nav-header">
+            <p>{{listItem.heading}}</p>
+            <span class="glyphicon glyphicon-menu-down pull-right closebutton"></span>
+        </label>
+          <ul class="nav nav-list tree">
+            <li class="listTopic" (click)="changeActivePage(topic.page)" *ngFor="let topic of listItem.topics">
+              <label>{{topic.heading}}</label></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div *ngIf="modalVisible" class="col-sm-8 col-md-8 col-lg-9 pdfViewer">
+    <pdf-viewer [src]="studyUrl" [render-text]="true" [show-all]="false" [zoom]="0.65"
+      [(page)]="activePage" [original-size]="false" (error)="onError($event)" (after-load-complete)="callBackFn($event)" style="display: block; height:100%"></pdf-viewer>
+    <div class="pdftoolbar">
+      <span class="zoom">
+        <span class="glyphicon glyphicon-font reduceFont" ></span>
+      <span class="glyphicon glyphicon-font"></span>
+      </span>
+      <span class="divider"></span>
+      <span class="comment">
+        <span class="glyphicon glyphicon-comment"></span>
+      </span>
+      <span class="divider"></span>
+      <span class="volume">
+        <span class="glyphicon glyphicon-volume-up"></span>
+      </span>
+      <span class="divider"></span>
+      <span class="navigation">
+        <span (click) = "changePage('previous')" class="glyphicon glyphicon-menu-left"></span>
+      <span (click)="changePage('next')" class="glyphicon glyphicon-menu-right"></span>
+      </span>
+      <span class="divider"></span>
+      <span class="print">
+        <span class="glyphicon glyphicon-print"></span>
+      </span>
+      <span class="divider"></span>
+      <span class="fullscreen">
+        <span class="glyphicon glyphicon-fullscreen"></span>
+      </span>
+    </div>
+  </div>
+</div>
