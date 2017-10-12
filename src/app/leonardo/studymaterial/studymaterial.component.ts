@@ -115,7 +115,12 @@ export class StudymaterialComponent implements OnInit, AfterViewInit {
     if(selectedtopicElem){
       selectedtopicElem.classList.remove("topic-selected");
     }
-    event.target.parentElement.classList.add("topic-selected");
+    if(event.target.tagName == "LI"){
+      event.target.classList.add("topic-selected");
+    }
+    else{
+      event.target.parentElement.classList.add("topic-selected");
+    }    
     this.changeActivePage(pageIndex);
   }
   changeActivePage(pageIndex){
