@@ -8,7 +8,7 @@
             <span class="glyphicon glyphicon-menu-down pull-right closebutton"></span>
         </label>
           <ul class="nav nav-list tree">
-            <li class="listTopic" (click)="changeActivePage(topic.page)" *ngFor="let topic of listItem.topics">
+            <li class="listTopic" (click)="handleElementClick(topic.page,$event)" *ngFor="let topic of listItem.topics">
               <label>{{topic.heading}}</label></li>
           </ul>
         </li>

@@ -7,6 +7,6 @@
     <button class="btn btn-primary" [style.visibility]="checkvisiblity(navigatorData.showStudyButton)" (click)="launchEbook()">Study</button>
     <button class="btn btn-primary" [style.visibility]="checkvisiblity(navigatorData.showHintButton)" (click)="displayHint()" [disabled] = "navigatorData.hint.isLastHint">Hint</button>
     <button class="btn btn-primary" [style.visibility] = "checkvisiblity(navigatorData.showCheckAnswer)" (click)="checkMyAnswer()">{{(this.answerButtonMode == "checkAnswer"?"Check My Work":"Try Again")}}</button>
-    <button class="btn btn-primary pull-right" [style.visibility] = "checkvisiblity(navigatorData.showSubmitButton)" (click) = "handleSubmitClick()">Submit</button>
+    <button class="btn btn-primary pull-right" [style.visibility] = "checkvisiblity(navigatorData.showSubmitButton)" (click) = "handleSubmitClick()">{{(this.submitButtonMode == "submit"?"Submit":"Close")}}</button>
   </div>
 </div>

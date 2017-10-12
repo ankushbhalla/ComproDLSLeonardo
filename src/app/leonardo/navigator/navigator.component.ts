@@ -12,8 +12,10 @@ export class NavigatorComponent implements OnInit {
   @Output() navEvent: EventEmitter<Object> = new EventEmitter();
   @Input() navigatorData: any;
   answerButtonMode;
+  submitButtonMode;
   constructor(private router: Router) {
       this.answerButtonMode = "checkAnswer";
+      this.submitButtonMode = "submit";
   }
 
   ngOnInit() {
@@ -41,9 +43,14 @@ export class NavigatorComponent implements OnInit {
   }
 
   handleSubmitClick() {
-    this.navEvent.emit({ eventId: "CHECK_MY_ANSWER_CLICKED" });
-    //Leonardo.scripts.destroyGrids();
-    //this.router.navigate(['/dashboard']);
+    if(this.submitButtonMode == "submit"){
+      this.submitButtonMode = "close";
+      this.navEvent.emit({ eventId: "CHECK_MY_ANSWER_CLICKED" });
+    }
+    else{
+      Leonardo.scripts.destroyGrids();
+      this.router.navigate(['/dashboard']);
+    }
   }
   checkvisiblity(mode) {
     if (mode == true) {

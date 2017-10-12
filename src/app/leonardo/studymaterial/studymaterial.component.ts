@@ -89,9 +89,18 @@ export class StudymaterialComponent implements OnInit, AfterViewInit {
           }
        })
     }
-  //   $('label.tree-toggler').click(function () {
-  //     $(this).parent().children('ul.tree').toggle(300);
-  // });
+    this.updateviewforFirstElemSelected(rootNodes[0]);
+   
+    //   $('label.tree-toggler').click(function () {
+    //     $(this).parent().children('ul.tree').toggle(300);
+    // });
+  }
+  updateviewforFirstElemSelected(firstElement){
+    firstElement.parentElement.children[1]["style"].display = "block";
+    firstElement.parentElement.children[1].children[0].classList.add("topic-selected");
+    firstElement.classList.add("listHead-selected");
+    firstElement.children[1].classList.remove("glyphicon-menu-down");
+    firstElement.children[1].classList.add("glyphicon-menu-up");
   }
 
   onError(error) {
@@ -100,6 +109,14 @@ export class StudymaterialComponent implements OnInit, AfterViewInit {
   }
   callBackFn(check) {
   // for pdf viewer    
+  }
+  handleElementClick(pageIndex, event) {
+    let selectedtopicElem = document.getElementsByClassName("topic-selected")[0];
+    if(selectedtopicElem){
+      selectedtopicElem.classList.remove("topic-selected");
+    }
+    event.target.parentElement.classList.add("topic-selected");
+    this.changeActivePage(pageIndex);
   }
   changeActivePage(pageIndex){
     this.activePage = pageIndex;
