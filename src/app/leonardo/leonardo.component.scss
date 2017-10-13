@@ -60,7 +60,7 @@
     height: 100%;
 }
 .modal-body{
-    height: calc(100% - 56px);
+    height: calc(100% - 64px);
     padding: 0px;
 }
 .modal-header{
@@ -70,10 +70,12 @@
     background: #000000;
     color: #ffffff;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
     .closeButton{
         color:#DAD2D2;
         background: transparent;
         border:0px;
+        font-size: 18px;
     }
 }
+
