@@ -11,17 +11,17 @@
             <li class="listTopic" (click)="handleElementClick(topic.page,$event)" *ngFor="let topic of listItem.topics">
               <label>{{topic.heading}}</label></li>
           </ul>
-        </li>
+        </li> 
       </ul>
     </div>
   </div>
   <div *ngIf="modalVisible" class="col-sm-8 col-md-8 col-lg-9 pdfViewer">
-    <pdf-viewer [src]="studyUrl" [render-text]="true" [show-all]="false" [zoom]="0.65"
+    <pdf-viewer [src]="studyUrl" [render-text]="true" [show-all]="false" [zoom]=viewerZoomValue
       [(page)]="activePage" [original-size]="false" (error)="onError($event)" (after-load-complete)="callBackFn($event)" style="display: block; height:100%"></pdf-viewer>
     <div class="pdftoolbar">
       <span class="zoom">
-        <span class="glyphicon glyphicon-font reduceFont" ></span>
-      <span class="glyphicon glyphicon-font"></span>
+        <span (click) = "updateZoomValue('decrease')" class="glyphicon glyphicon-font reduceFont" ></span>
+      <span (click) = "updateZoomValue('increase')" class="glyphicon glyphicon-font"></span>
       </span>
       <span class="divider"></span>
       <span class="comment">
