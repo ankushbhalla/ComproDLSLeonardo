@@ -16,7 +16,7 @@ export class StudymaterialComponent implements OnInit, AfterViewInit {
     let currentUrl = (this.platformlocation as any).location.href;
     let requestUrl = currentUrl.split("/").slice(0,3).join("/");
     this.studyUrl = requestUrl+'/assets/studyMaterial.pdf';
-    this.viewerZoomValue = 0.65;
+    this.viewerZoomValue = 0.75;
     this.activePage = 1;
     this.listItems = [
       {

@@ -75,4 +75,7 @@
     .reduceFont{
         font-size: 18px;
     }
+    >span{
+        user-select: none;
+    }
 }
