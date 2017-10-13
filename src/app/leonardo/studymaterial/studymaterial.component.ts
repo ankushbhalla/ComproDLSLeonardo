@@ -11,10 +11,12 @@ export class StudymaterialComponent implements OnInit, AfterViewInit {
   listItems: object;
   activePage:number;
   studyUrl:string;
+  viewerZoomValue:number
   constructor(private platformlocation:PlatformLocation) {
     let currentUrl = (this.platformlocation as any).location.href;
     let requestUrl = currentUrl.split("/").slice(0,3).join("/");
     this.studyUrl = requestUrl+'/assets/studyMaterial.pdf';
+    this.viewerZoomValue = 0.65;
     this.activePage = 1;
     this.listItems = [
       {
@@ -132,6 +134,21 @@ export class StudymaterialComponent implements OnInit, AfterViewInit {
     }
     else if(direction == "previous"){
       this.changeActivePage(this.activePage-1);
+    }
+  }
+  
+  changeViewerZoom(value){
+    if(value>0.4 && value<=1){
+      this.viewerZoomValue = value;
+    }   
+  }
+  
+  updateZoomValue(direction){
+    if(direction == "decrease"){
+      this.changeViewerZoom(this.viewerZoomValue-0.05);
+    }
+    else{
+      this.changeViewerZoom(this.viewerZoomValue+0.05);
     }
   }
 
