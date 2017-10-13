@@ -19,31 +19,43 @@
 
 .listHead{
     color: #454444;
-    border-bottom: 2px solid #9F9F9F;
+    border-bottom: 1px solid #9F9F9F;
     .closebutton{
         margin: auto 10px auto 0;
+        font-size: 16px;
     }   
 
     >label{
-        padding:  14px 10px;
+        padding:  10px 10px;
         width: 100%;
         margin-bottom: 0px;
         display: flex;
+
+        >p{
+            display: inline-flex;
+            margin: 0 auto;
+            font-size: 16px;
+            width:calc(100% - 30px);
+        }
     } 
 }
 .nav-list.tree{
     display: none;
-    background: white;  
+    background: white;
+    li:last-child{
+        border:0px;
+    }  
 }
 .listTopic{
     padding: 2px 10px;
     border-bottom: 1px solid lightgrey;
     cursor:pointer;
     >label{
-        padding: 5px 0px 5px 20px;
+        padding: 10px 0px 10px 20px;
         color: #858585;
         cursor:pointer;
         width: 100%;
+        margin-bottom: 0px;
     }
 }
 .topic-selected{
@@ -52,24 +64,18 @@
         color: white; 
     }    
 }
-.tree-toggler>p{
-    display: inline-flex;
-    margin: 0 auto;
-    width:calc(100% - 30px);
-}
 .pdftoolbar{
     background: #000000;
-    border-radius: 10px;
+    border-radius: 4px;
     color:#EEEDED;
     opacity: 0.8;
-    font-size:24px;
-    padding: 5px; 
-    width:340px;
+    font-size:22px;
+    padding: 5px 10px; 
+    width:368px;
     position: relative;
     bottom: 55px;
     margin: auto;
     .divider{
-        margin: 0px 8px;
         border-left:1px solid #383838;
     }
     .reduceFont{
@@ -77,5 +83,8 @@
     }
     >span{
         user-select: none;
+        >span{
+            padding: 0px 6px 0px 10px;
+        }
     }
 }
