@@ -1,6 +1,6 @@
-webpackJsonp([1],{
+webpackJsonp([2],{
 
-/***/ 240:
+/***/ 310:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,11 +13,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 240;
+webpackEmptyAsyncContext.id = 310;
 
 /***/ }),
 
-/***/ 320:
+/***/ 471:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -39,7 +39,7 @@ var DataService = (function () {
             "Training": {
                 "1": {
                     question: {
-                        template: "<br><div class=\"questionHeadings\">Requirement</div>\n            <div>The accounts of Colby Group are provided with their normal balances as of August 31, 2017.</div>\n            <br/>\n            <div>Prepare Colby Group trial balance as of August 31, 2017. Enter the assets and liabilities in the order of liquidity.</div>\n            <br/>\n            <div>Remember that each line of the heading is very important and should be in a specific order.</div>\n            <br>\n            <div class=\"questionHeadings\">Account Balances</div>\n            <div> The accounts are listed in no particular order.</div>\n            <div style=\"height: 440px; min-width: 347px; min-height: 440px;\" leoDataId=\"leoHost1\" class=\"leoHost\">\n            </div>",
+                        template: "<br><div class=\"questionHeadings\">Requirement</div>\n            <div>The accounts of Colby Group are provided with their normal balances as of August 31, 2017.</div>\n            <br/>\n            <div>Prepare Colby Group trial balance as of August 31, 2017. Enter the assets and liabilities in the order of liquidity.</div>\n            <br/>\n            <div>Remember that each line of the heading is very important and should be in a specific order.</div>\n            <br>\n            <div class=\"questionHeadings\">Account Balances</div>\n            <div> The accounts are listed in no particular order.</div>\n            <div style=\"height: 440px; min-width: 347px; min-height: 440px;\" leoDataId=\"leoHost1\" class=\"leoHost\"></div>\n            <div class=\"questionHeadings\">Prerequisites</div>\n            <div>1. Knowledge of Ledger balance (Ledger balances are segregated into debit balances and credit balances to prepare trial balance report.) </div>\n            <div>2. Understanding of following account groups \u2013 Assets, Liabilities, Equity, Revenue & Expenses</div>\n            <div>3. Familiar with golden rules of accounting i.e. able to list the account correctly under Debit/Credit side.</div>\n            ",
                         leoData: {
                             "leoHost1": {
                                 config: {
@@ -49,20 +49,20 @@ var DataService = (function () {
                         }
                     },
                     solution: {
-                        config: { "data": [["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "colorfills": [{ "id": 0, "color": "lightgray" }, { "id": 1, "color": "white" }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "left", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "1", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }] }, "options": { "preventEditingOnCheckAnswer": false, "setUniformCustomProperties": { "border": "1px solid black" }, "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "center", "vertical": "bottom" }, "maxRows": 40, "readOnly": false }, "hints": [{ "from": { "row": 0, "col": 0 }, "to": { "row": 2, "col": 0 }, "expectedvalues": [["Colby Group"], ["Trial Balance"], ["August 31, 2017"]], "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "styles": { "fontWeight": true } }, { "from": { "row": 5, "col": 0 }, "to": { "row": 9, "col": 2 }, "expectedvalues": [["Cash", 17300, ""], ["Accounts Receivable", 37000, ""], ["Supplies", 7400, ""], ["Prepaid Insurance", 1900, ""], ["Equipment", 196000, ""]] }, { "from": { "row": 10, "col": 0 }, "to": { "row": 14, "col": 2 }, "expectedvalues": [["Accounts Payable", "", 26000], ["Notes Payable", "", 97600], ["Terry Colby, Capital", "", 89650], ["Terry Colby, Drawing", 56000, ""], ["Fees Earned", "", 454450]] }, { "from": { "row": 15, "col": 0 }, "to": { "row": 18, "col": 2 }, "expectedvalues": [["Wages Expense", 270000, ""], ["Rent Expense", 51800, ""], ["Advertising Expense", 25200, ""], ["Misc. Expense", 5100, ""]] }], "modeconfig": { "mode": "Assessment", "hostAppRootPath": "", "role": "student", "showHintsBtn": false, "hideTopBar": false, "showCheckAnswerBtn": false, "showRibbon": true }, "mergedranges": [{ "row": 3, "col": 1, "rowspan": 1, "colspan": 2 }], "rows": { "0": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "1": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "2": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "3": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "4": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "2": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "5": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "6": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "7": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "8": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "9": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "10": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "11": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "12": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "13": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "14": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "15": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "16": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "17": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "18": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "19": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } } }, "sheetNames": ["Solution"] },
+                        config: { "data": [["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "colorfills": [{ "id": 0, "color": "lightgray" }, { "id": 1, "color": "white" }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "left", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "1", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }] }, "options": { "preventEditingOnCheckAnswer": false, "setUniformCustomProperties": { "border": "1px solid black" }, "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "center", "vertical": "bottom" }, "maxRows": 40, "readOnly": false }, "hints": [{ "from": { "row": 0, "col": 0 }, "to": { "row": 2, "col": 0 }, "expectedvalues": [["Colby Group"], ["Trial Balance"], ["August 31, 2017"]], "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "styles": { "fontWeight": true } }, { "from": { "row": 5, "col": 0 }, "to": { "row": 9, "col": 2 }, "expectedvalues": [["Cash", 17300, ""], ["Accounts Receivable", 37000, ""], ["Supplies", 7400, ""], ["Prepaid Insurance", 1900, ""], ["Equipment", 196000, ""]] }, { "from": { "row": 10, "col": 0 }, "to": { "row": 14, "col": 2 }, "expectedvalues": [["Accounts Payable", "", 26000], ["Notes Payable", "", 97600], ["Terry Colby, Capital", "", 89650], ["Terry Colby, Drawing", 56000, ""], ["Fees Earned", "", 454450]] }, { "from": { "row": 15, "col": 0 }, "to": { "row": 18, "col": 2 }, "expectedvalues": [["Wages Expense", 270000, ""], ["Rent Expense", 51800, ""], ["Advertising Expense", 25200, ""], ["Misc. Expense", 5100, ""]] }], "modeconfig": { "mode": "Assessment", "hostAppRootPath": "libs", "role": "student", "showHintsBtn": false, "hideTopBar": false, "showCheckAnswerBtn": false, "showRibbon": true }, "mergedranges": [{ "row": 3, "col": 1, "rowspan": 1, "colspan": 2 }], "rows": { "0": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "1": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "2": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "3": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "4": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "2": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "5": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "6": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "7": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "8": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "9": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "10": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "11": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "12": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "13": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "14": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "15": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "16": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "17": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "18": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "19": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } } }, "sheetNames": ["Solution"] },
                         correctData: {
                             correctData: [
                                 ["Colby Group", "", "", "", "", "", "", "", "", "", "", "", ""], ["Trial Balance", "", "", "", "", "", "", "", "", "", "", "", ""], ["August 31, 2017", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["Cash", 17300, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Receivable", 37000, "", "", "", "", "", "", "", "", "", "", ""], ["Supplies", 7400, "", "", "", "", "", "", "", "", "", "", ""], ["Prepaid Insurance", 1900, "", "", "", "", "", "", "", "", "", "", ""], ["Equipment", 196000, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Payable", "", 26000, "", "", "", "", "", "", "", "", "", ""], ["Notes Payable", "", 97600, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Capital", "", 89650, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Drawing", 56000, "", "", "", "", "", "", "", "", "", "", ""], ["Fees Earned", "", 454450, "", "", "", "", "", "", "", "", "", ""], ["Wages Expense", 270000, "", "", "", "", "", "", "", "", "", "", ""], ["Rent Expense", 51800, "", "", "", "", "", "", "", "", "", "", ""], ["Advertising Expense", 25200, "", "", "", "", "", "", "", "", "", "", ""], ["Misc. Expense", 5100, "", "", "", "", "", "", "", "", "", "", ""], ["Total", 667700, 667700, "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]
                             ],
                             validationJson: [
-                                { "cellRange": { "from": { "row": 0, "col": 0 }, "to": { "row": 0, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 0, "col": 0 } }, { "cellRange": { "from": { "row": 1, "col": 0 }, "to": { "row": 1, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 1, "col": 0 } }, { "cellRange": { "from": { "row": 2, "col": 0 }, "to": { "row": 2, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 2, "col": 0 } }, { "cellRange": { "from": { "row": 5, "col": 0 }, "to": { "row": 5, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 5, "col": 0 } }, { "cellRange": { "from": { "row": 6, "col": 0 }, "to": { "row": 6, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 6, "col": 0 } }, { "cellRange": { "from": { "row": 7, "col": 0 }, "to": { "row": 7, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 7, "col": 0 } }, { "cellRange": { "from": { "row": 8, "col": 0 }, "to": { "row": 8, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 8, "col": 0 } }, { "cellRange": { "from": { "row": 9, "col": 0 }, "to": { "row": 9, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 9, "col": 0 } }, { "cellRange": { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 10, "col": 0 } }, { "cellRange": { "from": { "row": 11, "col": 0 }, "to": { "row": 11, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 11, "col": 0 } }, { "cellRange": { "from": { "row": 12, "col": 0 }, "to": { "row": 12, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 12, "col": 0 } }, { "cellRange": { "from": { "row": 13, "col": 0 }, "to": { "row": 13, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 13, "col": 0 } }, { "cellRange": { "from": { "row": 14, "col": 0 }, "to": { "row": 14, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 14, "col": 0 } }, { "cellRange": { "from": { "row": 15, "col": 0 }, "to": { "row": 15, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 15, "col": 0 } }, { "cellRange": { "from": { "row": 16, "col": 0 }, "to": { "row": 16, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 16, "col": 0 } }, { "cellRange": { "from": { "row": 17, "col": 0 }, "to": { "row": 17, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 17, "col": 0 } }, { "cellRange": { "from": { "row": 18, "col": 0 }, "to": { "row": 18, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 18, "col": 0 } }, { "cellRange": { "from": { "row": 19, "col": 0 }, "to": { "row": 19, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this row are incorrect.", "row": 19, "col": 0 } }
+                                { "cellRange": { "from": { "row": 0, "col": 0 }, "to": { "row": 0, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 0, "col": 0 } }, { "cellRange": { "from": { "row": 1, "col": 0 }, "to": { "row": 1, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 1, "col": 0 } }, { "cellRange": { "from": { "row": 2, "col": 0 }, "to": { "row": 2, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is missing.", "row": 2, "col": 0 } }, { "cellRange": { "from": { "row": 3, "col": 0 }, "to": { "row": 3, "col": 1 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 3, "col": 1 } }, { "cellRange": { "from": { "row": 4, "col": 0 }, "to": { "row": 4, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Account Titles are incorrect.", "row": 4, "col": 0 } }, { "cellRange": { "from": { "row": 5, "col": 0 }, "to": { "row": 5, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 5, "col": 0 } }, { "cellRange": { "from": { "row": 6, "col": 0 }, "to": { "row": 6, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 6, "col": 0 } }, { "cellRange": { "from": { "row": 7, "col": 0 }, "to": { "row": 7, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 7, "col": 0 } }, { "cellRange": { "from": { "row": 8, "col": 0 }, "to": { "row": 8, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 8, "col": 0 } }, { "cellRange": { "from": { "row": 9, "col": 0 }, "to": { "row": 9, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 9, "col": 0 } }, { "cellRange": { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 10, "col": 0 } }, { "cellRange": { "from": { "row": 11, "col": 0 }, "to": { "row": 11, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 11, "col": 0 } }, { "cellRange": { "from": { "row": 12, "col": 0 }, "to": { "row": 12, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 12, "col": 0 } }, { "cellRange": { "from": { "row": 13, "col": 0 }, "to": { "row": 13, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 13, "col": 0 } }, { "cellRange": { "from": { "row": 14, "col": 0 }, "to": { "row": 14, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 14, "col": 0 } }, { "cellRange": { "from": { "row": 15, "col": 0 }, "to": { "row": 15, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 15, "col": 0 } }, { "cellRange": { "from": { "row": 16, "col": 0 }, "to": { "row": 16, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 16, "col": 0 } }, { "cellRange": { "from": { "row": 17, "col": 0 }, "to": { "row": 17, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 17, "col": 0 } }, { "cellRange": { "from": { "row": 18, "col": 0 }, "to": { "row": 18, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 18, "col": 0 } }, { "cellRange": { "from": { "row": 19, "col": 0 }, "to": { "row": 19, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this row are incorrect.", "row": 19, "col": 0 } }
                             ]
                         }
                     }
                 },
                 "2": {
                     question: {
-                        template: "<br><div class=\"questionHeadings\">Requirement</div>\n              <div>Kingram Company sells Leather Journal to office supply stores and other retailers around the world.</div>\n              <br/>\n              <div>Assume that the company sold 40000 pencils of its product at a price of $10 each during the year. Prepare the income statement for the most recent year.</div>\n              <br/>\n              <div>\n                <div style=\"float:left;  margin-right:20px;\">\n                  <div class=\"questionHeadings\">Amounts</div>\n                  <div style=\"height: 370px; min-width: 384px; min-height: 370px;\" leoDataId=\"leoHost1\" class=\"leoHost\"></div>\n                </div>\n                <div style=\"float:left;  margin-right:20px;\">\n                  <div class=\"questionHeadings\">Cost of goods manufactured</div>\n                  <div style=\"height: 300px; min-width: 347px; min-height: 300px;\" leoDataId=\"leoHost2\" class=\"leoHost\"></div>\n                </div>\n                <div style=\"clear:both;\">\n                  <div class=\"questionHeadings\">Cost of goods sold</div>\n                  <div style=\"height: 180px; min-width: 347px; min-height: 180px;\" leoDataId=\"leoHost3\" class=\"leoHost\"></div>\n              </div>",
+                        template: "<br><div class=\"questionHeadings\">Requirement</div>\n              <div>Kingram Company sells leather notepads to office supply stores and other retailers around the world.</div>\n              <br/>\n              <div>Assume that the company sold 40000 leather notepads at a price of $10 each during the year. Prepare the income statement for the most recent year.</div>\n              <br/>\n              <div>\n                <div style=\"float:left;  margin-right:20px;\">\n                  <div class=\"questionHeadings\">Amounts</div>\n                  <div style=\"height: 370px; min-width: 384px; min-height: 370px;\" leoDataId=\"leoHost1\" class=\"leoHost\"></div>\n                </div>\n                <div style=\"float:left;  margin-right:20px;\">\n                  <div class=\"questionHeadings\">Cost of goods manufactured</div>\n                  <div style=\"height: 300px; min-width: 347px; min-height: 300px;\" leoDataId=\"leoHost2\" class=\"leoHost\"></div>\n                </div>\n                <div style=\"clear:both;\">\n                  <div class=\"questionHeadings\">Cost of goods sold</div>\n                  <div style=\"height: 180px; min-width: 392px; min-height: 180px;\" leoDataId=\"leoHost3\" class=\"leoHost\"></div>\n              </div>",
                         leoData: {
                             "leoHost1": {
                                 config: {
@@ -82,13 +82,13 @@ var DataService = (function () {
                         }
                     },
                     solution: {
-                        config: { "data": [["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "colorfills": [{ "id": 0, "color": "lightgray" }, { "id": 1, "color": "white" }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "left", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "1", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }] }, "options": { "preventEditingOnCheckAnswer": false, "setUniformCustomProperties": { "border": "1px solid black" }, "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "center", "vertical": "bottom" }, "maxRows": 40, "readOnly": false }, "hints": [{ "from": { "row": 0, "col": 0 }, "to": { "row": 2, "col": 0 }, "expectedvalues": [["Kingram Company"], ["Income Statement"], ["For the Most Recent Year"]], "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "styles": { "fontWeight": true } }, { "from": { "row": 3, "col": 0 }, "to": { "row": 5, "col": 2 }, "expectedvalues": [["Sales revenue", "", 400000], ["Less: Cost of goods sold", "", 169000], ["Gross profit", "", 231000]] }, { "from": { "row": 6, "col": 0 }, "to": { "row": 9, "col": 2 }, "expectedvalues": [["Less operating expenses:", "", ""], ["General and administrative expenses", 21500, ""], ["Marketing expenses", 76000, ""], ["Total operating expenses", "", 97500]] }, { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 }, "expectedvalues": [["Operating income", "", 133500]] }], "modeconfig": { "mode": "Assessment", "hostAppRootPath": "", "role": "student", "showHintsBtn": false, "hideTopBar": false, "showCheckAnswerBtn": false, "showRibbon": true }, "columns": { "0": { "width": 260 } }, "rows": { "0": { "cells": { "0": { "colorfill": 0, "border": 1 }, "1": { "colorfill": 0, "border": 1 }, "2": { "colorfill": 0, "border": 1 } } }, "1": { "cells": { "0": { "colorfill": 0, "border": 1 }, "1": { "colorfill": 0, "border": 1 }, "2": { "colorfill": 0, "border": 1 } } }, "2": { "cells": { "0": { "colorfill": 0, "border": 1 }, "1": { "colorfill": 0, "border": 1 }, "2": { "colorfill": 0, "border": 1 } } }, "3": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "4": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "5": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "6": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "7": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "8": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "9": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "10": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } } }, "sheetNames": ["Solution"] },
+                        config: { "data": [["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "colorfills": [{ "id": 0, "color": "lightgray" }, { "id": 1, "color": "white" }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "left", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "1", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }] }, "options": { "preventEditingOnCheckAnswer": false, "setUniformCustomProperties": { "border": "1px solid black" }, "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "center", "vertical": "bottom" }, "maxRows": 40, "readOnly": false }, "hints": [{ "from": { "row": 0, "col": 0 }, "to": { "row": 2, "col": 0 }, "expectedvalues": [["Kingram Company"], ["Income Statement"], ["For the Most Recent Year"]], "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "styles": { "fontWeight": true } }, { "from": { "row": 3, "col": 0 }, "to": { "row": 5, "col": 2 }, "expectedvalues": [["Sales revenue", "", 400000], ["Less: Cost of goods sold", "", 169000], ["Gross profit", "", 231000]] }, { "from": { "row": 6, "col": 0 }, "to": { "row": 9, "col": 2 }, "expectedvalues": [["Less operating expenses:", "", ""], ["General and administrative expenses", 21500, ""], ["Marketing expenses", 76000, ""], ["Total operating expenses", "", 97500]] }, { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 }, "expectedvalues": [["Operating income", "", 133500]] }], "modeconfig": { "mode": "Assessment", "hostAppRootPath": "libs", "role": "student", "showHintsBtn": false, "hideTopBar": false, "showCheckAnswerBtn": false, "showRibbon": true }, "columns": { "0": { "width": 260 } }, "rows": { "0": { "cells": { "0": { "colorfill": 0, "border": 1 }, "1": { "colorfill": 0, "border": 1 }, "2": { "colorfill": 0, "border": 1 } } }, "1": { "cells": { "0": { "colorfill": 0, "border": 1 }, "1": { "colorfill": 0, "border": 1 }, "2": { "colorfill": 0, "border": 1 } } }, "2": { "cells": { "0": { "colorfill": 0, "border": 1 }, "1": { "colorfill": 0, "border": 1 }, "2": { "colorfill": 0, "border": 1 } } }, "3": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "4": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "5": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "6": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "7": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "8": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "9": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "10": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } } }, "sheetNames": ["Solution"] },
                         correctData: {
                             correctData: [
                                 ["Kingram Company", "", "", "", "", "", "", "", "", "", "", "", ""], ["Income Statement", "", "", "", "", "", "", "", "", "", "", "", ""], ["For the Most Recent Year", "", "", "", "", "", "", "", "", "", "", "", ""], ["Sales revenue", "", 400000, "", "", "", "", "", "", "", "", "", ""], ["Less: Cost of goods sold", "", 169000, "", "", "", "", "", "", "", "", "", ""], ["Gross profit", "", 231000, "", "", "", "", "", "", "", "", "", ""], ["Less operating expenses:", "", "", "", "", "", "", "", "", "", "", "", ""], ["General and administrative expenses", 21500, "", "", "", "", "", "", "", "", "", "", ""], ["Marketing expenses", 76000, "", "", "", "", "", "", "", "", "", "", ""], ["Total operating expenses", "", 97500, "", "", "", "", "", "", "", "", "", ""], ["Operating income", "", 133500, "", "", "", "", "", "", "", "", "", ""]
                             ],
                             validationJson: [
-                                { "cellRange": { "from": { "row": 0, "col": 0 }, "to": { "row": 0, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 0, "col": 0 } }, { "cellRange": { "from": { "row": 1, "col": 0 }, "to": { "row": 1, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 1, "col": 0 } }, { "cellRange": { "from": { "row": 2, "col": 0 }, "to": { "row": 2, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 2, "col": 0 } }, { "cellRange": { "from": { "row": 3, "col": 0 }, "to": { "row": 3, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 3, "col": 0 } }, { "cellRange": { "from": { "row": 4, "col": 0 }, "to": { "row": 4, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 4, "col": 0 } }, { "cellRange": { "from": { "row": 5, "col": 0 }, "to": { "row": 5, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 5, "col": 0 } }, { "cellRange": { "from": { "row": 6, "col": 0 }, "to": { "row": 6, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 6, "col": 0 } }, { "cellRange": { "from": { "row": 7, "col": 0 }, "to": { "row": 7, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 7, "col": 0 } }, { "cellRange": { "from": { "row": 8, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 8, "col": 0 } }, { "cellRange": { "from": { "row": 9, "col": 0 }, "to": { "row": 9, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 9, "col": 0 } }, { "cellRange": { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 10, "col": 0 } }
+                                { "cellRange": { "from": { "row": 0, "col": 0 }, "to": { "row": 0, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 0, "col": 0 } }, { "cellRange": { "from": { "row": 1, "col": 0 }, "to": { "row": 1, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 1, "col": 0 } }, { "cellRange": { "from": { "row": 2, "col": 0 }, "to": { "row": 2, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 2, "col": 0 } }, { "cellRange": { "from": { "row": 3, "col": 0 }, "to": { "row": 3, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 3, "col": 0 } }, { "cellRange": { "from": { "row": 4, "col": 0 }, "to": { "row": 4, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 4, "col": 0 } }, { "cellRange": { "from": { "row": 5, "col": 0 }, "to": { "row": 5, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 5, "col": 0 } }, { "cellRange": { "from": { "row": 6, "col": 0 }, "to": { "row": 6, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 6, "col": 0 } }, { "cellRange": { "from": { "row": 7, "col": 0 }, "to": { "row": 7, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 7, "col": 0 } }, { "cellRange": { "from": { "row": 8, "col": 0 }, "to": { "row": 8, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 8, "col": 0 } }, { "cellRange": { "from": { "row": 9, "col": 0 }, "to": { "row": 9, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 9, "col": 0 } }, { "cellRange": { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 10, "col": 0 } }
                             ]
                         }
                     }
@@ -114,7 +114,7 @@ var DataService = (function () {
                     },
                     solution: {
                         qIns: "<p>Create a profile table for an index move of 600 revolutions in a time of 5 seconds, followed by a dwell of 1 second. The time spent during each segment should be equal. Compute the RMS acceleration.</p>",
-                        config: { "data": [["Segment Type", "Initial Velocity (u)", "Final Velocity (v)", "Segment Duration (t)", "Acceleration (a)", "Distance Travelled (s)", "a<sup>2</sup>*t"], ["", "rev/s", "rev/s", "s", "rev/s<sup>2</sup>", "rev", ""], ["Accel", "0.00", "", "1.67", "", "", ""], ["Cruise", "", "", "1.67", "", "", ""], ["Decel", "", "", "1.67", "", "", ""], ["Dwell", "0.00", "0.00", "1.00", "", "", ""], ["Total:", "", "", "=SUM(E3:E6)", "", "=SUM(F3:F6)", "=SUM(G3:G6)"], ["", "", "", "", "", "", ""], ["RMS Acceleration", "", "rev/sec<sup>2</sup>", "", "", "", ""], ["", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2 }], "alignments": [{ "id": 0, "horizontal": "center", "vertical": "middle", "wraptext": true }], "colorfills": [{ "id": 0, "color": "#FFFFFF" }, { "id": 1, "color": "#FFFFFF" }], "borders": [] }, "columns": { "0": { "width": 143 }, "1": { "width": 125 }, "2": { "width": 110 }, "3": { "width": 115 }, "4": { "width": 150 }, "5": { "width": 150 }, "6": { "width": 64 } }, "rows": { "0": { "height": 43, "cells": { "0": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "1": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "2": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "3": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "4": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold", "tooltip": this.getTooltipText() }, "5": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "6": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" } } }, "1": { "cells": { "4": { "tooltip": this.getTooltipText() } } }, "2": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 0, "alignment": 0, "readOnly": false, "tooltip": this.getTooltipText() }, "5": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 0, "alignment": 0, "readOnly": false } } }, "3": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 0, "alignment": 0, "readOnly": false, "tooltip": this.getTooltipText() }, "5": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 0, "alignment": 0, "readOnly": false } } }, "4": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 0, "alignment": 0, "readOnly": false, "tooltip": this.getTooltipText() }, "5": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 0, "alignment": 0, "readOnly": false } } }, "5": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 0, "alignment": 0, "readOnly": false, "tooltip": this.getTooltipText() }, "5": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 0, "alignment": 0, "readOnly": false } } }, "6": { "cells": { "0": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "4": { "tooltip": this.getTooltipText() } } }, "7": { "cells": { "4": { "tooltip": this.getTooltipText() } } }, "8": { "cells": { "0": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "tooltip": this.getTooltipText() } } }, "9": { "cells": { "4": { "tooltip": this.getTooltipText() } } } }, "mergedranges": [], "options": { "rowheaders": true, "colheaders": true, "formulas": true, "manualcolumnresize": true, "defaultAlign": { "horizontal": "center", "vertical": "middle" }, "maxRows": 12, "readOnly": true, "readOnlyCellStyles": "{background-color:#F2F2F2; color:black;}", "tolerance": 1, "containerStyles": "{box-shadow: 6px 6px 9px #ddd; border: 1px solid #ddd;}" }, "modeconfig": { "mode": "Training", "role": "student", "showHintsBtn": false, "showCheckAnswerBtn": false, "hideTopBar": false, "LeoHorizontalAlignment": "center" }, "currentState": { "cell": { "row": "", "col": "" } } },
+                        config: { "data": [["Segment Type", "Initial Velocity (u)", "Final Velocity (v)", "Segment Duration (t)", "Acceleration (a)", "Distance Travelled (s)", "a<sup>2</sup>*t"], ["", "rev/s", "rev/s", "s", "rev/s<sup>2</sup>", "rev", ""], ["Accel", "0.00", "", "1.67", "", "", ""], ["Cruise", "", "", "1.67", "", "", ""], ["Decel", "", "", "1.67", "", "", ""], ["Dwell", "0.00", "0.00", "1.00", "", "", ""], ["Total:", "", "", "=SUM(D3:D6)", "", "=SUM(F3:F6)", "=SUM(G3:G6)"], ["", "", "", "", "", "", ""], ["RMS Acceleration", "", "rev/sec<sup>2</sup>", "", "", "", ""], ["", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2 }, { "id": 2, "cat": "Number", "decimal": 2 }], "alignments": [{ "id": 0, "horizontal": "center", "vertical": "middle", "wraptext": true }], "colorfills": [{ "id": 0, "color": "#FFFFFF" }, { "id": 1, "color": "#FFFFFF" }], "borders": [] }, "columns": { "0": { "width": 143 }, "1": { "width": 125 }, "2": { "width": 110 }, "3": { "width": 115 }, "4": { "width": 123 }, "5": { "width": 150 }, "6": { "width": 91 } }, "rows": { "0": { "height": 43, "cells": { "0": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "1": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "2": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "3": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "4": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "5": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "6": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" } } }, "1": { "cells": { "4": {} } }, "2": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 2, "alignment": 0, "readOnly": false }, "5": { "numberFormat": 2, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 2, "alignment": 0, "readOnly": false } } }, "3": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 2, "alignment": 0, "readOnly": false }, "5": { "numberFormat": 2, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 2, "alignment": 0, "readOnly": false } } }, "4": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 2, "alignment": 0, "readOnly": false }, "5": { "numberFormat": 2, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 2, "alignment": 0, "readOnly": false } } }, "5": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 2, "alignment": 0, "readOnly": false }, "5": { "numberFormat": 2, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 2, "alignment": 0, "readOnly": false } } }, "6": { "cells": { "0": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "5": { "numberFormat": 2 }, "6": { "numberFormat": 2 } } }, "7": { "cells": { "4": {} } }, "8": { "cells": { "0": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "1": { "numberFormat": 2, "alignment": 0, "readOnly": false }, "4": {} } }, "9": { "cells": { "4": {} } } }, "mergedranges": [], "options": { "rowheaders": true, "colheaders": true, "formulas": true, "manualcolumnresize": true, "defaultAlign": { "horizontal": "center", "vertical": "middle" }, "maxRows": 12, "readOnly": true, "readOnlyCellStyles": "{background-color:#F2F2F2; color:black;}", "tolerance": 1, "containerStyles": "{box-shadow: 6px 6px 9px #ddd; border: 1px solid #ddd;}" }, "modeconfig": { "mode": "Training", "role": "student", "showHintsBtn": false, "showCheckAnswerBtn": false, "hideTopBar": false, "LeoHorizontalAlignment": "center" }, "currentState": { "cell": { "row": "", "col": "" } } },
                         correctData: [["Segment Type", "Initial Velocity (u)", "Final Velocity (v)", "Segment Duration (t)", "Acceleration (a)", "Distance Travelled (s)", "a2*t"], ["", "rev/s", "rev/s", "s", "rev/s2", "rev", ""], ["Accel", "0.00", "180.00", "1.67", "108.00", "150.00", "19440.0"], ["Cruise", "180.00", "180.00", "1.67", "0.00", "300.00", "0.00"], ["Decel", "180.00", "0.00", "1.67", "-108.00", "150.00", "19440.0"], ["Dwell", "0.00", "0.00", "1.00", "0.00", "0.00", "0.00"], ["Total", "", "", "6.00", "", "600.00", "38880.00"], ["", "", "", "", "", "", ""], ["RMS accel", "80.49", "rev/sec2", "", "", "", ""], ["", "", "", "", "", "", ""]],
                         gridUIParams: {
                             height: 400,
@@ -126,38 +126,34 @@ var DataService = (function () {
             "Assessment": {
                 "1": {
                     question: {
-                        template: "<h1 class=\"questionHeadings\">Instructions</h1>\n            <div>The accounts of Colby Group are provided with their normal balances as of August 31, 2017.</div>\n            <br/>\n            <div class=\"questionHeadings\">Account Balances</div>\n            <div> The accounts are listed in no particular order.</div>\n            <div style=\"height: 280px; width: 820px;\" leoDataId=\"leoHost1\" class=\"leoHost\">\n            </div>\n            <br/>\n            <div class=\"questionHeadings\">Requirement</div>\n            <div>Prepare Colby Group trial balance as of August 31, 2017. Enter the assets and liabilities in the order of liquidity.<br> Remember that each line of the heading is very important and should be in a specific order.</div>",
+                        template: "<br><div class=\"questionHeadings\">Requirement</div>\n            <div>The accounts of Colby Group are provided with their normal balances as of August 31, 2017.</div>\n            <br/>\n            <div>Prepare Colby Group trial balance as of August 31, 2017. Enter the assets and liabilities in the order of liquidity.</div>\n            <br/>\n            <div>Remember that each line of the heading is very important and should be in a specific order.</div>\n            <br>\n            <div class=\"questionHeadings\">Account Balances</div>\n            <div> The accounts are listed in no particular order.</div>\n            <div style=\"height: 440px; min-width: 347px; min-height: 440px;\" leoDataId=\"leoHost1\" class=\"leoHost\"></div>\n            ",
                         leoData: {
                             "leoHost1": {
                                 config: {
-                                    "data": [["Accounts", "Balance", "", "Accounts", "Balance"], ["Terry Colby, Capital", "89650", "", "Advertising Expense", "25200"], ["Terry Colby, Drawing", "56000", "", "Misc. Expense", "5100"], ["Accounts Payable", "26000", "", "Equipment", "196000"], ["Prepaid Insurance", "1900", "", "Cash", "17300"], ["Fees Earned", "454450", "", "Accounts Receivable", "37000"], ["Wages Expense", "270000", "", "Supplies", "7400"], ["Rent Expense", "51800", "", "Notes Payable", "97600"]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "right", "vertical": "Middle", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }] }, "columns": { "0": { "width": 200 }, "1": { "width": 150 }, "2": { "width": 20 }, "3": { "width": 200 }, "4": { "width": 150 } }, "rows": { "0": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "1": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "2": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "3": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "4": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "5": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "6": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "7": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } } }, "options": { "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "left", "vertical": "middle" }, "maxRows": 20, "readOnly": true }, "modeconfig": { "mode": "Assessment", "role": "student", "showHintsBtn": false, "hideTopBar": true, "showCheckAnswerBtn": false, "theme": "leonardoThemeGreen", "tableContainsColumnHeaders": true }, "sheetNames": ["Data"]
+                                    "data": [["Accounts", "Balance"], ["Terry Colby, Capital", "89650"], ["Terry Colby, Drawing", "56000"], ["Accounts Payable", "26000"], ["Prepaid Insurance", "1900"], ["Fees Earned", "454450"], ["Wages Expense", "270000"], ["Rent Expense", "51800"], ["Advertising Expense", "25200"], ["Misc. Expense", "5100"], ["Equipment", "196000"], ["Cash", "17300"], ["Accounts Receivable", "37000"], ["Supplies", "7400"], ["Notes Payable", "97600"]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }] }, "columns": { "0": { "width": 150 }, "1": { "width": 150 } }, "rows": { "0": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "1": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "2": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "3": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "4": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "5": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "6": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "7": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "8": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "9": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "10": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "11": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "12": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "13": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "14": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } } }, "options": { "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "left", "vertical": "middle" }, "maxRows": 20, "readOnly": true }, "modeconfig": { "mode": "Assessment", "role": "student", "showHintsBtn": false, "hideTopBar": true, "showCheckAnswerBtn": false, "theme": "leonardoThemeGreen", "tableContainsColumnHeaders": true }, "sheetNames": ["Data"]
                                 }
                             }
                         }
                     },
                     solution: {
-                        config: { "data": [["", "", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "colorfills": [{ "id": 0, "color": "lightgray" }, { "id": 1, "color": "white" }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "left", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "1", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }] }, "options": { "preventEditingOnCheckAnswer": false, "setUniformCustomProperties": { "border": "1px solid black" }, "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "center", "vertical": "bottom" }, "maxRows": 30, "readOnly": false }, "hints": [{ "from": { "row": 0, "col": 0 }, "to": { "row": 2, "col": 0 }, "expectedvalues": [["Colby Group"], ["Trial Balance"], ["August 31, 2017"]], "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "styles": { "fontWeight": true } }, { "from": { "row": 5, "col": 0 }, "to": { "row": 9, "col": 2 }, "expectedvalues": [["Cash", 17300, ""], ["Accounts Receivable", 37000, ""], ["Supplies", 7400, ""], ["Prepaid Insurance", 1900, ""], ["Equipment", 196000, ""]] }, { "from": { "row": 10, "col": 0 }, "to": { "row": 14, "col": 2 }, "expectedvalues": [["Accounts Payable", "", 26000], ["Notes Payable", "", 97600], ["Terry Colby, Capital", "", 89650], ["Terry Colby, Drawing", 56000, ""], ["Fees Earned", "", 454450]] }, { "from": { "row": 15, "col": 0 }, "to": { "row": 18, "col": 2 }, "expectedvalues": [["Wages Expense", 270000, ""], ["Rent Expense", 51800, ""], ["Advertising Expense", 25200, ""], ["Misc. Expense", 5100, ""]] }], "modeconfig": { "mode": "Assessment", "hostAppRootPath": "", "role": "student", "showHintsBtn": false, "hideTopBar": false, "showCheckAnswerBtn": false, "showRibbon": true }, "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 3, "col": 1, "rowspan": 1, "colspan": 2 }], "rows": { "0": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold", "readOnly": false } } }, "1": { "cells": { "0": { "border": 1, "colorfill": 0, "fontWeight": "bold", "readOnly": false } } }, "2": { "cells": { "0": { "border": 1, "colorfill": 0, "fontWeight": "bold", "readOnly": false } } }, "3": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "4": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "2": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "5": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "6": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "7": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "8": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "9": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "10": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "11": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "12": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "13": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "14": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "15": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "16": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "17": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "18": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "19": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } } }, "sheetNames": ["Solution"], "columns": { "3": { "width": 145 }, "4": { "width": 145 }, "5": { "width": 145 }, "6": { "width": 145 }, "7": { "width": 145 } } },
+                        config: { "data": [["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "colorfills": [{ "id": 0, "color": "lightgray" }, { "id": 1, "color": "white" }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "left", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "1", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }] }, "options": { "preventEditingOnCheckAnswer": false, "setUniformCustomProperties": { "border": "1px solid black" }, "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "center", "vertical": "bottom" }, "maxRows": 40, "readOnly": false }, "hints": [{ "from": { "row": 0, "col": 0 }, "to": { "row": 2, "col": 0 }, "expectedvalues": [["Colby Group"], ["Trial Balance"], ["August 31, 2017"]], "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "styles": { "fontWeight": true } }, { "from": { "row": 5, "col": 0 }, "to": { "row": 9, "col": 2 }, "expectedvalues": [["Cash", 17300, ""], ["Accounts Receivable", 37000, ""], ["Supplies", 7400, ""], ["Prepaid Insurance", 1900, ""], ["Equipment", 196000, ""]] }, { "from": { "row": 10, "col": 0 }, "to": { "row": 14, "col": 2 }, "expectedvalues": [["Accounts Payable", "", 26000], ["Notes Payable", "", 97600], ["Terry Colby, Capital", "", 89650], ["Terry Colby, Drawing", 56000, ""], ["Fees Earned", "", 454450]] }, { "from": { "row": 15, "col": 0 }, "to": { "row": 18, "col": 2 }, "expectedvalues": [["Wages Expense", 270000, ""], ["Rent Expense", 51800, ""], ["Advertising Expense", 25200, ""], ["Misc. Expense", 5100, ""]] }], "modeconfig": { "mode": "Assessment", "hostAppRootPath": "libs", "role": "student", "showHintsBtn": false, "hideTopBar": false, "showCheckAnswerBtn": false, "showRibbon": true }, "mergedranges": [{ "row": 3, "col": 1, "rowspan": 1, "colspan": 2 }], "rows": { "0": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "1": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "2": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "3": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "4": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "2": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "5": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "6": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "7": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "8": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "9": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "10": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "11": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "12": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "13": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "14": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "15": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "16": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "17": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "18": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "19": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } } }, "sheetNames": ["Solution"] },
                         correctData: {
                             correctData: [
                                 ["Colby Group", "", "", "", "", "", "", "", "", "", "", "", ""], ["Trial Balance", "", "", "", "", "", "", "", "", "", "", "", ""], ["August 31, 2017", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["Cash", 17300, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Receivable", 37000, "", "", "", "", "", "", "", "", "", "", ""], ["Supplies", 7400, "", "", "", "", "", "", "", "", "", "", ""], ["Prepaid Insurance", 1900, "", "", "", "", "", "", "", "", "", "", ""], ["Equipment", 196000, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Payable", "", 26000, "", "", "", "", "", "", "", "", "", ""], ["Notes Payable", "", 97600, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Capital", "", 89650, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Drawing", 56000, "", "", "", "", "", "", "", "", "", "", ""], ["Fees Earned", "", 454450, "", "", "", "", "", "", "", "", "", ""], ["Wages Expense", 270000, "", "", "", "", "", "", "", "", "", "", ""], ["Rent Expense", 51800, "", "", "", "", "", "", "", "", "", "", ""], ["Advertising Expense", 25200, "", "", "", "", "", "", "", "", "", "", ""], ["Misc. Expense", 5100, "", "", "", "", "", "", "", "", "", "", ""], ["Total", 667700, 667700, "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]
                             ],
                             validationJson: [
-                                { "cellRange": { "from": { "row": 0, "col": 0 }, "to": { "row": 0, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 0, "col": 0 } }, { "cellRange": { "from": { "row": 1, "col": 0 }, "to": { "row": 1, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 1, "col": 0 } }, { "cellRange": { "from": { "row": 2, "col": 0 }, "to": { "row": 2, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 2, "col": 0 } }, { "cellRange": { "from": { "row": 5, "col": 0 }, "to": { "row": 5, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 5, "col": 0 } }, { "cellRange": { "from": { "row": 6, "col": 0 }, "to": { "row": 6, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 6, "col": 0 } }, { "cellRange": { "from": { "row": 7, "col": 0 }, "to": { "row": 7, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 7, "col": 0 } }, { "cellRange": { "from": { "row": 8, "col": 0 }, "to": { "row": 8, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 8, "col": 0 } }, { "cellRange": { "from": { "row": 9, "col": 0 }, "to": { "row": 9, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 9, "col": 0 } }, { "cellRange": { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 10, "col": 0 } }, { "cellRange": { "from": { "row": 11, "col": 0 }, "to": { "row": 11, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 11, "col": 0 } }, { "cellRange": { "from": { "row": 12, "col": 0 }, "to": { "row": 12, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 12, "col": 0 } }, { "cellRange": { "from": { "row": 13, "col": 0 }, "to": { "row": 13, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 13, "col": 0 } }, { "cellRange": { "from": { "row": 14, "col": 0 }, "to": { "row": 14, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 14, "col": 0 } }, { "cellRange": { "from": { "row": 15, "col": 0 }, "to": { "row": 15, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 15, "col": 0 } }, { "cellRange": { "from": { "row": 16, "col": 0 }, "to": { "row": 16, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 16, "col": 0 } }, { "cellRange": { "from": { "row": 17, "col": 0 }, "to": { "row": 17, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 17, "col": 0 } }, { "cellRange": { "from": { "row": 18, "col": 0 }, "to": { "row": 18, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 18, "col": 0 } }, { "cellRange": { "from": { "row": 19, "col": 0 }, "to": { "row": 19, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this row are incorrect.", "row": 19, "col": 0 } }
+                                { "cellRange": { "from": { "row": 0, "col": 0 }, "to": { "row": 0, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 0, "col": 0 } }, { "cellRange": { "from": { "row": 1, "col": 0 }, "to": { "row": 1, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 1, "col": 0 } }, { "cellRange": { "from": { "row": 2, "col": 0 }, "to": { "row": 2, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is missing.", "row": 2, "col": 0 } }, { "cellRange": { "from": { "row": 3, "col": 0 }, "to": { "row": 3, "col": 1 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 3, "col": 1 } }, { "cellRange": { "from": { "row": 4, "col": 0 }, "to": { "row": 4, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Account Titles are incorrect.", "row": 4, "col": 0 } }, { "cellRange": { "from": { "row": 5, "col": 0 }, "to": { "row": 5, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 5, "col": 0 } }, { "cellRange": { "from": { "row": 6, "col": 0 }, "to": { "row": 6, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 6, "col": 0 } }, { "cellRange": { "from": { "row": 7, "col": 0 }, "to": { "row": 7, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 7, "col": 0 } }, { "cellRange": { "from": { "row": 8, "col": 0 }, "to": { "row": 8, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 8, "col": 0 } }, { "cellRange": { "from": { "row": 9, "col": 0 }, "to": { "row": 9, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 9, "col": 0 } }, { "cellRange": { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 10, "col": 0 } }, { "cellRange": { "from": { "row": 11, "col": 0 }, "to": { "row": 11, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 11, "col": 0 } }, { "cellRange": { "from": { "row": 12, "col": 0 }, "to": { "row": 12, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 12, "col": 0 } }, { "cellRange": { "from": { "row": 13, "col": 0 }, "to": { "row": 13, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 13, "col": 0 } }, { "cellRange": { "from": { "row": 14, "col": 0 }, "to": { "row": 14, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 14, "col": 0 } }, { "cellRange": { "from": { "row": 15, "col": 0 }, "to": { "row": 15, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 15, "col": 0 } }, { "cellRange": { "from": { "row": 16, "col": 0 }, "to": { "row": 16, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 16, "col": 0 } }, { "cellRange": { "from": { "row": 17, "col": 0 }, "to": { "row": 17, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 17, "col": 0 } }, { "cellRange": { "from": { "row": 18, "col": 0 }, "to": { "row": 18, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 18, "col": 0 } }, { "cellRange": { "from": { "row": 19, "col": 0 }, "to": { "row": 19, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this row are incorrect.", "row": 19, "col": 0 } }
                             ]
-                        },
-                        gridUIParams: {
-                            height: 865,
-                            width: 1205
                         }
                     }
                 },
                 "2": {
                     question: {
-                        template: "<h1 class=\"questionHeadings\">Instructions:</h1>\n              <div>Kingram Company sells Leather Journal to office supply stores and other retailers around the world.</div>\n              <br/>\n              <div class=\"questionHeadings\">Amounts</div>\n              <div style=\"height: 230px; width: 820px;\" leoDataId=\"leoHost1\" class=\"leoHost\"></div>\n              <br/>\n              <div>\n                <div style=\"float:left;\">\n                  <div class=\"questionHeadings\">Cost of goods manufactured</div>\n                  <div style=\"height: 300px; width: 347px;\" leoDataId=\"leoHost2\" class=\"leoHost\"></div>\n                </div>\n                <div style=\"float:left;\">\n                  <div class=\"questionHeadings\">Cost of goods sold</div>\n                  <div style=\"height: 180px; width: 405px;\" leoDataId=\"leoHost3\" class=\"leoHost\"></div>\n                </div>\n              </div>\n              <br/>\n              <div class=\"questionHeadings\" style=\"clear:both\";>Requirement</div>\n              <div>Assume that the company sold 40000 pencils of its product at a price of $10 each during the year. Prepare the income statement for the most recent year.</div>",
+                        template: "<br><div class=\"questionHeadings\">Requirement</div>\n              <div>Kingram Company sells leather notepads to office supply stores and other retailers around the world.</div>\n              <br/>\n              <div>Assume that the company sold 40000 leather notepads at a price of $10 each during the year. Prepare the income statement for the most recent year.</div>\n              <br/>\n              <div>\n                <div style=\"float:left;  margin-right:20px;\">\n                  <div class=\"questionHeadings\">Amounts</div>\n                  <div style=\"height: 370px; min-width: 384px; min-height: 370px;\" leoDataId=\"leoHost1\" class=\"leoHost\"></div>\n                </div>\n                <div style=\"float:left;  margin-right:20px;\">\n                  <div class=\"questionHeadings\">Cost of goods manufactured</div>\n                  <div style=\"height: 300px; min-width: 347px; min-height: 300px;\" leoDataId=\"leoHost2\" class=\"leoHost\"></div>\n                </div>\n                <div style=\"clear:both;\">\n                  <div class=\"questionHeadings\">Cost of goods sold</div>\n                  <div style=\"height: 180px; min-width: 392px; min-height: 180px;\" leoDataId=\"leoHost3\" class=\"leoHost\"></div>\n              </div>",
                         leoData: {
                             "leoHost1": {
                                 config: {
-                                    "data": [["Item", "Amount", "", "Item", "Amount"], ["Raw material purchased", "62000", "", "Ending inventory", "18000"], ["Cost of direct materials", "55000", "", "Overhead manufacturing cost", "20000"], ["Cost of indirect materials", "5000", "", "General and administrative expenses", "21500"], ["Cost of direct labor", "78000", "", "Beginning finished goods inventory", "5000"], ["Cost of indiredt labor", "10000", "", "Ending finished goods inventory", "11000"], ["Beginning inventory", "25000", "", "Marketing expenses", "76000"]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "right", "vertical": "Middle", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }] }, "columns": { "0": { "width": 180 }, "1": { "width": 150 }, "2": { "width": 20 }, "3": { "width": 255 }, "4": { "width": 150 } }, "rows": { "0": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "1": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "2": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "3": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "4": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "5": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } }, "6": { "cells": { "1": { "numberFormat": 1, "alignment": 2 }, "4": { "numberFormat": 1, "alignment": 2 } } } }, "options": { "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "left", "vertical": "middle" }, "maxRows": 20, "readOnly": true }, "modeconfig": { "mode": "Assessment", "role": "student", "showHintsBtn": false, "hideTopBar": true, "showCheckAnswerBtn": false, "theme": "leonardoThemeGreen", "tableContainsColumnHeaders": true }, "sheetNames": ["Items"]
+                                    "data": [["Item", "Amount"], ["Raw material purchased", "62000"], ["Cost of direct materials", "55000"], ["Cost of indirect materials", "5000"], ["Cost of direct labor", "78000"], ["Cost of indiredt labor", "10000"], ["Beginning inventory", "25000"], ["Ending inventory", "18000"], ["Overhead manufacturing cost", "20000"], ["General and administrative expenses", "21500"], ["Beginning finished goods inventory", "5000"], ["Ending finished goods inventory", "11000"], ["Marketing expenses", "76000"]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }] }, "columns": { "0": { "width": 255 }, "1": { "width": 100 } }, "rows": { "0": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "1": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "2": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "3": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "4": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "5": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "6": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "7": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "8": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "9": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "10": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "11": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "12": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } } }, "options": { "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "left", "vertical": "middle" }, "maxRows": 20, "readOnly": true }, "modeconfig": { "mode": "Assessment", "role": "student", "showHintsBtn": false, "hideTopBar": true, "showCheckAnswerBtn": false, "theme": "leonardoThemeGreen", "tableContainsColumnHeaders": true }, "sheetNames": ["Items"]
                                 }
                             },
                             "leoHost2": {
@@ -173,18 +169,14 @@ var DataService = (function () {
                         }
                     },
                     solution: {
-                        config: { "data": [["", "", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""], ["", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "colorfills": [{ "id": 0, "color": "lightgray" }, { "id": 1, "color": "white" }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "left", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "1", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }] }, "options": { "preventEditingOnCheckAnswer": false, "setUniformCustomProperties": { "border": "1px solid black" }, "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "center", "vertical": "bottom" }, "maxRows": 30, "readOnly": false }, "hints": [{ "from": { "row": 0, "col": 0 }, "to": { "row": 2, "col": 0 }, "expectedvalues": [["Kingram Company"], ["Income Statement"], ["For the Most Recent Year"]], "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "styles": { "fontWeight": true } }, { "from": { "row": 3, "col": 0 }, "to": { "row": 5, "col": 2 }, "expectedvalues": [["Sales revenue", "", 400000], ["Less: Cost of goods sold", "", 169000], ["Gross profit", "", 231000]] }, { "from": { "row": 6, "col": 0 }, "to": { "row": 9, "col": 2 }, "expectedvalues": [["Less operating expenses:", "", ""], ["General and administrative expenses", 21500, ""], ["Marketing expenses", 76000, ""], ["Total operating expenses", "", 97500]] }, { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 }, "expectedvalues": [["Operating income", "", 133500]] }], "modeconfig": { "mode": "Assessment", "hostAppRootPath": "", "role": "student", "showHintsBtn": false, "hideTopBar": false, "showCheckAnswerBtn": false, "showRibbon": true }, "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "rows": { "0": { "cells": { "0": { "colorfill": 0, "border": 1 }, "1": { "colorfill": 0, "border": 1 }, "2": { "colorfill": 0, "border": 1 } } }, "1": { "cells": { "0": { "colorfill": 0, "border": 1 }, "1": { "colorfill": 0, "border": 1 }, "2": { "colorfill": 0, "border": 1 } } }, "2": { "cells": { "0": { "colorfill": 0, "border": 1 }, "1": { "colorfill": 0, "border": 1 }, "2": { "colorfill": 0, "border": 1 } } }, "3": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "4": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "5": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "6": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "7": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "8": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "9": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "10": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } } }, "sheetNames": ["Solution"], "columns": { "0": { "width": 260 }, "3": { "width": 123 }, "4": { "width": 123 }, "5": { "width": 123 }, "6": { "width": 123 }, "7": { "width": 123 } } },
+                        config: { "data": [["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "colorfills": [{ "id": 0, "color": "lightgray" }, { "id": 1, "color": "white" }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "left", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "1", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }] }, "options": { "preventEditingOnCheckAnswer": false, "setUniformCustomProperties": { "border": "1px solid black" }, "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "center", "vertical": "bottom" }, "maxRows": 40, "readOnly": false }, "hints": [{ "from": { "row": 0, "col": 0 }, "to": { "row": 2, "col": 0 }, "expectedvalues": [["Kingram Company"], ["Income Statement"], ["For the Most Recent Year"]], "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "styles": { "fontWeight": true } }, { "from": { "row": 3, "col": 0 }, "to": { "row": 5, "col": 2 }, "expectedvalues": [["Sales revenue", "", 400000], ["Less: Cost of goods sold", "", 169000], ["Gross profit", "", 231000]] }, { "from": { "row": 6, "col": 0 }, "to": { "row": 9, "col": 2 }, "expectedvalues": [["Less operating expenses:", "", ""], ["General and administrative expenses", 21500, ""], ["Marketing expenses", 76000, ""], ["Total operating expenses", "", 97500]] }, { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 }, "expectedvalues": [["Operating income", "", 133500]] }], "modeconfig": { "mode": "Assessment", "hostAppRootPath": "libs", "role": "student", "showHintsBtn": false, "hideTopBar": false, "showCheckAnswerBtn": false, "showRibbon": true }, "columns": { "0": { "width": 260 } }, "rows": { "0": { "cells": { "0": { "colorfill": 0, "border": 1 }, "1": { "colorfill": 0, "border": 1 }, "2": { "colorfill": 0, "border": 1 } } }, "1": { "cells": { "0": { "colorfill": 0, "border": 1 }, "1": { "colorfill": 0, "border": 1 }, "2": { "colorfill": 0, "border": 1 } } }, "2": { "cells": { "0": { "colorfill": 0, "border": 1 }, "1": { "colorfill": 0, "border": 1 }, "2": { "colorfill": 0, "border": 1 } } }, "3": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "4": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "5": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "6": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "7": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "8": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "9": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } }, "10": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2 }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1 }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1 } } } }, "sheetNames": ["Solution"] },
                         correctData: {
                             correctData: [
                                 ["Kingram Company", "", "", "", "", "", "", "", "", "", "", "", ""], ["Income Statement", "", "", "", "", "", "", "", "", "", "", "", ""], ["For the Most Recent Year", "", "", "", "", "", "", "", "", "", "", "", ""], ["Sales revenue", "", 400000, "", "", "", "", "", "", "", "", "", ""], ["Less: Cost of goods sold", "", 169000, "", "", "", "", "", "", "", "", "", ""], ["Gross profit", "", 231000, "", "", "", "", "", "", "", "", "", ""], ["Less operating expenses:", "", "", "", "", "", "", "", "", "", "", "", ""], ["General and administrative expenses", 21500, "", "", "", "", "", "", "", "", "", "", ""], ["Marketing expenses", 76000, "", "", "", "", "", "", "", "", "", "", ""], ["Total operating expenses", "", 97500, "", "", "", "", "", "", "", "", "", ""], ["Operating income", "", 133500, "", "", "", "", "", "", "", "", "", ""]
                             ],
                             validationJson: [
-                                { "cellRange": { "from": { "row": 0, "col": 0 }, "to": { "row": 0, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 0, "col": 0 } }, { "cellRange": { "from": { "row": 1, "col": 0 }, "to": { "row": 1, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 1, "col": 0 } }, { "cellRange": { "from": { "row": 2, "col": 0 }, "to": { "row": 2, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 2, "col": 0 } }, { "cellRange": { "from": { "row": 3, "col": 0 }, "to": { "row": 3, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 3, "col": 0 } }, { "cellRange": { "from": { "row": 4, "col": 0 }, "to": { "row": 4, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 4, "col": 0 } }, { "cellRange": { "from": { "row": 5, "col": 0 }, "to": { "row": 5, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 5, "col": 0 } }, { "cellRange": { "from": { "row": 6, "col": 0 }, "to": { "row": 6, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 6, "col": 0 } }, { "cellRange": { "from": { "row": 7, "col": 0 }, "to": { "row": 7, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 7, "col": 0 } }, { "cellRange": { "from": { "row": 8, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 8, "col": 0 } }, { "cellRange": { "from": { "row": 9, "col": 0 }, "to": { "row": 9, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 9, "col": 0 } }, { "cellRange": { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 10, "col": 0 } }
+                                { "cellRange": { "from": { "row": 0, "col": 0 }, "to": { "row": 0, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 0, "col": 0 } }, { "cellRange": { "from": { "row": 1, "col": 0 }, "to": { "row": 1, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 1, "col": 0 } }, { "cellRange": { "from": { "row": 2, "col": 0 }, "to": { "row": 2, "col": 0 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 2, "col": 0 } }, { "cellRange": { "from": { "row": 3, "col": 0 }, "to": { "row": 3, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 3, "col": 0 } }, { "cellRange": { "from": { "row": 4, "col": 0 }, "to": { "row": 4, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 4, "col": 0 } }, { "cellRange": { "from": { "row": 5, "col": 0 }, "to": { "row": 5, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 5, "col": 0 } }, { "cellRange": { "from": { "row": 6, "col": 0 }, "to": { "row": 6, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 6, "col": 0 } }, { "cellRange": { "from": { "row": 7, "col": 0 }, "to": { "row": 7, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 7, "col": 0 } }, { "cellRange": { "from": { "row": 8, "col": 0 }, "to": { "row": 8, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 8, "col": 0 } }, { "cellRange": { "from": { "row": 9, "col": 0 }, "to": { "row": 9, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 9, "col": 0 } }, { "cellRange": { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this item are incorrect.", "row": 10, "col": 0 } }
                             ]
-                        },
-                        gridUIParams: {
-                            height: 865,
-                            width: 1205
                         }
                     }
                 },
@@ -209,7 +201,7 @@ var DataService = (function () {
                     },
                     solution: {
                         qIns: "<p>Create a profile table for an index move of 600 revolutions in a time of 5 seconds, followed by a dwell of 1 second. The time spent during each segment should be equal. Compute the RMS acceleration.</p>",
-                        config: { "data": [["Segment Type", "Initial Velocity (u)", "Final Velocity (v)", "Segment Duration (t)", "Acceleration (a)", "Distance Travelled (s)", "a<sup>2</sup>*t"], ["", "rev/s", "rev/s", "s", "rev/s<sup>2</sup>", "rev", ""], ["Accel", "0.00", "", "1.67", "", "", ""], ["Cruise", "", "", "1.67", "", "", ""], ["Decel", "", "", "1.67", "", "", ""], ["Dwell", "0.00", "0.00", "1.00", "", "", ""], ["Total:", "", "", "=SUM(E3:E6)", "", "=SUM(F3:F6)", "=SUM(G3:G6)"], ["", "", "", "", "", "", ""], ["RMS Acceleration", "", "rev/sec<sup>2</sup>", "", "", "", ""], ["", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2 }], "alignments": [{ "id": 0, "horizontal": "center", "vertical": "middle", "wraptext": true }], "colorfills": [{ "id": 0, "color": "#FFFFFF" }, { "id": 1, "color": "#FFFFFF" }], "borders": [] }, "columns": { "0": { "width": 143 }, "1": { "width": 125 }, "2": { "width": 110 }, "3": { "width": 115 }, "4": { "width": 150 }, "5": { "width": 150 }, "6": { "width": 64 } }, "rows": { "0": { "height": 43, "cells": { "0": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "1": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "2": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "3": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "4": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold", "tooltip": this.getTooltipText() }, "5": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "6": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" } } }, "1": { "cells": { "4": { "tooltip": this.getTooltipText() } } }, "2": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 0, "alignment": 0, "readOnly": false, "tooltip": this.getTooltipText() }, "5": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 0, "alignment": 0, "readOnly": false } } }, "3": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 0, "alignment": 0, "readOnly": false, "tooltip": this.getTooltipText() }, "5": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 0, "alignment": 0, "readOnly": false } } }, "4": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 0, "alignment": 0, "readOnly": false, "tooltip": this.getTooltipText() }, "5": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 0, "alignment": 0, "readOnly": false } } }, "5": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 0, "alignment": 0, "readOnly": false, "tooltip": this.getTooltipText() }, "5": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 0, "alignment": 0, "readOnly": false } } }, "6": { "cells": { "0": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "4": { "tooltip": this.getTooltipText() } } }, "7": { "cells": { "4": { "tooltip": this.getTooltipText() } } }, "8": { "cells": { "0": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "tooltip": this.getTooltipText() } } }, "9": { "cells": { "4": { "tooltip": this.getTooltipText() } } } }, "mergedranges": [], "options": { "rowheaders": true, "colheaders": true, "formulas": true, "manualcolumnresize": true, "defaultAlign": { "horizontal": "center", "vertical": "middle" }, "maxRows": 12, "readOnly": true, "readOnlyCellStyles": "{background-color:#F2F2F2; color:black;}", "tolerance": 1, "containerStyles": "{box-shadow: 6px 6px 9px #ddd; border: 1px solid #ddd;}" }, "modeconfig": { "mode": "Training", "role": "student", "showHintsBtn": false, "showCheckAnswerBtn": false, "hideTopBar": false, "LeoHorizontalAlignment": "center" }, "currentState": { "cell": { "row": "", "col": "" } } },
+                        config: { "data": [["Segment Type", "Initial Velocity (u)", "Final Velocity (v)", "Segment Duration (t)", "Acceleration (a)", "Distance Travelled (s)", "a<sup>2</sup>*t"], ["", "rev/s", "rev/s", "s", "rev/s<sup>2</sup>", "rev", ""], ["Accel", "0.00", "", "1.67", "", "", ""], ["Cruise", "", "", "1.67", "", "", ""], ["Decel", "", "", "1.67", "", "", ""], ["Dwell", "0.00", "0.00", "1.00", "", "", ""], ["Total:", "", "", "=SUM(D3:D6)", "", "=SUM(F3:F6)", "=SUM(G3:G6)"], ["", "", "", "", "", "", ""], ["RMS Acceleration", "", "rev/sec<sup>2</sup>", "", "", "", ""], ["", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2 }], "alignments": [{ "id": 0, "horizontal": "center", "vertical": "middle", "wraptext": true }], "colorfills": [{ "id": 0, "color": "#FFFFFF" }, { "id": 1, "color": "#FFFFFF" }], "borders": [] }, "columns": { "0": { "width": 143 }, "1": { "width": 125 }, "2": { "width": 110 }, "3": { "width": 115 }, "4": { "width": 150 }, "5": { "width": 150 }, "6": { "width": 64 } }, "rows": { "0": { "height": 43, "cells": { "0": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "1": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "2": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "3": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "4": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "5": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "6": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" } } }, "1": { "cells": { "4": {} } }, "2": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "5": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 0, "alignment": 0, "readOnly": false } } }, "3": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "5": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 0, "alignment": 0, "readOnly": false } } }, "4": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "5": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 0, "alignment": 0, "readOnly": false } } }, "5": { "cells": { "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "2": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "3": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "5": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "6": { "numberFormat": 0, "alignment": 0, "readOnly": false } } }, "6": { "cells": { "0": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "4": {} } }, "7": { "cells": { "4": {} } }, "8": { "cells": { "0": { "numberFormat": 0, "alignment": 0, "fontWeight": "bold" }, "1": { "numberFormat": 0, "alignment": 0, "readOnly": false }, "4": {} } }, "9": { "cells": { "4": {} } } }, "mergedranges": [], "options": { "rowheaders": true, "colheaders": true, "formulas": true, "manualcolumnresize": true, "defaultAlign": { "horizontal": "center", "vertical": "middle" }, "maxRows": 12, "readOnly": true, "readOnlyCellStyles": "{background-color:#F2F2F2; color:black;}", "tolerance": 1, "containerStyles": "{box-shadow: 6px 6px 9px #ddd; border: 1px solid #ddd;}" }, "modeconfig": { "mode": "Training", "role": "student", "showHintsBtn": false, "showCheckAnswerBtn": false, "hideTopBar": false, "LeoHorizontalAlignment": "center" }, "currentState": { "cell": { "row": "", "col": "" } } },
                         correctData: [["Segment Type", "Initial Velocity (u)", "Final Velocity (v)", "Segment Duration (t)", "Acceleration (a)", "Distance Travelled (s)", "a2*t"], ["", "rev/s", "rev/s", "s", "rev/s2", "rev", ""], ["Accel", "0.00", "180.00", "1.67", "108.00", "150.00", "19440.0"], ["Cruise", "180.00", "180.00", "1.67", "0.00", "300.00", "0.00"], ["Decel", "180.00", "0.00", "1.67", "-108.00", "150.00", "19440.0"], ["Dwell", "0.00", "0.00", "1.00", "0.00", "0.00", "0.00"], ["Total", "", "", "6.00", "", "600.00", "38880.00"], ["", "", "", "", "", "", ""], ["RMS accel", "80.49", "rev/sec2", "", "", "", ""], ["", "", "", "", "", "", ""]],
                         gridUIParams: {
                             height: 400,
@@ -219,74 +211,143 @@ var DataService = (function () {
                 }
             }
         };
+        this.stu1config = {
+            "Assessment": {
+                "1": {
+                    question: {
+                        template: "<br><div class=\"questionHeadings\">Requirement</div>\n            <div>The accounts of Colby Group are provided with their normal balances as of August 31, 2017.</div>\n            <br/>\n            <div>Prepare Colby Group trial balance as of August 31, 2017. Enter the assets and liabilities in the order of liquidity.</div>\n            <br/>\n            <div>Remember that each line of the heading is very important and should be in a specific order.</div>\n            <br>\n            <div class=\"questionHeadings\">Account Balances</div>\n            <div> The accounts are listed in no particular order.</div>\n            <div style=\"height: 440px; min-width: 347px; min-height: 440px;\" leoDataId=\"leoHost1\" class=\"leoHost\"></div>\n            ",
+                        leoData: {
+                            "leoHost1": {
+                                config: {
+                                    "data": [["Accounts", "Balance"], ["Terry Colby, Capital", "89650"], ["Terry Colby, Drawing", "56000"], ["Accounts Payable", "26000"], ["Prepaid Insurance", "1900"], ["Fees Earned", "454450"], ["Wages Expense", "270000"], ["Rent Expense", "51800"], ["Advertising Expense", "25200"], ["Misc. Expense", "5100"], ["Equipment", "196000"], ["Cash", "17300"], ["Accounts Receivable", "37000"], ["Supplies", "7400"], ["Notes Payable", "97600"]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }] }, "columns": { "0": { "width": 150 }, "1": { "width": 150 } }, "rows": { "0": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "1": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "2": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "3": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "4": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "5": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "6": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "7": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "8": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "9": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "10": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "11": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "12": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "13": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "14": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } } }, "options": { "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "left", "vertical": "middle" }, "maxRows": 20, "readOnly": true }, "modeconfig": { "mode": "Assessment", "role": "student", "showHintsBtn": false, "hideTopBar": true, "showCheckAnswerBtn": false, "theme": "leonardoThemeGreen", "tableContainsColumnHeaders": true }, "sheetNames": ["Data"]
+                                }
+                            }
+                        }
+                    },
+                    solution: {
+                        config: {
+                            "data": [["Colby Group", "", "", "", "", "", "", "", "", "", "", "", ""], ["Trial Balance", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["Cash", 17300, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Receivable", 37000, "", "", "", "", "", "", "", "", "", "", ""], ["Supplies", 7400, "", "", "", "", "", "", "", "", "", "", ""], ["Prepaid Insurance", 1900, "", "", "", "", "", "", "", "", "", "", ""], ["Equipment", 196000, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Payable", "", 26000, "", "", "", "", "", "", "", "", "", ""], ["Notes Payable", 97600, "", "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Capital", "", 89650, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Drawing", 56000, "", "", "", "", "", "", "", "", "", "", ""], ["Fees Earned", "", 454450, "", "", "", "", "", "", "", "", "", ""], ["Wages Expense", 270000, "", "", "", "", "", "", "", "", "", "", ""], ["Rent Expense", 51800, "", "", "", "", "", "", "", "", "", "", ""], ["Advertising Expense", 25200, "", "", "", "", "", "", "", "", "", "", ""], ["Misc. Expense", 5100, "", "", "", "", "", "", "", "", "", "", ""], ["Total", "=SUM(B6:B19)", "=SUM(C6:C19)", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "colorfills": [{ "id": 0, "color": "lightgray" }, { "id": 1, "color": "white" }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "left", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "1", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }] }, "options": { "preventEditingOnCheckAnswer": false, "setUniformCustomProperties": { "border": "1px solid black" }, "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "center", "vertical": "bottom" }, "maxRows": 40, "readOnly": false }, "hints": [{ "from": { "row": 0, "col": 0 }, "to": { "row": 2, "col": 0 }, "expectedvalues": [["Colby Group"], ["Trial Balance"], ["August 31, 2017"]], "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "styles": { "fontWeight": true } }, { "from": { "row": 5, "col": 0 }, "to": { "row": 9, "col": 2 }, "expectedvalues": [["Cash", 17300, ""], ["Accounts Receivable", 37000, ""], ["Supplies", 7400, ""], ["Prepaid Insurance", 1900, ""], ["Equipment", 196000, ""]] }, { "from": { "row": 10, "col": 0 }, "to": { "row": 14, "col": 2 }, "expectedvalues": [["Accounts Payable", "", 26000], ["Notes Payable", "", 97600], ["Terry Colby, Capital", "", 89650], ["Terry Colby, Drawing", 56000, ""], ["Fees Earned", "", 454450]] }, { "from": { "row": 15, "col": 0 }, "to": { "row": 18, "col": 2 }, "expectedvalues": [["Wages Expense", 270000, ""], ["Rent Expense", 51800, ""], ["Advertising Expense", 25200, ""], ["Misc. Expense", 5100, ""]] }], "modeconfig": { "mode": "Assessment", "hostAppRootPath": "libs", "role": "student", "showHintsBtn": false, "hideTopBar": false, "showCheckAnswerBtn": false, "showRibbon": true }, "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 3, "col": 1, "rowspan": 1, "colspan": 2 }], "rows": { "0": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "1": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "2": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "3": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "4": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "2": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "5": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "6": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "7": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "8": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "9": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "10": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "11": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "12": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "13": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "14": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "15": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "16": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "17": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "18": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "19": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } } }, "sheetNames": ["Solution"]
+                        },
+                        correctData: {
+                            correctData: [
+                                ["Colby Group", "", "", "", "", "", "", "", "", "", "", "", ""], ["Trial Balance", "", "", "", "", "", "", "", "", "", "", "", ""], ["August 31, 2017", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["Cash", 17300, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Receivable", 37000, "", "", "", "", "", "", "", "", "", "", ""], ["Supplies", 7400, "", "", "", "", "", "", "", "", "", "", ""], ["Prepaid Insurance", 1900, "", "", "", "", "", "", "", "", "", "", ""], ["Equipment", 196000, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Payable", "", 26000, "", "", "", "", "", "", "", "", "", ""], ["Notes Payable", "", 97600, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Capital", "", 89650, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Drawing", 56000, "", "", "", "", "", "", "", "", "", "", ""], ["Fees Earned", "", 454450, "", "", "", "", "", "", "", "", "", ""], ["Wages Expense", 270000, "", "", "", "", "", "", "", "", "", "", ""], ["Rent Expense", 51800, "", "", "", "", "", "", "", "", "", "", ""], ["Advertising Expense", 25200, "", "", "", "", "", "", "", "", "", "", ""], ["Misc. Expense", 5100, "", "", "", "", "", "", "", "", "", "", ""], ["Total", 667700, 667700, "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]
+                            ],
+                            validationJson: [
+                                { "cellRange": { "from": { "row": 0, "col": 0 }, "to": { "row": 0, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 0, "col": 0 } }, { "cellRange": { "from": { "row": 1, "col": 0 }, "to": { "row": 1, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 1, "col": 0 } }, { "cellRange": { "from": { "row": 2, "col": 0 }, "to": { "row": 2, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is missing.", "row": 2, "col": 0 } }, { "cellRange": { "from": { "row": 3, "col": 0 }, "to": { "row": 3, "col": 1 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 3, "col": 1 } }, { "cellRange": { "from": { "row": 4, "col": 0 }, "to": { "row": 4, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Account Titles are incorrect.", "row": 4, "col": 0 } }, { "cellRange": { "from": { "row": 5, "col": 0 }, "to": { "row": 5, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 5, "col": 0 } }, { "cellRange": { "from": { "row": 6, "col": 0 }, "to": { "row": 6, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 6, "col": 0 } }, { "cellRange": { "from": { "row": 7, "col": 0 }, "to": { "row": 7, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 7, "col": 0 } }, { "cellRange": { "from": { "row": 8, "col": 0 }, "to": { "row": 8, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 8, "col": 0 } }, { "cellRange": { "from": { "row": 9, "col": 0 }, "to": { "row": 9, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 9, "col": 0 } }, { "cellRange": { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 10, "col": 0 } }, { "cellRange": { "from": { "row": 11, "col": 0 }, "to": { "row": 11, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 11, "col": 0 } }, { "cellRange": { "from": { "row": 12, "col": 0 }, "to": { "row": 12, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 12, "col": 0 } }, { "cellRange": { "from": { "row": 13, "col": 0 }, "to": { "row": 13, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 13, "col": 0 } }, { "cellRange": { "from": { "row": 14, "col": 0 }, "to": { "row": 14, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 14, "col": 0 } }, { "cellRange": { "from": { "row": 15, "col": 0 }, "to": { "row": 15, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 15, "col": 0 } }, { "cellRange": { "from": { "row": 16, "col": 0 }, "to": { "row": 16, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 16, "col": 0 } }, { "cellRange": { "from": { "row": 17, "col": 0 }, "to": { "row": 17, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 17, "col": 0 } }, { "cellRange": { "from": { "row": 18, "col": 0 }, "to": { "row": 18, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 18, "col": 0 } }, { "cellRange": { "from": { "row": 19, "col": 0 }, "to": { "row": 19, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this row are incorrect.", "row": 19, "col": 0 } }
+                            ]
+                        }
+                    }
+                }
+            }
+        };
+        this.stu2config = {
+            "Assessment": {
+                "1": {
+                    question: {
+                        template: "<br><div class=\"questionHeadings\">Requirement</div>\n            <div>The accounts of Colby Group are provided with their normal balances as of August 31, 2017.</div>\n            <br/>\n            <div>Prepare Colby Group trial balance as of August 31, 2017. Enter the assets and liabilities in the order of liquidity.</div>\n            <br/>\n            <div>Remember that each line of the heading is very important and should be in a specific order.</div>\n            <br>\n            <div class=\"questionHeadings\">Account Balances</div>\n            <div> The accounts are listed in no particular order.</div>\n            <div style=\"height: 440px; min-width: 347px; min-height: 440px;\" leoDataId=\"leoHost1\" class=\"leoHost\"></div>\n            ",
+                        leoData: {
+                            "leoHost1": {
+                                config: {
+                                    "data": [["Accounts", "Balance"], ["Terry Colby, Capital", "89650"], ["Terry Colby, Drawing", "56000"], ["Accounts Payable", "26000"], ["Prepaid Insurance", "1900"], ["Fees Earned", "454450"], ["Wages Expense", "270000"], ["Rent Expense", "51800"], ["Advertising Expense", "25200"], ["Misc. Expense", "5100"], ["Equipment", "196000"], ["Cash", "17300"], ["Accounts Receivable", "37000"], ["Supplies", "7400"], ["Notes Payable", "97600"]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }] }, "columns": { "0": { "width": 150 }, "1": { "width": 150 } }, "rows": { "0": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "1": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "2": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "3": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "4": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "5": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "6": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "7": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "8": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "9": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "10": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "11": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "12": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "13": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "14": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } } }, "options": { "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "left", "vertical": "middle" }, "maxRows": 20, "readOnly": true }, "modeconfig": { "mode": "Assessment", "role": "student", "showHintsBtn": false, "hideTopBar": true, "showCheckAnswerBtn": false, "theme": "leonardoThemeGreen", "tableContainsColumnHeaders": true }, "sheetNames": ["Data"]
+                                }
+                            }
+                        }
+                    },
+                    solution: {
+                        config: {
+                            "data": [["Colby Group", "", "", "", "", "", "", "", "", "", "", "", ""], ["Trial Balance", "", "", "", "", "", "", "", "", "", "", "", ""], ["August 31, 2017", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["Cash", 17300, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Receivable", 37000, "", "", "", "", "", "", "", "", "", "", ""], ["Supplies", 7400, "", "", "", "", "", "", "", "", "", "", ""], ["Prepaid Insurance", 1900, "", "", "", "", "", "", "", "", "", "", ""], ["Equipment", 196000, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Payable", "", 26000, "", "", "", "", "", "", "", "", "", ""], ["Notes Payable", "", 97600, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Capital", "", 89650, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Drawing", 56000, "", "", "", "", "", "", "", "", "", "", ""], ["Fees Earned", "", 454450, "", "", "", "", "", "", "", "", "", ""], ["Wages Expense", 270000, "", "", "", "", "", "", "", "", "", "", ""], ["Rent Expense", 51800, "", "", "", "", "", "", "", "", "", "", ""], ["Advertising Expense", 25200, "", "", "", "", "", "", "", "", "", "", ""], ["Misc. Expense", 5100, "", "", "", "", "", "", "", "", "", "", ""], ["Total", "=SUM(B6:B19)", "=SUM(C6:C19)", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "colorfills": [{ "id": 0, "color": "lightgray" }, { "id": 1, "color": "white" }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "left", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "1", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }] }, "options": { "preventEditingOnCheckAnswer": false, "setUniformCustomProperties": { "border": "1px solid black" }, "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "center", "vertical": "bottom" }, "maxRows": 40, "readOnly": false }, "hints": [{ "from": { "row": 0, "col": 0 }, "to": { "row": 2, "col": 0 }, "expectedvalues": [["Colby Group"], ["Trial Balance"], ["August 31, 2017"]], "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "styles": { "fontWeight": true } }, { "from": { "row": 5, "col": 0 }, "to": { "row": 9, "col": 2 }, "expectedvalues": [["Cash", 17300, ""], ["Accounts Receivable", 37000, ""], ["Supplies", 7400, ""], ["Prepaid Insurance", 1900, ""], ["Equipment", 196000, ""]] }, { "from": { "row": 10, "col": 0 }, "to": { "row": 14, "col": 2 }, "expectedvalues": [["Accounts Payable", "", 26000], ["Notes Payable", "", 97600], ["Terry Colby, Capital", "", 89650], ["Terry Colby, Drawing", 56000, ""], ["Fees Earned", "", 454450]] }, { "from": { "row": 15, "col": 0 }, "to": { "row": 18, "col": 2 }, "expectedvalues": [["Wages Expense", 270000, ""], ["Rent Expense", 51800, ""], ["Advertising Expense", 25200, ""], ["Misc. Expense", 5100, ""]] }], "modeconfig": { "mode": "Assessment", "hostAppRootPath": "libs", "role": "student", "showHintsBtn": false, "hideTopBar": false, "showCheckAnswerBtn": false, "showRibbon": true }, "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 3, "col": 1, "rowspan": 1, "colspan": 2 }], "rows": { "0": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "1": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "2": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "3": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "4": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "2": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "5": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "6": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "7": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "8": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "9": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "10": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "11": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "12": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "13": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "14": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "15": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "16": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "17": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "18": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "19": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } } }, "sheetNames": ["Solution"]
+                        },
+                        correctData: {
+                            correctData: [
+                                ["Colby Group", "", "", "", "", "", "", "", "", "", "", "", ""], ["Trial Balance", "", "", "", "", "", "", "", "", "", "", "", ""], ["August 31, 2017", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["Cash", 17300, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Receivable", 37000, "", "", "", "", "", "", "", "", "", "", ""], ["Supplies", 7400, "", "", "", "", "", "", "", "", "", "", ""], ["Prepaid Insurance", 1900, "", "", "", "", "", "", "", "", "", "", ""], ["Equipment", 196000, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Payable", "", 26000, "", "", "", "", "", "", "", "", "", ""], ["Notes Payable", "", 97600, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Capital", "", 89650, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Drawing", 56000, "", "", "", "", "", "", "", "", "", "", ""], ["Fees Earned", "", 454450, "", "", "", "", "", "", "", "", "", ""], ["Wages Expense", 270000, "", "", "", "", "", "", "", "", "", "", ""], ["Rent Expense", 51800, "", "", "", "", "", "", "", "", "", "", ""], ["Advertising Expense", 25200, "", "", "", "", "", "", "", "", "", "", ""], ["Misc. Expense", 5100, "", "", "", "", "", "", "", "", "", "", ""], ["Total", 667700, 667700, "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]
+                            ],
+                            validationJson: [
+                                { "cellRange": { "from": { "row": 0, "col": 0 }, "to": { "row": 0, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 0, "col": 0 } }, { "cellRange": { "from": { "row": 1, "col": 0 }, "to": { "row": 1, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 1, "col": 0 } }, { "cellRange": { "from": { "row": 2, "col": 0 }, "to": { "row": 2, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is missing.", "row": 2, "col": 0 } }, { "cellRange": { "from": { "row": 3, "col": 0 }, "to": { "row": 3, "col": 1 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 3, "col": 1 } }, { "cellRange": { "from": { "row": 4, "col": 0 }, "to": { "row": 4, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Account Titles are incorrect.", "row": 4, "col": 0 } }, { "cellRange": { "from": { "row": 5, "col": 0 }, "to": { "row": 5, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 5, "col": 0 } }, { "cellRange": { "from": { "row": 6, "col": 0 }, "to": { "row": 6, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 6, "col": 0 } }, { "cellRange": { "from": { "row": 7, "col": 0 }, "to": { "row": 7, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 7, "col": 0 } }, { "cellRange": { "from": { "row": 8, "col": 0 }, "to": { "row": 8, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 8, "col": 0 } }, { "cellRange": { "from": { "row": 9, "col": 0 }, "to": { "row": 9, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 9, "col": 0 } }, { "cellRange": { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 10, "col": 0 } }, { "cellRange": { "from": { "row": 11, "col": 0 }, "to": { "row": 11, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 11, "col": 0 } }, { "cellRange": { "from": { "row": 12, "col": 0 }, "to": { "row": 12, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 12, "col": 0 } }, { "cellRange": { "from": { "row": 13, "col": 0 }, "to": { "row": 13, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 13, "col": 0 } }, { "cellRange": { "from": { "row": 14, "col": 0 }, "to": { "row": 14, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 14, "col": 0 } }, { "cellRange": { "from": { "row": 15, "col": 0 }, "to": { "row": 15, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 15, "col": 0 } }, { "cellRange": { "from": { "row": 16, "col": 0 }, "to": { "row": 16, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 16, "col": 0 } }, { "cellRange": { "from": { "row": 17, "col": 0 }, "to": { "row": 17, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 17, "col": 0 } }, { "cellRange": { "from": { "row": 18, "col": 0 }, "to": { "row": 18, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 18, "col": 0 } }, { "cellRange": { "from": { "row": 19, "col": 0 }, "to": { "row": 19, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this row are incorrect.", "row": 19, "col": 0 } }
+                            ]
+                        }
+                    }
+                }
+            }
+        };
     }
-    DataService.prototype.getQuestionConfig = function (mode, id) {
-        return this.config[mode][id];
+    DataService.prototype.getQuestionConfig = function (mode, id, user) {
+        if (user === void 0) { user = null; }
+        var studentConfig;
+        if (user) {
+            try {
+                studentConfig = (user == "stu1") ? this.stu1config[mode][id] : this.stu2config[mode][id];
+            }
+            catch (err) {
+                studentConfig = this.config[mode][id];
+            }
+        }
+        if (!studentConfig) {
+            studentConfig = this.config[mode][id];
+        }
+        return studentConfig;
     };
     DataService.prototype.getTooltipText = function () {
         return { "text": "<div style = 'width:100%;text-align: center'><span style = 'margin-left:5px;margin-right:5px'>Final Velocity (v) - Initial Velocity (u)</span><hr style= 'width:100%;margin:auto'/><span>Segment Duration (t)</span></div>", "orientation": "right" };
     };
     DataService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* Injectable */])(), 
-        __metadata('design:paramtypes', [])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [])
     ], DataService);
     return DataService;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/data.service.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/data.service.js.map
 
 /***/ }),
 
-/***/ 334:
+/***/ 484:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(335);
+module.exports = __webpack_require__(485);
 
 
 /***/ }),
 
-/***/ 335:
+/***/ 485:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(364);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(435);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(501);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(513);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(584);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(752);
 
 
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_28" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/main.js.map
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/main.js.map
 
 /***/ }),
 
-/***/ 435:
+/***/ 584:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(142);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(436);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(443);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__leonardo_leonardo_module__ = __webpack_require__(467);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__dashboard_dashboard_module__ = __webpack_require__(489);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__data_service__ = __webpack_require__(320);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(496);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(591);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__leonardo_leonardo_module__ = __webpack_require__(613);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__dashboard_dashboard_module__ = __webpack_require__(740);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__data_service__ = __webpack_require__(471);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(747);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
 
@@ -316,7 +377,7 @@ var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["R" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]
             ],
@@ -330,39 +391,43 @@ var AppModule = (function () {
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_7__data_service__["a" /* DataService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/app.module.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/app.module.js.map
 
 /***/ }),
 
-/***/ 467:
+/***/ 613:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return leoRoutes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeonardoModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__leonardo_component__ = __webpack_require__(468);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__navigator_navigator_component__ = __webpack_require__(471);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__question_box_question_box_component__ = __webpack_require__(474);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__cosmatt_item_box_cosmatt_item_box_component__ = __webpack_require__(477);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__workspace_workspace_component__ = __webpack_require__(480);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__verticalSplitter_ng2_split_pane__ = __webpack_require__(483);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_pdf_viewer__ = __webpack_require__(614);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_pdf_viewer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_pdf_viewer__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__ = __webpack_require__(648);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__leonardo_component__ = __webpack_require__(716);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigator_navigator_component__ = __webpack_require__(719);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__question_box_question_box_component__ = __webpack_require__(722);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__cosmatt_item_box_cosmatt_item_box_component__ = __webpack_require__(725);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__workspace_workspace_component__ = __webpack_require__(728);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__verticalSplitter_ng2_split_pane__ = __webpack_require__(731);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__studymaterial_studymaterial_component__ = __webpack_require__(737);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+
+
+
 
 
 
@@ -374,47 +439,83 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var leoRoutes = [
     {
+        path: ':id/:mode/:user',
+        component: __WEBPACK_IMPORTED_MODULE_5__leonardo_component__["a" /* LeonardoComponent */]
+    },
+    {
         path: ':id/:mode',
-        component: __WEBPACK_IMPORTED_MODULE_3__leonardo_component__["a" /* LeonardoComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_5__leonardo_component__["a" /* LeonardoComponent */]
     }
 ];
 var LeonardoModule = (function () {
     function LeonardoModule() {
     }
     LeonardoModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
-                __WEBPACK_IMPORTED_MODULE_8__verticalSplitter_ng2_split_pane__["a" /* SplitPaneModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */]
+                __WEBPACK_IMPORTED_MODULE_10__verticalSplitter_ng2_split_pane__["a" /* SplitPaneModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */],
+                __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__["a" /* ModalModule */].forRoot()
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_3__leonardo_component__["a" /* LeonardoComponent */]
+                __WEBPACK_IMPORTED_MODULE_5__leonardo_component__["a" /* LeonardoComponent */]
             ],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__leonardo_component__["a" /* LeonardoComponent */],
-                __WEBPACK_IMPORTED_MODULE_4__navigator_navigator_component__["a" /* NavigatorComponent */],
-                __WEBPACK_IMPORTED_MODULE_5__question_box_question_box_component__["a" /* QuestionBoxComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__cosmatt_item_box_cosmatt_item_box_component__["a" /* CosmattItemBoxComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__workspace_workspace_component__["a" /* WorkspaceComponent */]
+                __WEBPACK_IMPORTED_MODULE_5__leonardo_component__["a" /* LeonardoComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__navigator_navigator_component__["a" /* NavigatorComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__question_box_question_box_component__["a" /* QuestionBoxComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__cosmatt_item_box_cosmatt_item_box_component__["a" /* CosmattItemBoxComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__workspace_workspace_component__["a" /* WorkspaceComponent */],
+                __WEBPACK_IMPORTED_MODULE_3_ng2_pdf_viewer__["PdfViewerComponent"],
+                __WEBPACK_IMPORTED_MODULE_11__studymaterial_studymaterial_component__["a" /* StudymaterialComponent */]
             ]
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], LeonardoModule);
     return LeonardoModule;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/leonardo.module.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/leonardo.module.js.map
 
 /***/ }),
 
-/***/ 468:
+/***/ 621:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 636:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 637:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 638:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 716:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeonardoComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_service__ = __webpack_require__(320);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_service__ = __webpack_require__(471);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_modal__ = __webpack_require__(470);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -427,6 +528,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var LeonardoComponent = (function () {
     function LeonardoComponent(dataService, route) {
         var _this = this;
@@ -435,7 +537,10 @@ var LeonardoComponent = (function () {
         this.sub = this.route.params.subscribe(function (params) {
             _this.id = params['id'];
             _this.mode = params['mode'];
-            var questionConfig = _this.dataService.getQuestionConfig(_this.mode, _this.id);
+            if (params['user']) {
+                _this.user = params['user'];
+            }
+            var questionConfig = _this.dataService.getQuestionConfig(_this.mode, _this.id, _this.user);
             _this.questionData = questionConfig["question"];
             _this.solutionData = questionConfig["solution"];
         });
@@ -445,20 +550,33 @@ var LeonardoComponent = (function () {
             },
             showCheckAnswer: this.checkmode(this.mode),
             showHintButton: this.checkmode(this.mode),
+            showStudyButton: this.checkmode(this.mode),
             showSubmitButton: true
         };
+        this.modalVisible = false;
     }
     LeonardoComponent.prototype.ngOnInit = function () {
     };
     LeonardoComponent.prototype.handleCompEvents = function ($event) {
         var eventMap = {
             "CHECK_MY_ANSWER_CLICKED": this.checkAnswer.bind(this),
-            "HINT_CLICKED": this.displayHint.bind(this)
+            "HINT_CLICKED": this.displayHint.bind(this),
+            "TRY_AGAIN_CLICKED": this.tryAgain.bind(this),
+            "STUDY_CLICKED": this.studyLaunch.bind(this),
         };
         eventMap[$event.eventId]();
     };
     LeonardoComponent.prototype.checkAnswer = function () {
         this.workspace.checkAnswer();
+    };
+    LeonardoComponent.prototype.studyLaunch = function () {
+        this.modalWindow.show();
+    };
+    LeonardoComponent.prototype.studyClose = function () {
+        this.modalWindow.hide();
+    };
+    LeonardoComponent.prototype.tryAgain = function () {
+        this.workspace.tryAgain();
     };
     LeonardoComponent.prototype.displayHint = function () {
         this.workspace.displayHint();
@@ -474,45 +592,53 @@ var LeonardoComponent = (function () {
             return true;
         }
     };
+    LeonardoComponent.prototype.setModalVisibilty = function (modalVisiblity) {
+        this.modalVisible = modalVisiblity;
+    };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* ViewChild */])('contentWrapper'), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('modalWindow'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_modal__["a" /* ModalDirective */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_modal__["a" /* ModalDirective */]) === "function" && _a || Object)
+    ], LeonardoComponent.prototype, "modalWindow", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('contentWrapper'),
+        __metadata("design:type", Object)
     ], LeonardoComponent.prototype, "contentWrapper", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* ViewChild */])('workspace'), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('workspace'),
+        __metadata("design:type", Object)
     ], LeonardoComponent.prototype, "workspace", void 0);
     LeonardoComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-leonardo',
-            template: __webpack_require__(469),
-            styles: [__webpack_require__(470)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]) === 'function' && _b) || Object])
+            template: __webpack_require__(717),
+            styles: [__webpack_require__(718)]
+        }),
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object])
     ], LeonardoComponent);
     return LeonardoComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/leonardo.component.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/leonardo.component.js.map
 
 /***/ }),
 
-/***/ 469:
+/***/ 717:
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"mode=='Training' && id!='3'\" #contentWrapper class=\"contentWrapper\">\r\n  <vertical-split-pane class=\"verticalSeparator\" primary-component-initialratio=\"0.30\" separator-thickness=\"21\" [primary-component-minsize]=\"0\"\r\n    [secondary-component-minsize]=\"829\">\r\n    <div class=\"split-pane-content-primary\">\r\n      <app-question-box class=\"questionWrapper\" [questionData]='questionData'></app-question-box>\r\n    </div>\r\n    <div class=\"split-pane-content-secondary\">\r\n      <app-workspace #workspace class=\"workspaceWrapper\" [solutionData]='solutionData' (gridEvent) = \"handleGridEvent($event)\"></app-workspace>\r\n    </div>\r\n  </vertical-split-pane>\r\n</div>\r\n<div *ngIf=\"mode=='Assessment' && id!='3'\" #contentWrapper class=\"contentWrapper verticalView\">\r\n      <app-question-box class=\"questionWrapper\" [questionData]='questionData'></app-question-box>\r\n      <app-workspace #workspace class=\"workspaceWrapper col-md-12\" [solutionData]='solutionData' (gridEvent) = \"handleGridEvent($event)\"></app-workspace>\r\n</div>\r\n\r\n<div *ngIf=\"id=='3'\"  #contentWrapper class=\"contentWrapper verticalView cosmattItemWrapper\">\r\n  <cosmatt-item-box #workspace class=\"questionWrapper\" [questionData]='questionData' [solutionData]='solutionData' (gridEvent) = \"handleGridEvent($event)\"></cosmatt-item-box>\r\n</div>\r\n\r\n<app-navigator *ngIf=\"id!='3'\" (navEvent)=\"handleCompEvents($event)\" class=\"navigatorWrapper\" [navigatorData] = \"navigatorData\"></app-navigator>\r\n"
+module.exports = "<div *ngIf=\"id!='3'\" #contentWrapper class=\"contentWrapper\">\n  <vertical-split-pane class=\"verticalSeparator\" primary-component-initialratio=\"0.30\" separator-thickness=\"21\" [primary-component-minsize]=\"0\"\n    [secondary-component-minsize]=\"829\">\n    <div class=\"split-pane-content-primary\">\n      <app-question-box class=\"questionWrapper\" [questionData]='questionData'></app-question-box>\n    </div>\n    <div class=\"split-pane-content-secondary\">\n      <app-workspace #workspace class=\"workspaceWrapper\" [solutionData]='solutionData' (gridEvent) = \"handleGridEvent($event)\"></app-workspace>\n    </div>\n  </vertical-split-pane>\n</div>\n<!-- <div *ngIf=\"mode=='Assessment' && id!='3'\" #contentWrapper class=\"contentWrapper verticalView\">\n      <app-question-box class=\"questionWrapper\" [questionData]='questionData'></app-question-box>\n      <app-workspace #workspace class=\"workspaceWrapper col-md-12\" [solutionData]='solutionData' (gridEvent) = \"handleGridEvent($event)\"></app-workspace>\n</div> -->\n\n<div *ngIf=\"id=='3'\"  #contentWrapper class=\"contentWrapper verticalView cosmattItemWrapper\">\n  <cosmatt-item-box #workspace class=\"questionWrapper\" [questionData]='questionData' [solutionData]='solutionData' (gridEvent) = \"handleGridEvent($event)\"></cosmatt-item-box>\n</div>\n\n<div bsModal #modalWindow=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" (onShown)=\"setModalVisibilty(true)\" (onHidden)=\"setModalVisibilty(false)\"aria-labelledby=\"mySmallModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-view\">\n    <div class=\"modal-content \">\n      <div class=\"modal-header comproBand\">        \n        <p class=\"modal-title text-xs-center fw-bold mt\" id=\"myModalLabel18\">Study - Accounting Fundamentals and Concepts\n        <button (click)=\"modalWindow.hide()\" aria-label=\"Close\" class=\"pull-right closeButton\" type=\"button\">\n          <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\n        </button>\n      </p>\n      </div>\n      <div class=\"modal-body\">\n        <app-studymaterial [modalVisible]= \"modalVisible\"></app-studymaterial>\n      </div>\n    </div>\n  </div>  \n</div>\n\n<app-navigator *ngIf=\"id!='3'\" (navEvent)=\"handleCompEvents($event)\" class=\"navigatorWrapper\" [navigatorData] = \"navigatorData\"></app-navigator>\n"
 
 /***/ }),
 
-/***/ 470:
+/***/ 718:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)();
+exports = module.exports = __webpack_require__(20)();
 // imports
 
 
 // module
-exports.push([module.i, ".contentWrapper > * {\n  display: inline-block; }\n\n.contentWrapper {\n  height: calc(100% - 108px);\n  width: 100%;\n  background-color: #ececec; }\n\n.navigatorWrapper {\n  height: 155px;\n  bottom: 0;\n  font-size: 1.1em;\n  line-height: 1.6; }\n\n.workspaceWrapper {\n  height: 100%; }\n\n.split-pane-content-primary {\n  height: 100%;\n  width: 100%;\n  overflow: auto; }\n\n.split-pane-content-secondary {\n  height: 100%;\n  width: 100%; }\n\n.questionWrapper {\n  height: 100%;\n  width: 100%;\n  overflow: auto; }\n\n.contentWrapper.verticalView {\n  overflow-y: auto;\n  overflow-x: hidden;\n  background-color: #fff; }\n  .contentWrapper.verticalView .questionWrapper {\n    height: auto; }\n\n.contentWrapper.verticalView.cosmattItemWrapper {\n  height: calc(100% - 54px); }\n", ""]);
+exports.push([module.i, ".contentWrapper > * {\n  display: inline-block; }\n\n.contentWrapper {\n  height: calc(100% - 108px);\n  width: 100%;\n  background-color: #ececec; }\n\n.navigatorWrapper {\n  height: 155px;\n  bottom: 0;\n  font-size: 1.1em;\n  line-height: 1.6; }\n\n.workspaceWrapper {\n  height: 100%; }\n\n.split-pane-content-primary {\n  height: 100%;\n  width: 100%;\n  overflow: auto; }\n\n.split-pane-content-secondary {\n  height: 100%;\n  width: 100%; }\n\n.questionWrapper {\n  height: 100%;\n  width: 100%;\n  overflow: auto; }\n\n.contentWrapper.verticalView {\n  overflow-y: auto;\n  background-color: #fff; }\n  .contentWrapper.verticalView .questionWrapper {\n    height: auto; }\n\n.contentWrapper.verticalView.cosmattItemWrapper {\n  height: calc(100% - 54px); }\n\n.modal-view {\n  width: 90%;\n  height: 85%;\n  top: 10%;\n  margin: auto; }\n\n.modal-content {\n  height: 100%; }\n\n.modal-body {\n  height: calc(100% - 64px);\n  padding: 0px; }\n\n.modal-header {\n  border-bottom: 0px; }\n\n.comproBand {\n  background: #000000;\n  color: #ffffff;\n  font-weight: bold;\n  font-size: 24px; }\n  .comproBand .closeButton {\n    color: #DAD2D2;\n    background: transparent;\n    border: 0px;\n    font-size: 18px; }\n", ""]);
 
 // exports
 
@@ -522,13 +648,13 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 471:
+/***/ 719:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigatorComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(72);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -543,20 +669,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var NavigatorComponent = (function () {
     function NavigatorComponent(router) {
         this.router = router;
-        this.navEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* EventEmitter */]();
+        this.navEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.answerButtonMode = "checkAnswer";
+        this.submitButtonMode = "submit";
     }
     NavigatorComponent.prototype.ngOnInit = function () {
         console.log(this.navigatorData);
     };
     NavigatorComponent.prototype.checkMyAnswer = function () {
-        this.navEvent.emit({ eventId: "CHECK_MY_ANSWER_CLICKED" });
+        if (this.answerButtonMode == "checkAnswer") {
+            this.navEvent.emit({ eventId: "CHECK_MY_ANSWER_CLICKED" });
+            this.answerButtonMode = "tryAgain";
+        }
+        else if (this.answerButtonMode == "tryAgain") {
+            this.navEvent.emit({ eventId: "TRY_AGAIN_CLICKED" });
+            this.answerButtonMode = "checkAnswer";
+        }
     };
     NavigatorComponent.prototype.displayHint = function () {
         this.navEvent.emit({ eventId: "HINT_CLICKED" });
     };
+    NavigatorComponent.prototype.launchEbook = function () {
+        this.navEvent.emit({ eventId: "STUDY_CLICKED" });
+    };
     NavigatorComponent.prototype.handleSubmitClick = function () {
-        Leonardo.scripts.destroyGrids();
-        this.router.navigate(['/dashboard']);
+        if (this.submitButtonMode == "submit") {
+            this.submitButtonMode = "close";
+            this.navEvent.emit({ eventId: "CHECK_MY_ANSWER_CLICKED" });
+        }
+        else {
+            Leonardo.scripts.destroyGrids();
+            this.router.navigate(['/dashboard']);
+        }
     };
     NavigatorComponent.prototype.checkvisiblity = function (mode) {
         if (mode == true) {
@@ -567,39 +711,40 @@ var NavigatorComponent = (function () {
         }
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Output */])(), 
-        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* EventEmitter */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* EventEmitter */]) === 'function' && _a) || Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
     ], NavigatorComponent.prototype, "navEvent", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Input */])(), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
     ], NavigatorComponent.prototype, "navigatorData", void 0);
     NavigatorComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-navigator',
-            template: __webpack_require__(472),
-            styles: [__webpack_require__(473)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
+            template: __webpack_require__(720),
+            styles: [__webpack_require__(721)]
+        }),
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
     ], NavigatorComponent);
     return NavigatorComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/navigator.component.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/navigator.component.js.map
 
 /***/ }),
 
-/***/ 472:
+/***/ 720:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-default\">\r\n  <div class=\"panel-body\" style=\"display: none;\">\r\n    <p>Prepare the trial balance. Remember that each lineof the heading is very important and should be in a specific order.</p>\r\n    <p><i>Avoid committing spelling mistakes while typing the account heads.</i></p>\r\n  </div>\r\n  <div class=\"panel-footer\">\r\n    <button class=\"btn btn-primary\" [style.visibility]=\"checkvisiblity(navigatorData.showHintButton)\" (click)=\"displayHint()\" [disabled] = \"navigatorData.hint.isLastHint\">Hint</button>\r\n    <button class=\"btn btn-primary\" [style.visibility] = \"checkvisiblity(navigatorData.showCheckAnswer)\" (click)=\"checkMyAnswer()\">Check My Work</button>\r\n    <button class=\"btn btn-primary pull-right\" [style.visibility] = \"checkvisiblity(navigatorData.showSubmitButton)\" (click) = \"handleSubmitClick()\">Submit</button>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"panel panel-default\">\n  <div class=\"panel-body\" style=\"display: none;\">\n    <p>Prepare the trial balance. Remember that each lineof the heading is very important and should be in a specific order.</p>\n    <p><i>Avoid committing spelling mistakes while typing the account heads.</i></p>\n  </div>\n  <div class=\"panel-footer\">\n    <button class=\"btn btn-primary\" [style.visibility]=\"checkvisiblity(navigatorData.showStudyButton)\" (click)=\"launchEbook()\">Study</button>\n    <button class=\"btn btn-primary\" [style.visibility]=\"checkvisiblity(navigatorData.showHintButton)\" (click)=\"displayHint()\" [disabled] = \"navigatorData.hint.isLastHint\">Hint</button>\n    <button class=\"btn btn-primary\" [style.visibility] = \"checkvisiblity(navigatorData.showCheckAnswer)\" (click)=\"checkMyAnswer()\">{{(this.answerButtonMode == \"checkAnswer\"?\"Check My Work\":\"Try Again\")}}</button>\n    <button class=\"btn btn-primary pull-right\" [style.visibility] = \"checkvisiblity(navigatorData.showSubmitButton)\" (click) = \"handleSubmitClick()\">{{(this.submitButtonMode == \"submit\"?\"Submit\":\"Close\")}}</button>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ 473:
+/***/ 721:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)();
+exports = module.exports = __webpack_require__(20)();
 // imports
 
 
@@ -614,7 +759,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 474:
+/***/ 722:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -642,39 +787,40 @@ var QuestionBoxComponent = (function () {
         }
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Input */])(), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
     ], QuestionBoxComponent.prototype, "questionData", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* ViewChild */])('questionHost'), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('questionHost'),
+        __metadata("design:type", Object)
     ], QuestionBoxComponent.prototype, "questionHost", void 0);
     QuestionBoxComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-question-box',
-            template: __webpack_require__(475),
-            styles: [__webpack_require__(476)],
-            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* ViewEncapsulation */].None
-        }), 
-        __metadata('design:paramtypes', [])
+            template: __webpack_require__(723),
+            styles: [__webpack_require__(724)],
+            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
+        }),
+        __metadata("design:paramtypes", [])
     ], QuestionBoxComponent);
     return QuestionBoxComponent;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/question-box.component.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/question-box.component.js.map
 
 /***/ }),
 
-/***/ 475:
+/***/ 723:
 /***/ (function(module, exports) {
 
-module.exports = "<div #questionHost class=\"col-md-12 questionHost\">\r\n</div>"
+module.exports = "<div #questionHost class=\"col-md-12 questionHost\">\n</div>"
 
 /***/ }),
 
-/***/ 476:
+/***/ 724:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)();
+exports = module.exports = __webpack_require__(20)();
 // imports
 
 
@@ -689,7 +835,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 477:
+/***/ 725:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -732,7 +878,7 @@ var CosmattItemBoxComponent = (function () {
                 this.workspace.nativeElement.style.width = this.solutionData.gridUIParams.width + "px";
             }
         }
-        Leonardo.scripts.add(this.workspace.nativeElement, this.solutionData.config, this.solutionData.correctData);
+        Leonardo.scripts.add(this.workspace.nativeElement, JSON.parse(JSON.stringify(this.solutionData.config)), this.solutionData.correctData);
     };
     CosmattItemBoxComponent.prototype.cmwHandler = function () {
         this.isCMWEnabled = false;
@@ -743,51 +889,52 @@ var CosmattItemBoxComponent = (function () {
         Leonardo.scripts.reset(this.workspace.nativeElement);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Input */])(), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
     ], CosmattItemBoxComponent.prototype, "questionData", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Input */])(), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
     ], CosmattItemBoxComponent.prototype, "solutionData", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* ViewChild */])('cosmattItemContainer'), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('cosmattItemContainer'),
+        __metadata("design:type", Object)
     ], CosmattItemBoxComponent.prototype, "cosmattItemContainer", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* ViewChild */])('qInstruction'), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('qInstruction'),
+        __metadata("design:type", Object)
     ], CosmattItemBoxComponent.prototype, "qInstruction", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* ViewChild */])('workspace'), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('workspace'),
+        __metadata("design:type", Object)
     ], CosmattItemBoxComponent.prototype, "workspace", void 0);
     CosmattItemBoxComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'cosmatt-item-box',
-            template: __webpack_require__(478),
-            styles: [__webpack_require__(479)],
-            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* ViewEncapsulation */].None
-        }), 
-        __metadata('design:paramtypes', [])
+            template: __webpack_require__(726),
+            styles: [__webpack_require__(727)],
+            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
+        }),
+        __metadata("design:paramtypes", [])
     ], CosmattItemBoxComponent);
     return CosmattItemBoxComponent;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/cosmatt-item-box.component.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/cosmatt-item-box.component.js.map
 
 /***/ }),
 
-/***/ 478:
+/***/ 726:
 /***/ (function(module, exports) {
 
-module.exports = "<div #cosmattItemHost class=\"col-md-12 cosmattItemHost\">\r\n  <div #itemHeaderContainer class=\"col-md-11 itemHeaderContainer \">\r\n    <h2>\r\n      <span class=\"glyphicon glyphicon-book\"></span>\r\n      <span>{{chapName}}</span>\r\n      <span>-</span>\r\n      <span>{{secName}}</span>\r\n    </h2>\r\n  </div>\r\n  <div #cosmattItemContainer class=\"col-md-11 cosmattItemContainer\"></div>\r\n  <div #workspaceHost class=\"col-md-11 workspaceHost\">\r\n    <div #workspaceContainer class=\"workspaceContainer\">\r\n      <div class=\"qInstruction\">\r\n        <div class=\"qLabel\">Question:</div>\r\n        <div #qInstruction class=\"statement\"></div>\r\n      </div>\r\n      <div #workspace class=\"workspace\">\r\n      </div>\r\n      <div class=\"btnContainer\">\r\n        <button class=\"navBtn btnCMW\" (click)=\"cmwHandler()\" [disabled]=\"!isCMWEnabled\">\r\n          <a>\r\n            <span class=\"glyphicon glyphicon-ok\"></span>\r\n          </a>\r\n          <span class=\"btnText\">Check My Work</span>\r\n        </button>\r\n        <button class=\"navBtn btnReset\" (click)=\"resetHandler()\">\r\n          <a>\r\n            <span class=\"glyphicon glyphicon-repeat\"></span>\r\n          </a>\r\n          <span class=\"btnText\">Reset</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div #cosmattItemHost class=\"col-md-12 cosmattItemHost\">\n  <div #itemHeaderContainer class=\"col-md-11 itemHeaderContainer \">\n    <h2>\n      <span class=\"glyphicon glyphicon-book\"></span>\n      <span>{{chapName}}</span>\n      <span>-</span>\n      <span>{{secName}}</span>\n    </h2>\n  </div>\n  <div #cosmattItemContainer class=\"col-md-11 cosmattItemContainer\"></div>\n  <div #workspaceHost class=\"col-md-11 workspaceHost\">\n    <div #workspaceContainer class=\"workspaceContainer\">\n      <div class=\"qInstruction\">\n        <div class=\"qLabel\">Question:</div>\n        <div #qInstruction class=\"statement\"></div>\n      </div>\n      <div #workspace class=\"workspace\">\n      </div>\n      <div class=\"btnContainer\">\n        <button class=\"navBtn btnCMW\" (click)=\"cmwHandler()\" [disabled]=\"!isCMWEnabled\">\n          <a>\n            <span class=\"glyphicon glyphicon-ok\"></span>\n          </a>\n          <span class=\"btnText\">Check My Work</span>\n        </button>\n        <button class=\"navBtn btnReset\" (click)=\"resetHandler()\">\n          <a>\n            <span class=\"glyphicon glyphicon-repeat\"></span>\n          </a>\n          <span class=\"btnText\">Reset</span>\n        </button>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ 479:
+/***/ 727:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)();
+exports = module.exports = __webpack_require__(20)();
 // imports
 
 
@@ -802,7 +949,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 480:
+/***/ 728:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -820,7 +967,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var WorkspaceComponent = (function () {
     function WorkspaceComponent() {
-        this.gridEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* EventEmitter */]();
+        this.gridEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     WorkspaceComponent.prototype.ngOnInit = function () {
         if (this.solutionData.gridUIParams) {
@@ -836,6 +983,9 @@ var WorkspaceComponent = (function () {
     WorkspaceComponent.prototype.checkAnswer = function () {
         Leonardo.scripts.checkAnswer(this.leoHost.nativeElement);
     };
+    WorkspaceComponent.prototype.tryAgain = function () {
+        Leonardo.scripts.tryAgain(this.leoHost.nativeElement);
+    };
     WorkspaceComponent.prototype.displayHint = function () {
         var hint = Leonardo.scripts.displayHint(this.leoHost.nativeElement);
         if (hint.isLastHint) {
@@ -843,43 +993,44 @@ var WorkspaceComponent = (function () {
         }
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Input */])(), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
     ], WorkspaceComponent.prototype, "solutionData", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* ViewChild */])('leoHost'), 
-        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* ElementRef */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* ElementRef */]) === 'function' && _a) || Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('leoHost'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
     ], WorkspaceComponent.prototype, "leoHost", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Output */])(), 
-        __metadata('design:type', (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* EventEmitter */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* EventEmitter */]) === 'function' && _b) || Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
     ], WorkspaceComponent.prototype, "gridEvent", void 0);
     WorkspaceComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-workspace',
-            template: __webpack_require__(481),
-            styles: [__webpack_require__(482)]
-        }), 
-        __metadata('design:paramtypes', [])
+            template: __webpack_require__(729),
+            styles: [__webpack_require__(730)]
+        }),
+        __metadata("design:paramtypes", [])
     ], WorkspaceComponent);
     return WorkspaceComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/workspace.component.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/workspace.component.js.map
 
 /***/ }),
 
-/***/ 481:
+/***/ 729:
 /***/ (function(module, exports) {
 
-module.exports = "<div #leoHost class=\"leoHost\">\r\n</div>"
+module.exports = "<div #leoHost class=\"leoHost\">\n</div>"
 
 /***/ }),
 
-/***/ 482:
+/***/ 730:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)();
+exports = module.exports = __webpack_require__(20)();
 // imports
 
 
@@ -894,23 +1045,20 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 483:
+/***/ 731:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SplitPaneModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vertical_split_pane_separator_component__ = __webpack_require__(484);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__vertical_split_pane_component__ = __webpack_require__(486);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vertical_split_pane_separator_component__ = __webpack_require__(732);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__vertical_split_pane_component__ = __webpack_require__(734);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
 
@@ -919,72 +1067,76 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var SplitPaneModule = (function () {
     function SplitPaneModule() {
     }
+    SplitPaneModule_1 = SplitPaneModule;
     SplitPaneModule.forRoot = function () {
         return {
-            ngModule: SplitPaneModule,
+            ngModule: SplitPaneModule_1,
             providers: []
         };
     };
-    SplitPaneModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* NgModule */])({
+    SplitPaneModule = SplitPaneModule_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [__WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */]],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__vertical_split_pane_component__["a" /* VerticalSplitPaneComponent */],
                 __WEBPACK_IMPORTED_MODULE_2__vertical_split_pane_separator_component__["a" /* VerticalSplitSeparatorComponent */]
             ],
             exports: [__WEBPACK_IMPORTED_MODULE_3__vertical_split_pane_component__["a" /* VerticalSplitPaneComponent */]]
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], SplitPaneModule);
     return SplitPaneModule;
+    var SplitPaneModule_1;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/ng2-split-pane.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/ng2-split-pane.js.map
 
 /***/ }),
 
-/***/ 484:
+/***/ 732:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerticalSplitSeparatorComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__split_pane_separator_component__ = __webpack_require__(485);
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__split_pane_separator_component__ = __webpack_require__(733);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 
 var VerticalSplitSeparatorComponent = (function (_super) {
     __extends(VerticalSplitSeparatorComponent, _super);
     function VerticalSplitSeparatorComponent() {
-        _super.apply(this, arguments);
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     VerticalSplitSeparatorComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'vertical-split-separator',
             styles: ["\n    :host {\n      width: 21px;\n      cursor: url(../assets/cursor.cur), ew-resize;\n      position: relative;\n      background-color: #f7f7f7;\n      border-left: 1px solid lightgrey;\n      z-index:2;\n    }\n\n    .handle {\n      width: 100%;\n      height: 100%;\n      padding-left: 3px;\n      background-color: rgba(0,0,0,0);\n      position: absolute;\n    }\n  "],
             template: "\n    <div class=\"handle\"><img src=\"../assets/splitter.png\"></div>\n  "
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], VerticalSplitSeparatorComponent);
     return VerticalSplitSeparatorComponent;
 }(__WEBPACK_IMPORTED_MODULE_1__split_pane_separator_component__["a" /* SplitSeparatorComponent */]));
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/vertical-split-pane-separator.component.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/vertical-split-pane-separator.component.js.map
 
 /***/ }),
 
-/***/ 485:
+/***/ 733:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1002,7 +1154,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var SplitSeparatorComponent = (function () {
     function SplitSeparatorComponent() {
-        this.notifyWillChangeSize = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* EventEmitter */]();
+        this.notifyWillChangeSize = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     SplitSeparatorComponent.prototype.ngOnInit = function () {
     };
@@ -1011,39 +1163,41 @@ var SplitSeparatorComponent = (function () {
         return false;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Output */])(), 
-        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* EventEmitter */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* EventEmitter */]) === 'function' && _a) || Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
     ], SplitSeparatorComponent.prototype, "notifyWillChangeSize", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["H" /* HostListener */])('mousedown', ['$event']), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [Object]), 
-        __metadata('design:returntype', void 0)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('mousedown', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
     ], SplitSeparatorComponent.prototype, "onMousedown", null);
-    SplitSeparatorComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({}), 
-        __metadata('design:paramtypes', [])
-    ], SplitSeparatorComponent);
     return SplitSeparatorComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/split-pane-separator.component.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/split-pane-separator.component.js.map
 
 /***/ }),
 
-/***/ 486:
+/***/ 734:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerticalSplitPaneComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__split_pane_component__ = __webpack_require__(487);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__position_service__ = __webpack_require__(488);
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__split_pane_component__ = __webpack_require__(735);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__position_service__ = __webpack_require__(736);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1059,7 +1213,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var VerticalSplitPaneComponent = (function (_super) {
     __extends(VerticalSplitPaneComponent, _super);
     function VerticalSplitPaneComponent() {
-        _super.apply(this, arguments);
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     VerticalSplitPaneComponent.prototype.getTotalSize = function () {
         return this.outerContainer.nativeElement.offsetWidth;
@@ -1084,31 +1238,31 @@ var VerticalSplitPaneComponent = (function (_super) {
         return false;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* ViewChild */])('outer'), 
-        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* ElementRef */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* ElementRef */]) === 'function' && _a) || Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('outer'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
     ], VerticalSplitPaneComponent.prototype, "outerContainer", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["H" /* HostListener */])('mousemove', ['$event']), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [Object]), 
-        __metadata('design:returntype', void 0)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('mousemove', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
     ], VerticalSplitPaneComponent.prototype, "onMousemove", null);
     VerticalSplitPaneComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'vertical-split-pane',
             styles: ["\n    :host{\n      height: 100%;\n      width: 100%;\n    }\n    .v-outer {\n      height: calc(100% - 1px);\n      width: 100%;\n      padding-top: 1px;\n      display: flex;\n      border-left: 1px solid #ddd;\n      border-right: 1px solid #ddd;\n      background-color: #fff;\n    }\n\n    .left-component {\n      width: calc(50%);\n      height:100%;      \n    }\n\n    .right-component {\n      width: calc(50%);\n      overflow: hidden;\n      height:100%;\n    }\n  "],
             template: "\n  <div #outer class=\"v-outer\">\n    <div #primaryComponent class=\"left-component\">\n      <ng-content select=\".split-pane-content-primary\"></ng-content>\n    </div>\n    <vertical-split-separator #separator (notifyWillChangeSize)=\"notifyWillChangeSize($event)\"></vertical-split-separator>\n    <div #secondaryComponent class=\"right-component\">\n      <ng-content select=\".split-pane-content-secondary\"></ng-content>\n    </div>\n  </div>\n  ",
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], VerticalSplitPaneComponent);
     return VerticalSplitPaneComponent;
     var _a;
 }(__WEBPACK_IMPORTED_MODULE_1__split_pane_component__["a" /* SplitPaneComponent */]));
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/vertical-split-pane.component.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/vertical-split-pane.component.js.map
 
 /***/ }),
 
-/***/ 487:
+/***/ 735:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1130,7 +1284,7 @@ var SplitPaneComponent = (function () {
         this.primaryMinSize = 0;
         this.secondaryMinSize = 0;
         this.localStorageKey = null;
-        this.notifySizeDidChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* EventEmitter */]();
+        this.notifySizeDidChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this.dividerSize = 8.0;
         this.isResizing = false;
     }
@@ -1185,54 +1339,48 @@ var SplitPaneComponent = (function () {
         return false;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* ViewChild */])('primaryComponent'), 
-        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* ElementRef */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* ElementRef */]) === 'function' && _a) || Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('primaryComponent'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
     ], SplitPaneComponent.prototype, "primaryComponent", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* ViewChild */])('secondaryComponent'), 
-        __metadata('design:type', (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* ElementRef */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* ElementRef */]) === 'function' && _b) || Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('secondaryComponent'),
+        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _b || Object)
     ], SplitPaneComponent.prototype, "secondaryComponent", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Input */])('primary-component-initialratio'), 
-        __metadata('design:type', Number)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('primary-component-initialratio'),
+        __metadata("design:type", Number)
     ], SplitPaneComponent.prototype, "initialRatio", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Input */])('primary-component-minsize'), 
-        __metadata('design:type', Number)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('primary-component-minsize'),
+        __metadata("design:type", Number)
     ], SplitPaneComponent.prototype, "primaryMinSize", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Input */])('secondary-component-minsize'), 
-        __metadata('design:type', Number)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('secondary-component-minsize'),
+        __metadata("design:type", Number)
     ], SplitPaneComponent.prototype, "secondaryMinSize", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Input */])('local-storage-key'), 
-        __metadata('design:type', String)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('local-storage-key'),
+        __metadata("design:type", String)
     ], SplitPaneComponent.prototype, "localStorageKey", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Y" /* Output */])('on-change'), 
-        __metadata('design:type', (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* EventEmitter */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* EventEmitter */]) === 'function' && _c) || Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('on-change'),
+        __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
     ], SplitPaneComponent.prototype, "notifySizeDidChange", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["H" /* HostListener */])('mouseup', ['$event']), 
-        __metadata('design:type', Function), 
-        __metadata('design:paramtypes', [Object]), 
-        __metadata('design:returntype', void 0)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('mouseup', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
     ], SplitPaneComponent.prototype, "onMouseup", null);
-    SplitPaneComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({
-            selector: 'split-pane',
-            host: { 'style': 'height: 40px; position:relative; top:2px; left:20px;' }
-        }), 
-        __metadata('design:paramtypes', [])
-    ], SplitPaneComponent);
     return SplitPaneComponent;
     var _a, _b, _c;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/split-pane.component.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/split-pane.component.js.map
 
 /***/ }),
 
-/***/ 488:
+/***/ 736:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1388,21 +1536,18 @@ var PositionService = (function () {
     ;
     return PositionService;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/position.service.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/position.service.js.map
 
 /***/ }),
 
-/***/ 489:
+/***/ 737:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return dashboardRoutes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StudymaterialComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_component__ = __webpack_require__(490);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dashboard_item_dashboard_item_component__ = __webpack_require__(493);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(7);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1411,6 +1556,207 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var StudymaterialComponent = (function () {
+    function StudymaterialComponent(platformlocation) {
+        this.platformlocation = platformlocation;
+        var currentUrl = this.platformlocation.location.href;
+        var requestUrl = currentUrl.split("/").slice(0, 3).join("/");
+        this.studyUrl = requestUrl + '/assets/studyMaterial.pdf';
+        this.viewerZoomValue = 0.75;
+        this.activePage = 1;
+        this.listItems = [
+            {
+                heading: "A. Accounts",
+                topics: [{
+                        heading: "A.1. Asset Accounts",
+                        page: 1
+                    },
+                    {
+                        heading: "A.2. Liability Accounts",
+                        page: 2
+                    },
+                    {
+                        heading: "A.3. Shareholders Accounts",
+                        page: 3
+                    },
+                    {
+                        heading: "A.4. T-Accounts",
+                        page: 4
+                    },
+                    {
+                        heading: "A.5. Chart of Accounts",
+                        page: 6
+                    }
+                ]
+            },
+            {
+                heading: "B. The Trial Balance",
+                topics: [{
+                        heading: "B.1. Trial Balance",
+                        page: 7
+                    }
+                ]
+            },
+            {
+                heading: "C. Using Formula Accounting Records",
+                topics: [{
+                        heading: "C.1. Recording Transactions in the General Journal",
+                        page: 10
+                    },
+                    {
+                        heading: "C.2. Posting Transactions to the General Ledger",
+                        page: 13
+                    }
+                ]
+            }
+        ];
+    }
+    StudymaterialComponent.prototype.ngOnInit = function () {
+    };
+    StudymaterialComponent.prototype.ngAfterViewInit = function () {
+        var rootNodes = document.querySelectorAll("label.tree-toggler");
+        for (var i = 0; i < rootNodes.length; i++) {
+            rootNodes[i].addEventListener("click", function () {
+                if (this.classList.contains("listHead-selected")) {
+                    this.children[1].classList.remove("glyphicon-menu-up");
+                    this.children[1].classList.add("glyphicon-menu-down");
+                    this.classList.remove("listHead-selected");
+                }
+                else {
+                    this.classList.add("listHead-selected");
+                    this.children[1].classList.remove("glyphicon-menu-down");
+                    this.children[1].classList.add("glyphicon-menu-up");
+                }
+                var listElement = this.parentElement.children[1];
+                if (listElement.style.display == "none" || listElement.style.display == "") {
+                    listElement.style.display = "block";
+                }
+                else {
+                    listElement.style.display = "none";
+                }
+            });
+        }
+        this.updateviewforFirstElemSelected(rootNodes[0]);
+        //   $('label.tree-toggler').click(function () {
+        //     $(this).parent().children('ul.tree').toggle(300);
+        // });
+    };
+    StudymaterialComponent.prototype.updateviewforFirstElemSelected = function (firstElement) {
+        firstElement.parentElement.children[1]["style"].display = "block";
+        firstElement.parentElement.children[1].children[0].classList.add("topic-selected");
+        firstElement.classList.add("listHead-selected");
+        firstElement.children[1].classList.remove("glyphicon-menu-down");
+        firstElement.children[1].classList.add("glyphicon-menu-up");
+    };
+    StudymaterialComponent.prototype.onError = function (error) {
+        console.log(error);
+        // for pdf viewer
+    };
+    StudymaterialComponent.prototype.callBackFn = function (check) {
+        // for pdf viewer    
+    };
+    StudymaterialComponent.prototype.handleElementClick = function (pageIndex, event) {
+        var selectedtopicElem = document.getElementsByClassName("topic-selected")[0];
+        if (selectedtopicElem) {
+            selectedtopicElem.classList.remove("topic-selected");
+        }
+        if (event.target.tagName == "LI") {
+            event.target.classList.add("topic-selected");
+        }
+        else {
+            event.target.parentElement.classList.add("topic-selected");
+        }
+        this.changeActivePage(pageIndex);
+    };
+    StudymaterialComponent.prototype.changeActivePage = function (pageIndex) {
+        this.activePage = pageIndex;
+    };
+    StudymaterialComponent.prototype.changePage = function (direction) {
+        if (direction == "next") {
+            this.changeActivePage(this.activePage + 1);
+        }
+        else if (direction == "previous") {
+            this.changeActivePage(this.activePage - 1);
+        }
+    };
+    StudymaterialComponent.prototype.changeViewerZoom = function (value) {
+        if (value > 0.4 && value <= 1) {
+            this.viewerZoomValue = value;
+        }
+    };
+    StudymaterialComponent.prototype.updateZoomValue = function (direction) {
+        if (direction == "decrease") {
+            this.changeViewerZoom(this.viewerZoomValue - 0.05);
+        }
+        else {
+            this.changeViewerZoom(this.viewerZoomValue + 0.05);
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Boolean)
+    ], StudymaterialComponent.prototype, "modalVisible", void 0);
+    StudymaterialComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-studymaterial',
+            template: __webpack_require__(738),
+            styles: [__webpack_require__(739)],
+            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* PlatformLocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* PlatformLocation */]) === "function" && _a || Object])
+    ], StudymaterialComponent);
+    return StudymaterialComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/studymaterial.component.js.map
+
+/***/ }),
+
+/***/ 738:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\" style=\"height:100%\">\n  <div class=\"col-sm-4 col-md-4 col-lg-3 pdfNavigator\">\n    <div class=\"navigatorContainer\">\n      <ul class=\"nav nav-list\">\n        <li class=\"listHead\" *ngFor=\"let listItem of listItems \">\n          <label class=\"tree-toggler nav-header\">\n            <p>{{listItem.heading}}</p>\n            <span class=\"glyphicon glyphicon-menu-down pull-right closebutton\"></span>\n        </label>\n          <ul class=\"nav nav-list tree\">\n            <li class=\"listTopic\" (click)=\"handleElementClick(topic.page,$event)\" *ngFor=\"let topic of listItem.topics\">\n              <label>{{topic.heading}}</label></li>\n          </ul>\n        </li> \n      </ul>\n    </div>\n  </div>\n  <div *ngIf=\"modalVisible\" class=\"col-sm-8 col-md-8 col-lg-9 pdfViewer\">\n    <pdf-viewer [src]=\"studyUrl\" [render-text]=\"true\" [show-all]=\"false\" [zoom]=viewerZoomValue\n      [(page)]=\"activePage\" [original-size]=\"false\" (error)=\"onError($event)\" (after-load-complete)=\"callBackFn($event)\" style=\"display: block; height:100%\"></pdf-viewer>\n    <div class=\"pdftoolbar\">\n      <span class=\"zoom\">\n        <span (click) = \"updateZoomValue('decrease')\" class=\"glyphicon glyphicon-font reduceFont\" ></span>\n      <span (click) = \"updateZoomValue('increase')\" class=\"glyphicon glyphicon-font\"></span>\n      </span>\n      <span class=\"divider\"></span>\n      <span class=\"comment\">\n        <span class=\"glyphicon glyphicon-comment\"></span>\n      </span>\n      <span class=\"divider\"></span>\n      <span class=\"volume\">\n        <span class=\"glyphicon glyphicon-volume-up\"></span>\n      </span>\n      <span class=\"divider\"></span>\n      <span class=\"navigation\">\n        <span (click) = \"changePage('previous')\" class=\"glyphicon glyphicon-menu-left\"></span>\n      <span (click)=\"changePage('next')\" class=\"glyphicon glyphicon-menu-right\"></span>\n      </span>\n      <span class=\"divider\"></span>\n      <span class=\"print\">\n        <span class=\"glyphicon glyphicon-print\"></span>\n      </span>\n      <span class=\"divider\"></span>\n      <span class=\"fullscreen\">\n        <span class=\"glyphicon glyphicon-fullscreen\"></span>\n      </span>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ 739:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(20)();
+// imports
+
+
+// module
+exports.push([module.i, ".ng2-pdf-viewer-container {\n  height: 100%;\n  background: #565656; }\n\n.pdfViewer {\n  height: 100%;\n  padding-left: 0px; }\n\n.pdfNavigator {\n  height: 100%;\n  padding-right: 0px; }\n\n.navigatorContainer {\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  background: #E6E6E6; }\n\n.listHead {\n  color: #454444;\n  border-bottom: 1px solid #9F9F9F; }\n  .listHead .closebutton {\n    margin: auto 10px auto 0;\n    font-size: 16px; }\n  .listHead > label {\n    padding: 10px 10px;\n    width: 100%;\n    margin-bottom: 0px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex; }\n    .listHead > label > p {\n      display: -webkit-inline-box;\n      display: -ms-inline-flexbox;\n      display: inline-flex;\n      margin: 0 auto;\n      font-size: 16px;\n      width: calc(100% - 30px); }\n\n.nav-list.tree {\n  display: none;\n  background: white; }\n  .nav-list.tree li:last-child {\n    border: 0px; }\n\n.listTopic {\n  padding: 2px 10px;\n  border-bottom: 1px solid lightgrey;\n  cursor: pointer; }\n  .listTopic > label {\n    padding: 10px 0px 10px 20px;\n    color: #858585;\n    cursor: pointer;\n    width: 100%;\n    margin-bottom: 0px; }\n\n.topic-selected {\n  background: #337AB7; }\n  .topic-selected > label {\n    color: white; }\n\n.pdftoolbar {\n  background: #000000;\n  border-radius: 4px;\n  color: #EEEDED;\n  opacity: 0.8;\n  font-size: 22px;\n  padding: 5px 10px;\n  width: 368px;\n  position: relative;\n  bottom: 55px;\n  margin: auto; }\n  .pdftoolbar .divider {\n    border-left: 1px solid #383838; }\n  .pdftoolbar .reduceFont {\n    font-size: 18px; }\n  .pdftoolbar > span {\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none; }\n    .pdftoolbar > span > span {\n      padding: 0px 6px 0px 10px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 740:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return dashboardRoutes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_component__ = __webpack_require__(741);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dashboard_item_dashboard_item_component__ = __webpack_require__(744);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
 
@@ -1428,23 +1774,23 @@ var DashboardModule = (function () {
     function DashboardModule() {
     }
     DashboardModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */]
             ],
             exports: [__WEBPACK_IMPORTED_MODULE_3__dashboard_component__["a" /* DashboardComponent */]],
             declarations: [__WEBPACK_IMPORTED_MODULE_3__dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_4__dashboard_item_dashboard_item_component__["a" /* DashboardItemComponent */]]
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], DashboardModule);
     return DashboardModule;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/dashboard.module.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/dashboard.module.js.map
 
 /***/ }),
 
-/***/ 490:
+/***/ 741:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1464,47 +1810,48 @@ var DashboardComponent = (function () {
     function DashboardComponent() {
         this.questions = [
             {
-                qText: "Prepare a Trial Balance",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum ",
+                qText: "Trial Balance: Learn",
+                description: "Learn to prepare Trial Balance to verify that debits equal the credits",
                 badges: ['Accounting', 'Training'],
                 view: "Side by Side View",
                 index: 1
             },
             {
-                qText: "Prepare an Income Statement",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum ",
+                qText: "Income Statement: Learn",
+                description: "Learn to prepare Income Statement to access the profitability of a company during a particular time interval",
                 badges: ['Accounting', 'Training'],
                 view: "Side by Side View",
                 index: 2
             },
             {
-                qText: "Create a Motion Profile Table",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+                qText: "Create a Motion Profile",
+                description: "Motion profile is simply a way of defining how an Axis moves with respect to time.",
                 badges: ['Physics', 'Training'],
-                view: "Side by Side View",
+                view: "Reading View",
                 index: 3
             },
             {
-                qText: "Prepare a Trial Balance",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+                qText: "Trial Balance: Assess",
+                description: "Assess student's knowledge and skill at the end of the course",
                 badges: ['Accounting', 'Assessment'],
-                view: "Reading View",
+                view: "Side by Side View",
                 index: 1
             },
             {
-                qText: "Prepare an Income Statement",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+                qText: "Income Statement: Assess",
+                description: "Assess student's knowledge and skill at the end of the course",
                 badges: ['Accounting', 'Assessment'],
-                view: "Reading View",
+                view: "Side by Side View",
                 index: 2
             },
             {
-                qText: "Create a Motion Profile Table",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis purus mi, quis blandit odio fermentum eu",
+                qText: "Solve Projectile Problem",
+                description: "Assess student's knowledge and skill at the end of the course",
                 badges: ['Physics', 'Assessment'],
-                view: "Reading View",
+                view: "Side by Side View",
                 index: 3
-            }];
+            }
+        ];
     }
     DashboardComponent.prototype.ngOnInit = function () {
     };
@@ -1518,35 +1865,36 @@ var DashboardComponent = (function () {
         }
     };
     DashboardComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-dashboard',
-            template: __webpack_require__(491),
-            styles: [__webpack_require__(492)]
-        }), 
-        __metadata('design:paramtypes', [])
+            template: __webpack_require__(742),
+            styles: [__webpack_require__(743)]
+        }),
+        __metadata("design:paramtypes", [])
     ], DashboardComponent);
     return DashboardComponent;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/dashboard.component.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/dashboard.component.js.map
 
 /***/ }),
 
-/***/ 491:
+/***/ 742:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"dashboard-items-container\">\r\n  <div class=\"container contentDiv\">\r\n    <div class=\"row item-container\">\r\n      <app-dashboard-item *ngFor=\"let ques of questions;\" [quesMeta]=\"ques\" class=\"col-lg-4 col-md-4 col-sm-4\"></app-dashboard-item>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"dashboard-items-container\">\n  <div class=\"container contentDiv\">\n    <div class=\"row item-container\">\n      <app-dashboard-item *ngFor=\"let ques of questions;\" [quesMeta]=\"ques\" class=\"col-lg-4 col-md-6 col-sm-12\"></app-dashboard-item>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ 492:
+/***/ 743:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)();
+exports = module.exports = __webpack_require__(20)();
 // imports
 
 
 // module
-exports.push([module.i, ".header {\n  height: 63px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: default;\n  background-color: #ececec;\n  border-bottom: 3px solid #CB2929; }\n  .header .headingWrapper {\n    width: 100%; }\n\n.dashboard-items-container {\n  background-color: #eee;\n  padding-top: 160px;\n  height: calc(100% - 54px); }\n\n.contentDiv {\n  min-width: 80%;\n  max-width: 1280px; }\n", ""]);
+exports.push([module.i, ".header {\n  height: 63px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: default;\n  background-color: #ececec;\n  border-bottom: 3px solid #CB2929; }\n  .header .headingWrapper {\n    width: 100%; }\n\n.dashboard-items-container {\n  background-color: #eee;\n  padding-top: 6%;\n  height: calc(100% - 54px);\n  overflow: auto; }\n\n.contentDiv {\n  min-width: 90%;\n  max-width: 1280px; }\n", ""]);
 
 // exports
 
@@ -1556,7 +1904,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 493:
+/***/ 744:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1581,48 +1929,49 @@ var DashboardItemComponent = (function () {
         return badgeName.split(" ").join("");
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Input */])(), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
     ], DashboardItemComponent.prototype, "questionIndex", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Input */])(), 
-        __metadata('design:type', Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
     ], DashboardItemComponent.prototype, "quesMeta", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* ViewChild */])('title'), 
-        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* ElementRef */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* ElementRef */]) === 'function' && _a) || Object)
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('title'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
     ], DashboardItemComponent.prototype, "titleBox", void 0);
     DashboardItemComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-dashboard-item',
-            template: __webpack_require__(494),
-            styles: [__webpack_require__(495)]
-        }), 
-        __metadata('design:paramtypes', [])
+            template: __webpack_require__(745),
+            styles: [__webpack_require__(746)]
+        }),
+        __metadata("design:paramtypes", [])
     ], DashboardItemComponent);
     return DashboardItemComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/dashboard-item.component.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/dashboard-item.component.js.map
 
 /***/ }),
 
-/***/ 494:
+/***/ 745:
 /***/ (function(module, exports) {
 
-module.exports = "<section class=\"widget\">\r\n  <div class =\"dashboard-item-widget\">\r\n  <div class=\"widget-body clearfix\">\r\n    <div>\r\n      <div>\r\n        <div #title class=\"dashboard-item-title\">{{quesMeta.qText}}</div>\r\n\r\n      </div>\r\n      <div class=\"description-container\">{{quesMeta.description}}\r\n      </div>\r\n      <div class=\"badge-container\">\r\n          <span class=\"badge leobadge {{createClassName(badge)}}\" *ngFor = \"let badge of quesMeta.badges\">{{badge}}</span>\r\n          <span class=\"viewtypeContainer\">{{\"| \"+ quesMeta.view}}</span>\r\n      </div>\r\n    </div>    \r\n  </div>\r\n  </div>\r\n  <div class=\"button-container\">\r\n    <button [routerLink]=\"['/question',quesMeta.index,quesMeta.badges[1]]\" class=\"btn btn-leonardo\" type=\"submit\">Launch</button>\r\n    <!-- routerlink path to be changed to ../../question when moved to previous release  -->\r\n  </div>\r\n</section>\r\n"
+module.exports = "<section class=\"widget\">\n  <!-- <div *ngIf=\"quesMeta.index == 3 && quesMeta.view == 'Side by Side View'\" class=\"comingsooncurtain\"><p> Coming Soon...</p></div> -->\n  <div class =\"dashboard-item-widget\">\n  <div class=\"widget-body clearfix\">\n    <div>\n      <div>\n        <div #title class=\"dashboard-item-title\">{{quesMeta.qText}}</div>\n\n      </div>\n      <div class=\"description-container\">{{quesMeta.description}}\n      </div>\n      <div class=\"badge-container\">\n          <span class=\"badge leobadge {{createClassName(badge)}}\" *ngFor = \"let badge of quesMeta.badges\">{{badge}}</span>\n          <span class=\"viewtypeContainer\">{{\"| \"+ quesMeta.view}}</span>\n      </div>\n    </div>    \n  </div>\n  </div>\n  <div  *ngIf=\"!(quesMeta.index == 3 && quesMeta.view == 'Side by Side View') \"class=\"button-container\">\n    <button [routerLink]=\"['/question',quesMeta.index,quesMeta.badges[1]]\" class=\"btn btn-leonardo\" type=\"submit\">Launch</button>\n    <!-- routerlink path to be changed to ../../question when moved to previous release  -->\n  </div>\n  <div  *ngIf=\"quesMeta.index == 3 && quesMeta.view == 'Side by Side View'\"class=\"button-container\">\n    <button [routerLink]=\"['/question',quesMeta.index,quesMeta.badges[1]]\" class=\"btn btn-leonardo-inverse\" type=\"submit\" disabled>Coming Soon</button>\n    <!-- routerlink path to be changed to ../../question when moved to previous release  -->\n  </div>\n</section>\n"
 
 /***/ }),
 
-/***/ 495:
+/***/ 746:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)();
+exports = module.exports = __webpack_require__(20)();
 // imports
 
 
 // module
-exports.push([module.i, ".widget {\n  position: relative;\n  margin-bottom: 30px;\n  background: #fff;\n  border: 0px solid #217346;\n  border-top-width: 8px;\n  border-radius: 0.5rem;\n  height: 260px;\n  -webkit-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);\n          box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2); }\n\n.dashboard-item-widget {\n  padding: 30px 30px 40px 30px;\n  height: 200px; }\n  .dashboard-item-widget .dashboard-item-title {\n    -ms-flex-item-align: center;\n        align-self: center;\n    max-height: 58px;\n    line-height: 1.2;\n    width: 100%;\n    font-size: 24px;\n    font-family: \"open-sans\";\n    color: #464646; }\n  .dashboard-item-widget .description-container {\n    font-size: 16px;\n    font-family: \"open-sans\";\n    color: #575757;\n    padding-top: 11px;\n    display: -webkit-box;\n    -webkit-line-clamp: 3;\n    -webkit-box-orient: vertical;\n    overflow: hidden; }\n\n.button-container {\n  background-color: #F0F0F0;\n  text-align: center;\n  padding: 10px 0 10px 0; }\n  .button-container .btn-leonardo {\n    background-color: transparent;\n    color: #01579B;\n    border: 1px solid #01579B; }\n  .button-container .btn-leonardo:hover {\n    background-color: #01579B;\n    color: #F0F0F0;\n    border: 1px solid #01579B; }\n  .button-container .btn-leonardo:hover {\n    background-color: #01579B;\n    color: #F0F0F0;\n    border: 1px solid #01579B; }\n\n.leobadge {\n  border-radius: 3px;\n  margin: 2px;\n  font-size: 13px;\n  font-weight: normal;\n  color: #fff;\n  font-family: open-sans;\n  padding: 7px 11px; }\n\n.badge-container {\n  padding-top: 15px; }\n\n.Physics {\n  background: #006064; }\n\n.Training {\n  background: #906D96; }\n\n.Accounting {\n  background: #8D6E63; }\n\n.Assessment {\n  background: #FF8E6C; }\n\n.viewtypeContainer {\n  font-family: open-sans;\n  font-size: 16px;\n  color: #343434;\n  padding-left: 15px; }\n", ""]);
+exports.push([module.i, ".widget {\n  position: relative;\n  margin-bottom: 30px;\n  background: #fff;\n  border: 0px solid #217346;\n  border-top-width: 8px;\n  border-radius: 0.5rem;\n  height: 260px;\n  -webkit-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);\n          box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2); }\n\n.dashboard-item-widget {\n  padding: 30px 30px 40px 30px;\n  height: 200px; }\n  .dashboard-item-widget .dashboard-item-title {\n    -ms-flex-item-align: center;\n        align-self: center;\n    max-height: 58px;\n    line-height: 1.2;\n    width: 100%;\n    font-size: 24px;\n    font-family: \"open-sans\";\n    color: #464646; }\n  @media (max-width: 1420px) and (min-width: 1200px) {\n    .dashboard-item-widget .dashboard-item-title {\n      font-size: 21px; } }\n  .dashboard-item-widget .description-container {\n    font-size: 16px;\n    font-family: \"open-sans\";\n    color: #575757;\n    padding-top: 11px;\n    display: -webkit-box;\n    -webkit-line-clamp: 3;\n    -webkit-box-orient: vertical;\n    overflow: hidden; }\n  @media (max-width: 1420px) and (min-width: 1200px) {\n    .dashboard-item-widget .description-container {\n      font-size: 15px; } }\n\n.button-container {\n  background-color: #F0F0F0;\n  text-align: center;\n  padding: 10px 0 10px 0; }\n  .button-container .btn-leonardo {\n    background-color: transparent;\n    color: #01579B;\n    border: 1px solid #01579B; }\n  .button-container .btn-leonardo:hover {\n    background-color: #01579B;\n    color: #F0F0F0;\n    border: 1px solid #01579B; }\n  .button-container .btn-leonardo-inverse {\n    background-color: grey;\n    color: white; }\n\n.leobadge {\n  border-radius: 3px;\n  margin: 2px;\n  font-size: 14px;\n  font-weight: normal;\n  color: #fff;\n  font-family: open-sans;\n  padding: 7px 11px; }\n\n@media (max-width: 1420px) and (min-width: 1320px) {\n  .leobadge {\n    font-size: 12px; } }\n\n@media (max-width: 1320px) and (min-width: 1200px) {\n  .leobadge {\n    font-size: 11px; } }\n\n.badge-container {\n  padding-top: 15px; }\n\n.Physics {\n  background: #006064; }\n\n.Training {\n  background: #906D96; }\n\n.Accounting {\n  background: #8D6E63; }\n\n.Assessment {\n  background: #FF8E6C; }\n\n.viewtypeContainer {\n  font-family: open-sans;\n  font-size: 16px;\n  color: #343434;\n  padding-left: 15px; }\n\n@media (max-width: 1420px) and (min-width: 1200px) {\n  .viewtypeContainer {\n    font-size: 14px; } }\n\n.comingsooncurtain {\n  position: absolute;\n  z-index: 2;\n  width: 100%;\n  height: 100%;\n  background: #d2d2d2;\n  opacity: 0.95;\n  left: 0px;\n  top: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n\n.comingsooncurtain p {\n  color: #666662;\n  font-size: 35px;\n  text-align: center;\n  font-family: open-sans;\n  font-weight: bolder;\n  margin: auto; }\n", ""]);
 
 // exports
 
@@ -1632,13 +1981,13 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 496:
+/***/ 747:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(72);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1673,36 +2022,37 @@ var AppComponent = (function () {
         this.router.navigate(['/dashboard']);
     };
     AppComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(497),
-            styles: [__webpack_require__(498)]
-        }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _a) || Object])
+            template: __webpack_require__(748),
+            styles: [__webpack_require__(749)]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
     ], AppComponent);
     return AppComponent;
     var _a;
 }());
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/app.component.js.map
+
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/app.component.js.map
 
 /***/ }),
 
-/***/ 497:
+/***/ 748:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid header\">\r\n  <div class=\"headingWrapper\">\r\n      <div class=\"logo\"></div>\r\n      <div class=\"verticalLine\"></div>\r\n      <div class=\"productName\">Leonardo</div>\r\n      <button *ngIf=\"isBackVisible\" (click)=\"backBtnClick()\" class=\"backbtn btn btn-default pull-right\">Back</button>\r\n  </div>\r\n</div>\r\n<router-outlet></router-outlet>"
+module.exports = "<div class=\"container-fluid header\">\n  <div class=\"headingWrapper\">\n      <div class=\"logo\"></div>\n      <div class=\"verticalLine\"></div>\n      <div class=\"productName\">Leonardo</div>\n      <button *ngIf=\"isBackVisible\" (click)=\"backBtnClick()\" class=\"backbtn btn btn-default pull-right\">Back</button>\n  </div>\n</div>\n<router-outlet></router-outlet>"
 
 /***/ }),
 
-/***/ 498:
+/***/ 749:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(14)();
+exports = module.exports = __webpack_require__(20)();
 // imports
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"open-sans\";\n  src: url(" + __webpack_require__(499) + ") format(\"woff\"); }\n\n.header {\n  width: 100%;\n  color: #fff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 54px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: default;\n  background-color: black; }\n  .header .headingWrapper {\n    width: 100%;\n    height: 34px; }\n  .header .verticalLine {\n    border-left: 1px solid grey;\n    display: inline-block;\n    height: 60%;\n    width: 5px; }\n  .header .productName {\n    font-size: 28px;\n    font-weight: Bold;\n    font-family: \"open-sans\";\n    color: #ffffff;\n    display: inline-block;\n    width: calc(100% - 206px); }\n  .header .logo {\n    display: inline-block;\n    height: 100%;\n    width: 132px;\n    background: url(" + __webpack_require__(500) + ") no-repeat;\n    position: relative;\n    top: 6px; }\n  .header .backbtn {\n    background-color: #E8E8E8;\n    position: relative;\n    margin-top: 10px;\n    padding: 4px 12px; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"open-sans\";\n  src: url(" + __webpack_require__(750) + ") format(\"woff\"); }\n\n.header {\n  width: 100%;\n  color: #fff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 54px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: default;\n  background-color: black; }\n  .header .headingWrapper {\n    width: 100%;\n    height: 34px; }\n  .header .verticalLine {\n    border-left: 1px solid grey;\n    display: inline-block;\n    height: 60%;\n    width: 5px; }\n  .header .productName {\n    font-size: 28px;\n    font-weight: Bold;\n    font-family: \"open-sans\";\n    color: #ffffff;\n    display: inline-block;\n    width: calc(100% - 206px); }\n  .header .logo {\n    display: inline-block;\n    height: 100%;\n    width: 132px;\n    background: url(" + __webpack_require__(751) + ") no-repeat;\n    position: relative;\n    top: 6px; }\n  .header .backbtn {\n    background-color: #E8E8E8;\n    position: relative;\n    margin-top: 10px;\n    padding: 4px 12px; }\n", ""]);
 
 // exports
 
@@ -1712,21 +2062,21 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 499:
+/***/ 750:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "OpenSans-Regular.woff";
 
 /***/ }),
 
-/***/ 500:
+/***/ 751:
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAAiCAYAAACZb20EAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJBQjdCOTlDNTVBQTExRTc5QTc2QTEwOEU1NkE2Qjk2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJBQjdCOTlENTVBQTExRTc5QTc2QTEwOEU1NkE2Qjk2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkFCN0I5OUE1NUFBMTFFNzlBNzZBMTA4RTU2QTZCOTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkFCN0I5OUI1NUFBMTFFNzlBNzZBMTA4RTU2QTZCOTYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6W3m1FAAADyElEQVR42uxbjZGqMBCGm2sA7UBL0BKgBC1BS8ASsAQsQUqQEuR1YCrQo4S7xNnMZXK7IYmC+sw3k1ExJMt++5MlEJ/P5yjgdTEej9Hjl8vlwD9S+PmPt2/ed86PJ/z712dQ3X9rEBknOedfW94Ybwf462oMH0FF7wNuCDP+MRHGEIh/HzTg7YJ8Foh/H9RAehI8/jaI/PltaF/QZ2F5bm4551E9TyzieFtZnNtCmG9Cju8XwrMK3vbKwsoXKRhSAV6r/1eCASQd4zBJfFjVD4MrObytPc6dWRpOCkaWKSv7rRbqJarg8ffFjreYt6mmaIEV4q02KJGQLcYfSe9VybcM+yHU9wQRUreEV7p6+wwxLgYGUPnOEYgfFhMP4rtKNNdz/hCfEKvNghB4AblH7XtEVqcpMuYK+p20Y1LwUjm+B9kk9DlPMMdBk9k0fw7jyt8TCx3MHkB8ZOnRwvs30HY2g3wqAh0IwXIgJVMsLNeUq4cmYRRzw7yFRqbMZSlS/iygb2ZQ5gGRWRxfGuanxqF0kMN41cApA9PxAuSo+QIu9hn4Q1H6pKM02SsWV1iEqLxjvIiIIpSVu+bHheM5pYVHlgbZ+0AD3qxj76GPP8RPkEHWiIfJfivEKmMIM7qXmCx5Slj0hvBUU6hdExEm7Zg/hpYQOhhpik+Q6+8TrSHCHCxv+pDEYwqtkXKEWmXWipC6V1MetAXlM2I13DiGwx1xTmIou1iHUdVwTW0PedoFG8JBrimLl297X+L7DF1DK8nFk17lmlqIgJTMC9h77534ZyXzFiRPLl8DqYzy/NTV87vq+Fhr21CKP/Sm0JxIwdLz83sRH/B8KSozOGBusVETiH9hbAjyrauOrt25HMk1AY/BDEpOBiXeJvp9osa27LUmvkAsLWBYso/asUqp7YXX732ID6F++AXardVGot1r8MKHR03LnkyZ9yjF2iclHrtlO+uQm91CfEqEDIbk+dRQ3zcDES9uYJQ3ENoQOpgghmV7Tdgiq/IwyAq5Xrn2wvY2alviK+RiSiS3MBhU3/YTysEeFtwO6EkpoWjmQHyN6OCkEd9G5m3PVfS7lauTsuuQp4jw7Wvslq3sq+d3pj1u1Znjlx1CqbcNa4tFnk2fe9a2jCBz5zDO2sJQlpFfqqsiv+ftVN0zC+PNXHK89IwpYl1yg3+qRYUtTLJDCF+6CHAn4ueaLJWHDJQOZDUzclxMMTgvi+jnAlxyvZStQXS+Fu/F8WZtlPELvjSpvgyoEvaWoF6aDOVcQCA+IBAfiA8qeE/8CDAAiwU+dQRBNokAAAAASUVORK5CYII="
 
 /***/ }),
 
-/***/ 501:
+/***/ 752:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1738,9 +2088,9 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAAiCAYAAACZ
 var environment = {
     production: false
 };
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/environment.js.map
+//# sourceMappingURL=D:/ComproDLSLeonardo/src/environment.js.map
 
 /***/ })
 
-},[334]);
+},[484]);
 //# sourceMappingURL=main.bundle.js.map
