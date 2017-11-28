@@ -16639,7 +16639,7 @@ ControlGenerators.ComboBox.prototype.DropdownOpener = function(e) {
 
     //Fix for SIMS-403, Added check for window width
     var comboLeft = $comboBox.offset().left;
-    var winWidth = $simArea.width();
+    var winWidth = $simArea.offset().left + $simArea.width();
     var ddWidth = $dropDown.width();
     if (comboLeft + ddWidth > winWidth) {
         ddCss.left = (winWidth - ddWidth - comboLeft) - 4;
@@ -17313,7 +17313,7 @@ ControlGenerators.CondensedSectionControl.prototype.DropdownOpener = function(e)
 
     //Fix for SIMS-403, Added check for window width
     var comboLeft = $comboBox.offset().left;
-    var winWidth = $simArea.width();
+    var winWidth = $simArea.offset().left + $simArea.width();
     var ddWidth = $dropDown.width();
     if (comboLeft + ddWidth > winWidth) {
         ddCss.left = (winWidth - ddWidth - comboLeft) - 4;
@@ -17617,7 +17617,7 @@ ControlGenerators.ComboBox.prototype.DropdownOpener = function(basefunc) {
 			var $comboWrapper = $comboBox.closest('.combobox-wrapper');
 			var $dropDown = $comboWrapper.find('.combobox-dropdown:not(.contextMenu)');
 			var comboLeft = $comboBox.offset().left;
-			var winWidth = $simArea.width();
+			var winWidth = $simArea.offset().left +  $simArea.width();
 			var ddWidth = $dropDown.width();
 			var offset = 0;
 			if ($comboBox.data('leftOffset')) {
