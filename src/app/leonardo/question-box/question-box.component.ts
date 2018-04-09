@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
-declare var Leonardo: any;
+import { LeonardoCoreService } from '../../leonardo-core.service';
+
 @Component({
   selector: 'app-question-box',
   templateUrl: './question-box.component.html',
@@ -9,14 +10,14 @@ declare var Leonardo: any;
 export class QuestionBoxComponent implements OnInit {
   @Input() questionData: any;
   @ViewChild('questionHost') questionHost: any;
-  constructor() { }
+  constructor( private leonardoCoreService:LeonardoCoreService) { }
 
   ngOnInit() {
     this.questionHost.nativeElement.innerHTML = this.questionData["template"];
     let leoInstances = this.questionHost.nativeElement.querySelectorAll(".leoHost");
     for (let index = 0; index < leoInstances.length; index++) {
       let data = this.questionData.leoData[leoInstances[index].getAttribute("leoDataId")];
-      Leonardo.scripts.add(leoInstances[index], data.config, data.correctData );
+      this.leonardoCoreService.addWidget("questionBox-"+index, leoInstances[index], data);
     }
   }
 

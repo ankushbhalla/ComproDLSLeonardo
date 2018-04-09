@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, ViewChild, ElementRef, ViewEncapsulation, EventEmitter } from '@angular/core';
-declare var Leonardo: any;
+import { LeonardoCoreService } from '../../leonardo-core.service';
+
+
 @Component({
   selector: 'cosmatt-item-box',
   templateUrl: './cosmatt-item-box.component.html',
@@ -17,7 +19,7 @@ export class CosmattItemBoxComponent implements OnInit {
   chapName: string = "";
   secName: string = "";
 
-  constructor() { }
+  constructor(private leonardoCoreService: LeonardoCoreService) { }
 
   ngOnInit() {
     this.chapName = this.questionData["chapter"];
@@ -27,7 +29,7 @@ export class CosmattItemBoxComponent implements OnInit {
     let leoInstances = this.cosmattItemContainer.nativeElement.querySelectorAll(".leoHost");
     for (let index = 0; index < leoInstances.length; index++) {
       let data = this.questionData.leoData[leoInstances[index].getAttribute("leoDataId")];
-      Leonardo.scripts.add(leoInstances[index], data.config, data.correctData );
+      this.leonardoCoreService.addWidget("spreadsheet-"+index,leoInstances[index], data.config);
     }
 
     this.renderWorkspace();
@@ -48,17 +50,18 @@ export class CosmattItemBoxComponent implements OnInit {
       }
     }
 
-    Leonardo.scripts.add(this.workspace.nativeElement, JSON.parse(JSON.stringify(this.solutionData.config)), this.solutionData.correctData);
+    this.leonardoCoreService.addWidget("question-1", this.workspace.nativeElement, JSON.parse(JSON.stringify(this.solutionData.config)));
   }
 
   cmwHandler(){
     this.isCMWEnabled = false;
-    Leonardo.scripts.checkAnswer(this.workspace.nativeElement);
+    let score = this.leonardoCoreService.getWidget("question-1").score();
+    this.leonardoCoreService.getWidget("question-1").displayFeedback(score);
   }
 
   resetHandler(){
     this.isCMWEnabled = true;
-    Leonardo.scripts.reset(this.workspace.nativeElement);
+    this.leonardoCoreService.getWidget("question-1").clearFeedback();;
   }
 
 }
