@@ -1,6 +1,6 @@
-webpackJsonp([2],{
+webpackJsonp(["main"],{
 
-/***/ 310:
+/***/ "../../../../../src/$$_gendir lazy recursive":
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,16 +13,42 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 310;
+webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 
 /***/ }),
 
-/***/ 470:
+/***/ "../../../../../src/app/app.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container-fluid header\">\r\n  <div class=\"headingWrapper\">\r\n      <div class=\"logo\"></div>\r\n      <div class=\"verticalLine\"></div>\r\n      <div class=\"productName\">Leonardo</div>\r\n      <button *ngIf=\"isBackVisible\" (click)=\"backBtnClick()\" class=\"backbtn btn btn-default pull-right\">Back</button>\r\n  </div>\r\n</div>\r\n<router-outlet></router-outlet>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")();
+// imports
+
+
+// module
+exports.push([module.i, "@font-face {\n  font-family: \"open-sans\";\n  src: url(" + __webpack_require__("../../../../../src/assets/OpenSans-Regular.woff") + ") format(\"woff\"); }\n\n.header {\n  width: 100%;\n  color: #fff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 54px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: default;\n  background-color: black; }\n  .header .headingWrapper {\n    width: 100%;\n    height: 34px; }\n  .header .verticalLine {\n    border-left: 1px solid grey;\n    display: inline-block;\n    height: 60%;\n    width: 5px; }\n  .header .productName {\n    font-size: 28px;\n    font-weight: Bold;\n    font-family: \"open-sans\";\n    color: #ffffff;\n    display: inline-block;\n    width: calc(100% - 206px); }\n  .header .logo {\n    display: inline-block;\n    height: 100%;\n    width: 132px;\n    background: url(" + __webpack_require__("../../../../../src/assets/ComproDLS.png") + ") no-repeat;\n    position: relative;\n    top: 6px; }\n  .header .backbtn {\n    background-color: #E8E8E8;\n    position: relative;\n    margin-top: 10px;\n    padding: 4px 12px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -33,31 +59,389 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var DataService = /** @class */ (function () {
+
+var AppComponent = (function () {
+    function AppComponent(router) {
+        this.router = router;
+        this.isBackVisible = false;
+    }
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var body = document.getElementsByTagName("body")[0];
+        var self = this;
+        this.router.events.subscribe(function (urlParams) {
+            if (urlParams.url === "/dashboard" || (urlParams.url === "/" && urlParams["urlAfterRedirects"] === "/dashboard")) {
+                _this.isBackVisible = false;
+            }
+            else {
+                _this.isBackVisible = true;
+            }
+        });
+    };
+    AppComponent.prototype.backBtnClick = function () {
+        Leonardo.scripts.destroyGrids();
+        this.router.navigate(['/dashboard']);
+    };
+    AppComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-root',
+            template: __webpack_require__("../../../../../src/app/app.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/app.component.scss")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
+    ], AppComponent);
+    return AppComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/app.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__leonardo_leonardo_module__ = __webpack_require__("../../../../../src/app/leonardo/leonardo.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__dashboard_dashboard_module__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+var appRoutes = [
+    {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+    },
+    {
+        path: 'question',
+        children: __WEBPACK_IMPORTED_MODULE_5__leonardo_leonardo_module__["b" /* leoRoutes */]
+    },
+    {
+        path: 'dashboard',
+        children: __WEBPACK_IMPORTED_MODULE_6__dashboard_dashboard_module__["b" /* dashboardRoutes */]
+    }
+];
+var AppModule = (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_5__leonardo_leonardo_module__["a" /* LeonardoModule */],
+                __WEBPACK_IMPORTED_MODULE_6__dashboard_dashboard_module__["a" /* DashboardModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */].forRoot(appRoutes)
+            ],
+            providers: [__WEBPACK_IMPORTED_MODULE_7__data_service__["a" /* DataService */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/dashboard/dashboard-item/dashboard-item.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<section class=\"widget\">\r\n  <!-- <div *ngIf=\"quesMeta.index == 3 && quesMeta.view == 'Side by Side View'\" class=\"comingsooncurtain\"><p> Coming Soon...</p></div> -->\r\n  <div class =\"dashboard-item-widget\">\r\n  <div class=\"widget-body clearfix\">\r\n    <div>\r\n      <div>\r\n        <div #title class=\"dashboard-item-title\">{{quesMeta.qText}}</div>\r\n\r\n      </div>\r\n      <div class=\"description-container\">{{quesMeta.description}}\r\n      </div>\r\n      <div class=\"badge-container\">\r\n          <span class=\"badge leobadge {{createClassName(badge)}}\" *ngFor = \"let badge of quesMeta.badges\">{{badge}}</span>\r\n          <span class=\"viewtypeContainer\">{{\"| \"+ quesMeta.view}}</span>\r\n      </div>\r\n    </div>    \r\n  </div>\r\n  </div>\r\n  <div  *ngIf=\"!(quesMeta.index == 3 && quesMeta.view == 'Side by Side View') \"class=\"button-container\">\r\n    <button [routerLink]=\"['/question',quesMeta.index,quesMeta.badges[1]]\" class=\"btn btn-leonardo\" type=\"submit\">Launch</button>\r\n    <!-- routerlink path to be changed to ../../question when moved to previous release  -->\r\n  </div>\r\n  <div  *ngIf=\"quesMeta.index == 3 && quesMeta.view == 'Side by Side View'\"class=\"button-container\">\r\n    <button [routerLink]=\"['/question',quesMeta.index,quesMeta.badges[1]]\" class=\"btn btn-leonardo-inverse\" type=\"submit\" disabled>Coming Soon</button>\r\n    <!-- routerlink path to be changed to ../../question when moved to previous release  -->\r\n  </div>\r\n</section>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/dashboard/dashboard-item/dashboard-item.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")();
+// imports
+
+
+// module
+exports.push([module.i, ".widget {\n  position: relative;\n  margin-bottom: 30px;\n  background: #fff;\n  border: 0px solid #217346;\n  border-top-width: 8px;\n  border-radius: 0.5rem;\n  height: 260px;\n  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2); }\n\n.dashboard-item-widget {\n  padding: 30px 30px 40px 30px;\n  height: 200px; }\n  .dashboard-item-widget .dashboard-item-title {\n    align-self: center;\n    max-height: 58px;\n    line-height: 1.2;\n    width: 100%;\n    font-size: 24px;\n    font-family: \"open-sans\";\n    color: #464646; }\n  @media (max-width: 1420px) and (min-width: 1200px) {\n    .dashboard-item-widget .dashboard-item-title {\n      font-size: 21px; } }\n  .dashboard-item-widget .description-container {\n    font-size: 16px;\n    font-family: \"open-sans\";\n    color: #575757;\n    padding-top: 11px;\n    display: -webkit-box;\n    -webkit-line-clamp: 3;\n    -webkit-box-orient: vertical;\n    overflow: hidden; }\n  @media (max-width: 1420px) and (min-width: 1200px) {\n    .dashboard-item-widget .description-container {\n      font-size: 15px; } }\n\n.button-container {\n  background-color: #F0F0F0;\n  text-align: center;\n  padding: 10px 0 10px 0; }\n  .button-container .btn-leonardo {\n    background-color: transparent;\n    color: #01579B;\n    border: 1px solid #01579B; }\n  .button-container .btn-leonardo:hover {\n    background-color: #01579B;\n    color: #F0F0F0;\n    border: 1px solid #01579B; }\n  .button-container .btn-leonardo-inverse {\n    background-color: grey;\n    color: white; }\n\n.leobadge {\n  border-radius: 3px;\n  margin: 2px;\n  font-size: 14px;\n  font-weight: normal;\n  color: #fff;\n  font-family: open-sans;\n  padding: 7px 11px; }\n\n@media (max-width: 1420px) and (min-width: 1320px) {\n  .leobadge {\n    font-size: 12px; } }\n\n@media (max-width: 1320px) and (min-width: 1200px) {\n  .leobadge {\n    font-size: 11px; } }\n\n.badge-container {\n  padding-top: 15px; }\n\n.Physics {\n  background: #006064; }\n\n.Training {\n  background: #906D96; }\n\n.Accounting {\n  background: #8D6E63; }\n\n.Assessment {\n  background: #FF8E6C; }\n\n.viewtypeContainer {\n  font-family: open-sans;\n  font-size: 16px;\n  color: #343434;\n  padding-left: 15px; }\n\n@media (max-width: 1420px) and (min-width: 1200px) {\n  .viewtypeContainer {\n    font-size: 14px; } }\n\n.comingsooncurtain {\n  position: absolute;\n  z-index: 2;\n  width: 100%;\n  height: 100%;\n  background: #d2d2d2;\n  opacity: 0.95;\n  left: 0px;\n  top: 0px;\n  display: flex;\n  align-items: center; }\n\n.comingsooncurtain p {\n  color: #666662;\n  font-size: 35px;\n  text-align: center;\n  font-family: open-sans;\n  font-weight: bolder;\n  margin: auto; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/dashboard/dashboard-item/dashboard-item.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardItemComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DashboardItemComponent = (function () {
+    function DashboardItemComponent() {
+    }
+    DashboardItemComponent.prototype.ngOnInit = function () {
+    };
+    DashboardItemComponent.prototype.createClassName = function (badgeName) {
+        return badgeName.split(" ").join("");
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], DashboardItemComponent.prototype, "questionIndex", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], DashboardItemComponent.prototype, "quesMeta", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('title'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+    ], DashboardItemComponent.prototype, "titleBox", void 0);
+    DashboardItemComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-dashboard-item',
+            template: __webpack_require__("../../../../../src/app/dashboard/dashboard-item/dashboard-item.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/dashboard/dashboard-item/dashboard-item.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], DashboardItemComponent);
+    return DashboardItemComponent;
+    var _a;
+}());
+
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/dashboard-item.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/dashboard/dashboard.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"dashboard-items-container\">\r\n  <div class=\"container contentDiv\">\r\n    <div class=\"row item-container\">\r\n      <app-dashboard-item *ngFor=\"let ques of questions;\" [quesMeta]=\"ques\" class=\"col-lg-4 col-md-6 col-sm-12\"></app-dashboard-item>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/dashboard/dashboard.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")();
+// imports
+
+
+// module
+exports.push([module.i, ".header {\n  height: 63px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: default;\n  background-color: #ececec;\n  border-bottom: 3px solid #CB2929; }\n  .header .headingWrapper {\n    width: 100%; }\n\n.dashboard-items-container {\n  background-color: #eee;\n  padding-top: 6%;\n  height: calc(100% - 54px);\n  overflow: auto; }\n\n.contentDiv {\n  min-width: 90%;\n  max-width: 1280px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/dashboard/dashboard.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DashboardComponent = (function () {
+    function DashboardComponent() {
+        this.questions = [
+            {
+                qText: "Trial Balance: Learn",
+                description: "Learn to prepare Trial Balance to verify that debits equal the credits",
+                badges: ['Accounting', 'Training'],
+                view: "Side by Side View",
+                index: 1
+            },
+            {
+                qText: "Income Statement: Learn",
+                description: "Learn to prepare Income Statement to access the profitability of a company during a particular time interval",
+                badges: ['Accounting', 'Training'],
+                view: "Side by Side View",
+                index: 2
+            },
+            {
+                qText: "Create a Motion Profile",
+                description: "Motion profile is simply a way of defining how an Axis moves with respect to time.",
+                badges: ['Physics', 'Training'],
+                view: "Reading View",
+                index: 3
+            },
+            {
+                qText: "Trial Balance: Assess",
+                description: "Assess student's knowledge and skill at the end of the course",
+                badges: ['Accounting', 'Assessment'],
+                view: "Side by Side View",
+                index: 1
+            },
+            {
+                qText: "Income Statement: Assess",
+                description: "Assess student's knowledge and skill at the end of the course",
+                badges: ['Accounting', 'Assessment'],
+                view: "Side by Side View",
+                index: 2
+            },
+            {
+                qText: "Solve Projectile Problem",
+                description: "Assess student's knowledge and skill at the end of the course",
+                badges: ['Physics', 'Assessment'],
+                view: "Side by Side View",
+                index: 3
+            }
+        ];
+    }
+    DashboardComponent.prototype.ngOnInit = function () {
+    };
+    DashboardComponent.prototype.getQuesIndex = function (Qindex) {
+        var relativeLength = (this.questions.length) / 2;
+        if (Qindex > relativeLength) {
+            return (Qindex - relativeLength);
+        }
+        else {
+            return Qindex;
+        }
+    };
+    DashboardComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-dashboard',
+            template: __webpack_require__("../../../../../src/app/dashboard/dashboard.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/dashboard/dashboard.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], DashboardComponent);
+    return DashboardComponent;
+}());
+
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/dashboard.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/dashboard/dashboard.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return dashboardRoutes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dashboard_item_dashboard_item_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard-item/dashboard-item.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var dashboardRoutes = [
+    {
+        path: '',
+        component: __WEBPACK_IMPORTED_MODULE_3__dashboard_component__["a" /* DashboardComponent */],
+        pathMatch: 'full'
+    }
+];
+var DashboardModule = (function () {
+    function DashboardModule() {
+    }
+    DashboardModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */]
+            ],
+            exports: [__WEBPACK_IMPORTED_MODULE_3__dashboard_component__["a" /* DashboardComponent */]],
+            declarations: [__WEBPACK_IMPORTED_MODULE_3__dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_4__dashboard_item_dashboard_item_component__["a" /* DashboardItemComponent */]]
+        })
+    ], DashboardModule);
+    return DashboardModule;
+}());
+
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/dashboard.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/data.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DataService = (function () {
     function DataService() {
         this.config = {
             "Training": {
                 "1": {
                     question: {
-                        template: "<br><div class=\"questionHeadings\">Requirement</div>\n            <div>The accounts of Colby Group are provided with their normal balances as of August 31, 2017.</div>\n            <br/>\n            <div>Prepare Colby Group trial balance as of August 31, 2017. Enter the assets and liabilities in the order of liquidity.</div>\n            <br/>\n            <div>Remember that each line of the heading is very important and should be in a specific order.</div>\n            <br>\n            <div class=\"questionHeadings\">Account Balances</div>\n            <div> The accounts are listed in no particular order.</div>\n            <div style=\"height: 440px; min-width: 347px; min-height: 440px;\" leoDataId=\"leoHost1\" class=\"leoHost\"></div>\n            <div class=\"questionHeadings\">Prerequisites</div>\n            <div>1. Knowledge of Ledger balance (Ledger balances are segregated into debit balances and credit balances to prepare trial balance report.) </div>\n            <div>2. Understanding of following account groups \u2013 Assets, Liabilities, Equity, Revenue & Expenses</div>\n            <div>3. Familiar with golden rules of accounting i.e. able to list the account correctly under Debit/Credit side.</div>\n            ",
+                        template: "<br><div class=\"questionHeadings\">Requirement</div>\n            <div>The accounts of Fantasy Group are listed below with their normal balances as of March 31, 2018.</div>\n            <br/>\n            <div>Prepare the Trial Balance using these account balances. Please maintain the order of liquidity in the Trial Balance. Also ensure that the heading lines are provided in the correct order.</div>\n            <br/>\n            <div class=\"questionHeadings\">Account Balances</div>\n            <div> The accounts are listed in no particular order.</div>\n            <div style=\"height: 440px; min-width: 347px; min-height: 440px;\" leoDataId=\"leoHost1\" class=\"leoHost\"></div>\n            <div class=\"questionHeadings\">Prerequisites</div>\n            <div>1. Knowledge of Ledger balance (Ledger balances are segregated into debit balances and credit balances to prepare trial balance report.) </div>\n            <div>2. Understanding of following account groups \u2013 Assets, Liabilities, Equity, Revenue & Expenses</div>\n            <div>3. Familiar with golden rules of accounting i.e. able to list the account correctly under Debit/Credit side.</div>\n            ",
                         leoData: {
                             "leoHost1": {
                                 config: {
-                                    "data": [["Accounts", "Balance"], ["Terry Colby, Capital", "89650"], ["Terry Colby, Drawing", "56000"], ["Accounts Payable", "26000"], ["Prepaid Insurance", "1900"], ["Fees Earned", "454450"], ["Wages Expense", "270000"], ["Rent Expense", "51800"], ["Advertising Expense", "25200"], ["Misc. Expense", "5100"], ["Equipment", "196000"], ["Cash", "17300"], ["Accounts Receivable", "37000"], ["Supplies", "7400"], ["Notes Payable", "97600"]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }] }, "columns": { "0": { "width": 150 }, "1": { "width": 150 } }, "rows": { "0": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "1": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "2": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "3": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "4": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "5": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "6": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "7": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "8": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "9": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "10": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "11": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "12": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "13": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "14": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } } }, "options": { "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "left", "vertical": "middle" }, "maxRows": 20, "readOnly": true }, "modeconfig": { "mode": "Assessment", "role": "student", "showHintsBtn": false, "hideTopBar": true, "showCheckAnswerBtn": false, "theme": "leonardoThemeGreen", "tableContainsColumnHeaders": true }, "sheetNames": ["Data"]
+                                    "data": [["Accounts", "Balance"], ["Owner's, Capital", "145835"], ["Owner's, Drawing", "114920"], ["Accounts Payable", "26000"], ["Prepaid Insurance", "1960"], ["Fees Earned", "409255"], ["Wages Expense", "243250"], ["Rent Expense", "46870"], ["Advertising Expense", "22930"], ["Misc. Expense", "4840"], ["Equipment", "176650"], ["Cash", "17300"], ["Accounts Receivable", "33550"], ["Supplies", "6910"], ["Notes Payable", "88090"]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }] }, "columns": { "0": { "width": 150 }, "1": { "width": 150 } }, "rows": { "0": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "1": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "2": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "3": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "4": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "5": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "6": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "7": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "8": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "9": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "10": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "11": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "12": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "13": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } }, "14": { "cells": { "1": { "numberFormat": 1, "alignment": 1 } } } }, "options": { "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "left", "vertical": "middle" }, "maxRows": 20, "readOnly": true }, "modeconfig": { "mode": "Assessment", "role": "student", "showHintsBtn": false, "hideTopBar": true, "showCheckAnswerBtn": false, "theme": "leonardoThemeGreen", "tableContainsColumnHeaders": true }, "sheetNames": ["Data"]
                                 }
                             }
                         }
                     },
                     solution: {
-                        config: { "data": [["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "colorfills": [{ "id": 0, "color": "lightgray" }, { "id": 1, "color": "white" }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "left", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "1", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }] }, "options": { "preventEditingOnCheckAnswer": false, "setUniformCustomProperties": { "border": "1px solid black" }, "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "center", "vertical": "bottom" }, "maxRows": 40, "readOnly": false }, "hints": [{ "from": { "row": 0, "col": 0 }, "to": { "row": 2, "col": 0 }, "expectedvalues": [["Colby Group"], ["Trial Balance"], ["August 31, 2017"]], "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "styles": { "fontWeight": true } }, { "from": { "row": 5, "col": 0 }, "to": { "row": 9, "col": 2 }, "expectedvalues": [["Cash", 17300, ""], ["Accounts Receivable", 37000, ""], ["Supplies", 7400, ""], ["Prepaid Insurance", 1900, ""], ["Equipment", 196000, ""]] }, { "from": { "row": 10, "col": 0 }, "to": { "row": 14, "col": 2 }, "expectedvalues": [["Accounts Payable", "", 26000], ["Notes Payable", "", 97600], ["Terry Colby, Capital", "", 89650], ["Terry Colby, Drawing", 56000, ""], ["Fees Earned", "", 454450]] }, { "from": { "row": 15, "col": 0 }, "to": { "row": 18, "col": 2 }, "expectedvalues": [["Wages Expense", 270000, ""], ["Rent Expense", 51800, ""], ["Advertising Expense", 25200, ""], ["Misc. Expense", 5100, ""]] }], "modeconfig": { "mode": "Assessment", "hostAppRootPath": "libs", "role": "student", "showHintsBtn": false, "hideTopBar": false, "showCheckAnswerBtn": false, "showRibbon": true }, "mergedranges": [{ "row": 3, "col": 1, "rowspan": 1, "colspan": 2 }], "rows": { "0": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "1": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "2": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "3": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "4": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "2": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "5": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "6": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "7": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "8": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "9": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "10": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "11": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "12": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "13": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "14": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "15": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "16": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "17": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "18": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "19": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } } }, "sheetNames": ["Solution"] },
-                        correctData: {
-                            correctData: [
-                                ["Colby Group", "", "", "", "", "", "", "", "", "", "", "", ""], ["Trial Balance", "", "", "", "", "", "", "", "", "", "", "", ""], ["August 31, 2017", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["Cash", 17300, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Receivable", 37000, "", "", "", "", "", "", "", "", "", "", ""], ["Supplies", 7400, "", "", "", "", "", "", "", "", "", "", ""], ["Prepaid Insurance", 1900, "", "", "", "", "", "", "", "", "", "", ""], ["Equipment", 196000, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Payable", "", 26000, "", "", "", "", "", "", "", "", "", ""], ["Notes Payable", "", 97600, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Capital", "", 89650, "", "", "", "", "", "", "", "", "", ""], ["Terry Colby, Drawing", 56000, "", "", "", "", "", "", "", "", "", "", ""], ["Fees Earned", "", 454450, "", "", "", "", "", "", "", "", "", ""], ["Wages Expense", 270000, "", "", "", "", "", "", "", "", "", "", ""], ["Rent Expense", 51800, "", "", "", "", "", "", "", "", "", "", ""], ["Advertising Expense", 25200, "", "", "", "", "", "", "", "", "", "", ""], ["Misc. Expense", 5100, "", "", "", "", "", "", "", "", "", "", ""], ["Total", 667700, 667700, "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]
-                            ],
-                            validationJson: [
-                                { "cellRange": { "from": { "row": 0, "col": 0 }, "to": { "row": 0, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 0, "col": 0 } }, { "cellRange": { "from": { "row": 1, "col": 0 }, "to": { "row": 1, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 1, "col": 0 } }, { "cellRange": { "from": { "row": 2, "col": 0 }, "to": { "row": 2, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is missing.", "row": 2, "col": 0 } }, { "cellRange": { "from": { "row": 3, "col": 0 }, "to": { "row": 3, "col": 1 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 3, "col": 1 } }, { "cellRange": { "from": { "row": 4, "col": 0 }, "to": { "row": 4, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Account Titles are incorrect.", "row": 4, "col": 0 } }, { "cellRange": { "from": { "row": 5, "col": 0 }, "to": { "row": 5, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 5, "col": 0 } }, { "cellRange": { "from": { "row": 6, "col": 0 }, "to": { "row": 6, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 6, "col": 0 } }, { "cellRange": { "from": { "row": 7, "col": 0 }, "to": { "row": 7, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 7, "col": 0 } }, { "cellRange": { "from": { "row": 8, "col": 0 }, "to": { "row": 8, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 8, "col": 0 } }, { "cellRange": { "from": { "row": 9, "col": 0 }, "to": { "row": 9, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 9, "col": 0 } }, { "cellRange": { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 10, "col": 0 } }, { "cellRange": { "from": { "row": 11, "col": 0 }, "to": { "row": 11, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 11, "col": 0 } }, { "cellRange": { "from": { "row": 12, "col": 0 }, "to": { "row": 12, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 12, "col": 0 } }, { "cellRange": { "from": { "row": 13, "col": 0 }, "to": { "row": 13, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 13, "col": 0 } }, { "cellRange": { "from": { "row": 14, "col": 0 }, "to": { "row": 14, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 14, "col": 0 } }, { "cellRange": { "from": { "row": 15, "col": 0 }, "to": { "row": 15, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 15, "col": 0 } }, { "cellRange": { "from": { "row": 16, "col": 0 }, "to": { "row": 16, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 16, "col": 0 } }, { "cellRange": { "from": { "row": 17, "col": 0 }, "to": { "row": 17, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 17, "col": 0 } }, { "cellRange": { "from": { "row": 18, "col": 0 }, "to": { "row": 18, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 18, "col": 0 } }, { "cellRange": { "from": { "row": 19, "col": 0 }, "to": { "row": 19, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this row are incorrect.", "row": 19, "col": 0 } }
-                            ]
-                        }
+                        "config": { "data": [["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]], "styles": { "numberFormats": [{ "id": 0, "cat": "General" }, { "id": 1, "cat": "Accounting", "decimal": 2, "symbol": "$" }, { "id": 2, "cat": "Percentage", "decimal": 2 }], "colorfills": [{ "id": 0, "color": "lightgray" }, { "id": 1, "color": "white" }], "alignments": [{ "id": 0, "horizontal": "General", "vertical": "Bottom", "wraptext": true }, { "id": 1, "horizontal": "right", "vertical": "Bottom", "wraptext": true }, { "id": 2, "horizontal": "left", "vertical": "Bottom", "wraptext": true }], "borders": [{ "id": 0, "border": { "left": { "width": "0", "color": "#000000" }, "right": { "width": "0", "color": "#000000" }, "top": { "width": "0", "color": "#000000" }, "bottom": { "width": "0", "color": "#000000" } } }, { "id": 1, "border": { "left": { "width": "1", "color": "#000000" }, "right": { "width": "1", "color": "#000000" }, "top": { "width": "1", "color": "#000000" }, "bottom": { "width": "1", "color": "#000000" } } }] }, "options": { "preventEditingOnCheckAnswer": false, "setUniformCustomProperties": { "border": "1px solid black" }, "defaultRowHeight": 23, "rowheaders": true, "colheaders": true, "defaultAlign": { "horizontal": "center", "vertical": "bottom" }, "maxRows": 40, "readOnly": false }, "hints": [{ "from": { "row": 0, "col": 0 }, "to": { "row": 2, "col": 0 }, "expectedvalues": [["Fantasy Group"], ["Trial Balance"], ["March 31, 2018"]], "mergedranges": [{ "row": 0, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 1, "col": 0, "rowspan": 1, "colspan": 3 }, { "row": 2, "col": 0, "rowspan": 1, "colspan": 3 }], "styles": { "fontWeight": true } }, { "from": { "row": 5, "col": 0 }, "to": { "row": 9, "col": 2 }, "expectedvalues": [["Cash", 17300, ""], ["Accounts Receivable", 33550, ""], ["Supplies", 6910, ""], ["Prepaid Insurance", 1960, ""], ["Equipment", 176650, ""]] }, { "from": { "row": 10, "col": 0 }, "to": { "row": 14, "col": 2 }, "expectedvalues": [["Accounts Payable", "", 26000], ["Notes Payable", "", 88090], ["Owner's, Capital", "", 145835], ["Owner's, Drawing", 114920, ""], ["Fees Earned", "", 409255]] }, { "from": { "row": 15, "col": 0 }, "to": { "row": 18, "col": 2 }, "expectedvalues": [["Wages Expense", 243250, ""], ["Rent Expense", 46870, ""], ["Advertising Expense", 22930, ""], ["Misc. Expense", 4840, ""]] }], "modeconfig": { "mode": "Assessment", "hostAppRootPath": "libs", "role": "student", "showHintsBtn": false, "hideTopBar": false, "showCheckAnswerBtn": false, "showRibbon": true }, "mergedranges": [{ "row": 3, "col": 1, "rowspan": 1, "colspan": 2 }], "rows": { "0": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "1": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "2": { "cells": { "0": { "colorfill": 0, "border": 1, "readOnly": false }, "1": { "colorfill": 0, "border": 1, "readOnly": false }, "2": { "colorfill": 0, "border": 1, "readOnly": false } } }, "3": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "4": { "cells": { "0": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "1": { "colorfill": 0, "border": 1, "fontWeight": "bold" }, "2": { "colorfill": 0, "border": 1, "fontWeight": "bold" } } }, "5": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "6": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "7": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "8": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "9": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "10": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "11": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "12": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "13": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "14": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "15": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "16": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "17": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "18": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } }, "19": { "cells": { "0": { "colorfill": 1, "border": 1, "alignment": 2, "readOnly": false }, "1": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false }, "2": { "colorfill": 1, "border": 1, "numberFormat": 1, "readOnly": false } } } }, "sheetNames": ["Solution"] }, "correctData": { "correctData": [["Fantasy Group", "", "", "", "", "", "", "", "", "", "", "", ""], ["Trial Balance", "", "", "", "", "", "", "", "", "", "", "", ""], ["March 31, 2018", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "Balance", "", "", "", "", "", "", "", "", "", "", ""], ["Account Title", "Debit", "Credit", "", "", "", "", "", "", "", "", "", ""], ["Cash", 17300, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Receivable", 33550, "", "", "", "", "", "", "", "", "", "", ""], ["Supplies", 6910, "", "", "", "", "", "", "", "", "", "", ""], ["Prepaid Insurance", 1960, "", "", "", "", "", "", "", "", "", "", ""], ["Equipment", 176650, "", "", "", "", "", "", "", "", "", "", ""], ["Accounts Payable", "", 26000, "", "", "", "", "", "", "", "", "", ""], ["Notes Payable", "", 88090, "", "", "", "", "", "", "", "", "", ""], ["Owner's, Capital", "", 145835, "", "", "", "", "", "", "", "", "", ""], ["Owner's, Drawing", 114920, "", "", "", "", "", "", "", "", "", "", ""], ["Fees Earned", "", 409255, "", "", "", "", "", "", "", "", "", ""], ["Wages Expense", 243250, "", "", "", "", "", "", "", "", "", "", ""], ["Rent Expense", 46870, "", "", "", "", "", "", "", "", "", "", ""], ["Advertising Expense", 22930, "", "", "", "", "", "", "", "", "", "", ""], ["Misc. Expense", 4840, "", "", "", "", "", "", "", "", "", "", ""], ["Total", 669180, 669180, "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", "", "", "", "", "", ""]], "validationJson": [{ "cellRange": { "from": { "row": 0, "col": 0 }, "to": { "row": 0, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 0, "col": 0 } }, { "cellRange": { "from": { "row": 1, "col": 0 }, "to": { "row": 1, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 1, "col": 0 } }, { "cellRange": { "from": { "row": 2, "col": 0 }, "to": { "row": 2, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is missing.", "row": 2, "col": 0 } }, { "cellRange": { "from": { "row": 3, "col": 0 }, "to": { "row": 3, "col": 1 } }, "rule": "all", "errorDetails": { "comment": "Entry for this Header is incorrect.", "row": 3, "col": 1 } }, { "cellRange": { "from": { "row": 4, "col": 0 }, "to": { "row": 4, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Account Titles are incorrect.", "row": 4, "col": 0 } }, { "cellRange": { "from": { "row": 5, "col": 0 }, "to": { "row": 5, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 5, "col": 0 } }, { "cellRange": { "from": { "row": 6, "col": 0 }, "to": { "row": 6, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 6, "col": 0 } }, { "cellRange": { "from": { "row": 7, "col": 0 }, "to": { "row": 7, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 7, "col": 0 } }, { "cellRange": { "from": { "row": 8, "col": 0 }, "to": { "row": 8, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 8, "col": 0 } }, { "cellRange": { "from": { "row": 9, "col": 0 }, "to": { "row": 9, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 9, "col": 0 } }, { "cellRange": { "from": { "row": 10, "col": 0 }, "to": { "row": 10, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 10, "col": 0 } }, { "cellRange": { "from": { "row": 11, "col": 0 }, "to": { "row": 11, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 11, "col": 0 } }, { "cellRange": { "from": { "row": 12, "col": 0 }, "to": { "row": 12, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 12, "col": 0 } }, { "cellRange": { "from": { "row": 13, "col": 0 }, "to": { "row": 13, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 13, "col": 0 } }, { "cellRange": { "from": { "row": 14, "col": 0 }, "to": { "row": 14, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 14, "col": 0 } }, { "cellRange": { "from": { "row": 15, "col": 0 }, "to": { "row": 15, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 15, "col": 0 } }, { "cellRange": { "from": { "row": 16, "col": 0 }, "to": { "row": 16, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 16, "col": 0 } }, { "cellRange": { "from": { "row": 17, "col": 0 }, "to": { "row": 17, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 17, "col": 0 } }, { "cellRange": { "from": { "row": 18, "col": 0 }, "to": { "row": 18, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this account are incorrect.", "row": 18, "col": 0 } }, { "cellRange": { "from": { "row": 19, "col": 0 }, "to": { "row": 19, "col": 2 } }, "rule": "all", "errorDetails": { "comment": "Entries for this row are incorrect.", "row": 19, "col": 0 } }] }
                     }
                 },
                 "2": {
@@ -300,222 +684,154 @@ var DataService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 484:
+/***/ "../../../../../src/app/leonardo/cosmatt-item-box/cosmatt-item-box.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div #cosmattItemHost class=\"col-md-12 cosmattItemHost\">\r\n  <div #itemHeaderContainer class=\"col-md-11 itemHeaderContainer \">\r\n    <h2>\r\n      <span class=\"glyphicon glyphicon-book\"></span>\r\n      <span>{{chapName}}</span>\r\n      <span>-</span>\r\n      <span>{{secName}}</span>\r\n    </h2>\r\n  </div>\r\n  <div #cosmattItemContainer class=\"col-md-11 cosmattItemContainer\"></div>\r\n  <div #workspaceHost class=\"col-md-11 workspaceHost\">\r\n    <div #workspaceContainer class=\"workspaceContainer\">\r\n      <div class=\"qInstruction\">\r\n        <div class=\"qLabel\">Question:</div>\r\n        <div #qInstruction class=\"statement\"></div>\r\n      </div>\r\n      <div #workspace class=\"workspace\">\r\n      </div>\r\n      <div class=\"btnContainer\">\r\n        <button class=\"navBtn btnCMW\" (click)=\"cmwHandler()\" [disabled]=\"!isCMWEnabled\">\r\n          <a>\r\n            <span class=\"glyphicon glyphicon-ok\"></span>\r\n          </a>\r\n          <span class=\"btnText\">Check My Work</span>\r\n        </button>\r\n        <button class=\"navBtn btnReset\" (click)=\"resetHandler()\">\r\n          <a>\r\n            <span class=\"glyphicon glyphicon-repeat\"></span>\r\n          </a>\r\n          <span class=\"btnText\">Reset</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/leonardo/cosmatt-item-box/cosmatt-item-box.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(485);
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")();
+// imports
 
 
-/***/ }),
+// module
+exports.push([module.i, ".cosmattItemHost {\n  background-color: #dedede; }\n  .cosmattItemHost .itemHeaderContainer {\n    float: none;\n    margin: 20px auto;\n    padding: 0px; }\n  .cosmattItemHost .cosmattItemContainer {\n    background-color: #ffffff;\n    margin: auto;\n    float: none;\n    padding-top: 1px;\n    padding-bottom: 1px;\n    border-top: solid 5px #cb2929;\n    border-top-left-radius: 2.8px;\n    border-top-right-radius: 2.8px; }\n    .cosmattItemHost .cosmattItemContainer > div {\n      font-size: 1.1em;\n      line-height: 1.6; }\n    .cosmattItemHost .cosmattItemContainer .questionHeadings {\n      font-weight: 600;\n      color: #008fce;\n      font-size: 1.5em; }\n    .cosmattItemHost .cosmattItemContainer .leoHost {\n      width: 100%; }\n    .cosmattItemHost .cosmattItemContainer div.code-math {\n      font-size: 24px;\n      padding: 10px;\n      border-radius: 3px;\n      text-align: center;\n      overflow: auto;\n      color: #333;\n      line-height: 19px; }\n      .cosmattItemHost .cosmattItemContainer div.code-math .MathJax_SVG_Display {\n        width: auto;\n        display: inline-block !important;\n        border: 1px solid #199ed5;\n        border-radius: 10px;\n        padding: 10px;\n        background-color: #e2f4fd;\n        font-size: .65em;\n        font-family: Open Sans !important; }\n    .cosmattItemHost .cosmattItemContainer h6 {\n      margin: 12px 0 10px;\n      padding: 0;\n      -webkit-font-smoothing: antialiased;\n      cursor: text;\n      position: relative;\n      font-size: 1.1em;\n      font-weight: 400;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n      -ms-flex-align: center;\n      align-items: center;\n      -webkit-box-pack: center;\n      -ms-flex-pack: center;\n      justify-content: center;\n      color: #f3722d; }\n    .cosmattItemHost .cosmattItemContainer p img {\n      box-shadow: 6px 6px 9px #ddd;\n      border: 1px solid #ddd;\n      position: relative;\n      left: 50%;\n      -webkit-transform: translate(-50%);\n      transform: translate(-50%); }\n  .cosmattItemHost .workspaceHost {\n    background-color: #ffffff;\n    margin: auto;\n    float: none;\n    padding-top: 1px;\n    padding-bottom: 50px; }\n    .cosmattItemHost .workspaceHost .workspaceContainer {\n      box-shadow: 6px 6px 9px #ddd;\n      border: 1px solid #ddd; }\n      .cosmattItemHost .workspaceHost .workspaceContainer .qInstruction {\n        width: 100%;\n        background-color: #f5f5f5;\n        font-size: 1.286em; }\n        .cosmattItemHost .workspaceHost .workspaceContainer .qInstruction .qLabel {\n          color: #000;\n          float: left;\n          font-weight: 600;\n          display: inline-block;\n          padding: 20px 5px 20px 50px;\n          width: 135px;\n          height: 100%; }\n        .cosmattItemHost .workspaceHost .workspaceContainer .qInstruction .statement {\n          color: #366894;\n          display: inline-block;\n          padding: 20px 50px 20px 5px;\n          width: calc(100% - 135px); }\n      .cosmattItemHost .workspaceHost .workspaceContainer .workspace {\n        margin-top: 50px; }\n      .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer {\n        margin: auto;\n        float: none;\n        border-top: 1px solid #d1d1d1;\n        height: 70px;\n        padding-top: 15px;\n        width: 97%; }\n        .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn {\n          color: #01579b;\n          padding: 5px 16px;\n          line-height: 1.5;\n          text-align: center;\n          white-space: nowrap;\n          vertical-align: middle;\n          border: none;\n          background-color: #fff;\n          outline: none; }\n          .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn a {\n            text-decoration: none; }\n            .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn a .glyphicon {\n              padding-right: 7px; }\n        .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn:hover {\n          text-decoration: underline; }\n        .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn:disabled {\n          color: graytext;\n          text-decoration: none;\n          cursor: not-allowed; }\n          .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn:disabled .glyphicon {\n            color: graytext; }\n        .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn.btnReset {\n          border-left: 1px solid #d1d1d1; }\n", ""]);
 
-/***/ 485:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(513);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(584);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(754);
+// exports
 
 
-
-
-if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
-}
-Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/main.js.map
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 584:
+/***/ "../../../../../src/app/leonardo/cosmatt-item-box/cosmatt-item-box.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(591);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__leonardo_leonardo_module__ = __webpack_require__(613);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__dashboard_dashboard_module__ = __webpack_require__(742);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__data_service__ = __webpack_require__(470);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__(749);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CosmattItemBoxComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
-
-
-
-
-
-
-var appRoutes = [
-    {
-        path: '',
-        redirectTo: 'dashboard',
-        pathMatch: 'full'
-    },
-    {
-        path: 'question',
-        children: __WEBPACK_IMPORTED_MODULE_5__leonardo_leonardo_module__["b" /* leoRoutes */]
-    },
-    {
-        path: 'dashboard',
-        children: __WEBPACK_IMPORTED_MODULE_6__dashboard_dashboard_module__["b" /* dashboardRoutes */]
-    }
-];
-var AppModule = /** @class */ (function () {
-    function AppModule() {
-    }
-    AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_5__leonardo_leonardo_module__["a" /* LeonardoModule */],
-                __WEBPACK_IMPORTED_MODULE_6__dashboard_dashboard_module__["a" /* DashboardModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */].forRoot(appRoutes)
-            ],
-            providers: [__WEBPACK_IMPORTED_MODULE_7__data_service__["a" /* DataService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
-        })
-    ], AppModule);
-    return AppModule;
-}());
-
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/app.module.js.map
-
-/***/ }),
-
-/***/ 613:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return leoRoutes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeonardoModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_pdf_viewer__ = __webpack_require__(614);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_pdf_viewer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_pdf_viewer__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__ = __webpack_require__(650);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__leonardo_component__ = __webpack_require__(718);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigator_navigator_component__ = __webpack_require__(721);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__question_box_question_box_component__ = __webpack_require__(724);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__cosmatt_item_box_cosmatt_item_box_component__ = __webpack_require__(727);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__workspace_workspace_component__ = __webpack_require__(730);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__verticalSplitter_ng2_split_pane__ = __webpack_require__(733);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__studymaterial_studymaterial_component__ = __webpack_require__(739);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-var leoRoutes = [
-    {
-        path: ':id/:mode/:user',
-        component: __WEBPACK_IMPORTED_MODULE_5__leonardo_component__["a" /* LeonardoComponent */]
-    },
-    {
-        path: ':id/:mode',
-        component: __WEBPACK_IMPORTED_MODULE_5__leonardo_component__["a" /* LeonardoComponent */]
+var CosmattItemBoxComponent = (function () {
+    function CosmattItemBoxComponent() {
+        this.isCMWEnabled = true;
+        this.chapName = "";
+        this.secName = "";
     }
-];
-var LeonardoModule = /** @class */ (function () {
-    function LeonardoModule() {
-    }
-    LeonardoModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
-                __WEBPACK_IMPORTED_MODULE_10__verticalSplitter_ng2_split_pane__["a" /* SplitPaneModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */],
-                __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__["a" /* ModalModule */].forRoot()
-            ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_5__leonardo_component__["a" /* LeonardoComponent */]
-            ],
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__leonardo_component__["a" /* LeonardoComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__navigator_navigator_component__["a" /* NavigatorComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__question_box_question_box_component__["a" /* QuestionBoxComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__cosmatt_item_box_cosmatt_item_box_component__["a" /* CosmattItemBoxComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__workspace_workspace_component__["a" /* WorkspaceComponent */],
-                __WEBPACK_IMPORTED_MODULE_3_ng2_pdf_viewer__["PdfViewerComponent"],
-                __WEBPACK_IMPORTED_MODULE_11__studymaterial_studymaterial_component__["a" /* StudymaterialComponent */]
-            ]
-        })
-    ], LeonardoModule);
-    return LeonardoModule;
+    CosmattItemBoxComponent.prototype.ngOnInit = function () {
+        this.chapName = this.questionData["chapter"];
+        this.secName = this.questionData["section"];
+        this.cosmattItemContainer.nativeElement.innerHTML = this.questionData["template"];
+        var leoInstances = this.cosmattItemContainer.nativeElement.querySelectorAll(".leoHost");
+        for (var index = 0; index < leoInstances.length; index++) {
+            var data = this.questionData.leoData[leoInstances[index].getAttribute("leoDataId")];
+            Leonardo.scripts.add(leoInstances[index], data.config, data.correctData);
+        }
+        this.renderWorkspace();
+    };
+    CosmattItemBoxComponent.prototype.renderWorkspace = function () {
+        this.qInstruction.nativeElement.innerHTML = this.solutionData.qIns;
+        if (this.solutionData.gridUIParams) {
+            if (this.solutionData.gridUIParams.height) {
+                this.workspace.nativeElement.style.height = this.solutionData.gridUIParams.height + "px";
+            }
+            if (this.solutionData.gridUIParams.width) {
+                this.workspace.nativeElement.style.width = this.solutionData.gridUIParams.width + "px";
+            }
+        }
+        Leonardo.scripts.add(this.workspace.nativeElement, JSON.parse(JSON.stringify(this.solutionData.config)), this.solutionData.correctData);
+    };
+    CosmattItemBoxComponent.prototype.cmwHandler = function () {
+        this.isCMWEnabled = false;
+        Leonardo.scripts.checkAnswer(this.workspace.nativeElement);
+    };
+    CosmattItemBoxComponent.prototype.resetHandler = function () {
+        this.isCMWEnabled = true;
+        Leonardo.scripts.reset(this.workspace.nativeElement);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], CosmattItemBoxComponent.prototype, "questionData", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], CosmattItemBoxComponent.prototype, "solutionData", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('cosmattItemContainer'),
+        __metadata("design:type", Object)
+    ], CosmattItemBoxComponent.prototype, "cosmattItemContainer", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('qInstruction'),
+        __metadata("design:type", Object)
+    ], CosmattItemBoxComponent.prototype, "qInstruction", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('workspace'),
+        __metadata("design:type", Object)
+    ], CosmattItemBoxComponent.prototype, "workspace", void 0);
+    CosmattItemBoxComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'cosmatt-item-box',
+            template: __webpack_require__("../../../../../src/app/leonardo/cosmatt-item-box/cosmatt-item-box.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/leonardo/cosmatt-item-box/cosmatt-item-box.component.scss")],
+            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
+        }),
+        __metadata("design:paramtypes", [])
+    ], CosmattItemBoxComponent);
+    return CosmattItemBoxComponent;
 }());
 
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/leonardo.module.js.map
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/cosmatt-item-box.component.js.map
 
 /***/ }),
 
-/***/ 623:
+/***/ "../../../../../src/app/leonardo/leonardo.component.html":
 /***/ (function(module, exports) {
 
-/* (ignored) */
+module.exports = "<div *ngIf=\"id!='3'\" #contentWrapper class=\"contentWrapper\">\r\n  <vertical-split-pane class=\"verticalSeparator\" primary-component-initialratio=\"0.30\" separator-thickness=\"21\" [primary-component-minsize]=\"0\"\r\n    [secondary-component-minsize]=\"829\">\r\n    <div class=\"split-pane-content-primary\">\r\n      <app-question-box class=\"questionWrapper\" [questionData]='questionData'></app-question-box>\r\n    </div>\r\n    <div class=\"split-pane-content-secondary\">\r\n      <app-workspace #workspace class=\"workspaceWrapper\" [solutionData]='solutionData' (gridEvent) = \"handleGridEvent($event)\"></app-workspace>\r\n    </div>\r\n  </vertical-split-pane>\r\n</div>\r\n<!-- <div *ngIf=\"mode=='Assessment' && id!='3'\" #contentWrapper class=\"contentWrapper verticalView\">\r\n      <app-question-box class=\"questionWrapper\" [questionData]='questionData'></app-question-box>\r\n      <app-workspace #workspace class=\"workspaceWrapper col-md-12\" [solutionData]='solutionData' (gridEvent) = \"handleGridEvent($event)\"></app-workspace>\r\n</div> -->\r\n\r\n<div *ngIf=\"id=='3'\"  #contentWrapper class=\"contentWrapper verticalView cosmattItemWrapper\">\r\n  <cosmatt-item-box #workspace class=\"questionWrapper\" [questionData]='questionData' [solutionData]='solutionData' (gridEvent) = \"handleGridEvent($event)\"></cosmatt-item-box>\r\n</div>\r\n\r\n<div bsModal #modalWindow=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" (onShown)=\"setModalVisibilty(true)\" (onHidden)=\"setModalVisibilty(false)\"aria-labelledby=\"mySmallModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog modal-view\">\r\n    <div class=\"modal-content \">\r\n      <div class=\"modal-header comproBand\">        \r\n        <p class=\"modal-title text-xs-center fw-bold mt\" id=\"myModalLabel18\">Study - Accounting Fundamentals and Concepts\r\n        <button (click)=\"modalWindow.hide()\" aria-label=\"Close\" class=\"pull-right closeButton\" type=\"button\">\r\n          <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\r\n        </button>\r\n      </p>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <app-studymaterial [modalVisible]= \"modalVisible\"></app-studymaterial>\r\n      </div>\r\n    </div>\r\n  </div>  \r\n</div>\r\n\r\n<app-navigator *ngIf=\"id!='3'\" (navEvent)=\"handleCompEvents($event)\" class=\"navigatorWrapper\" [navigatorData] = \"navigatorData\"></app-navigator>\r\n"
 
 /***/ }),
 
-/***/ 638:
-/***/ (function(module, exports) {
+/***/ "../../../../../src/app/leonardo/leonardo.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
 
-/* (ignored) */
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")();
+// imports
 
-/***/ }),
 
-/***/ 639:
-/***/ (function(module, exports) {
+// module
+exports.push([module.i, ".contentWrapper > * {\n  display: inline-block; }\n\n.contentWrapper {\n  height: calc(100% - 108px);\n  width: 100%;\n  background-color: #ececec; }\n\n.navigatorWrapper {\n  height: 155px;\n  bottom: 0;\n  font-size: 1.1em;\n  line-height: 1.6; }\n\n.workspaceWrapper {\n  height: 100%; }\n\n.split-pane-content-primary {\n  height: 100%;\n  width: 100%;\n  overflow: auto; }\n\n.split-pane-content-secondary {\n  height: 100%;\n  width: 100%; }\n\n.questionWrapper {\n  height: 100%;\n  width: 100%;\n  overflow: auto; }\n\n.contentWrapper.verticalView {\n  overflow-y: auto;\n  background-color: #fff; }\n  .contentWrapper.verticalView .questionWrapper {\n    height: auto; }\n\n.contentWrapper.verticalView.cosmattItemWrapper {\n  height: calc(100% - 54px); }\n\n.modal-view {\n  width: 90%;\n  height: 85%;\n  top: 10%;\n  margin: auto; }\n\n.modal-content {\n  height: 100%; }\n\n.modal-body {\n  height: calc(100% - 64px);\n  padding: 0px; }\n\n.modal-header {\n  border-bottom: 0px; }\n\n.comproBand {\n  background: #000000;\n  color: #ffffff;\n  font-weight: bold;\n  font-size: 24px; }\n  .comproBand .closeButton {\n    color: #DAD2D2;\n    background: transparent;\n    border: 0px;\n    font-size: 18px; }\n", ""]);
 
-/* (ignored) */
+// exports
 
-/***/ }),
 
-/***/ 640:
-/***/ (function(module, exports) {
-
-/* (ignored) */
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 718:
+/***/ "../../../../../src/app/leonardo/leonardo.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeonardoComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_service__ = __webpack_require__(470);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_modal__ = __webpack_require__(469);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_service__ = __webpack_require__("../../../../../src/app/data.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_modal__ = __webpack_require__("../../../../ngx-bootstrap/modal/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -529,7 +845,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var LeonardoComponent = /** @class */ (function () {
+var LeonardoComponent = (function () {
     function LeonardoComponent(dataService, route) {
         var _this = this;
         this.dataService = dataService;
@@ -610,8 +926,8 @@ var LeonardoComponent = /** @class */ (function () {
     LeonardoComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-leonardo',
-            template: __webpack_require__(719),
-            styles: [__webpack_require__(720)]
+            template: __webpack_require__("../../../../../src/app/leonardo/leonardo.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/leonardo/leonardo.component.scss")]
         }),
         __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object])
     ], LeonardoComponent);
@@ -623,22 +939,101 @@ var LeonardoComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 719:
-/***/ (function(module, exports) {
+/***/ "../../../../../src/app/leonardo/leonardo.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "<div *ngIf=\"id!='3'\" #contentWrapper class=\"contentWrapper\">\r\n  <vertical-split-pane class=\"verticalSeparator\" primary-component-initialratio=\"0.30\" separator-thickness=\"21\" [primary-component-minsize]=\"0\"\r\n    [secondary-component-minsize]=\"829\">\r\n    <div class=\"split-pane-content-primary\">\r\n      <app-question-box class=\"questionWrapper\" [questionData]='questionData'></app-question-box>\r\n    </div>\r\n    <div class=\"split-pane-content-secondary\">\r\n      <app-workspace #workspace class=\"workspaceWrapper\" [solutionData]='solutionData' (gridEvent) = \"handleGridEvent($event)\"></app-workspace>\r\n    </div>\r\n  </vertical-split-pane>\r\n</div>\r\n<!-- <div *ngIf=\"mode=='Assessment' && id!='3'\" #contentWrapper class=\"contentWrapper verticalView\">\r\n      <app-question-box class=\"questionWrapper\" [questionData]='questionData'></app-question-box>\r\n      <app-workspace #workspace class=\"workspaceWrapper col-md-12\" [solutionData]='solutionData' (gridEvent) = \"handleGridEvent($event)\"></app-workspace>\r\n</div> -->\r\n\r\n<div *ngIf=\"id=='3'\"  #contentWrapper class=\"contentWrapper verticalView cosmattItemWrapper\">\r\n  <cosmatt-item-box #workspace class=\"questionWrapper\" [questionData]='questionData' [solutionData]='solutionData' (gridEvent) = \"handleGridEvent($event)\"></cosmatt-item-box>\r\n</div>\r\n\r\n<div bsModal #modalWindow=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" (onShown)=\"setModalVisibilty(true)\" (onHidden)=\"setModalVisibilty(false)\"aria-labelledby=\"mySmallModalLabel\" aria-hidden=\"true\">\r\n  <div class=\"modal-dialog modal-view\">\r\n    <div class=\"modal-content \">\r\n      <div class=\"modal-header comproBand\">        \r\n        <p class=\"modal-title text-xs-center fw-bold mt\" id=\"myModalLabel18\">Study - Accounting Fundamentals and Concepts\r\n        <button (click)=\"modalWindow.hide()\" aria-label=\"Close\" class=\"pull-right closeButton\" type=\"button\">\r\n          <span class=\"glyphicon glyphicon-remove\" aria-hidden=\"true\"></span>\r\n        </button>\r\n      </p>\r\n      </div>\r\n      <div class=\"modal-body\">\r\n        <app-studymaterial [modalVisible]= \"modalVisible\"></app-studymaterial>\r\n      </div>\r\n    </div>\r\n  </div>  \r\n</div>\r\n\r\n<app-navigator *ngIf=\"id!='3'\" (navEvent)=\"handleCompEvents($event)\" class=\"navigatorWrapper\" [navigatorData] = \"navigatorData\"></app-navigator>\r\n"
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return leoRoutes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeonardoModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_pdf_viewer__ = __webpack_require__("../../../../ng2-pdf-viewer/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_pdf_viewer___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ng2_pdf_viewer__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__ = __webpack_require__("../../../../ngx-bootstrap/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__leonardo_component__ = __webpack_require__("../../../../../src/app/leonardo/leonardo.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__navigator_navigator_component__ = __webpack_require__("../../../../../src/app/leonardo/navigator/navigator.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__question_box_question_box_component__ = __webpack_require__("../../../../../src/app/leonardo/question-box/question-box.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__cosmatt_item_box_cosmatt_item_box_component__ = __webpack_require__("../../../../../src/app/leonardo/cosmatt-item-box/cosmatt-item-box.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__workspace_workspace_component__ = __webpack_require__("../../../../../src/app/leonardo/workspace/workspace.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__verticalSplitter_ng2_split_pane__ = __webpack_require__("../../../../../src/app/leonardo/verticalSplitter/ng2-split-pane.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__studymaterial_studymaterial_component__ = __webpack_require__("../../../../../src/app/leonardo/studymaterial/studymaterial.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+var leoRoutes = [
+    {
+        path: ':id/:mode/:user',
+        component: __WEBPACK_IMPORTED_MODULE_5__leonardo_component__["a" /* LeonardoComponent */]
+    },
+    {
+        path: ':id/:mode',
+        component: __WEBPACK_IMPORTED_MODULE_5__leonardo_component__["a" /* LeonardoComponent */]
+    }
+];
+var LeonardoModule = (function () {
+    function LeonardoModule() {
+    }
+    LeonardoModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
+                __WEBPACK_IMPORTED_MODULE_10__verticalSplitter_ng2_split_pane__["a" /* SplitPaneModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */],
+                __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__["a" /* ModalModule */].forRoot()
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_5__leonardo_component__["a" /* LeonardoComponent */]
+            ],
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_5__leonardo_component__["a" /* LeonardoComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__navigator_navigator_component__["a" /* NavigatorComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__question_box_question_box_component__["a" /* QuestionBoxComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__cosmatt_item_box_cosmatt_item_box_component__["a" /* CosmattItemBoxComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__workspace_workspace_component__["a" /* WorkspaceComponent */],
+                __WEBPACK_IMPORTED_MODULE_3_ng2_pdf_viewer__["PdfViewerComponent"],
+                __WEBPACK_IMPORTED_MODULE_11__studymaterial_studymaterial_component__["a" /* StudymaterialComponent */]
+            ]
+        })
+    ], LeonardoModule);
+    return LeonardoModule;
+}());
+
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/leonardo.module.js.map
 
 /***/ }),
 
-/***/ 720:
+/***/ "../../../../../src/app/leonardo/navigator/navigator.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"panel panel-default\">\r\n  <div class=\"panel-body\" style=\"display: none;\">\r\n    <p>Prepare the trial balance. Remember that each lineof the heading is very important and should be in a specific order.</p>\r\n    <p><i>Avoid committing spelling mistakes while typing the account heads.</i></p>\r\n  </div>\r\n  <div class=\"panel-footer\">\r\n    <button class=\"btn btn-primary\" [style.visibility]=\"checkvisiblity(navigatorData.showStudyButton)\" (click)=\"launchEbook()\">Study</button>\r\n    <button class=\"btn btn-primary\" [style.visibility]=\"checkvisiblity(navigatorData.showHintButton)\" (click)=\"displayHint()\" [disabled] = \"navigatorData.hint.isLastHint\">Hint</button>\r\n    <button class=\"btn btn-primary\" [style.visibility] = \"checkvisiblity(navigatorData.showCheckAnswer)\" (click)=\"checkMyAnswer()\">{{(this.answerButtonMode == \"checkAnswer\"?\"Check My Work\":\"Try Again\")}}</button>\r\n    <button class=\"btn btn-primary pull-right\" [style.visibility] = \"checkvisiblity(navigatorData.showSubmitButton)\" (click) = \"handleSubmitClick()\">{{(this.submitButtonMode == \"submit\"?\"Submit\":\"Close\")}}</button>\r\n  </div>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/leonardo/navigator/navigator.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(20)();
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")();
 // imports
 
 
 // module
-exports.push([module.i, ".contentWrapper > * {\n  display: inline-block; }\n\n.contentWrapper {\n  height: calc(100% - 108px);\n  width: 100%;\n  background-color: #ececec; }\n\n.navigatorWrapper {\n  height: 155px;\n  bottom: 0;\n  font-size: 1.1em;\n  line-height: 1.6; }\n\n.workspaceWrapper {\n  height: 100%; }\n\n.split-pane-content-primary {\n  height: 100%;\n  width: 100%;\n  overflow: auto; }\n\n.split-pane-content-secondary {\n  height: 100%;\n  width: 100%; }\n\n.questionWrapper {\n  height: 100%;\n  width: 100%;\n  overflow: auto; }\n\n.contentWrapper.verticalView {\n  overflow-y: auto;\n  background-color: #fff; }\n  .contentWrapper.verticalView .questionWrapper {\n    height: auto; }\n\n.contentWrapper.verticalView.cosmattItemWrapper {\n  height: calc(100% - 54px); }\n\n.modal-view {\n  width: 90%;\n  height: 85%;\n  top: 10%;\n  margin: auto; }\n\n.modal-content {\n  height: 100%; }\n\n.modal-body {\n  height: calc(100% - 64px);\n  padding: 0px; }\n\n.modal-header {\n  border-bottom: 0px; }\n\n.comproBand {\n  background: #000000;\n  color: #ffffff;\n  font-weight: bold;\n  font-size: 24px; }\n  .comproBand .closeButton {\n    color: #DAD2D2;\n    background: transparent;\n    border: 0px;\n    font-size: 18px; }\n", ""]);
+exports.push([module.i, ".panel.panel-default {\n  margin-bottom: 0px;\n  border: 0; }\n  .panel.panel-default .panel-footer {\n    border: 0; }\n", ""]);
 
 // exports
 
@@ -648,13 +1043,13 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 721:
+/***/ "../../../../../src/app/leonardo/navigator/navigator.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigatorComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -666,7 +1061,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var NavigatorComponent = /** @class */ (function () {
+var NavigatorComponent = (function () {
     function NavigatorComponent(router) {
         this.router = router;
         this.navEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
@@ -721,8 +1116,8 @@ var NavigatorComponent = /** @class */ (function () {
     NavigatorComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-navigator',
-            template: __webpack_require__(722),
-            styles: [__webpack_require__(723)]
+            template: __webpack_require__("../../../../../src/app/leonardo/navigator/navigator.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/leonardo/navigator/navigator.component.scss")]
         }),
         __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
     ], NavigatorComponent);
@@ -734,22 +1129,22 @@ var NavigatorComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 722:
+/***/ "../../../../../src/app/leonardo/question-box/question-box.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"panel panel-default\">\r\n  <div class=\"panel-body\" style=\"display: none;\">\r\n    <p>Prepare the trial balance. Remember that each lineof the heading is very important and should be in a specific order.</p>\r\n    <p><i>Avoid committing spelling mistakes while typing the account heads.</i></p>\r\n  </div>\r\n  <div class=\"panel-footer\">\r\n    <button class=\"btn btn-primary\" [style.visibility]=\"checkvisiblity(navigatorData.showStudyButton)\" (click)=\"launchEbook()\">Study</button>\r\n    <button class=\"btn btn-primary\" [style.visibility]=\"checkvisiblity(navigatorData.showHintButton)\" (click)=\"displayHint()\" [disabled] = \"navigatorData.hint.isLastHint\">Hint</button>\r\n    <button class=\"btn btn-primary\" [style.visibility] = \"checkvisiblity(navigatorData.showCheckAnswer)\" (click)=\"checkMyAnswer()\">{{(this.answerButtonMode == \"checkAnswer\"?\"Check My Work\":\"Try Again\")}}</button>\r\n    <button class=\"btn btn-primary pull-right\" [style.visibility] = \"checkvisiblity(navigatorData.showSubmitButton)\" (click) = \"handleSubmitClick()\">{{(this.submitButtonMode == \"submit\"?\"Submit\":\"Close\")}}</button>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div #questionHost class=\"col-md-12 questionHost\">\r\n</div>"
 
 /***/ }),
 
-/***/ 723:
+/***/ "../../../../../src/app/leonardo/question-box/question-box.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(20)();
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")();
 // imports
 
 
 // module
-exports.push([module.i, ".panel.panel-default {\n  margin-bottom: 0px;\n  border: 0; }\n  .panel.panel-default .panel-footer {\n    border: 0; }\n", ""]);
+exports.push([module.i, ".questionHost > div {\n  font-size: 1.1em;\n  line-height: 1.6; }\n\n.questionHost .questionHeadings {\n  font-weight: 600;\n  color: #008fce;\n  font-size: 1.5em; }\n\n.questionHost .leoHost {\n  width: 100%; }\n", ""]);
 
 // exports
 
@@ -759,12 +1154,12 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 724:
+/***/ "../../../../../src/app/leonardo/question-box/question-box.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuestionBoxComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -775,7 +1170,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var QuestionBoxComponent = /** @class */ (function () {
+var QuestionBoxComponent = (function () {
     function QuestionBoxComponent() {
     }
     QuestionBoxComponent.prototype.ngOnInit = function () {
@@ -797,8 +1192,8 @@ var QuestionBoxComponent = /** @class */ (function () {
     QuestionBoxComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-question-box',
-            template: __webpack_require__(725),
-            styles: [__webpack_require__(726)],
+            template: __webpack_require__("../../../../../src/app/leonardo/question-box/question-box.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/leonardo/question-box/question-box.component.scss")],
             encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
         }),
         __metadata("design:paramtypes", [])
@@ -810,22 +1205,22 @@ var QuestionBoxComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 725:
+/***/ "../../../../../src/app/leonardo/studymaterial/studymaterial.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div #questionHost class=\"col-md-12 questionHost\">\r\n</div>"
+module.exports = "<div class=\"row\" style=\"height:100%\">\r\n  <div class=\"col-sm-4 col-md-4 col-lg-3 pdfNavigator\">\r\n    <div class=\"navigatorContainer\">\r\n      <ul class=\"nav nav-list\">\r\n        <li class=\"listHead\" *ngFor=\"let listItem of listItems \">\r\n          <label class=\"tree-toggler nav-header\">\r\n            <p>{{listItem.heading}}</p>\r\n            <span class=\"glyphicon glyphicon-menu-down pull-right closebutton\"></span>\r\n        </label>\r\n          <ul class=\"nav nav-list tree\">\r\n            <li class=\"listTopic\" (click)=\"handleElementClick(topic.page,$event)\" *ngFor=\"let topic of listItem.topics\">\r\n              <label>{{topic.heading}}</label></li>\r\n          </ul>\r\n        </li> \r\n      </ul>\r\n    </div>\r\n  </div>\r\n  <div *ngIf=\"modalVisible\" class=\"col-sm-8 col-md-8 col-lg-9 pdfViewer\">\r\n    <pdf-viewer [src]=\"studyUrl\" [render-text]=\"true\" [show-all]=\"false\" [zoom]=viewerZoomValue\r\n      [(page)]=\"activePage\" [original-size]=\"false\" (error)=\"onError($event)\" (after-load-complete)=\"callBackFn($event)\" style=\"display: block; height:100%\"></pdf-viewer>\r\n    <div class=\"pdftoolbar\">\r\n      <span class=\"zoom\">\r\n        <span (click) = \"updateZoomValue('decrease')\" class=\"glyphicon glyphicon-font reduceFont\" ></span>\r\n      <span (click) = \"updateZoomValue('increase')\" class=\"glyphicon glyphicon-font\"></span>\r\n      </span>\r\n      <span class=\"divider\"></span>\r\n      <span class=\"comment\">\r\n        <span class=\"glyphicon glyphicon-comment\"></span>\r\n      </span>\r\n      <span class=\"divider\"></span>\r\n      <span class=\"volume\">\r\n        <span class=\"glyphicon glyphicon-volume-up\"></span>\r\n      </span>\r\n      <span class=\"divider\"></span>\r\n      <span class=\"navigation\">\r\n        <span (click) = \"changePage('previous')\" class=\"glyphicon glyphicon-menu-left\"></span>\r\n      <span (click)=\"changePage('next')\" class=\"glyphicon glyphicon-menu-right\"></span>\r\n      </span>\r\n      <span class=\"divider\"></span>\r\n      <span class=\"print\">\r\n        <span class=\"glyphicon glyphicon-print\"></span>\r\n      </span>\r\n      <span class=\"divider\"></span>\r\n      <span class=\"fullscreen\">\r\n        <span class=\"glyphicon glyphicon-fullscreen\"></span>\r\n      </span>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
-/***/ 726:
+/***/ "../../../../../src/app/leonardo/studymaterial/studymaterial.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(20)();
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")();
 // imports
 
 
 // module
-exports.push([module.i, ".questionHost > div {\n  font-size: 1.1em;\n  line-height: 1.6; }\n\n.questionHost .questionHeadings {\n  font-weight: 600;\n  color: #008fce;\n  font-size: 1.5em; }\n\n.questionHost .leoHost {\n  width: 100%; }\n", ""]);
+exports.push([module.i, ".ng2-pdf-viewer-container {\n  height: 100%;\n  background: #565656; }\n\n.pdfViewer {\n  height: 100%;\n  padding-left: 0px; }\n\n.pdfNavigator {\n  height: 100%;\n  padding-right: 0px; }\n\n.navigatorContainer {\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  background: #E6E6E6; }\n\n.listHead {\n  color: #454444;\n  border-bottom: 1px solid #9F9F9F; }\n  .listHead .closebutton {\n    margin: auto 10px auto 0;\n    font-size: 16px; }\n  .listHead > label {\n    padding: 10px 10px;\n    width: 100%;\n    margin-bottom: 0px;\n    display: flex; }\n    .listHead > label > p {\n      display: inline-flex;\n      margin: 0 auto;\n      font-size: 16px;\n      width: calc(100% - 30px); }\n\n.nav-list.tree {\n  display: none;\n  background: white; }\n  .nav-list.tree li:last-child {\n    border: 0px; }\n\n.listTopic {\n  padding: 2px 10px;\n  border-bottom: 1px solid lightgrey;\n  cursor: pointer; }\n  .listTopic > label {\n    padding: 10px 0px 10px 20px;\n    color: #858585;\n    cursor: pointer;\n    width: 100%;\n    margin-bottom: 0px; }\n\n.topic-selected {\n  background: #337AB7; }\n  .topic-selected > label {\n    color: white; }\n\n.pdftoolbar {\n  background: #000000;\n  border-radius: 4px;\n  color: #EEEDED;\n  opacity: 0.8;\n  font-size: 22px;\n  padding: 5px 10px;\n  width: 368px;\n  position: relative;\n  bottom: 55px;\n  margin: auto; }\n  .pdftoolbar .divider {\n    border-left: 1px solid #383838; }\n  .pdftoolbar .reduceFont {\n    font-size: 18px; }\n  .pdftoolbar > span {\n    user-select: none; }\n    .pdftoolbar > span > span {\n      padding: 0px 6px 0px 10px; }\n", ""]);
 
 // exports
 
@@ -835,12 +1230,13 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 727:
+/***/ "../../../../../src/app/leonardo/studymaterial/studymaterial.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CosmattItemBoxComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StudymaterialComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -851,209 +1247,173 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var CosmattItemBoxComponent = /** @class */ (function () {
-    function CosmattItemBoxComponent() {
-        this.isCMWEnabled = true;
-        this.chapName = "";
-        this.secName = "";
+
+var StudymaterialComponent = (function () {
+    function StudymaterialComponent(platformlocation) {
+        this.platformlocation = platformlocation;
+        var currentUrl = this.platformlocation.location.href;
+        var requestUrl = currentUrl.split("/").slice(0, 3).join("/");
+        this.studyUrl = requestUrl + '/assets/studyMaterial.pdf';
+        this.viewerZoomValue = 0.75;
+        this.activePage = 1;
+        this.listItems = [
+            {
+                heading: "A. Accounts",
+                topics: [{
+                        heading: "A.1. Asset Accounts",
+                        page: 1
+                    },
+                    {
+                        heading: "A.2. Liability Accounts",
+                        page: 2
+                    },
+                    {
+                        heading: "A.3. Shareholders Accounts",
+                        page: 3
+                    },
+                    {
+                        heading: "A.4. T-Accounts",
+                        page: 4
+                    },
+                    {
+                        heading: "A.5. Chart of Accounts",
+                        page: 6
+                    }
+                ]
+            },
+            {
+                heading: "B. The Trial Balance",
+                topics: [{
+                        heading: "B.1. Trial Balance",
+                        page: 7
+                    }
+                ]
+            },
+            {
+                heading: "C. Using Formula Accounting Records",
+                topics: [{
+                        heading: "C.1. Recording Transactions in the General Journal",
+                        page: 10
+                    },
+                    {
+                        heading: "C.2. Posting Transactions to the General Ledger",
+                        page: 13
+                    }
+                ]
+            }
+        ];
     }
-    CosmattItemBoxComponent.prototype.ngOnInit = function () {
-        this.chapName = this.questionData["chapter"];
-        this.secName = this.questionData["section"];
-        this.cosmattItemContainer.nativeElement.innerHTML = this.questionData["template"];
-        var leoInstances = this.cosmattItemContainer.nativeElement.querySelectorAll(".leoHost");
-        for (var index = 0; index < leoInstances.length; index++) {
-            var data = this.questionData.leoData[leoInstances[index].getAttribute("leoDataId")];
-            Leonardo.scripts.add(leoInstances[index], data.config, data.correctData);
+    StudymaterialComponent.prototype.ngOnInit = function () {
+    };
+    StudymaterialComponent.prototype.ngAfterViewInit = function () {
+        var rootNodes = document.querySelectorAll("label.tree-toggler");
+        for (var i = 0; i < rootNodes.length; i++) {
+            rootNodes[i].addEventListener("click", function () {
+                if (this.classList.contains("listHead-selected")) {
+                    this.children[1].classList.remove("glyphicon-menu-up");
+                    this.children[1].classList.add("glyphicon-menu-down");
+                    this.classList.remove("listHead-selected");
+                }
+                else {
+                    this.classList.add("listHead-selected");
+                    this.children[1].classList.remove("glyphicon-menu-down");
+                    this.children[1].classList.add("glyphicon-menu-up");
+                }
+                var listElement = this.parentElement.children[1];
+                if (listElement.style.display == "none" || listElement.style.display == "") {
+                    listElement.style.display = "block";
+                }
+                else {
+                    listElement.style.display = "none";
+                }
+            });
         }
-        this.renderWorkspace();
+        this.updateviewforFirstElemSelected(rootNodes[0]);
+        //   $('label.tree-toggler').click(function () {
+        //     $(this).parent().children('ul.tree').toggle(300);
+        // });
     };
-    CosmattItemBoxComponent.prototype.renderWorkspace = function () {
-        this.qInstruction.nativeElement.innerHTML = this.solutionData.qIns;
-        if (this.solutionData.gridUIParams) {
-            if (this.solutionData.gridUIParams.height) {
-                this.workspace.nativeElement.style.height = this.solutionData.gridUIParams.height + "px";
-            }
-            if (this.solutionData.gridUIParams.width) {
-                this.workspace.nativeElement.style.width = this.solutionData.gridUIParams.width + "px";
-            }
+    StudymaterialComponent.prototype.updateviewforFirstElemSelected = function (firstElement) {
+        firstElement.parentElement.children[1]["style"].display = "block";
+        firstElement.parentElement.children[1].children[0].classList.add("topic-selected");
+        firstElement.classList.add("listHead-selected");
+        firstElement.children[1].classList.remove("glyphicon-menu-down");
+        firstElement.children[1].classList.add("glyphicon-menu-up");
+    };
+    StudymaterialComponent.prototype.onError = function (error) {
+        console.log(error);
+        // for pdf viewer
+    };
+    StudymaterialComponent.prototype.callBackFn = function (check) {
+        // for pdf viewer    
+    };
+    StudymaterialComponent.prototype.handleElementClick = function (pageIndex, event) {
+        var selectedtopicElem = document.getElementsByClassName("topic-selected")[0];
+        if (selectedtopicElem) {
+            selectedtopicElem.classList.remove("topic-selected");
         }
-        Leonardo.scripts.add(this.workspace.nativeElement, JSON.parse(JSON.stringify(this.solutionData.config)), this.solutionData.correctData);
+        if (event.target.tagName == "LI") {
+            event.target.classList.add("topic-selected");
+        }
+        else {
+            event.target.parentElement.classList.add("topic-selected");
+        }
+        this.changeActivePage(pageIndex);
     };
-    CosmattItemBoxComponent.prototype.cmwHandler = function () {
-        this.isCMWEnabled = false;
-        Leonardo.scripts.checkAnswer(this.workspace.nativeElement);
+    StudymaterialComponent.prototype.changeActivePage = function (pageIndex) {
+        this.activePage = pageIndex;
     };
-    CosmattItemBoxComponent.prototype.resetHandler = function () {
-        this.isCMWEnabled = true;
-        Leonardo.scripts.reset(this.workspace.nativeElement);
+    StudymaterialComponent.prototype.changePage = function (direction) {
+        if (direction == "next") {
+            this.changeActivePage(this.activePage + 1);
+        }
+        else if (direction == "previous") {
+            this.changeActivePage(this.activePage - 1);
+        }
+    };
+    StudymaterialComponent.prototype.changeViewerZoom = function (value) {
+        if (value > 0.4 && value <= 1) {
+            this.viewerZoomValue = value;
+        }
+    };
+    StudymaterialComponent.prototype.updateZoomValue = function (direction) {
+        if (direction == "decrease") {
+            this.changeViewerZoom(this.viewerZoomValue - 0.05);
+        }
+        else {
+            this.changeViewerZoom(this.viewerZoomValue + 0.05);
+        }
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Object)
-    ], CosmattItemBoxComponent.prototype, "questionData", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Object)
-    ], CosmattItemBoxComponent.prototype, "solutionData", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('cosmattItemContainer'),
-        __metadata("design:type", Object)
-    ], CosmattItemBoxComponent.prototype, "cosmattItemContainer", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('qInstruction'),
-        __metadata("design:type", Object)
-    ], CosmattItemBoxComponent.prototype, "qInstruction", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('workspace'),
-        __metadata("design:type", Object)
-    ], CosmattItemBoxComponent.prototype, "workspace", void 0);
-    CosmattItemBoxComponent = __decorate([
+        __metadata("design:type", Boolean)
+    ], StudymaterialComponent.prototype, "modalVisible", void 0);
+    StudymaterialComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'cosmatt-item-box',
-            template: __webpack_require__(728),
-            styles: [__webpack_require__(729)],
+            selector: 'app-studymaterial',
+            template: __webpack_require__("../../../../../src/app/leonardo/studymaterial/studymaterial.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/leonardo/studymaterial/studymaterial.component.scss")],
             encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
         }),
-        __metadata("design:paramtypes", [])
-    ], CosmattItemBoxComponent);
-    return CosmattItemBoxComponent;
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* PlatformLocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* PlatformLocation */]) === "function" && _a || Object])
+    ], StudymaterialComponent);
+    return StudymaterialComponent;
+    var _a;
 }());
 
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/cosmatt-item-box.component.js.map
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/studymaterial.component.js.map
 
 /***/ }),
 
-/***/ 728:
-/***/ (function(module, exports) {
-
-module.exports = "<div #cosmattItemHost class=\"col-md-12 cosmattItemHost\">\r\n  <div #itemHeaderContainer class=\"col-md-11 itemHeaderContainer \">\r\n    <h2>\r\n      <span class=\"glyphicon glyphicon-book\"></span>\r\n      <span>{{chapName}}</span>\r\n      <span>-</span>\r\n      <span>{{secName}}</span>\r\n    </h2>\r\n  </div>\r\n  <div #cosmattItemContainer class=\"col-md-11 cosmattItemContainer\"></div>\r\n  <div #workspaceHost class=\"col-md-11 workspaceHost\">\r\n    <div #workspaceContainer class=\"workspaceContainer\">\r\n      <div class=\"qInstruction\">\r\n        <div class=\"qLabel\">Question:</div>\r\n        <div #qInstruction class=\"statement\"></div>\r\n      </div>\r\n      <div #workspace class=\"workspace\">\r\n      </div>\r\n      <div class=\"btnContainer\">\r\n        <button class=\"navBtn btnCMW\" (click)=\"cmwHandler()\" [disabled]=\"!isCMWEnabled\">\r\n          <a>\r\n            <span class=\"glyphicon glyphicon-ok\"></span>\r\n          </a>\r\n          <span class=\"btnText\">Check My Work</span>\r\n        </button>\r\n        <button class=\"navBtn btnReset\" (click)=\"resetHandler()\">\r\n          <a>\r\n            <span class=\"glyphicon glyphicon-repeat\"></span>\r\n          </a>\r\n          <span class=\"btnText\">Reset</span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
-
-/***/ }),
-
-/***/ 729:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(20)();
-// imports
-
-
-// module
-exports.push([module.i, ".cosmattItemHost {\n  background-color: #dedede; }\n  .cosmattItemHost .itemHeaderContainer {\n    float: none;\n    margin: 20px auto;\n    padding: 0px; }\n  .cosmattItemHost .cosmattItemContainer {\n    background-color: #ffffff;\n    margin: auto;\n    float: none;\n    padding-top: 1px;\n    padding-bottom: 1px;\n    border-top: solid 5px #cb2929;\n    border-top-left-radius: 2.8px;\n    border-top-right-radius: 2.8px; }\n    .cosmattItemHost .cosmattItemContainer > div {\n      font-size: 1.1em;\n      line-height: 1.6; }\n    .cosmattItemHost .cosmattItemContainer .questionHeadings {\n      font-weight: 600;\n      color: #008fce;\n      font-size: 1.5em; }\n    .cosmattItemHost .cosmattItemContainer .leoHost {\n      width: 100%; }\n    .cosmattItemHost .cosmattItemContainer div.code-math {\n      font-size: 24px;\n      padding: 10px;\n      border-radius: 3px;\n      text-align: center;\n      overflow: auto;\n      color: #333;\n      line-height: 19px; }\n      .cosmattItemHost .cosmattItemContainer div.code-math .MathJax_SVG_Display {\n        width: auto;\n        display: inline-block !important;\n        border: 1px solid #199ed5;\n        border-radius: 10px;\n        padding: 10px;\n        background-color: #e2f4fd;\n        font-size: .65em;\n        font-family: Open Sans !important; }\n    .cosmattItemHost .cosmattItemContainer h6 {\n      margin: 12px 0 10px;\n      padding: 0;\n      -webkit-font-smoothing: antialiased;\n      cursor: text;\n      position: relative;\n      font-size: 1.1em;\n      font-weight: 400;\n      display: -webkit-box;\n      display: -ms-flexbox;\n      display: flex;\n      -webkit-box-align: center;\n      -ms-flex-align: center;\n      align-items: center;\n      -webkit-box-pack: center;\n      -ms-flex-pack: center;\n      justify-content: center;\n      color: #f3722d; }\n    .cosmattItemHost .cosmattItemContainer p img {\n      -webkit-box-shadow: 6px 6px 9px #ddd;\n              box-shadow: 6px 6px 9px #ddd;\n      border: 1px solid #ddd;\n      position: relative;\n      left: 50%;\n      -webkit-transform: translate(-50%);\n      transform: translate(-50%); }\n  .cosmattItemHost .workspaceHost {\n    background-color: #ffffff;\n    margin: auto;\n    float: none;\n    padding-top: 1px;\n    padding-bottom: 50px; }\n    .cosmattItemHost .workspaceHost .workspaceContainer {\n      -webkit-box-shadow: 6px 6px 9px #ddd;\n              box-shadow: 6px 6px 9px #ddd;\n      border: 1px solid #ddd; }\n      .cosmattItemHost .workspaceHost .workspaceContainer .qInstruction {\n        width: 100%;\n        background-color: #f5f5f5;\n        font-size: 1.286em; }\n        .cosmattItemHost .workspaceHost .workspaceContainer .qInstruction .qLabel {\n          color: #000;\n          float: left;\n          font-weight: 600;\n          display: inline-block;\n          padding: 20px 5px 20px 50px;\n          width: 135px;\n          height: 100%; }\n        .cosmattItemHost .workspaceHost .workspaceContainer .qInstruction .statement {\n          color: #366894;\n          display: inline-block;\n          padding: 20px 50px 20px 5px;\n          width: calc(100% - 135px); }\n      .cosmattItemHost .workspaceHost .workspaceContainer .workspace {\n        margin-top: 50px; }\n      .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer {\n        margin: auto;\n        float: none;\n        border-top: 1px solid #d1d1d1;\n        height: 70px;\n        padding-top: 15px;\n        width: 97%; }\n        .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn {\n          color: #01579b;\n          padding: 5px 16px;\n          line-height: 1.5;\n          text-align: center;\n          white-space: nowrap;\n          vertical-align: middle;\n          border: none;\n          background-color: #fff;\n          outline: none; }\n          .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn a {\n            text-decoration: none; }\n            .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn a .glyphicon {\n              padding-right: 7px; }\n        .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn:hover {\n          text-decoration: underline; }\n        .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn:disabled {\n          color: graytext;\n          text-decoration: none;\n          cursor: not-allowed; }\n          .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn:disabled .glyphicon {\n            color: graytext; }\n        .cosmattItemHost .workspaceHost .workspaceContainer .btnContainer .navBtn.btnReset {\n          border-left: 1px solid #d1d1d1; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ 730:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkspaceComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var WorkspaceComponent = /** @class */ (function () {
-    function WorkspaceComponent() {
-        this.gridEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-    }
-    WorkspaceComponent.prototype.ngOnInit = function () {
-        if (this.solutionData.gridUIParams) {
-            if (this.solutionData.gridUIParams.height) {
-                this.leoHost.nativeElement.style.height = this.solutionData.gridUIParams.height + "px";
-            }
-            if (this.solutionData.gridUIParams.width) {
-                this.leoHost.nativeElement.style.width = this.solutionData.gridUIParams.width + "px";
-            }
-        }
-        Leonardo.scripts.add(this.leoHost.nativeElement, this.solutionData.config, this.solutionData.correctData);
-    };
-    WorkspaceComponent.prototype.checkAnswer = function () {
-        Leonardo.scripts.checkAnswer(this.leoHost.nativeElement);
-    };
-    WorkspaceComponent.prototype.tryAgain = function () {
-        Leonardo.scripts.tryAgain(this.leoHost.nativeElement);
-    };
-    WorkspaceComponent.prototype.displayHint = function () {
-        var hint = Leonardo.scripts.displayHint(this.leoHost.nativeElement);
-        if (hint.isLastHint) {
-            this.gridEvent.emit({ type: "hint", hint: hint });
-        }
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Object)
-    ], WorkspaceComponent.prototype, "solutionData", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('leoHost'),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
-    ], WorkspaceComponent.prototype, "leoHost", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
-    ], WorkspaceComponent.prototype, "gridEvent", void 0);
-    WorkspaceComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-workspace',
-            template: __webpack_require__(731),
-            styles: [__webpack_require__(732)]
-        }),
-        __metadata("design:paramtypes", [])
-    ], WorkspaceComponent);
-    return WorkspaceComponent;
-    var _a, _b;
-}());
-
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/workspace.component.js.map
-
-/***/ }),
-
-/***/ 731:
-/***/ (function(module, exports) {
-
-module.exports = "<div #leoHost class=\"leoHost\">\r\n</div>"
-
-/***/ }),
-
-/***/ 732:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(20)();
-// imports
-
-
-// module
-exports.push([module.i, ".leoHost {\n  width: 100%;\n  height: 100%; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ 733:
+/***/ "../../../../../src/app/leonardo/verticalSplitter/ng2-split-pane.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SplitPaneModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vertical_split_pane_separator_component__ = __webpack_require__(734);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__vertical_split_pane_component__ = __webpack_require__(736);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__vertical_split_pane_separator_component__ = __webpack_require__("../../../../../src/app/leonardo/verticalSplitter/vertical-split-pane-separator.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__vertical_split_pane_component__ = __webpack_require__("../../../../../src/app/leonardo/verticalSplitter/vertical-split-pane.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1064,7 +1424,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SplitPaneModule = /** @class */ (function () {
+var SplitPaneModule = (function () {
     function SplitPaneModule() {
     }
     SplitPaneModule_1 = SplitPaneModule;
@@ -1092,300 +1452,12 @@ var SplitPaneModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 734:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerticalSplitSeparatorComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__split_pane_separator_component__ = __webpack_require__(735);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-var VerticalSplitSeparatorComponent = /** @class */ (function (_super) {
-    __extends(VerticalSplitSeparatorComponent, _super);
-    function VerticalSplitSeparatorComponent() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    VerticalSplitSeparatorComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'vertical-split-separator',
-            styles: ["\n    :host {\n      width: 21px;\n      cursor: url(../assets/cursor.cur), ew-resize;\n      position: relative;\n      background-color: #f7f7f7;\n      border-left: 1px solid lightgrey;\n      z-index:2;\n    }\n\n    .handle {\n      width: 100%;\n      height: 100%;\n      padding-left: 3px;\n      background-color: rgba(0,0,0,0);\n      position: absolute;\n    }\n  "],
-            template: "\n    <div class=\"handle\"><img src=\"../assets/splitter.png\"></div>\n  "
-        })
-    ], VerticalSplitSeparatorComponent);
-    return VerticalSplitSeparatorComponent;
-}(__WEBPACK_IMPORTED_MODULE_1__split_pane_separator_component__["a" /* SplitSeparatorComponent */]));
-
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/vertical-split-pane-separator.component.js.map
-
-/***/ }),
-
-/***/ 735:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SplitSeparatorComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var SplitSeparatorComponent = /** @class */ (function () {
-    function SplitSeparatorComponent() {
-        this.notifyWillChangeSize = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-    }
-    SplitSeparatorComponent.prototype.ngOnInit = function () {
-    };
-    SplitSeparatorComponent.prototype.onMousedown = function (event) {
-        this.notifyWillChangeSize.emit(true);
-        return false;
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
-    ], SplitSeparatorComponent.prototype, "notifyWillChangeSize", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('mousedown', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [Object]),
-        __metadata("design:returntype", void 0)
-    ], SplitSeparatorComponent.prototype, "onMousedown", null);
-    return SplitSeparatorComponent;
-    var _a;
-}());
-
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/split-pane-separator.component.js.map
-
-/***/ }),
-
-/***/ 736:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerticalSplitPaneComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__split_pane_component__ = __webpack_require__(737);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__position_service__ = __webpack_require__(738);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var VerticalSplitPaneComponent = /** @class */ (function (_super) {
-    __extends(VerticalSplitPaneComponent, _super);
-    function VerticalSplitPaneComponent() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    VerticalSplitPaneComponent.prototype.getTotalSize = function () {
-        return this.outerContainer.nativeElement.offsetWidth;
-    };
-    VerticalSplitPaneComponent.prototype.getPrimarySize = function () {
-        return this.primaryComponent.nativeElement.offsetWidth;
-    };
-    VerticalSplitPaneComponent.prototype.getSecondarySize = function () {
-        return this.secondaryComponent.nativeElement.offsetWidth;
-    };
-    VerticalSplitPaneComponent.prototype.dividerPosition = function (size) {
-        var ext = 3;
-        var sizePct = (size / this.getTotalSize()) * 100;
-        this.primaryComponent.nativeElement.style.width = sizePct + "%";
-        this.secondaryComponent.nativeElement.style.width = "calc(" + (100 - sizePct) + "% - 21px)";
-    };
-    VerticalSplitPaneComponent.prototype.onMousemove = function (event) {
-        if (this.isResizing) {
-            var coords = __WEBPACK_IMPORTED_MODULE_2__position_service__["a" /* PositionService */].offset(this.primaryComponent);
-            this.applySizeChange(event.pageX - coords.left);
-        }
-        return false;
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('outer'),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
-    ], VerticalSplitPaneComponent.prototype, "outerContainer", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('mousemove', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [Object]),
-        __metadata("design:returntype", void 0)
-    ], VerticalSplitPaneComponent.prototype, "onMousemove", null);
-    VerticalSplitPaneComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'vertical-split-pane',
-            styles: ["\n    :host{\n      height: 100%;\n      width: 100%;\n    }\n    .v-outer {\n      height: calc(100% - 1px);\n      width: 100%;\n      padding-top: 1px;\n      display: flex;\n      border-left: 1px solid #ddd;\n      border-right: 1px solid #ddd;\n      background-color: #fff;\n    }\n\n    .left-component {\n      width: calc(50%);\n      height:100%;      \n    }\n\n    .right-component {\n      width: calc(50%);\n      overflow: hidden;\n      height:100%;\n    }\n  "],
-            template: "\n  <div #outer class=\"v-outer\">\n    <div #primaryComponent class=\"left-component\">\n      <ng-content select=\".split-pane-content-primary\"></ng-content>\n    </div>\n    <vertical-split-separator #separator (notifyWillChangeSize)=\"notifyWillChangeSize($event)\"></vertical-split-separator>\n    <div #secondaryComponent class=\"right-component\">\n      <ng-content select=\".split-pane-content-secondary\"></ng-content>\n    </div>\n  </div>\n  ",
-        })
-    ], VerticalSplitPaneComponent);
-    return VerticalSplitPaneComponent;
-    var _a;
-}(__WEBPACK_IMPORTED_MODULE_1__split_pane_component__["a" /* SplitPaneComponent */]));
-
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/vertical-split-pane.component.js.map
-
-/***/ }),
-
-/***/ 737:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SplitPaneComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var SplitPaneComponent = /** @class */ (function () {
-    function SplitPaneComponent() {
-        this.initialRatio = 0.5;
-        this.primaryMinSize = 0;
-        this.secondaryMinSize = 0;
-        this.localStorageKey = null;
-        this.notifySizeDidChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-        this.dividerSize = 8.0;
-        this.isResizing = false;
-    }
-    SplitPaneComponent.prototype.ngAfterViewInit = function () {
-        var ratio = this.initialRatio;
-        if (this.localStorageKey != null) {
-            var ratioStr = localStorage.getItem(this.localStorageKey);
-            if (ratioStr != null) {
-                ratio = JSON.parse(ratioStr);
-            }
-        }
-        var size = ratio * this.getTotalSize();
-        this.applySizeChange(size);
-    };
-    SplitPaneComponent.prototype.getAvailableSize = function () {
-        return this.getTotalSize() - this.dividerSize;
-    };
-    SplitPaneComponent.prototype.applySizeChange = function (size) {
-        if (size != 0) {
-            var primarySize = this.checkValidBounds(size, this.primaryMinSize, this.getAvailableSize() - this.secondaryMinSize);
-            // console.debug("current: " + this.getPrimarySize()
-            //           + " want to be: " + size
-            //           + " min: " + this.primaryMinSize
-            //           + " max: " + (this.getTotalSize() - this.secondaryMinSize)
-            //           + " constrained to: " + primarySize
-            //         );
-            this.dividerPosition(primarySize);
-            this.notifySizeDidChange.emit({ 'primary': this.getPrimarySize(), 'secondary': this.getSecondarySize() });
-        }
-    };
-    SplitPaneComponent.prototype.notifyWillChangeSize = function (resizing) {
-        this.isResizing = resizing;
-    };
-    SplitPaneComponent.prototype.checkValidBounds = function (newSize, minSize, maxSize) {
-        return newSize >= minSize
-            ? (newSize <= maxSize)
-                ? newSize
-                : maxSize
-            : minSize;
-    };
-    SplitPaneComponent.prototype.stopResizing = function () {
-        this.isResizing = false;
-        this.primaryComponent.nativeElement.style.cursor = "auto";
-        this.secondaryComponent.nativeElement.style.cursor = "auto";
-        if (this.localStorageKey != null) {
-            var ratio = this.getPrimarySize() / (this.getTotalSize());
-            localStorage.setItem(this.localStorageKey, JSON.stringify(ratio));
-        }
-    };
-    SplitPaneComponent.prototype.onMouseup = function (event) {
-        this.stopResizing();
-        return false;
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('primaryComponent'),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
-    ], SplitPaneComponent.prototype, "primaryComponent", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('secondaryComponent'),
-        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _b || Object)
-    ], SplitPaneComponent.prototype, "secondaryComponent", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('primary-component-initialratio'),
-        __metadata("design:type", Number)
-    ], SplitPaneComponent.prototype, "initialRatio", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('primary-component-minsize'),
-        __metadata("design:type", Number)
-    ], SplitPaneComponent.prototype, "primaryMinSize", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('secondary-component-minsize'),
-        __metadata("design:type", Number)
-    ], SplitPaneComponent.prototype, "secondaryMinSize", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('local-storage-key'),
-        __metadata("design:type", String)
-    ], SplitPaneComponent.prototype, "localStorageKey", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('on-change'),
-        __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
-    ], SplitPaneComponent.prototype, "notifySizeDidChange", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('mouseup', ['$event']),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", [Object]),
-        __metadata("design:returntype", void 0)
-    ], SplitPaneComponent.prototype, "onMouseup", null);
-    return SplitPaneComponent;
-    var _a, _b, _c;
-}());
-
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/split-pane.component.js.map
-
-/***/ }),
-
-/***/ 738:
+/***/ "../../../../../src/app/leonardo/verticalSplitter/position.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PositionService; });
-var PositionService = /** @class */ (function () {
+var PositionService = (function () {
     function PositionService() {
     }
     /**
@@ -1541,13 +1613,12 @@ var PositionService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 739:
+/***/ "../../../../../src/app/leonardo/verticalSplitter/split-pane-separator.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StudymaterialComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(7);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SplitSeparatorComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1558,244 +1629,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-var StudymaterialComponent = /** @class */ (function () {
-    function StudymaterialComponent(platformlocation) {
-        this.platformlocation = platformlocation;
-        var currentUrl = this.platformlocation.location.href;
-        var requestUrl = currentUrl.split("/").slice(0, 3).join("/");
-        this.studyUrl = requestUrl + '/assets/studyMaterial.pdf';
-        this.viewerZoomValue = 0.75;
-        this.activePage = 1;
-        this.listItems = [
-            {
-                heading: "A. Accounts",
-                topics: [{
-                        heading: "A.1. Asset Accounts",
-                        page: 1
-                    },
-                    {
-                        heading: "A.2. Liability Accounts",
-                        page: 2
-                    },
-                    {
-                        heading: "A.3. Shareholders Accounts",
-                        page: 3
-                    },
-                    {
-                        heading: "A.4. T-Accounts",
-                        page: 4
-                    },
-                    {
-                        heading: "A.5. Chart of Accounts",
-                        page: 6
-                    }
-                ]
-            },
-            {
-                heading: "B. The Trial Balance",
-                topics: [{
-                        heading: "B.1. Trial Balance",
-                        page: 7
-                    }
-                ]
-            },
-            {
-                heading: "C. Using Formula Accounting Records",
-                topics: [{
-                        heading: "C.1. Recording Transactions in the General Journal",
-                        page: 10
-                    },
-                    {
-                        heading: "C.2. Posting Transactions to the General Ledger",
-                        page: 13
-                    }
-                ]
-            }
-        ];
+var SplitSeparatorComponent = (function () {
+    function SplitSeparatorComponent() {
+        this.notifyWillChangeSize = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
-    StudymaterialComponent.prototype.ngOnInit = function () {
+    SplitSeparatorComponent.prototype.ngOnInit = function () {
     };
-    StudymaterialComponent.prototype.ngAfterViewInit = function () {
-        var rootNodes = document.querySelectorAll("label.tree-toggler");
-        for (var i = 0; i < rootNodes.length; i++) {
-            rootNodes[i].addEventListener("click", function () {
-                if (this.classList.contains("listHead-selected")) {
-                    this.children[1].classList.remove("glyphicon-menu-up");
-                    this.children[1].classList.add("glyphicon-menu-down");
-                    this.classList.remove("listHead-selected");
-                }
-                else {
-                    this.classList.add("listHead-selected");
-                    this.children[1].classList.remove("glyphicon-menu-down");
-                    this.children[1].classList.add("glyphicon-menu-up");
-                }
-                var listElement = this.parentElement.children[1];
-                if (listElement.style.display == "none" || listElement.style.display == "") {
-                    listElement.style.display = "block";
-                }
-                else {
-                    listElement.style.display = "none";
-                }
-            });
-        }
-        this.updateviewforFirstElemSelected(rootNodes[0]);
-        //   $('label.tree-toggler').click(function () {
-        //     $(this).parent().children('ul.tree').toggle(300);
-        // });
-    };
-    StudymaterialComponent.prototype.updateviewforFirstElemSelected = function (firstElement) {
-        firstElement.parentElement.children[1]["style"].display = "block";
-        firstElement.parentElement.children[1].children[0].classList.add("topic-selected");
-        firstElement.classList.add("listHead-selected");
-        firstElement.children[1].classList.remove("glyphicon-menu-down");
-        firstElement.children[1].classList.add("glyphicon-menu-up");
-    };
-    StudymaterialComponent.prototype.onError = function (error) {
-        console.log(error);
-        // for pdf viewer
-    };
-    StudymaterialComponent.prototype.callBackFn = function (check) {
-        // for pdf viewer    
-    };
-    StudymaterialComponent.prototype.handleElementClick = function (pageIndex, event) {
-        var selectedtopicElem = document.getElementsByClassName("topic-selected")[0];
-        if (selectedtopicElem) {
-            selectedtopicElem.classList.remove("topic-selected");
-        }
-        if (event.target.tagName == "LI") {
-            event.target.classList.add("topic-selected");
-        }
-        else {
-            event.target.parentElement.classList.add("topic-selected");
-        }
-        this.changeActivePage(pageIndex);
-    };
-    StudymaterialComponent.prototype.changeActivePage = function (pageIndex) {
-        this.activePage = pageIndex;
-    };
-    StudymaterialComponent.prototype.changePage = function (direction) {
-        if (direction == "next") {
-            this.changeActivePage(this.activePage + 1);
-        }
-        else if (direction == "previous") {
-            this.changeActivePage(this.activePage - 1);
-        }
-    };
-    StudymaterialComponent.prototype.changeViewerZoom = function (value) {
-        if (value > 0.4 && value <= 1) {
-            this.viewerZoomValue = value;
-        }
-    };
-    StudymaterialComponent.prototype.updateZoomValue = function (direction) {
-        if (direction == "decrease") {
-            this.changeViewerZoom(this.viewerZoomValue - 0.05);
-        }
-        else {
-            this.changeViewerZoom(this.viewerZoomValue + 0.05);
-        }
+    SplitSeparatorComponent.prototype.onMousedown = function (event) {
+        this.notifyWillChangeSize.emit(true);
+        return false;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Boolean)
-    ], StudymaterialComponent.prototype, "modalVisible", void 0);
-    StudymaterialComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-studymaterial',
-            template: __webpack_require__(740),
-            styles: [__webpack_require__(741)],
-            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* PlatformLocation */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common__["h" /* PlatformLocation */]) === "function" && _a || Object])
-    ], StudymaterialComponent);
-    return StudymaterialComponent;
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _a || Object)
+    ], SplitSeparatorComponent.prototype, "notifyWillChangeSize", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('mousedown', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
+    ], SplitSeparatorComponent.prototype, "onMousedown", null);
+    return SplitSeparatorComponent;
     var _a;
 }());
 
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/studymaterial.component.js.map
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/split-pane-separator.component.js.map
 
 /***/ }),
 
-/***/ 740:
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\" style=\"height:100%\">\r\n  <div class=\"col-sm-4 col-md-4 col-lg-3 pdfNavigator\">\r\n    <div class=\"navigatorContainer\">\r\n      <ul class=\"nav nav-list\">\r\n        <li class=\"listHead\" *ngFor=\"let listItem of listItems \">\r\n          <label class=\"tree-toggler nav-header\">\r\n            <p>{{listItem.heading}}</p>\r\n            <span class=\"glyphicon glyphicon-menu-down pull-right closebutton\"></span>\r\n        </label>\r\n          <ul class=\"nav nav-list tree\">\r\n            <li class=\"listTopic\" (click)=\"handleElementClick(topic.page,$event)\" *ngFor=\"let topic of listItem.topics\">\r\n              <label>{{topic.heading}}</label></li>\r\n          </ul>\r\n        </li> \r\n      </ul>\r\n    </div>\r\n  </div>\r\n  <div *ngIf=\"modalVisible\" class=\"col-sm-8 col-md-8 col-lg-9 pdfViewer\">\r\n    <pdf-viewer [src]=\"studyUrl\" [render-text]=\"true\" [show-all]=\"false\" [zoom]=viewerZoomValue\r\n      [(page)]=\"activePage\" [original-size]=\"false\" (error)=\"onError($event)\" (after-load-complete)=\"callBackFn($event)\" style=\"display: block; height:100%\"></pdf-viewer>\r\n    <div class=\"pdftoolbar\">\r\n      <span class=\"zoom\">\r\n        <span (click) = \"updateZoomValue('decrease')\" class=\"glyphicon glyphicon-font reduceFont\" ></span>\r\n      <span (click) = \"updateZoomValue('increase')\" class=\"glyphicon glyphicon-font\"></span>\r\n      </span>\r\n      <span class=\"divider\"></span>\r\n      <span class=\"comment\">\r\n        <span class=\"glyphicon glyphicon-comment\"></span>\r\n      </span>\r\n      <span class=\"divider\"></span>\r\n      <span class=\"volume\">\r\n        <span class=\"glyphicon glyphicon-volume-up\"></span>\r\n      </span>\r\n      <span class=\"divider\"></span>\r\n      <span class=\"navigation\">\r\n        <span (click) = \"changePage('previous')\" class=\"glyphicon glyphicon-menu-left\"></span>\r\n      <span (click)=\"changePage('next')\" class=\"glyphicon glyphicon-menu-right\"></span>\r\n      </span>\r\n      <span class=\"divider\"></span>\r\n      <span class=\"print\">\r\n        <span class=\"glyphicon glyphicon-print\"></span>\r\n      </span>\r\n      <span class=\"divider\"></span>\r\n      <span class=\"fullscreen\">\r\n        <span class=\"glyphicon glyphicon-fullscreen\"></span>\r\n      </span>\r\n    </div>\r\n  </div>\r\n</div>"
-
-/***/ }),
-
-/***/ 741:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(20)();
-// imports
-
-
-// module
-exports.push([module.i, ".ng2-pdf-viewer-container {\n  height: 100%;\n  background: #565656; }\n\n.pdfViewer {\n  height: 100%;\n  padding-left: 0px; }\n\n.pdfNavigator {\n  height: 100%;\n  padding-right: 0px; }\n\n.navigatorContainer {\n  overflow-y: auto;\n  overflow-x: hidden;\n  height: 100%;\n  background: #E6E6E6; }\n\n.listHead {\n  color: #454444;\n  border-bottom: 1px solid #9F9F9F; }\n  .listHead .closebutton {\n    margin: auto 10px auto 0;\n    font-size: 16px; }\n  .listHead > label {\n    padding: 10px 10px;\n    width: 100%;\n    margin-bottom: 0px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex; }\n    .listHead > label > p {\n      display: -webkit-inline-box;\n      display: -ms-inline-flexbox;\n      display: inline-flex;\n      margin: 0 auto;\n      font-size: 16px;\n      width: calc(100% - 30px); }\n\n.nav-list.tree {\n  display: none;\n  background: white; }\n  .nav-list.tree li:last-child {\n    border: 0px; }\n\n.listTopic {\n  padding: 2px 10px;\n  border-bottom: 1px solid lightgrey;\n  cursor: pointer; }\n  .listTopic > label {\n    padding: 10px 0px 10px 20px;\n    color: #858585;\n    cursor: pointer;\n    width: 100%;\n    margin-bottom: 0px; }\n\n.topic-selected {\n  background: #337AB7; }\n  .topic-selected > label {\n    color: white; }\n\n.pdftoolbar {\n  background: #000000;\n  border-radius: 4px;\n  color: #EEEDED;\n  opacity: 0.8;\n  font-size: 22px;\n  padding: 5px 10px;\n  width: 368px;\n  position: relative;\n  bottom: 55px;\n  margin: auto; }\n  .pdftoolbar .divider {\n    border-left: 1px solid #383838; }\n  .pdftoolbar .reduceFont {\n    font-size: 18px; }\n  .pdftoolbar > span {\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none; }\n    .pdftoolbar > span > span {\n      padding: 0px 6px 0px 10px; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ 742:
+/***/ "../../../../../src/app/leonardo/verticalSplitter/split-pane.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return dashboardRoutes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_component__ = __webpack_require__(743);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dashboard_item_dashboard_item_component__ = __webpack_require__(746);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-var dashboardRoutes = [
-    {
-        path: '',
-        component: __WEBPACK_IMPORTED_MODULE_3__dashboard_component__["a" /* DashboardComponent */],
-        pathMatch: 'full'
-    }
-];
-var DashboardModule = /** @class */ (function () {
-    function DashboardModule() {
-    }
-    DashboardModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */]
-            ],
-            exports: [__WEBPACK_IMPORTED_MODULE_3__dashboard_component__["a" /* DashboardComponent */]],
-            declarations: [__WEBPACK_IMPORTED_MODULE_3__dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_4__dashboard_item_dashboard_item_component__["a" /* DashboardItemComponent */]]
-        })
-    ], DashboardModule);
-    return DashboardModule;
-}());
-
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/dashboard.module.js.map
-
-/***/ }),
-
-/***/ 743:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SplitPaneComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1806,188 +1673,170 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var DashboardComponent = /** @class */ (function () {
-    function DashboardComponent() {
-        this.questions = [
-            {
-                qText: "Trial Balance: Learn",
-                description: "Learn to prepare Trial Balance to verify that debits equal the credits",
-                badges: ['Accounting', 'Training'],
-                view: "Side by Side View",
-                index: 1
-            },
-            {
-                qText: "Income Statement: Learn",
-                description: "Learn to prepare Income Statement to access the profitability of a company during a particular time interval",
-                badges: ['Accounting', 'Training'],
-                view: "Side by Side View",
-                index: 2
-            },
-            {
-                qText: "Create a Motion Profile",
-                description: "Motion profile is simply a way of defining how an Axis moves with respect to time.",
-                badges: ['Physics', 'Training'],
-                view: "Reading View",
-                index: 3
-            },
-            {
-                qText: "Trial Balance: Assess",
-                description: "Assess student's knowledge and skill at the end of the course",
-                badges: ['Accounting', 'Assessment'],
-                view: "Side by Side View",
-                index: 1
-            },
-            {
-                qText: "Income Statement: Assess",
-                description: "Assess student's knowledge and skill at the end of the course",
-                badges: ['Accounting', 'Assessment'],
-                view: "Side by Side View",
-                index: 2
-            },
-            {
-                qText: "Solve Projectile Problem",
-                description: "Assess student's knowledge and skill at the end of the course",
-                badges: ['Physics', 'Assessment'],
-                view: "Side by Side View",
-                index: 3
+var SplitPaneComponent = (function () {
+    function SplitPaneComponent() {
+        this.initialRatio = 0.5;
+        this.primaryMinSize = 0;
+        this.secondaryMinSize = 0;
+        this.localStorageKey = null;
+        this.notifySizeDidChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.dividerSize = 8.0;
+        this.isResizing = false;
+    }
+    SplitPaneComponent.prototype.ngAfterViewInit = function () {
+        var ratio = this.initialRatio;
+        if (this.localStorageKey != null) {
+            var ratioStr = localStorage.getItem(this.localStorageKey);
+            if (ratioStr != null) {
+                ratio = JSON.parse(ratioStr);
             }
-        ];
-    }
-    DashboardComponent.prototype.ngOnInit = function () {
-    };
-    DashboardComponent.prototype.getQuesIndex = function (Qindex) {
-        var relativeLength = (this.questions.length) / 2;
-        if (Qindex > relativeLength) {
-            return (Qindex - relativeLength);
         }
-        else {
-            return Qindex;
+        var size = ratio * this.getTotalSize();
+        this.applySizeChange(size);
+    };
+    SplitPaneComponent.prototype.getAvailableSize = function () {
+        return this.getTotalSize() - this.dividerSize;
+    };
+    SplitPaneComponent.prototype.applySizeChange = function (size) {
+        if (size != 0) {
+            var primarySize = this.checkValidBounds(size, this.primaryMinSize, this.getAvailableSize() - this.secondaryMinSize);
+            // console.debug("current: " + this.getPrimarySize()
+            //           + " want to be: " + size
+            //           + " min: " + this.primaryMinSize
+            //           + " max: " + (this.getTotalSize() - this.secondaryMinSize)
+            //           + " constrained to: " + primarySize
+            //         );
+            this.dividerPosition(primarySize);
+            this.notifySizeDidChange.emit({ 'primary': this.getPrimarySize(), 'secondary': this.getSecondarySize() });
         }
     };
-    DashboardComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-dashboard',
-            template: __webpack_require__(744),
-            styles: [__webpack_require__(745)]
-        }),
-        __metadata("design:paramtypes", [])
-    ], DashboardComponent);
-    return DashboardComponent;
-}());
-
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/dashboard.component.js.map
-
-/***/ }),
-
-/***/ 744:
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"dashboard-items-container\">\r\n  <div class=\"container contentDiv\">\r\n    <div class=\"row item-container\">\r\n      <app-dashboard-item *ngFor=\"let ques of questions;\" [quesMeta]=\"ques\" class=\"col-lg-4 col-md-6 col-sm-12\"></app-dashboard-item>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
-
-/***/ }),
-
-/***/ 745:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(20)();
-// imports
-
-
-// module
-exports.push([module.i, ".header {\n  height: 63px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: default;\n  background-color: #ececec;\n  border-bottom: 3px solid #CB2929; }\n  .header .headingWrapper {\n    width: 100%; }\n\n.dashboard-items-container {\n  background-color: #eee;\n  padding-top: 6%;\n  height: calc(100% - 54px);\n  overflow: auto; }\n\n.contentDiv {\n  min-width: 90%;\n  max-width: 1280px; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ 746:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardItemComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var DashboardItemComponent = /** @class */ (function () {
-    function DashboardItemComponent() {
-    }
-    DashboardItemComponent.prototype.ngOnInit = function () {
+    SplitPaneComponent.prototype.notifyWillChangeSize = function (resizing) {
+        this.isResizing = resizing;
     };
-    DashboardItemComponent.prototype.createClassName = function (badgeName) {
-        return badgeName.split(" ").join("");
+    SplitPaneComponent.prototype.checkValidBounds = function (newSize, minSize, maxSize) {
+        return newSize >= minSize
+            ? (newSize <= maxSize)
+                ? newSize
+                : maxSize
+            : minSize;
+    };
+    SplitPaneComponent.prototype.stopResizing = function () {
+        this.isResizing = false;
+        this.primaryComponent.nativeElement.style.cursor = "auto";
+        this.secondaryComponent.nativeElement.style.cursor = "auto";
+        if (this.localStorageKey != null) {
+            var ratio = this.getPrimarySize() / (this.getTotalSize());
+            localStorage.setItem(this.localStorageKey, JSON.stringify(ratio));
+        }
+    };
+    SplitPaneComponent.prototype.onMouseup = function (event) {
+        this.stopResizing();
+        return false;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Object)
-    ], DashboardItemComponent.prototype, "questionIndex", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Object)
-    ], DashboardItemComponent.prototype, "quesMeta", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('title'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('primaryComponent'),
         __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
-    ], DashboardItemComponent.prototype, "titleBox", void 0);
-    DashboardItemComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-dashboard-item',
-            template: __webpack_require__(747),
-            styles: [__webpack_require__(748)]
-        }),
-        __metadata("design:paramtypes", [])
-    ], DashboardItemComponent);
-    return DashboardItemComponent;
-    var _a;
+    ], SplitPaneComponent.prototype, "primaryComponent", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('secondaryComponent'),
+        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _b || Object)
+    ], SplitPaneComponent.prototype, "secondaryComponent", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('primary-component-initialratio'),
+        __metadata("design:type", Number)
+    ], SplitPaneComponent.prototype, "initialRatio", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('primary-component-minsize'),
+        __metadata("design:type", Number)
+    ], SplitPaneComponent.prototype, "primaryMinSize", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('secondary-component-minsize'),
+        __metadata("design:type", Number)
+    ], SplitPaneComponent.prototype, "secondaryMinSize", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('local-storage-key'),
+        __metadata("design:type", String)
+    ], SplitPaneComponent.prototype, "localStorageKey", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])('on-change'),
+        __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _c || Object)
+    ], SplitPaneComponent.prototype, "notifySizeDidChange", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('mouseup', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
+    ], SplitPaneComponent.prototype, "onMouseup", null);
+    return SplitPaneComponent;
+    var _a, _b, _c;
 }());
 
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/dashboard-item.component.js.map
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/split-pane.component.js.map
 
 /***/ }),
 
-/***/ 747:
-/***/ (function(module, exports) {
-
-module.exports = "<section class=\"widget\">\r\n  <!-- <div *ngIf=\"quesMeta.index == 3 && quesMeta.view == 'Side by Side View'\" class=\"comingsooncurtain\"><p> Coming Soon...</p></div> -->\r\n  <div class =\"dashboard-item-widget\">\r\n  <div class=\"widget-body clearfix\">\r\n    <div>\r\n      <div>\r\n        <div #title class=\"dashboard-item-title\">{{quesMeta.qText}}</div>\r\n\r\n      </div>\r\n      <div class=\"description-container\">{{quesMeta.description}}\r\n      </div>\r\n      <div class=\"badge-container\">\r\n          <span class=\"badge leobadge {{createClassName(badge)}}\" *ngFor = \"let badge of quesMeta.badges\">{{badge}}</span>\r\n          <span class=\"viewtypeContainer\">{{\"| \"+ quesMeta.view}}</span>\r\n      </div>\r\n    </div>    \r\n  </div>\r\n  </div>\r\n  <div  *ngIf=\"!(quesMeta.index == 3 && quesMeta.view == 'Side by Side View') \"class=\"button-container\">\r\n    <button [routerLink]=\"['/question',quesMeta.index,quesMeta.badges[1]]\" class=\"btn btn-leonardo\" type=\"submit\">Launch</button>\r\n    <!-- routerlink path to be changed to ../../question when moved to previous release  -->\r\n  </div>\r\n  <div  *ngIf=\"quesMeta.index == 3 && quesMeta.view == 'Side by Side View'\"class=\"button-container\">\r\n    <button [routerLink]=\"['/question',quesMeta.index,quesMeta.badges[1]]\" class=\"btn btn-leonardo-inverse\" type=\"submit\" disabled>Coming Soon</button>\r\n    <!-- routerlink path to be changed to ../../question when moved to previous release  -->\r\n  </div>\r\n</section>\r\n"
-
-/***/ }),
-
-/***/ 748:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(20)();
-// imports
-
-
-// module
-exports.push([module.i, ".widget {\n  position: relative;\n  margin-bottom: 30px;\n  background: #fff;\n  border: 0px solid #217346;\n  border-top-width: 8px;\n  border-radius: 0.5rem;\n  height: 260px;\n  -webkit-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);\n          box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2); }\n\n.dashboard-item-widget {\n  padding: 30px 30px 40px 30px;\n  height: 200px; }\n  .dashboard-item-widget .dashboard-item-title {\n    -ms-flex-item-align: center;\n        align-self: center;\n    max-height: 58px;\n    line-height: 1.2;\n    width: 100%;\n    font-size: 24px;\n    font-family: \"open-sans\";\n    color: #464646; }\n  @media (max-width: 1420px) and (min-width: 1200px) {\n    .dashboard-item-widget .dashboard-item-title {\n      font-size: 21px; } }\n  .dashboard-item-widget .description-container {\n    font-size: 16px;\n    font-family: \"open-sans\";\n    color: #575757;\n    padding-top: 11px;\n    display: -webkit-box;\n    -webkit-line-clamp: 3;\n    -webkit-box-orient: vertical;\n    overflow: hidden; }\n  @media (max-width: 1420px) and (min-width: 1200px) {\n    .dashboard-item-widget .description-container {\n      font-size: 15px; } }\n\n.button-container {\n  background-color: #F0F0F0;\n  text-align: center;\n  padding: 10px 0 10px 0; }\n  .button-container .btn-leonardo {\n    background-color: transparent;\n    color: #01579B;\n    border: 1px solid #01579B; }\n  .button-container .btn-leonardo:hover {\n    background-color: #01579B;\n    color: #F0F0F0;\n    border: 1px solid #01579B; }\n  .button-container .btn-leonardo-inverse {\n    background-color: grey;\n    color: white; }\n\n.leobadge {\n  border-radius: 3px;\n  margin: 2px;\n  font-size: 14px;\n  font-weight: normal;\n  color: #fff;\n  font-family: open-sans;\n  padding: 7px 11px; }\n\n@media (max-width: 1420px) and (min-width: 1320px) {\n  .leobadge {\n    font-size: 12px; } }\n\n@media (max-width: 1320px) and (min-width: 1200px) {\n  .leobadge {\n    font-size: 11px; } }\n\n.badge-container {\n  padding-top: 15px; }\n\n.Physics {\n  background: #006064; }\n\n.Training {\n  background: #906D96; }\n\n.Accounting {\n  background: #8D6E63; }\n\n.Assessment {\n  background: #FF8E6C; }\n\n.viewtypeContainer {\n  font-family: open-sans;\n  font-size: 16px;\n  color: #343434;\n  padding-left: 15px; }\n\n@media (max-width: 1420px) and (min-width: 1200px) {\n  .viewtypeContainer {\n    font-size: 14px; } }\n\n.comingsooncurtain {\n  position: absolute;\n  z-index: 2;\n  width: 100%;\n  height: 100%;\n  background: #d2d2d2;\n  opacity: 0.95;\n  left: 0px;\n  top: 0px;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n\n.comingsooncurtain p {\n  color: #666662;\n  font-size: 35px;\n  text-align: center;\n  font-family: open-sans;\n  font-weight: bolder;\n  margin: auto; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ 749:
+/***/ "../../../../../src/app/leonardo/verticalSplitter/vertical-split-pane-separator.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(72);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerticalSplitSeparatorComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__split_pane_separator_component__ = __webpack_require__("../../../../../src/app/leonardo/verticalSplitter/split-pane-separator.component.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var VerticalSplitSeparatorComponent = (function (_super) {
+    __extends(VerticalSplitSeparatorComponent, _super);
+    function VerticalSplitSeparatorComponent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    VerticalSplitSeparatorComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'vertical-split-separator',
+            styles: ["\n    :host {\n      width: 21px;\n      cursor: url(../assets/cursor.cur), ew-resize;\n      position: relative;\n      background-color: #f7f7f7;\n      border-left: 1px solid lightgrey;\n      z-index:2;\n    }\n\n    .handle {\n      width: 100%;\n      height: 100%;\n      padding-left: 3px;\n      background-color: rgba(0,0,0,0);\n      position: absolute;\n    }\n  "],
+            template: "\n    <div class=\"handle\"><img src=\"../assets/splitter.png\"></div>\n  "
+        })
+    ], VerticalSplitSeparatorComponent);
+    return VerticalSplitSeparatorComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__split_pane_separator_component__["a" /* SplitSeparatorComponent */]));
+
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/vertical-split-pane-separator.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/leonardo/verticalSplitter/vertical-split-pane.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerticalSplitPaneComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__split_pane_component__ = __webpack_require__("../../../../../src/app/leonardo/verticalSplitter/split-pane.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__position_service__ = __webpack_require__("../../../../../src/app/leonardo/verticalSplitter/position.service.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1999,60 +1848,75 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var AppComponent = /** @class */ (function () {
-    function AppComponent(router) {
-        this.router = router;
-        this.isBackVisible = false;
-    }
-    AppComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        var body = document.getElementsByTagName("body")[0];
-        var self = this;
-        this.router.events.subscribe(function (urlParams) {
-            if (urlParams.url === "/dashboard" || (urlParams.url === "/" && urlParams["urlAfterRedirects"] === "/dashboard")) {
-                _this.isBackVisible = false;
-            }
-            else {
-                _this.isBackVisible = true;
-            }
-        });
-    };
-    AppComponent.prototype.backBtnClick = function () {
-        Leonardo.scripts.destroyGrids();
-        this.router.navigate(['/dashboard']);
-    };
-    AppComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'app-root',
-            template: __webpack_require__(750),
-            styles: [__webpack_require__(751)]
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
-    ], AppComponent);
-    return AppComponent;
-    var _a;
-}());
 
-//# sourceMappingURL=E:/ComproDLSLeonardo/src/app.component.js.map
+var VerticalSplitPaneComponent = (function (_super) {
+    __extends(VerticalSplitPaneComponent, _super);
+    function VerticalSplitPaneComponent() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    VerticalSplitPaneComponent.prototype.getTotalSize = function () {
+        return this.outerContainer.nativeElement.offsetWidth;
+    };
+    VerticalSplitPaneComponent.prototype.getPrimarySize = function () {
+        return this.primaryComponent.nativeElement.offsetWidth;
+    };
+    VerticalSplitPaneComponent.prototype.getSecondarySize = function () {
+        return this.secondaryComponent.nativeElement.offsetWidth;
+    };
+    VerticalSplitPaneComponent.prototype.dividerPosition = function (size) {
+        var ext = 3;
+        var sizePct = (size / this.getTotalSize()) * 100;
+        this.primaryComponent.nativeElement.style.width = sizePct + "%";
+        this.secondaryComponent.nativeElement.style.width = "calc(" + (100 - sizePct) + "% - 21px)";
+    };
+    VerticalSplitPaneComponent.prototype.onMousemove = function (event) {
+        if (this.isResizing) {
+            var coords = __WEBPACK_IMPORTED_MODULE_2__position_service__["a" /* PositionService */].offset(this.primaryComponent);
+            this.applySizeChange(event.pageX - coords.left);
+        }
+        return false;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('outer'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+    ], VerticalSplitPaneComponent.prototype, "outerContainer", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["HostListener"])('mousemove', ['$event']),
+        __metadata("design:type", Function),
+        __metadata("design:paramtypes", [Object]),
+        __metadata("design:returntype", void 0)
+    ], VerticalSplitPaneComponent.prototype, "onMousemove", null);
+    VerticalSplitPaneComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'vertical-split-pane',
+            styles: ["\n    :host{\n      height: 100%;\n      width: 100%;\n    }\n    .v-outer {\n      height: calc(100% - 1px);\n      width: 100%;\n      padding-top: 1px;\n      display: flex;\n      border-left: 1px solid #ddd;\n      border-right: 1px solid #ddd;\n      background-color: #fff;\n    }\n\n    .left-component {\n      width: calc(50%);\n      height:100%;      \n    }\n\n    .right-component {\n      width: calc(50%);\n      overflow: hidden;\n      height:100%;\n    }\n  "],
+            template: "\n  <div #outer class=\"v-outer\">\n    <div #primaryComponent class=\"left-component\">\n      <ng-content select=\".split-pane-content-primary\"></ng-content>\n    </div>\n    <vertical-split-separator #separator (notifyWillChangeSize)=\"notifyWillChangeSize($event)\"></vertical-split-separator>\n    <div #secondaryComponent class=\"right-component\">\n      <ng-content select=\".split-pane-content-secondary\"></ng-content>\n    </div>\n  </div>\n  ",
+        })
+    ], VerticalSplitPaneComponent);
+    return VerticalSplitPaneComponent;
+    var _a;
+}(__WEBPACK_IMPORTED_MODULE_1__split_pane_component__["a" /* SplitPaneComponent */]));
+
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/vertical-split-pane.component.js.map
 
 /***/ }),
 
-/***/ 750:
+/***/ "../../../../../src/app/leonardo/workspace/workspace.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid header\">\r\n  <div class=\"headingWrapper\">\r\n      <div class=\"logo\"></div>\r\n      <div class=\"verticalLine\"></div>\r\n      <div class=\"productName\">Leonardo</div>\r\n      <button *ngIf=\"isBackVisible\" (click)=\"backBtnClick()\" class=\"backbtn btn btn-default pull-right\">Back</button>\r\n  </div>\r\n</div>\r\n<router-outlet></router-outlet>"
+module.exports = "<div #leoHost class=\"leoHost\">\r\n</div>"
 
 /***/ }),
 
-/***/ 751:
+/***/ "../../../../../src/app/leonardo/workspace/workspace.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(20)();
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")();
 // imports
 
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: \"open-sans\";\n  src: url(" + __webpack_require__(752) + ") format(\"woff\"); }\n\n.header {\n  width: 100%;\n  color: #fff;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  height: 54px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: default;\n  background-color: black; }\n  .header .headingWrapper {\n    width: 100%;\n    height: 34px; }\n  .header .verticalLine {\n    border-left: 1px solid grey;\n    display: inline-block;\n    height: 60%;\n    width: 5px; }\n  .header .productName {\n    font-size: 28px;\n    font-weight: Bold;\n    font-family: \"open-sans\";\n    color: #ffffff;\n    display: inline-block;\n    width: calc(100% - 206px); }\n  .header .logo {\n    display: inline-block;\n    height: 100%;\n    width: 132px;\n    background: url(" + __webpack_require__(753) + ") no-repeat;\n    position: relative;\n    top: 6px; }\n  .header .backbtn {\n    background-color: #E8E8E8;\n    position: relative;\n    margin-top: 10px;\n    padding: 4px 12px; }\n", ""]);
+exports.push([module.i, ".leoHost {\n  width: 100%;\n  height: 100%; }\n", ""]);
 
 // exports
 
@@ -2062,21 +1926,92 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 752:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "../../../../../src/app/leonardo/workspace/workspace.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "OpenSans-Regular.woff";
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkspaceComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var WorkspaceComponent = (function () {
+    function WorkspaceComponent() {
+        this.gridEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    WorkspaceComponent.prototype.ngOnInit = function () {
+        if (this.solutionData.gridUIParams) {
+            if (this.solutionData.gridUIParams.height) {
+                this.leoHost.nativeElement.style.height = this.solutionData.gridUIParams.height + "px";
+            }
+            if (this.solutionData.gridUIParams.width) {
+                this.leoHost.nativeElement.style.width = this.solutionData.gridUIParams.width + "px";
+            }
+        }
+        Leonardo.scripts.add(this.leoHost.nativeElement, this.solutionData.config, this.solutionData.correctData);
+    };
+    WorkspaceComponent.prototype.checkAnswer = function () {
+        Leonardo.scripts.checkAnswer(this.leoHost.nativeElement);
+    };
+    WorkspaceComponent.prototype.tryAgain = function () {
+        Leonardo.scripts.tryAgain(this.leoHost.nativeElement);
+    };
+    WorkspaceComponent.prototype.displayHint = function () {
+        var hint = Leonardo.scripts.displayHint(this.leoHost.nativeElement);
+        if (hint.isLastHint) {
+            this.gridEvent.emit({ type: "hint", hint: hint });
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], WorkspaceComponent.prototype, "solutionData", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('leoHost'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+    ], WorkspaceComponent.prototype, "leoHost", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _b || Object)
+    ], WorkspaceComponent.prototype, "gridEvent", void 0);
+    WorkspaceComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-workspace',
+            template: __webpack_require__("../../../../../src/app/leonardo/workspace/workspace.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/leonardo/workspace/workspace.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], WorkspaceComponent);
+    return WorkspaceComponent;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/workspace.component.js.map
 
 /***/ }),
 
-/***/ 753:
+/***/ "../../../../../src/assets/ComproDLS.png":
 /***/ (function(module, exports) {
 
 module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAAiCAYAAACZb20EAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkJBQjdCOTlDNTVBQTExRTc5QTc2QTEwOEU1NkE2Qjk2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkJBQjdCOTlENTVBQTExRTc5QTc2QTEwOEU1NkE2Qjk2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QkFCN0I5OUE1NUFBMTFFNzlBNzZBMTA4RTU2QTZCOTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QkFCN0I5OUI1NUFBMTFFNzlBNzZBMTA4RTU2QTZCOTYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6W3m1FAAADyElEQVR42uxbjZGqMBCGm2sA7UBL0BKgBC1BS8ASsAQsQUqQEuR1YCrQo4S7xNnMZXK7IYmC+sw3k1ExJMt++5MlEJ/P5yjgdTEej9Hjl8vlwD9S+PmPt2/ed86PJ/z712dQ3X9rEBknOedfW94Ybwf462oMH0FF7wNuCDP+MRHGEIh/HzTg7YJ8Foh/H9RAehI8/jaI/PltaF/QZ2F5bm4551E9TyzieFtZnNtCmG9Cju8XwrMK3vbKwsoXKRhSAV6r/1eCASQd4zBJfFjVD4MrObytPc6dWRpOCkaWKSv7rRbqJarg8ffFjreYt6mmaIEV4q02KJGQLcYfSe9VybcM+yHU9wQRUreEV7p6+wwxLgYGUPnOEYgfFhMP4rtKNNdz/hCfEKvNghB4AblH7XtEVqcpMuYK+p20Y1LwUjm+B9kk9DlPMMdBk9k0fw7jyt8TCx3MHkB8ZOnRwvs30HY2g3wqAh0IwXIgJVMsLNeUq4cmYRRzw7yFRqbMZSlS/iygb2ZQ5gGRWRxfGuanxqF0kMN41cApA9PxAuSo+QIu9hn4Q1H6pKM02SsWV1iEqLxjvIiIIpSVu+bHheM5pYVHlgbZ+0AD3qxj76GPP8RPkEHWiIfJfivEKmMIM7qXmCx5Slj0hvBUU6hdExEm7Zg/hpYQOhhpik+Q6+8TrSHCHCxv+pDEYwqtkXKEWmXWipC6V1MetAXlM2I13DiGwx1xTmIou1iHUdVwTW0PedoFG8JBrimLl297X+L7DF1DK8nFk17lmlqIgJTMC9h77534ZyXzFiRPLl8DqYzy/NTV87vq+Fhr21CKP/Sm0JxIwdLz83sRH/B8KSozOGBusVETiH9hbAjyrauOrt25HMk1AY/BDEpOBiXeJvp9osa27LUmvkAsLWBYso/asUqp7YXX732ID6F++AXardVGot1r8MKHR03LnkyZ9yjF2iclHrtlO+uQm91CfEqEDIbk+dRQ3zcDES9uYJQ3ENoQOpgghmV7Tdgiq/IwyAq5Xrn2wvY2alviK+RiSiS3MBhU3/YTysEeFtwO6EkpoWjmQHyN6OCkEd9G5m3PVfS7lauTsuuQp4jw7Wvslq3sq+d3pj1u1Znjlx1CqbcNa4tFnk2fe9a2jCBz5zDO2sJQlpFfqqsiv+ftVN0zC+PNXHK89IwpYl1yg3+qRYUtTLJDCF+6CHAn4ueaLJWHDJQOZDUzclxMMTgvi+jnAlxyvZStQXS+Fu/F8WZtlPELvjSpvgyoEvaWoF6aDOVcQCA+IBAfiA8qeE/8CDAAiwU+dQRBNokAAAAASUVORK5CYII="
 
 /***/ }),
 
-/***/ 754:
+/***/ "../../../../../src/assets/OpenSans-Regular.woff":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "OpenSans-Regular.192fd6b1ca3431f297a4.woff";
+
+/***/ }),
+
+/***/ "../../../../../src/environments/environment.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2090,7 +2025,64 @@ var environment = {
 };
 //# sourceMappingURL=E:/ComproDLSLeonardo/src/environment.js.map
 
+/***/ }),
+
+/***/ "../../../../../src/main.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["enableProdMode"])();
+}
+Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
+//# sourceMappingURL=E:/ComproDLSLeonardo/src/main.js.map
+
+/***/ }),
+
+/***/ 0:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("../../../../../src/main.ts");
+
+
+/***/ }),
+
+/***/ 1:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 2:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 3:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
 /***/ })
 
-},[484]);
+},[0]);
 //# sourceMappingURL=main.bundle.js.map
