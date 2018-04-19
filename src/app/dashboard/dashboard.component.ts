@@ -50,7 +50,21 @@ export class DashboardComponent implements OnInit {
         badges:['Physics','Assessment'],
         view:"Side by Side View",
         index:3
-      }];
+      },
+      {
+        qText: "Exhaust System inspection",
+        description: "Assess student's knowledge and skill at the end of the course",
+        badges:['Physics','Assessment'],
+        view:"Reading View",
+        index:4
+      },{
+        qText: "Vehicle Emission control information",
+        description: "Assess student's knowledge and skill at the end of the course",
+        badges:['Physics','Assessment'],
+        view:"Reading View",
+        index:5
+      }
+    ];
   }
   ngOnInit() {
   }

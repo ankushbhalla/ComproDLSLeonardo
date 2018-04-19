@@ -29,10 +29,11 @@ export class CosmattItemBoxComponent implements OnInit {
     let leoInstances = this.cosmattItemContainer.nativeElement.querySelectorAll(".leoHost");
     for (let index = 0; index < leoInstances.length; index++) {
       let data = this.questionData.leoData[leoInstances[index].getAttribute("leoDataId")];
-      this.leonardoCoreService.addWidget("spreadsheet-"+index,leoInstances[index], data.config);
+      this.leonardoCoreService.addWidget("spreadsheet-" + index, leoInstances[index], data.config);
     }
-
-    this.renderWorkspace();
+    if (this.solutionData != null && this.solutionData.config != null) {
+      this.renderWorkspace();
+    }
   }
 
 
@@ -40,12 +41,12 @@ export class CosmattItemBoxComponent implements OnInit {
 
     this.qInstruction.nativeElement.innerHTML = this.solutionData.qIns;
 
-    if(this.solutionData.gridUIParams){
-      if(this.solutionData.gridUIParams.height){
+    if (this.solutionData.gridUIParams) {
+      if (this.solutionData.gridUIParams.height) {
         this.workspace.nativeElement.style.height = this.solutionData.gridUIParams.height + "px";
       }
 
-      if(this.solutionData.gridUIParams.width){
+      if (this.solutionData.gridUIParams.width) {
         this.workspace.nativeElement.style.width = this.solutionData.gridUIParams.width + "px";
       }
     }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import 'leonardodls-core/libs-leonardo-player/dist/leonardoPlayer.min.js';
-import '../../node_modules/leonardodls-core/libs-leonardo-player/dist/leonardoPlayer.min.css';
+import '../libs/Leonardo/leonardoPlayer.min.js';
+import '../libs/Leonardo/leonardoPlayer.min.css';
 
 declare var LeonardoPlayer;
 
