@@ -1,5 +1,5 @@
 {
-  "name": "comprodlsleonrdodemo",
+  "name": "comprodlsleonardodemo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -41,7 +41,6 @@
     "istanbul-instrumenter-loader": "^2.0.0",
     "latest": "^0.2.0",
     "less-loader": "^2.2.3",
-    "leonardodls-core": "git+https://2266b6fbc335a66e5ea3fe63b4b54794da09e65c:x-oauth-basic@github.com/comprodls/libs-leonardo-core.git#0.0.10",
     "morgan": "~1.8.1",
     "ng2-pdf-viewer": "^2.0.2",
     "ngx-bootstrap": "^1.9.3",
