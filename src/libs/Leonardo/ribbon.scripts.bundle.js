@@ -16487,7 +16487,7 @@ ControlGenerators.ComboBox.prototype.DropdownOpener = function(e) {
 
     var vOverflow = UIUtils.getVerticalOverflow($dropDown, $leonardoArea) + 40;
 
-    if ((vOverflow > 0) && ($comboBox.offset().top - $dropDown.outerHeight()) > 0) {
+    if ((vOverflow > 0) && ((($(window.top).height()- $comboBox.offset().top) - $comboBox.offset().top ) < 0)) {
         ddCss.bottom = $comboBox.position().top + $comboBox.outerHeight();
         ddCss.top = "";
     }
