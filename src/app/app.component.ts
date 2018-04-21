@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-declare var Leonardo: any;
+import { LeonardoCoreService } from './leonardo-core.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +9,7 @@ declare var Leonardo: any;
 })      
 export class AppComponent implements OnInit {
   isBackVisible: boolean = false;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private leonardoCoreService: LeonardoCoreService) { }
 
   ngOnInit() {
     let body = document.getElementsByTagName("body")[0];
@@ -27,7 +26,8 @@ export class AppComponent implements OnInit {
   }
 
   backBtnClick() {
-    Leonardo.scripts.destroyGrids();
+    //Leonardo.scripts.destroyGrids();
+    //this.leonardoCoreService.removeWidgets();
     this.router.navigate(['/dashboard']);
   }
 }

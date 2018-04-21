@@ -11,7 +11,8 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "libs"
+        "libs",
+        "dist"
       ],
       "index": "launch.html",
       "main": "main.ts",

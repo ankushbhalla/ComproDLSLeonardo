@@ -1,7 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Router } from '@angular/router';
-
-declare var Leonardo: any;
+import { LeonardoCoreService } from '../../leonardo-core.service';
 
 @Component({
   selector: 'app-navigator',
@@ -13,7 +12,7 @@ export class NavigatorComponent implements OnInit {
   @Input() navigatorData: any;
   answerButtonMode;
   submitButtonMode;
-  constructor(private router: Router) {
+  constructor(private router: Router, private leonardoCoreService: LeonardoCoreService) {
       this.answerButtonMode = "checkAnswer";
       this.submitButtonMode = "submit";
   }
@@ -48,7 +47,7 @@ export class NavigatorComponent implements OnInit {
       this.navEvent.emit({ eventId: "CHECK_MY_ANSWER_CLICKED" });
     }
     else{
-      Leonardo.scripts.destroyGrids();
+      //this.leonardoCoreService.removeWidgets();
       this.router.navigate(['/dashboard']);
     }
   }

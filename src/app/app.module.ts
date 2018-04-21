@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LeonardoModule, leoRoutes } from './leonardo/leonardo.module';
 import { DashboardModule, dashboardRoutes } from './dashboard/dashboard.module';
 import { DataService } from './data.service';
+import { LeonardoCoreService } from './leonardo-core.service';
 import { AppComponent } from './app.component';
 
 const appRoutes: Routes = [
@@ -38,7 +39,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers:[DataService],
+  providers:[DataService, LeonardoCoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
