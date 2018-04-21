@@ -53,14 +53,14 @@ export class DashboardComponent implements OnInit {
       // },
       {
         qText: "Exhaust System inspection",
-        description: "Assess student's knowledge and skill at the end of the course",
-        badges:['Physics','Assessment'],
+        description: "Use inspection checklist to record condition of the vehicle exhaust system",
+        badges:['Automotive','Assessment'],
         view:"Reading View",
         index:4
       },{
         qText: "Vehicle Emission control information",
-        description: "Assess student's knowledge and skill at the end of the course",
-        badges:['Physics','Assessment'],
+        description: "Analyse Vehicle Emission control information sticker",
+        badges:['Automotive','Assessment'],
         view:"Reading View",
         index:5
       }
