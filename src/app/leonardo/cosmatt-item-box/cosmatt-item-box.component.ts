@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, ViewChild, ElementRef, ViewEncapsulation, EventEmitter } from '@angular/core';
 import { LeonardoCoreService } from '../../leonardo-core.service';
+import Viewer from "viewerjs";
 
 
 @Component({
@@ -24,12 +25,34 @@ export class CosmattItemBoxComponent implements OnInit {
   ngOnInit() {
     this.chapName = this.questionData["chapter"];
     this.secName = this.questionData["section"];
-
+    
     this.cosmattItemContainer.nativeElement.innerHTML = this.questionData["template"];
+    
+    let imageElements = this.cosmattItemContainer.nativeElement.querySelectorAll('.refImage');
+    
+    if(imageElements){
+      let viewerConfig = {
+        navbar:false,
+        title:false,
+        movable:false,
+        toolbar:false,
+      };
+
+      for (let index = 0; index < imageElements.length; index++) {
+      let viewer = new Viewer(imageElements[index],viewerConfig);
+      }
+    }   
+
     let leoInstances = this.cosmattItemContainer.nativeElement.querySelectorAll(".leoHost");
-    for (let index = 0; index < leoInstances.length; index++) {
-      let data = this.questionData.leoData[leoInstances[index].getAttribute("leoDataId")];
-      this.leonardoCoreService.addWidget("spreadsheet-" + index, leoInstances[index], data.config);
+    if(leoInstances){
+      for (let index = 0; index < leoInstances.length; index++) {
+        let data = this.questionData.leoData[leoInstances[index].getAttribute("leoDataId")];
+        this.leonardoCoreService.addWidget("spreadsheet-" + index, leoInstances[index], data.config);
+      }
+    }
+    let buttons = this.cosmattItemContainer.nativeElement.querySelector(".btnContainer");
+    if(buttons){
+      buttons.querySelector(".btnCMW").addEventListener("click", this.handleFormSubmit.bind(this));
     }
     if (this.solutionData != null && this.solutionData.config != null) {
       this.renderWorkspace();
@@ -63,6 +86,15 @@ export class CosmattItemBoxComponent implements OnInit {
   resetHandler(){
     this.isCMWEnabled = true;
     this.leonardoCoreService.getWidget("question-1").clearFeedback();;
+  }
+
+  handleFormSubmit(){
+    let score = this.leonardoCoreService.getWidget("spreadsheet-0").score();
+    this.leonardoCoreService.getWidget("spreadsheet-0").displayFeedback(score);
+  }
+
+  handleFormReset(){
+    this.leonardoCoreService.getWidget("spreadsheet-0").clearFeedback();;
   }
 
 }

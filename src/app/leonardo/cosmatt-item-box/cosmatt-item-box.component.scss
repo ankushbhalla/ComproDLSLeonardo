@@ -1,3 +1,5 @@
+@import '../../../../node_modules/viewerjs/dist/viewer.min.css';
+
 .cosmattItemHost{
 
     background-color: #dedede;
@@ -127,54 +129,63 @@
         }
 
         .btnContainer{
-          margin: auto;
-          float: none;
-          border-top: 1px solid #d1d1d1;
-          height: 70px;
-          padding-top: 15px;
           width: 97%;
+        }
 
-          .navBtn{
-            color: #01579b;
-            padding: 5px 16px;
-            line-height: 1.5;
-            text-align: center;
-            white-space: nowrap;
-            vertical-align: middle;
-            border: none;
-            background-color: #fff;
-            outline: none;
+      }
 
-            a{
-              text-decoration: none;
+    }
+    .btnContainer{
+      margin: auto;
+      float: none;
+      border-top: 1px solid #d1d1d1;
+      height: 70px;
+      padding-top: 15px;
+      width: 100%;
 
-              .glyphicon{
-                padding-right: 7px;
-              }
-            }
+      .navBtn{
+        color: #01579b;
+        padding: 5px 16px;
+        line-height: 1.5;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        border: none;
+        background-color: #fff;
+        outline: none;
 
+        a{
+          text-decoration: none;
+
+          .glyphicon{
+            padding-right: 7px;
           }
+        }
 
-          .navBtn:hover{
-            text-decoration: underline;
-          }
+      }
 
-          .navBtn:disabled{
-            color: graytext;
-            text-decoration: none;
-            cursor: not-allowed;
+      .navBtn:hover{
+        text-decoration: underline;
+      }
 
-            .glyphicon{
-              color: graytext;
-            }
-          }
+      .navBtn:disabled{
+        color: graytext;
+        text-decoration: none;
+        cursor: not-allowed;
 
-          .navBtn.btnReset{
-            border-left: 1px solid #d1d1d1;
-          }
+        .glyphicon{
+          color: graytext;
         }
       }
 
+      .navBtn.btnReset{
+        border-left: 1px solid #d1d1d1;
+      }
+    }
+
+    .leo-questionarea {
+      height: 100%;
+      width: 100%;
     }
 
 }
