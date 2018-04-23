@@ -462,7 +462,7 @@ export class DataService {
                     <p>Exhaust Manifolds and Gaskets. Inspect the manifolds for cracks and gaskets for burn-through, either of which may cause leaks.</p>
                     <div class="questionHeadings">Requirements</div>
                     <p>Read the vehicle emission control information (VECI) from the following sticker and fill the form:</p>
-                    <img src="assets/emisson.jpg" style="height: 340px; left: 150px; position: relative;">
+                    <img src="assets/emisson.jpg" class="refImage" style="height: 340px; left: 150px; position: relative;">
                     <p></p>
                     <div style="height:689px;" leoDataId="leoHost1" class="leoHost"></div>
                     <p></p>
