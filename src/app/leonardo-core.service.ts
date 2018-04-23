@@ -20,5 +20,9 @@ export class LeonardoCoreService {
     removeWidget(uid) {
         return this.leonardoPlayer.removeWidget(uid);
     }
+
+    getLeonardoPlayer(){
+        return this.leonardoPlayer;
+    }
     
 }
