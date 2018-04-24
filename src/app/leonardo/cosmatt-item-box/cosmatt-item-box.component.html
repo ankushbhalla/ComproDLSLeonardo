@@ -8,7 +8,7 @@
     </h2>
   </div>
   <div #cosmattItemContainer class="col-md-11 cosmattItemContainer"></div>
-  <div #workspaceHost class="col-md-11 workspaceHost">
+  <div *ngIf="solutionData" #workspaceHost class="col-md-11 workspaceHost" >
     <div #workspaceContainer class="workspaceContainer">
       <div class="qInstruction">
         <div class="qLabel">Question:</div>

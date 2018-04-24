@@ -1,17 +1,17 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
-
-declare var Leonardo: any;
+import { Component, OnInit,OnDestroy, Input, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
+import { LeonardoCoreService } from '../../leonardo-core.service';
 
 @Component({
   selector: 'app-workspace',
   templateUrl: './workspace.component.html',
   styleUrls: ['./workspace.component.scss']
 })
-export class WorkspaceComponent implements OnInit {
+export class WorkspaceComponent implements OnInit, OnDestroy {
   @Input() solutionData: any;
   @ViewChild('leoHost') leoHost: ElementRef;
   @Output() gridEvent: EventEmitter<Object> = new EventEmitter();
-  constructor() { }
+  question;
+  constructor(private leonardoCoreService: LeonardoCoreService) { }
 
   ngOnInit() {
     if(this.solutionData.gridUIParams){
@@ -23,20 +23,24 @@ export class WorkspaceComponent implements OnInit {
         this.leoHost.nativeElement.style.width = this.solutionData.gridUIParams.width + "px";
       }
     }
+    this.question = this.leonardoCoreService.addWidget("workspace-1",this.leoHost.nativeElement, this.solutionData.config);
+  }
 
-    Leonardo.scripts.add(this.leoHost.nativeElement, this.solutionData.config, this.solutionData.correctData);
+  ngOnDestroy(){
+    this.question.destroy();
   }
 
   checkAnswer(){
-    Leonardo.scripts.checkAnswer(this.leoHost.nativeElement);
+    let score = this.question.score();
+    this.question.displayFeedback(score);
   }
 
   tryAgain(){
-    Leonardo.scripts.tryAgain(this.leoHost.nativeElement);
+    this.question.clearFeedback();
   }
 
   displayHint(){
-    let hint = Leonardo.scripts.displayHint(this.leoHost.nativeElement);
+    let hint = this.question.displayHint(this.leoHost.nativeElement);
     if(hint.isLastHint) {
       this.gridEvent.emit({type: "hint", hint: hint});
     }
