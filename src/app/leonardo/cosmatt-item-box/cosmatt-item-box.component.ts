@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, ViewChild, ElementRef, ViewEncapsulation, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Output, ViewChild, ElementRef, ViewEncapsulation, EventEmitter } from '@angular/core';
 import { LeonardoCoreService } from '../../leonardo-core.service';
 import Viewer from "viewerjs";
 
@@ -9,7 +9,7 @@ import Viewer from "viewerjs";
   styleUrls: ['./cosmatt-item-box.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class CosmattItemBoxComponent implements OnInit {
+export class CosmattItemBoxComponent implements OnInit, OnDestroy {
   @Input() questionData: any;
   @Input() solutionData: any;
   @ViewChild('cosmattItemContainer') cosmattItemContainer: any;
@@ -19,8 +19,10 @@ export class CosmattItemBoxComponent implements OnInit {
   isCMWEnabled: boolean = true;
   chapName: string = "";
   secName: string = "";
-
-  constructor(private leonardoCoreService: LeonardoCoreService) { }
+  leonardoWidgets;
+  constructor(private leonardoCoreService: LeonardoCoreService) { 
+    this.leonardoWidgets = {};
+  }
 
   ngOnInit() {
     this.chapName = this.questionData["chapter"];
@@ -47,7 +49,7 @@ export class CosmattItemBoxComponent implements OnInit {
     if(leoInstances){
       for (let index = 0; index < leoInstances.length; index++) {
         let data = this.questionData.leoData[leoInstances[index].getAttribute("leoDataId")];
-        this.leonardoCoreService.addWidget("spreadsheet-" + index, leoInstances[index], data.config);
+        this.leonardoWidgets["spreadsheet-" + index] = this.leonardoCoreService.addWidget("spreadsheet-" + index, leoInstances[index], data.config);
       }
     }
     let buttons = this.cosmattItemContainer.nativeElement.querySelector(".btnContainer");
@@ -57,6 +59,15 @@ export class CosmattItemBoxComponent implements OnInit {
     if (this.solutionData != null && this.solutionData.config != null) {
       this.renderWorkspace();
     }
+  }
+
+  ngOnDestroy(){
+    for (let index = 0; index < Object.keys(this.leonardoWidgets).length; index++) {
+      this.leonardoWidgets["spreadsheet-" + index].destroy();
+    }
+    if(this.leonardoCoreService.getWidget("question-1")){
+      this.leonardoCoreService.getWidget("question-1").destroy();
+    }    
   }
 
 

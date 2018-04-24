@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit,OnDestroy, Input, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { LeonardoCoreService } from '../../leonardo-core.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { LeonardoCoreService } from '../../leonardo-core.service';
   templateUrl: './workspace.component.html',
   styleUrls: ['./workspace.component.scss']
 })
-export class WorkspaceComponent implements OnInit {
+export class WorkspaceComponent implements OnInit, OnDestroy {
   @Input() solutionData: any;
   @ViewChild('leoHost') leoHost: ElementRef;
   @Output() gridEvent: EventEmitter<Object> = new EventEmitter();
@@ -24,6 +24,10 @@ export class WorkspaceComponent implements OnInit {
       }
     }
     this.question = this.leonardoCoreService.addWidget("workspace-1",this.leoHost.nativeElement, this.solutionData.config);
+  }
+
+  ngOnDestroy(){
+    this.question.destroy();
   }
 
   checkAnswer(){
