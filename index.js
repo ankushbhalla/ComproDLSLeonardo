@@ -39,7 +39,7 @@ function isValidTenant(tenant){
   let tenantMap ={
     "compro":"c0mpr0",
     "tts":"c1mpr1",
-    "automotive":"c2mpr2"
+    "automotive":"automotive"
   }
   if(tenantMap[tenant]){
     return true;
@@ -58,19 +58,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // For tenant/version - Start
-app.use('/:tenant',(req, res, next) => {
-  var tenant = req.params.tenant;
-  if(isValidTenant(tenant) == false){
-    next();
-  }
+app.use('/automotive',
   basicAuth({
-  users: getUserAuthentication(tenant),
+  users: {"automotive":"automotive"},
   challenge: true,
   unauthorizedResponse: getUnauthorizedResponse,
   realm: 'Leo Credential'
-  })
-  next();
-})
+  }))
+app.use('/tts',
+  basicAuth({
+  users: {"tts":"tts"},
+  challenge: true,
+  unauthorizedResponse: getUnauthorizedResponse,
+  realm: 'Leo Credential'
+}))
 app.get('/:tenant/:ver', (req, res) => {
   var tenant = req.params.tenant;
   var ver = req.params.ver;
