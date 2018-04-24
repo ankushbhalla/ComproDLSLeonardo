@@ -130,12 +130,7 @@ unauthorizedResponse: getUnauthorizedResponse,
   realm: 'Leo Credential'
 }))
 app.get('*', (req, res) => {
-  if(req.app.get('env') === 'development'){
-    res.sendFile(path.join(__dirname, 'dist/launch.html'));
-  }
-  else{
-    res.sendFile(path.join(__dirname, 'public/compro/April18/launch.html'));
-  }
+  res.sendFile(path.join(__dirname, 'public/compro/April18/launch.html'));
   
 });
 // Default Handling
