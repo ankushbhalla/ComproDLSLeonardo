@@ -9,13 +9,13 @@ export class DashboardComponent implements OnInit {
   questions: Array<Object>;
   constructor() {
     this.questions = [
-      // {
-      //   qText: "Trial Balance: Learn",
-      //   description: "Learn to prepare Trial Balance to verify that debits equal the credits",
-      //   badges:['Accounting','Training'],
-      //   view:"Side by Side View",
-      //   index:1
-      // },
+      {
+        qText: "Trial Balance: Learn",
+        description: "Learn to prepare Trial Balance to verify that debits equal the credits",
+        badges:['Accounting','Training'],
+        view:"Side by Side View",
+        index:1
+      }
       // {
       //   qText: "Income Statement: Learn",
       //   description: "Learn to prepare Income Statement to access the profitability of a company during a particular time interval",
@@ -51,7 +51,7 @@ export class DashboardComponent implements OnInit {
       //   view:"Side by Side View",
       //   index:3
       // },
-      {
+      ,{
         qText: "Exhaust System inspection",
         description: "Use inspection checklist to record condition of the vehicle exhaust system",
         badges:['Automotive','Assessment'],

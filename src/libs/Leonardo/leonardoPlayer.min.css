@@ -13002,7 +13002,7 @@ div.k-spreadsheet-window {
   color: #2e2e2e;
 }
 .ktb-var-selected-background {
-  color: transparent;
+  color: #939393;
 }
 .ktb-var-selected-gradient {
   background-image: url(./assets/kendo/images/highlight.png);
@@ -13320,7 +13320,7 @@ html .km-pane-wrapper .k-header {
 }
 /* Scheduler */
 .k-scheduler {
-  color: #2e2e2e;
+  color: #1f1f1f;
   background-color: #fff;
 }
 .k-scheduler-layout {
@@ -13361,9 +13361,9 @@ html .km-pane-wrapper .k-header {
 }
 .k-event,
 .k-task-complete {
-  border-color: rgba(84, 84, 84, 0);
-  background: rgba(46, 46, 46, 0) 0 -257px url(./assets/kendo/images/highlight.png) repeat-x;
-  color: #2e2e2e;
+  border-color: #e7e7e7;
+  background: #c1c1c1 0 -257px url(./assets/kendo/images/highlight.png) repeat-x;
+  color: #1f1f1f;
 }
 .k-event-inverse {
   color: #fff;
@@ -14140,9 +14140,9 @@ div.k-filebrowser-dropzone em {
   background: transparent;
 }
 .k-task-single {
-  background-color: rgba(102, 102, 102, 0);
-  border-color: rgba(84, 84, 84, 0);
-  color: #2e2e2e;
+  background-color: #f9f9f9;
+  border-color: #e7e7e7;
+  color: #1f1f1f;
 }
 .k-state-selected.k-task-single {
   border-color: #f85a00;
@@ -15077,11 +15077,11 @@ textarea.k-textbox,
 .k-spreadsheet .k-resize-handle,
 .k-spreadsheet .k-resize-hint-handle,
 .k-spreadsheet .k-resize-hint-marker {
-  background-color: transparent;
+  background-color: #939393;
 }
 .k-spreadsheet .k-resize-hint-vertical .k-resize-hint-handle,
 .k-spreadsheet .k-resize-hint-vertical .k-resize-hint-marker {
-  background-color: transparent;
+  background-color: #939393;
 }
 .k-spreadsheet .k-single-selection::after {
   background-color: #217346;
@@ -15103,7 +15103,7 @@ textarea.k-textbox,
 }
 .k-spreadsheet-filter.k-state-active {
   color: #000;
-  background-color: transparent;
+  background-color: #939393;
 }
 .k-spreadsheet-filter:hover {
   color: #2e2e2e;
@@ -15179,11 +15179,11 @@ textarea.k-textbox,
   background-color: #bcb4b0;
 }
 .k-spreadsheet-popup .k-state-active {
-  background-color: transparent;
+  background-color: #939393;
   color: #ffffff;
 }
 .k-spreadsheet-popup .k-state-active:hover {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #7a7a7a;
 }
 .k-spreadsheet-filter-menu .k-details {
   border-color: #d5d5d5;
@@ -15372,7 +15372,7 @@ textarea.k-textbox,
   color: blue;
 }
 .k-spreadsheet-formula-list .k-state-focused {
-  background-color: transparent;
+  background-color: #939393;
   color: #000;
 }
 .k-spreadsheet .k-widget[data-property='fontSize'] {
@@ -15596,6 +15596,10 @@ textarea.k-textbox,
 .k-widget .k-spreadsheet-view .k-spreadsheet-fixed-container .k-spreadsheet-column-header {
   cursor: url(./assets/kendo/images/DownArrow.cur), cell !important;
 }
+.k-widget .k-spreadsheet-view .k-spreadsheet-fixed-container .k-resize-hint .k-resize-hint-marker,
+.k-widget .k-spreadsheet-view .k-spreadsheet-fixed-container .k-resize-hint .k-resize-hint-handle {
+  position: absolute;
+}
 .k-widget .k-spreadsheet-sheets-bar .k-button-icon {
   height: calc(1.72em + 6px);
   width: calc(1.72em + 6px);
@@ -15636,6 +15640,10 @@ textarea.k-textbox,
   height: 100%;
   width: 100%;
   position: relative;
+}
+.leo-questionarea {
+  height: 100%;
+  width: 100%;
 }
 .leo-questionarea.split {
   height: 100%;
