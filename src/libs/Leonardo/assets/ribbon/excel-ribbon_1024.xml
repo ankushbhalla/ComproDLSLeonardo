@@ -1,0 +1,1196 @@
+<?xml version="1.0"?>
+<ribbon menutype="JSON">
+	<tabs>
+		<tab name="Home" ak="H">
+			<sections>
+				<section name="Clipboard" launcher="true" ak="FO" eventId="41">
+					<tooltips>
+						<tooltip type="HeaderBodyPic">
+							<img wd="62px" ht="128px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop top="-39px" left="-101px"/>
+							</img>
+							<body>
+								<![CDATA[See all the items you've copied to the Clipboard.]]>
+							</body>
+							<header>Clipboard</header>
+						</tooltip>
+					</tooltips>
+					<control type="SplitButtonNewVertical" identifier="home_clipboard_paste" text="Paste" ak="V" eventId="148">
+						<tooltips>
+							<tooltip target="arrow">
+								<body>
+									<![CDATA[Pick a paste option, such as keeping formatting or pasting only content.]]>
+								</body>
+								<header>Paste (Ctrl+V)</header>
+							</tooltip>
+							<tooltip target="icon">
+								<body>
+									<![CDATA[Add content on the Clipboard to your document.]]>
+								</body>
+								<header>Paste (Ctrl+V)</header>
+							</tooltip>
+						</tooltips>
+						<icon wd="32px" ht="32px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+							<imgcrop top="-1230px" left="-238px"/>
+						</icon>
+						<items wd="150px">
+							<item type="ItemHeader" disabled="true" text="Paste"/>
+							<items type="ImageArea">
+								<item type="ImageItem" ak="P" eventId="148" tooltip="Paste (P)">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-174px" left="0px"/>
+									</icon>
+								</item>
+								<item type="ImageItem" ak="F" eventId="200" tooltip="Formulas (F)">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-348px" left="0px"/>
+									</icon>
+								</item>
+								<item type="ImageItem" ak="O" eventId="201" tooltip="Formulas &amp; Number Formatting (O)">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-319px" left="0px"/>
+									</icon>
+								</item>
+								<item type="ImageItem" eventId="202" ak="K" tooltip="Keep Source Formatting (K)">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-261px" left="0px"/>
+									</icon>
+								</item>
+								<item type="ImageItem" eventId="203" ak="B" tooltip="No Borders (B)">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-203px" left="0px"/>
+									</icon>
+								</item>
+								<item type="ImageItem" eventId="204" ak="W" tooltip="Keep Source Column Widths (W)">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-290px" left="0px"/>
+									</icon>
+								</item>
+								<item type="ImageItem" ak="T" tooltip="Transpose (T)" eventId="876">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-87px" left="0px"/>
+									</icon>
+								</item>
+							</items>
+							<item type="ItemHeader" disabled="true" text="Paste Values"/>
+							<items type="ImageArea">
+								<item type="ImageItem" ak="V" tooltip="Values (V)" eventId="877">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-58px" left="0px"/>
+									</icon>
+								</item>
+								<item type="ImageItem" ak="A" tooltip="Values &amp; Number Formatting (A)" eventId="443">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-29px" left="0px"/>
+									</icon>
+								</item>
+								<item type="ImageItem" eventId="131" ak="E" tooltip="Values &amp; Source Formatting (E)">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="0px" left="0px"/>
+									</icon>
+								</item>
+							</items>
+							<item type="ItemHeader" disabled="true" text="Other Paste Options"/>
+							<items type="ImageArea">
+								<item type="ImageItem" ak="R" tooltip="Formatting (R)" eventId="870">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-377px" left="0px"/>
+									</icon>
+								</item>
+								<item type="ImageItem" ak="N" tooltip="Paste Link (N)" eventId="941">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-145px" left="0px"/>
+									</icon>
+								</item>
+								<item type="ImageItem" ak="U" tooltip="Picture (U)" eventId="942">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-116px" left="0px"/>
+									</icon>
+								</item>
+								<item type="ImageItem" ak="I" tooltip="Linked Picture (I)" eventId="943">
+									<icon wd="24px" ht="24px" src="dist/assets/ribbon/sprites/excel1024/home/clipboard_sectionitems.png">
+										<imgcrop top="-232px" left="0px"/>
+									</icon>
+								</item>
+							</items>
+							<item type="Separator" mode="solid"/>
+							<item text="Paste ~Special..." ak="S" eventId="205" tooltip="Paste Special (Ctrl+Alt+V)"/>
+						</items>
+					</control>
+					<control orientation="vertical">
+						<control type="MinimalButton" text="Cut" ak="X" eventId="142">
+							<tooltips>
+								<tooltip>
+									<body>
+										<![CDATA[Remove the selection and put it on the Clipboard so you can paste it somewhere else.]]>
+									</body>
+									<header>Cut (Ctrl+X)</header>
+								</tooltip>
+							</tooltips>
+							<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop top="-1264px" left="-238px"/>
+							</icon>
+						</control>
+						<control type="SplitButtonNewHorizontal" minimal="true" text="Copy" ak="C" eventId="133" classname="copy">
+							<tooltips>
+								<tooltip target="arrow">
+									<body>
+										<![CDATA[Pick how you want to copy the selection.]]>
+									</body>
+									<header>Copy (Ctrl+C)</header>
+								</tooltip>
+								<tooltip target="icon">
+									<body>
+										<![CDATA[Put a copy of the selection on the Clipboard so you can paste it somewhere else.]]>
+									</body>
+									<header>Copy (Ctrl+C)</header>
+								</tooltip>
+							</tooltips>
+							<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop top="-1286px" left="-274px"/>
+							</icon>
+							<text>Copy</text>
+							<items type="IconAndText" wd="165px" ak="C">
+								<item text="Copy" eventId="133" ak="C">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/img/EwaEdit.png">
+										<imgcrop top="-91px" left="-173px"/>
+									</icon>
+									<tooltips>
+										<tooltip position="Item">
+											<body>
+												<![CDATA[Put a copy of the selection on the Clipboard so you can paste it somewhere else.]]>
+											</body>
+											<header>Copy (Ctrl+C)</header>
+										</tooltip>
+									</tooltips>
+								</item>
+								<item text="Copy as ~Picture..." ak="P"/>
+							</items>
+						</control>
+						<control type="MinimalButton" text="Format Painter" ak="FP" eventId="299" classname="format-painter-excel">
+							<tooltips>
+								<tooltip type="HeaderBodyHelp">
+									<body>
+										<![CDATA[Like the look of a particular selection? You can apply that look to other content in the document.<br/><br/>To get started:<br/>1. Select content with the formatting you like<br/>2. Click Format Painter<br/>3. Select something else to automatically apply the formatting<br/><br/>FYI: To apply the formatting in multiple places, double-click Format Painter.]]>
+									</body>
+									<header>Format Painter</header>
+								</tooltip>
+							</tooltips>
+							<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop top="0px" left="-128px"/>
+							</icon>
+						</control>
+					</control>
+				</section>
+				<section name="Font" launcher="true" nrows="2" orientation="vertical" ak="FN" eventId="42">
+					<control>
+						<control type="ComboBoxText" selectedindex="1" width="109px" text="Font" defaulttext="Calibri" ak="FF" classname="font-name">
+							<tooltips>
+								<tooltip>
+									<body>
+										<![CDATA[Pick a new font for your text.]]>
+									</body>
+									<header>Font</header>
+								</tooltip>
+							</tooltips>
+							<items type="Font" width="260px" height="400px" eventId="56666">
+								<item text="Cambria"/>
+								<item text="Calibri"/>
+								<item text="Agency FB"/>
+								<item text="Algerian"/>
+								<item text="Arial Narrow"/>
+								<item text="Arial Unicode MS"/>
+								<item text="Arial Rounded MT"/>
+								<item text="Baskerville Old Face"/>
+								<item text="Bell MT"/>
+								<item text="Bernard MT Condensed"/>
+								<item text="Book Antiqua"/>
+								<item text="Bodoni MT"/>
+								<item text="Bodoni MT Black"/>
+								<item text="Bodoni MT Poster Compressed"/>
+								<item text="Bookman Old Style"/>
+								<item text="Bradley Hand ITC"/>
+								<item text="Britannic Bold (True Type)"/>
+								<item text="Berlin Sans FB"/>
+								<item text="Broadway"/>
+								<item text="Brush Script MT"/>
+								<item text="Bookshelf Symbol 7"/>
+								<item text="Calibri"/>
+								<item text="Californian FB"/>
+								<item text="Calisto MT"/>
+								<item text="Cambria Cambria Math"/>
+								<item text="Cambria"/>
+								<item text="Candara"/>
+								<item text="Castellar"/>
+								<item text="Century Schoolbook"/>
+								<item text="Centaur"/>
+								<item text="Century"/>
+								<item text="Chiller"/>
+								<item text="Colonna MT"/>
+								<item text="Consolas"/>
+								<item text="Contantia"/>
+								<item text="Cooper Black"/>
+								<item text="Copperplate Gothic"/>
+								<item text="Corbel"/>
+								<item text="Curlz MT"/>
+								<item text="Elephant"/>
+								<item text="Elephant Italic"/>
+								<item text="Engravers"/>
+								<item text="Eras Bold ITC"/>
+								<item text="Eras Demi ITC"/>
+								<item text="Eras Light ITC"/>
+								<item text="Eras Medium ITC"/>
+								<item text="Felix Titling"/>
+								<item text="Forte"/>
+								<item text="Franklin Gothic Book"/>
+								<item text="Franklin Gothic Demi"/>
+								<item text="Franklin Gothic Demi Cond"/>
+								<item text="Franklin Gothic Heavy"/>
+								<item text="Franklin Gothic Medium Cond"/>
+								<item text="Freestyle Script"/>
+								<item text="French Script MT"/>
+								<item text="Footlight MT Light"/>
+								<item text="Gabriola"/>
+								<item text="Garamond"/>
+								<item text="Garamond Bold"/>
+								<item text="Garamond Italic"/>
+								<item text="Gigi"/>
+								<item text="Gill Sans MT Bold Italic"/>
+								<item text="Gill Sans MT Bold"/>
+								<item text="Gill Sans MT Condensed"/>
+								<item text="Gill Sans MT Italic"/>
+								<item text="Gill Sans Ultra Bold Condensed"/>
+								<item text="Gill Sans Ultra Bold"/>
+								<item text="Gill Sans MT"/>
+								<item text="Gloucester MT Extra Condensed"/>
+								<item text="Gill Sans MT Ext Condensed Bold"/>
+								<item text="Century Gothic"/>
+								<item text="Goudy Old Style"/>
+								<item text="Goudy Stout"/>
+								<item text="Harlow Solid Italic"/>
+								<item text="Harrington"/>
+								<item text="Haettenschweiler"/>
+								<item text="High Tower Text"/>
+								<item text="Imprint MT Shadow"/>
+								<item text="Informal Roman"/>
+								<item text="Blackadder ITC"/>
+								<item text="Edwardian Script ITC"/>
+								<item text="Kristen ITC"/>
+								<item text="Jokerman"/>
+								<item text="Juice ITC"/>
+								<item text="Kunstler Script"/>
+								<item text="Wide Latin"/>
+								<item text="Lucida Bright"/>
+								<item text="Lucida Bright Demibold"/>
+								<item text="Lucida Bright Italic"/>
+								<item text="Lucida Calligraphy Italic"/>
+								<item text="Lucida Fax Regular"/>
+								<item text="Lucida Fax Demibold"/>
+								<item text="Lucida Fax Demibold Italic"/>
+								<item text="Lucida Handwriting Italic"/>
+								<item text="Lucida Sans Regular"/>
+								<item text="Lucida Sans Typewriter Regular"/>
+								<item text="Lucida Sans Typewriter Bold"/>
+								<item text="Lucida Sans Typewriter Bold Oblique"/>
+								<item text="Lucida Sans Typewriter Oblique"/>
+								<item text="Magneto Bold"/>
+								<item text="Maiandra GD"/>
+								<item text="Matura MT Script Capitals"/>
+								<item text="Meiryo"/>
+								<item text="Meiryo UI"/>
+								<item text="Mistral"/>
+								<item text="Modern No. 20"/>
+								<item text="Monotype Corsiva"/>
+								<item text="MT Extra"/>
+								<item text="Niagara Engraved"/>
+								<item text="Niagara Solid"/>
+								<item text="OCR A Extended"/>
+								<item text="Old English Text MT"/>
+								<item text="Onyx"/>
+								<item text="MS Outlook"/>
+								<item text="Palace Script MT"/>
+								<item text="Papyrus"/>
+								<item text="Parchment"/>
+								<item text="Perpetua Titling MT"/>
+								<item text="Perpetua"/>
+								<item text="Playbill"/>
+								<item text="Poor Richard"/>
+								<item text="Pristina"/>
+								<item text="Rage Italic"/>
+								<item text="Ravie"/>
+								<item text="MS Reference Sans Serif"/>
+								<item text="MS Reference Specialty"/>
+								<item text="Rockwell Condensed"/>
+								<item text="Rockwell"/>
+								<item text="Century Schoolbook"/>
+								<item text="Script MT Bold"/>
+								<item text="Segoe UI"/>
+								<item text="Showcard Gothic"/>
+								<item text="Snap ITC"/>
+								<item text="Stencil"/>
+								<item text="Tw Cen MT Condensed"/>
+								<item text="Tw Cen MT"/>
+								<item text="Tempus Sans ITC"/>
+								<item text="Viner Hand ITC"/>
+								<item text="Vivaldi Italic"/>
+								<item text="Vladimir Script"/>
+								<item text="Wingdings 2"/>
+								<item text="Wingdings 3"/>
+							</items>
+						</control>
+						<control type="ComboBoxText" selectedindex="1" width="40px" text="Font Size" defaulttext="11" ak="FS" classname="font-size" eventId="505" identifier="font_size" dontFireEventOnESC="true">
+							<tooltips>
+								<tooltip>
+									<body>
+										<![CDATA[Change the size of your text.]]>
+									</body>
+									<header>Font Size</header>
+								</tooltip>
+							</tooltips>
+							<items width="50px" height="400px" font-size="12px" type="Text">
+						<item text="8" itemValue="8"/>
+								<item text="9" itemValue="9"/>
+								<item text="10" itemValue="10"/>
+								<item text="11" itemValue="11"/>
+								<item text="12" eventId="506" itemValue="12"/>
+								<item text="14" eventId="507" itemValue="14"/>
+								<item text="16" itemValue="16"/>
+								<item text="18" eventId="508" itemValue="18"/>
+								<item text="20" eventId="509" itemValue="20"/>
+								<item text="22" itemValue="22"/>
+								<item text="24" itemValue="24"/>
+								<item text="26" itemValue="26"/>
+								<item text="28" itemValue="28"/>
+								<item text="36" itemValue="36"/>
+								<item text="48" itemValue="48"/>
+								<item text="72" itemValue="72"/>
+							</items>
+						</control>
+						<control type="MinimalButton" text="Increase Font Size" ak="FG" eventId="1136">
+							<tooltips>
+								<tooltip>
+									<body>
+										<![CDATA[Make your text a bit bigger.]]>
+									</body>
+									<header>Increase Font Size</header>
+								</tooltip>
+							</tooltips>
+							<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop top="-21px" left="-126px"/>
+							</icon>
+						</control>
+						<control type="MinimalButton" text="Decrease Font Size" ak="FK">
+							<tooltips>
+								<tooltip>
+									<body>
+										<![CDATA[Make your text a bit smaller.]]>
+									</body>
+									<header>Decrease Font Size</header>
+								</tooltip>
+							</tooltips>
+							<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop top="-21px" left="-147px"/>
+							</icon>
+						</control>
+					</control>
+					<control>
+						<control>
+							<control type="MinimalToggleButton" text="Bold" ak="1" classname="boldbutton" eventId="1">
+								<tooltips>
+									<tooltip>
+										<body>
+											<![CDATA[Make your text bold.]]>
+										</body>
+										<header>Bold (Ctrl+B)</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop top="-1282px" left="-238px"/>
+								</icon>
+							</control>
+							<control type="MinimalToggleButton" text="Italics" ak="2" eventId="575" classname="italicsbutton">
+								<tooltips>
+									<tooltip>
+										<body>
+											<![CDATA[Italicize your text.]]>
+										</body>
+										<header>Italic (Ctrl+I)</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop top="-1268px" left="-274px"/>
+								</icon>
+							</control>
+							<control type="SplitButtonNewHorizontal" minimal="true" text="Underline" ak="3" classname="highlight-underline">
+								<items type="IconAndText" wd="157px">
+									<item text="Underline" ak="U">
+										<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+											<imgcrop top="1px" left="-36px"/>
+										</icon>
+									</item>
+									<item text="Double Underline" ak="D">
+										<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+											<imgcrop top="-23px" left="-36px"/>
+										</icon>
+									</item>
+								</items>
+								<tooltips>
+									<tooltip target="icon">
+										<body>
+											<![CDATA[Underline your text.]]>
+										</body>
+										<header>Underline (Ctrl+U)</header>
+									</tooltip>
+									<tooltip target="arrow">
+										<body>
+											<![CDATA[Underline your text.]]>
+										</body>
+										<header>Underline (Ctrl+U)</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop top="-1299px" left="-238px"/>
+								</icon>
+							</control>
+						</control>
+						<control type="Separator"/>
+						<control>
+							<control type="SplitButtonNewHorizontal"  eventId="873" minimal="true" text="Borders" ak="B" identifier="home_font_borders">
+								<tooltips>
+									<tooltip target="icon" type="BodyOnly">
+										<body>
+											<![CDATA[Bottom Border]]>
+										</body>
+									</tooltip>
+									<tooltip target="arrow">
+										<body>
+											<![CDATA[Apply borders to the currently selected cells.]]>
+										</body>
+										<header>Bottom Border</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop top="-552px" left="-107px"/>
+								</icon>
+								<items>
+									<items type="scrollable" max-height="370px" wd="254px">
+										<item type="ItemHeader" disabled="true" text="Borders"/>
+										<item type="IconAndText" text="Bottom Border" ak="O" itemValue = "bottomBorder">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-127px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Top Border" ak="P" itemValue = "topBorder">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-29px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Left Border" ak="L" itemValue = "leftBorder">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-53px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Right Border" separator="true" ak="R" itemValue = "rightBorder">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-77px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="No Border" ak="N" itemValue = "no-border" >
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-103px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="All Borders" ak="A" eventId="873" itemValue="allBorder">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-127px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Outside Borders" ak="S" eventId="606" itemValue = "outsideBorder">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-151px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Thick Outside Borders" separator="true" ak="T" eventId="178" itemValue = "thick-outside-border">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-175px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Bottom Double Border" ak="B">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-201px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Thick Bottom Border" ak="H" eventId="874" itemValue = "thick-bottom-border">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-226px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Top and Bottom Border" ak="D" eventId="864">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-249px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Top and Thick Bottom Border" ak="C">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-274px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Top and Double Bottom Border" separator="true" ak="U" eventId="818">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-298px"/>
+											</icon>
+										</item>
+										<item type="ItemHeader" disabled="true" text="Draw Borders"/>
+										<item type="IconAndText" text="Draw Border" ak="W">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-344px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Draw Border Grid" ak="G">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-369px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Erase Border" ak="E">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-393px"/>
+											</icon>
+										</item>
+										<item type="IconAndText" text="Line Color" hassubitems="true" ak="I">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-417px"/>
+											</icon>
+										</item>
+										<item text="Line Style" type="IconAndText" separator="true" hassubitems="true" ak="Y"/>
+										<item type="IconAndText" text="More Borders..." eventId="80" ak="M">
+											<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/font_sectionitems.png">
+												<imgcrop left="-4px" top="-467px"/>
+											</icon>
+										</item>
+									</items>
+								</items>
+							</control>
+						</control>
+						<control type="Separator"/>
+						<control orientation="horizontal">
+							<control type="SplitButtonNewHorizontal" minimal="true" text="Fill Color" ak="H" identifier="fillColor" controlValue = "#FDFD15" eventId="936" changeColor="{&quot;enable&quot;:&quot;true&quot;}">
+								<tooltips>
+									<tooltip target="icon" type="HeaderBodyHelp">
+										<body>
+											<![CDATA[Color the background of cells to make them stand out.]]>
+										</body>
+										<header>Fill Color</header>
+									</tooltip>
+									<tooltip target="arrow" type="HeaderBodyHelp">
+										<body>
+											<![CDATA[Color the background of cells to make them stand out.]]>
+										</body>
+										<header>Fill Color</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop top="-1232px" left="-290px"/>
+								</icon>
+								<items wd="173px">
+									<item type="ColorPicker" text="ColorGrid" eventId="154" mode="onlyColors" classname="shape-fill"/>
+									<item type="IconAndText" text="No Fill" eventId="208" ak="N">
+										<icon wd="16px" ht="16px" src="dist/assets/ribbon/img/Excel/NoFill.png">
+											<imgcrop left="0px" top="0px"/>
+										</icon>
+									</item>
+								</items>
+							</control>
+							<control type="SplitButtonNewHorizontal" text="Font Color" ak="FC" minimal="true" identifier="homefontColor" controlValue = "#FF0000" eventId="153" changeColor="{&quot;enable&quot;:&quot;true&quot;}">
+								<tooltips>
+									<tooltip target="icon" type="HeaderBodyHelp">
+										<body>
+											<![CDATA[Change the color of your text.]]>
+										</body>
+										<header>Font Color</header>
+									</tooltip>
+									<tooltip target="arrow" type="HeaderBodyHelp">
+										<body>
+											<![CDATA[Change the color of your text.]]>
+										</body>
+										<header>Font Color</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop top="-3px" left="-104px"/>
+								</icon>
+								<items wd="171px">
+									<item type="ColorPicker" text="ColorGrid" eventId="153" classname="excel-font-color"/>
+								</items>
+							</control>
+						</control>
+					</control>
+					<tooltips>
+						<tooltip type="HeaderBodyPic">
+							<img wd="96px" ht="82px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop top="-957px" left="0px"/>
+							</img>
+							<body>
+								<![CDATA[Customize your text to give it the exact look you want. <br/> <br/> You can add a variety of styles and colors to your text, as well as visual effects such as strikethrough and superscript.]]>
+							</body>
+							<header>Font Settings (Ctrl+Shift+F)</header>
+						</tooltip>
+					</tooltips>
+				</section>
+				<section name="Alignment" launcher="true" nrows="2" ak="FA" eventId="44">
+					<tooltips>
+						<tooltip type="HeaderBodyPic">
+							<img wd="96px" ht="95px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop top="-768px" left="0px"/>
+							</img>
+							<body>
+								<![CDATA[Don't see what you're looking for?<br/><br/>Check out the full set of cell alignment options.]]>
+							</body>
+							<header>Alignment Settings</header>
+						</tooltip>
+					</tooltips>
+					<control orientation="vertical">
+						<control>
+							<control type="MinimalToggleButton" text="Top Align" ak="AT" id="top_align">
+								<tooltips>
+									<tooltip>
+										<body>
+											<![CDATA[Align text to the top.]]>
+										</body>
+										<header>Top Align</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop left="-290px" top="-1196px"/>
+								</icon>
+							</control>
+							<control type="MinimalToggleButton" classname="middlealign" text="Middle Align" ak="AM" eventId="60">
+								<tooltips>
+									<tooltip>
+										<body>
+											<![CDATA[Align text so that it is centered between the top and bottom of the cell.]]>
+										</body>
+										<header>Middle Align</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop left="-256px" top="-1264px"/>
+								</icon>
+							</control>
+							<control id="bottom-align" type="MinimalToggleButton" text="Bottom Align" ak="AB" eventId="920">
+								<tooltips>
+									<tooltip>
+										<body>
+											<![CDATA[Align text to the bottom.]]>
+										</body>
+										<header>Bottom Align</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop left="-264px" top="-1354px"/>
+								</icon>
+							</control>
+						</control>
+						<control>
+							<control type="MinimalToggleButton" text="Align Text Left" ak="AL" eventId="3" classname="align-left" controlValue="left">
+								<tooltips>
+									<tooltip>
+										<body>
+											<![CDATA[Align your content to the left.]]>
+										</body>
+										<header>Align Left</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop left="-246px" top="-1354px"/>
+								</icon>
+							</control>
+							<control type="MinimalToggleButton" text="Center" ak="AC" classname="align-center" eventId="2" controlValue="center">
+								<tooltips>
+									<tooltip>
+										<body>
+											<![CDATA[Center your content.]]>
+										</body>
+										<header>Center</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop left="-156px" top="-1368px"/>
+								</icon>
+							</control>
+							<control type="MinimalToggleButton" text="Align Text Right" ak="AR" classname="align-right" eventId="316" controlValue="right">
+								<tooltips>
+									<tooltip>
+										<body>
+											<![CDATA[Align your content to the right.]]>
+										</body>
+										<header>Align Right</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop left="-228px" top="-1354px"/>
+								</icon>
+							</control>
+						</control>
+					</control>
+					<control orientation="vertical">
+						<control type="DropDownButtonHorizontal" minimal="true" text="Orientation" ak="FQ">
+							<tooltips>
+								<tooltip>
+									<body>
+										<![CDATA[Rotate your text diagonally or vertically. This is a great way to label narrow columns.]]>
+									</body>
+									<header>Orientation</header>
+								</tooltip>
+							</tooltips>
+							<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop left="-107px" top="-1046px"/>
+							</icon>
+							<items wd="193px">
+								<item type="IconAndText" text="Angle Counterclockwise" ak="O" eventId="605">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/alignment_sectionitems.png">
+										<imgcrop left="-6px" top="-139px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Angle Clockwise" ak="L" eventId="869">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/alignment_sectionitems.png">
+										<imgcrop left="-6px" top="-163px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Vertical Text" ak="V">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/alignment_sectionitems.png">
+										<imgcrop left="-6px" top="-187px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Rotate Text Up" ak="U">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/alignment_sectionitems.png">
+										<imgcrop left="-6px" top="-211px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Rotate Text Down" separator="true" ak="D">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/alignment_sectionitems.png">
+										<imgcrop left="-6px" top="-236px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Format Cell Alignment" eventId="75" ak="M">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/alignment_sectionitems.png">
+										<imgcrop left="-6px" top="-262px"/>
+									</icon>
+									<tooltips>
+										<tooltip type="HeaderBodyPic" position="Item">
+											<img wd="96px" ht="95px" src="dist/assets/ribbon/img/tooltipSprite.png">
+												<imgcrop top="-768px" left="-0px"/>
+											</img>
+											<body>
+												<![CDATA[Don't see what you're looking for?<br/><br/>Check out the full set of cell alignment options.]]>
+											</body>
+											<header>Alignment Settings</header>
+										</tooltip>
+									</tooltips>
+								</item>
+							</items>
+						</control>
+						<control>
+							<control type="MinimalButton" text="Decrease Indent" ak="5">
+								<tooltips>
+									<tooltip>
+										<body>
+											<![CDATA[Move your content closer to the cell border.]]>
+										</body>
+										<header>Decrease Indent</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop left="-174px" top="-76px"/>
+								</icon>
+							</control>
+							<control type="MinimalButton" text="Increase Indent" ak="6" eventId="103">
+								<tooltips>
+									<tooltip>
+										<body>
+											<![CDATA[Move your content farther away from the cell border.]]>
+										</body>
+										<header>Increase Indent</header>
+									</tooltip>
+								</tooltips>
+								<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+									<imgcrop left="-197px" top="-76px"/>
+								</icon>
+							</control>
+						</control>
+					</control>
+					<control orientation="vertical">
+						<control type="Separator"/>
+					</control>
+					<control orientation="vertical">
+						<control type="ToggleButton" classname="wraptext" ak="W" eventId="28">
+							<tooltips>
+								<tooltip type="HeaderBodyPicHelp">
+									<img wd="96px" ht="128px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+										<imgcrop top="0px" left="0px"/>
+									</img>
+									<body>
+										<![CDATA[Wrap extra-long text into multiple lines so you can see all of it.]]>
+									</body>
+									<header>Wrap Text</header>
+								</tooltip>
+							</tooltips>
+							<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop left="-290px" top="-1214px"/>
+							</icon>
+						</control>
+						<control type="SplitButtonNewHorizontal" minimal="true" classname="mergeandcenter" eventId="61" ak="M" controlValue = "merge-and-center">
+							<tooltips>
+								<tooltip target="icon" type="HeaderBodyPicHelp">
+									<img wd="96px" ht="128px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+										<imgcrop top="-173px" left="-101px"/>
+									</img>
+									<body>
+										<![CDATA[Combine and center the contents of the selected cells in a new larger cell.<br/><br/>This is a great way to create a label that spans multiple columns.]]>
+									</body>
+									<header>Merge &amp; Center</header>
+								</tooltip>
+								<tooltip target="arrow">
+									<body>
+										<![CDATA[Pick how to merge cells.]]>
+									</body>
+									<header>Merge &amp; Center</header>
+								</tooltip>
+							</tooltips>
+							<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop left="-107px" top="-448px"/>
+							</icon>
+							<items wd="150px">
+								<item type="IconAndText" text="Merge &amp; Center" eventId="61" ak="C" itemValue="merge-and-center">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/alignment_sectionitems.png">
+										<imgcrop left="-6px" top="-6px"/>
+									</icon>
+									<tooltips>
+										<tooltip type="HeaderBodyPicHelp" position="Item">
+											<img wd="96px" ht="128px" src="dist/assets/ribbon/sprites/excel1024/home/alignment_sectionitems.png">
+												<imgcrop top="0px" left="-142px"/>
+											</img>
+											<body>
+												<![CDATA[Combine and center the contents of the selected cells in a new larger cell.<br/><br/>This is a great way to create a label that spans multiple columns.]]>
+											</body>
+											<header>Merge &amp; Center</header>
+										</tooltip>
+									</tooltips>
+								</item>
+								<item type="IconAndText" text="Merge Across" eventId="85" ak="A" itemValue = "merge-across">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/alignment_sectionitems.png">
+										<imgcrop left="-6px" top="-30px"/>
+									</icon>
+									<tooltips>
+										<tooltip position="Item">
+											<body>
+												<![CDATA[Merge selected cells in the same row into one large cell.]]>
+											</body>
+											<header>Merge Across</header>
+										</tooltip>
+									</tooltips>
+								</item>
+								<item type="IconAndText" text="Merge Cells" eventId="86" ak="M" itemValue = "merge-cells">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/alignment_sectionitems.png">
+										<imgcrop left="-6px" top="-54px"/>
+									</icon>
+									<tooltips>
+										<tooltip position="Item">
+											<body>
+												<![CDATA[Merge the selected cells into one cell.]]>
+											</body>
+											<header>Merge Cells</header>
+										</tooltip>
+									</tooltips>
+								</item>
+								<item type="IconAndText" text="Unmerge Cells" eventId="87" ak="U" itemValue = "false">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/alignment_sectionitems.png">
+										<imgcrop left="-6px" top="-78px"/>
+									</icon>
+									<tooltips>
+										<tooltip position="Item">
+											<body>
+												<![CDATA[Split the current cell into multiple cells.]]>
+											</body>
+											<header>Unmerge Cells</header>
+										</tooltip>
+									</tooltips>
+								</item>
+							</items>
+						</control>
+					</control>
+				</section>
+				<section name="Number" launcher="true" nrows="2" ak="FM" eventId="45">
+					<tooltips>
+						<tooltip type="HeaderBodyPic">
+							<img wd="96px" ht="95px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop top="-1039px" left="0px"/>
+							</img>
+							<body>
+								<![CDATA[Don't see what you're looking for?<br/><br/>Check out the full set of number formatting options.]]>
+							</body>
+							<header>Number Format</header>
+						</tooltip>
+					</tooltips>
+					<control orientation="vertical">
+						<control id="num-format" classname="num-format" type="ComboBoxText" selectedindex="1" width="129px" text="Number Format" defaulttext="General" ak="N" eventId="295" identifier="num_launcher_format" dontFireEventOnESC="true">
+							<tooltips>
+								<tooltip type="HeaderBodyHelp">
+									<body>
+										<![CDATA[Choose the format for your cells, such as percentage, currency, date or time.]]>
+									</body>
+									<header>Number Format</header>
+								</tooltip>
+							</tooltips>
+							<items width="202px">
+								<items type="scrollable" max-height="350px">
+									<item text="General" type="IconTextDesc" desc="No Specific Format" selected="true" eventId="89">
+										<icon wd="150px" ht="33px" src="dist/assets/ribbon/sprites/excel1024/home/number_sectionitems.png">
+											<imgcrop top="-5px" left="-5px"/>
+										</icon>
+									</item>
+									<item text="Number" type="IconAndText" eventId="90">
+										<icon wd="32px" ht="32px" src="dist/assets/ribbon/sprites/excel1024/home/number_sectionitems.png">
+											<imgcrop top="-49px" left="-5px"/>
+										</icon>
+									</item>
+									<item text="Currency" type="IconAndText" eventId="91">
+										<icon wd="32px" ht="32px" src="dist/assets/ribbon/sprites/excel1024/home/number_sectionitems.png">
+											<imgcrop top="-93px" left="-5px"/>
+										</icon>
+									</item>
+									<item text="Accounting" type="IconAndText" eventId="63">
+										<icon wd="32px" ht="32px" src="dist/assets/ribbon/sprites/excel1024/home/number_sectionitems.png">
+											<imgcrop top="-140px" left="-6px"/>
+										</icon>
+									</item>
+									<item text="Short Date" type="IconAndText" eventId="92">
+										<icon wd="32px" ht="32px" src="dist/assets/ribbon/sprites/excel1024/home/number_sectionitems.png">
+											<imgcrop top="-181px" left="-5px"/>
+										</icon>
+									</item>
+									<item text="Long Date" type="IconAndText" eventId="93">
+										<icon wd="32px" ht="32px" src="dist/assets/ribbon/sprites/excel1024/home/number_sectionitems.png">
+											<imgcrop top="-225px" left="-5px"/>
+										</icon>
+									</item>
+									<item text="Time" type="IconAndText" eventId="94">
+										<icon wd="32px" ht="32px" src="dist/assets/ribbon/sprites/excel1024/home/number_sectionitems.png">
+											<imgcrop top="-269px" left="-5px"/>
+										</icon>
+									</item>
+									<item text="Percentage" type="IconAndText" eventId="118">
+										<icon wd="32px" ht="32px" src="dist/assets/ribbon/sprites/excel1024/home/number_sectionitems.png">
+											<imgcrop top="-313px" left="-5px"/>
+										</icon>
+									</item>
+									<item text="Fraction" type="IconAndText" eventId="95">
+										<icon wd="32px" ht="32px" src="dist/assets/ribbon/sprites/excel1024/home/number_sectionitems.png">
+											<imgcrop top="-357px" left="-5px"/>
+										</icon>
+									</item>
+									<item text="Scientific" type="IconAndText" eventId="96">
+										<icon wd="32px" ht="32px" src="dist/assets/ribbon/sprites/excel1024/home/number_sectionitems.png">
+											<imgcrop top="-401px" left="-5px"/>
+										</icon>
+									</item>
+									<item text="Text" type="IconAndText" eventId="97" separator="true">
+										<icon wd="32px" ht="32px" src="dist/assets/ribbon/sprites/excel1024/home/number_sectionitems.png">
+											<imgcrop top="-445px" left="-5px"/>
+										</icon>
+									</item>
+								</items>
+								<item type="Separator" mode="solid">
+									<icon wd="32px" ht="32px" src="dist/assets/ribbon/sprites/excel1024/home/number_sectionitems.png">
+										<imgcrop top="-35px" left="-296px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="~More Number Formats..." classname="exclude_from_loop" eventId="45"/>
+							</items>
+						</control>
+						<control>
+							<control separator="true">
+								<control type="SplitButtonNewHorizontal" minimal="true" text="Accounting Number Format" ak="AN" eventId="63">
+									<tooltips>
+										<tooltip target="icon">
+											<body>
+												<![CDATA[Format as Dollars, Euros, or other currency.]]>
+											</body>
+											<header>Accounting Number Format</header>
+										</tooltip>
+										<tooltip target="arrow">
+											<body>
+												<![CDATA[Format as Dollars, Euros, or other currency.]]>
+											</body>
+											<header>Accounting Number Format</header>
+										</tooltip>
+									</tooltips>
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+										<imgcrop left="-190px" top="1px"/>
+									</icon>
+									<items wd="218px">
+										<item text="$ English (United States)" eventId="98"/>
+										<item text="&#194;&#163; English (United Kingdom)"/>
+										<item text="? Euro (? 123)"/>
+										<item text="&#194;&#165; Chinese (PRC)"/>
+										<item text="CHF French (Switzerland)" separator="true"/>
+										<item text="More Accounting Formats..." eventId="99" ak="M"/>
+									</items>
+								</control>
+								<control type="MinimalButton" text="Percent Style" ak="P" eventId="64">
+									<tooltips>
+										<tooltip>
+											<body>
+												<![CDATA[Format as a percent.]]>
+											</body>
+											<header>Percent Style (Ctrl+Shift+%)</header>
+										</tooltip>
+									</tooltips>
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+										<imgcrop left="-190px" top="-18px"/>
+									</icon>
+								</control>
+								<control type="MinimalButton" text="Comma Style" ak="K" eventId="65">
+									<tooltips>
+										<tooltip>
+											<body>
+												<![CDATA[Format with a thousands separator.]]>
+											</body>
+											<header>Comma Style</header>
+										</tooltip>
+									</tooltips>
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+										<imgcrop left="-192px" top="-1368px"/>
+									</icon>
+								</control>
+								<control type="Separator"/>
+							</control>
+							<control>
+								<control type="MinimalButton" text="Increase Decimal" ak="0" eventId="66">
+									<tooltips>
+										<tooltip>
+											<body>
+												<![CDATA[Show more decimal places for a more precise value.]]>
+											</body>
+											<header>Increase Decimal</header>
+										</tooltip>
+									</tooltips>
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+										<imgcrop left="-174px" top="-1368px"/>
+									</icon>
+								</control>
+								<control type="MinimalButton" text="Decrease Decimal" ak="9" eventId="67">
+									<tooltips>
+										<tooltip>
+											<body>
+												<![CDATA[Show fewer decimal places.]]>
+											</body>
+											<header>Decrease Decimal</header>
+										</tooltip>
+									</tooltips>
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+										<imgcrop left="-210px" top="-1368px"/>
+									</icon>
+								</control>
+							</control>
+						</control>
+					</control>
+				</section>
+				<section name="Cells" display="hideOnLowRes">
+					<control orientation="vertical">
+						<control type="SplitButtonNewHorizontal" text="Insert" eventId="82" ak="I" identifier="home_cells_insert">
+							<tooltips>
+								<tooltip target="icon" type="HeaderBodyHelp">
+									<body>
+										<![CDATA[Add new cells, rows or columns to your workbook.<br/><br/>FYI: To insert multiple rows or columns at a time, select multiple rows or columns in the sheet, and click Insert.]]>
+									</body>
+									<header>Insert Cells</header>
+								</tooltip>
+								<tooltip target="arrow">
+									<body>
+										<![CDATA[Add cells, rows, columns or sheets to your workbook.]]>
+									</body>
+									<header>Insert Cells</header>
+								</tooltip>
+							</tooltips>
+							<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop top="-78px" left="-263px"/>
+							</icon>
+							<items wd="180px">
+								<item type="IconAndText" text="Insert Cells..." separator="true" ak="I" eventId="51">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/cells_sectionitems.png">
+										<imgcrop top="0px" left="0px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Insert Sheet ~Rows" ak="R" eventId="52">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/cells_sectionitems.png">
+										<imgcrop top="-158px" left="-55px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Insert Sheet Columns" separator="true" ak="C" eventId="53">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/cells_sectionitems.png">
+										<imgcrop top="-58px" left="-170px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Insert Sheet" ak="S" eventId="54" tooltip="Insert Worksheet (Shift+F11)">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/cells_sectionitems.png">
+										<imgcrop top="-22px" left="-170px"/>
+									</icon>
+								</item>
+							</items>
+						</control>
+						<control type="SplitButtonNewHorizontal" text="Delete" eventId="84" ak="D" identifier="home_cells_delete">
+							<tooltips>
+								<tooltip target="icon">
+									<body>
+										<![CDATA[Delete cells, rows, columns or sheets from your workbook.<br/><br/>FYI: To delete multiple rows or columns at a time, select multiple rows or columns in the sheet, and click Delete.]]>
+									</body>
+									<header>Delete Cells</header>
+								</tooltip>
+								<tooltip target="arrow">
+									<body>
+										<![CDATA[Delete cells, rows, columns or sheets from your workbook.<br/><br/>FYI: To delete multiple rows or columns at a time, select multiple rows or columns in the sheet, and click Delete.]]>
+									</body>
+									<header>Delete Cells</header>
+								</tooltip>
+							</tooltips>
+							<icon wd="16px" ht="16px" src="dist/assets/ribbon/sprites/excel1024/home/home.png">
+								<imgcrop top="-101px" left="-263px"/>
+							</icon>
+							<items wd="185px">
+								<item type="IconAndText" text="Delete Cells..." separator="true" ak="D" eventId="55">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/img/Excel/Home/Cells/Delete_Dropdown/DeleteCells.png">
+										<imgcrop top="0px" left="0px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Delete Sheet Rows" ak="R" eventId="56">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/img/EwaEdit.png">
+										<imgcrop top="-141px" left="-145px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Delete Sheet Columns" separator="true" ak="C" eventId="57">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/img/EwaEdit.png">
+										<imgcrop top="-137px" left="-92px"/>
+									</icon>
+								</item>
+								<item type="IconAndText" text="Delete Sheet" ak="S" eventId="58">
+									<icon wd="16px" ht="16px" src="dist/assets/ribbon/img/EwaEdit.png">
+										<imgcrop top="-155px" left="-73px"/>
+									</icon>
+								</item>
+							</items>
+						</control>
+					</control>
+					<!--<control type="Image" hovereffect="true">
+              <tooltips><tooltip>
+                <body><![CDATA[Change the row height or column width, organize sheets, or protect or hide cells.]]></body>
+                <header>Format</header>
+              </tooltip></tooltips>
+              <icon wd="42px" ht="71px" src="dist/assets/ribbon/img/stylesandcellssprite.png">
+                <imgcrop top="4px" left="-266px"/>
+              </icon>
+            </control>-->
+				</section>
+			</sections>
+		</tab>
+	</tabs>
+</ribbon>
