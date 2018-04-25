@@ -1,0 +1,32 @@
+[
+    {
+        "qText": "Trial Balance: Learn",
+        "description": "Learn to prepare Trial Balance to verify that debits equal the credits",
+        "badges":[
+            "Accounting",
+            "Training"
+        ],
+        "view":"Side by Side View",
+        "index":1
+    },
+    {
+        "qText": "Exhaust System inspection",
+        "description": "Use inspection checklist to record condition of the vehicle exhaust system",
+        "badges":[
+            "Automotive",
+            "Assessment"
+        ],
+        "view":"Reading View",
+        "index":4
+      },
+    {
+        "qText": "Vehicle Emission control information",
+        "description": "Analyse Vehicle Emission control information sticker",
+        "badges":[
+            "Automotive",
+            "Assessment"
+        ],
+        "view":"Reading View",
+        "index":5
+    }
+]

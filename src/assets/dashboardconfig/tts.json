@@ -1,0 +1,12 @@
+[
+    {
+        "qText": "Trial Balance: Learn",
+        "description": "Learn to prepare Trial Balance to verify that debits equal the credits",
+        "badges":[
+            "Accounting",
+            "Training"
+        ],
+        "view":"Side by Side View",
+        "index":1
+    }
+]

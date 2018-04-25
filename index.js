@@ -49,6 +49,20 @@ function isValidTenant(tenant){
   }
 }
 
+function isValidVersion(version){
+  let versionMap ={
+    "April18":"April18",
+    "Sep17":"Sep17",
+    "June17":"June17"
+  }
+  if(versionMap[version]){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -72,14 +86,31 @@ app.use('/tts',
   unauthorizedResponse: getUnauthorizedResponse,
   realm: 'Leo Credential'
 }))
-app.get('/:tenant/:ver', (req, res) => {
+app.get('/:tenant/:ver', (req, res, next) => {
   var tenant = req.params.tenant;
   var ver = req.params.ver;
+  if(isValidTenant(tenant) == false){
+    next();
+    return;
+  }
+  if(isValidVersion(ver) == false){
+    next();
+    return;
+  }
   res.sendFile(path.join(__dirname, 'public/'+tenant+'/'+ver+'/launch.html'));
+  
 });
-app.get('/:tenant/:ver/*', (req, res) => {
+app.get('/:tenant/:ver/*', (req, res, next) => {
   var tenant = req.params.tenant;
   var ver = req.params.ver;
+  if(isValidTenant(tenant) == false){
+    next();
+    return;
+  }
+  if(isValidVersion(ver) == false){
+    next();
+    return;
+  }
   res.sendFile(path.join(__dirname, 'public/'+tenant+'/'+ver+'/launch.html'));
 });
 // For tenant - End
@@ -98,6 +129,7 @@ app.get('/:tenant', (req, res, next) => {
   var tenant = req.params.tenant;
   if(isValidTenant(tenant) == false){
     next();
+    return;
   }
   var ver = getDefaultVersion(tenant);
   if(ver){
@@ -112,6 +144,7 @@ app.get('/:tenant/*', (req, res, next) => {
   var tenant = req.params.tenant;
   if(isValidTenant(tenant) == false){
     next();
+    return;
   }
   var ver = getDefaultVersion(tenant);
   if(ver){
@@ -131,7 +164,7 @@ unauthorizedResponse: getUnauthorizedResponse,
   realm: 'Leo Credential'
 }))
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/compro/April18/launch.html'));
+  res.sendFile(path.join(__dirname, 'dist/launch.html'));
   
 });
 // Default Handling
