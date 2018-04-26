@@ -11839,7 +11839,7 @@ div.k-navigator .k-navigator-left {
   box-sizing: border-box;
 }
 .k-spreadsheet .k-spreadsheet-action-bar {
-  border-width: 0 0 1px;
+  border-width: 1px 0;
   border-style: solid;
   position: relative;
   font-size: 12px;
