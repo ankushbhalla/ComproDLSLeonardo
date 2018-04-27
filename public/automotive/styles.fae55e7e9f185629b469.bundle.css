@@ -11839,7 +11839,7 @@ div.k-navigator .k-navigator-left {
   box-sizing: border-box;
 }
 .k-spreadsheet .k-spreadsheet-action-bar {
-  border-width: 1px 0;
+  border-width: 0 0 1px;
   border-style: solid;
   position: relative;
   font-size: 12px;
@@ -15601,9 +15601,8 @@ textarea.k-textbox,
 .k-widget .k-spreadsheet-view .k-spreadsheet-fixed-container .k-spreadsheet-column-header {
   cursor: url(DownArrow.edba1589b3a71edf4dac.cur), cell !important;
 }
-.k-widget .k-spreadsheet-view .k-spreadsheet-fixed-container .k-resize-hint .k-resize-hint-marker,
 .k-widget .k-spreadsheet-view .k-spreadsheet-fixed-container .k-resize-hint .k-resize-hint-handle {
-  position: absolute;
+  display: none;
 }
 .k-widget .k-spreadsheet-sheets-bar .k-button-icon {
   height: calc(1.72em + 6px);
@@ -15617,6 +15616,9 @@ textarea.k-textbox,
   font-family: Arial, Verdana, sans-serif;
   font-size: 12px;
   margin-bottom: 0px;
+}
+.k-spreadsheet .k-spreadsheet-action-bar {
+  border-width: 1px 0px;
 }
 .widgetContainer.centerAlign {
   margin: auto;
