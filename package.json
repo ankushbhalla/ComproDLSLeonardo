@@ -41,7 +41,7 @@
     "istanbul-instrumenter-loader": "~2.0.0",
     "latest": "~0.2.0",
     "less-loader": "~2.2.3",
-    "morgan": "~1.8.1",
+    "morgan": "~1.10.0",
     "ng2-pdf-viewer": "~2.0.2",
     "ngx-bootstrap": "~1.9.3",
     "postcss-loader": "~0.13.0",
