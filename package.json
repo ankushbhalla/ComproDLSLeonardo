@@ -77,6 +77,6 @@
     "karma-jasmine-html-reporter": "~0.2.2",
     "karma-sourcemap-loader": "~0.3.7",
     "protractor": "~5.1.0",
-    "webpack-dev-server": "~2.3.0"
+    "webpack-dev-server": "~3.11.0"
   }
 }
